@@ -1,0 +1,68 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+}
+
+#logo {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    gap: 100px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;  /* Increase the font size */
+    font-weight: bold; /* Make the font bold */
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ddd;
+}
+
+#buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px); /* Subtract header height */
+    font-size: 3em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
