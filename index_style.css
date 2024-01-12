@@ -37,7 +37,7 @@ header {
 
 nav {
     display: flex;
-    gap: 10px;
+    gap: 50px;
     flex: 1; /* 让导航栏占据剩余空间 */
     justify-content: space-around;
     /* 移除order: 2; 如果我们不需要调整DOM的视觉顺序 */ 
@@ -58,9 +58,8 @@ nav a:hover {
 #buttons {
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-end; /* 改变对齐方式为右对齐 */
     flex: 100%;
-    order: 3;
 }
 
 .button {
