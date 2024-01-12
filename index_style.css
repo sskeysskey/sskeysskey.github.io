@@ -26,7 +26,9 @@ header {
 #logo {
     height: 50px;
     flex: 100%;
+    max-width: 200px; /* 添加一个最大宽度 */
     order: 1;
+    width: auto; /* 保持宽度与高度的比例 */
     margin-right: 80px;
 }
 
