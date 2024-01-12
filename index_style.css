@@ -15,10 +15,14 @@ body {
     padding: 0;
 }
 
+/* 适配大屏幕设备 */
+@media only screen and (min-width: 601px) {
+    /* ...保持现有样式不变... */
+
 header {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-wrap: nowrap; /* 不允许换行，确保所有元素在一行显示 */
+    justify-content: space-between; /* 两端对齐 */
     align-items: center;
     padding: 20px;
 }
@@ -34,9 +38,9 @@ header {
 nav {
     display: flex;
     gap: 10px;
-    flex: 100%;
+    flex: 1; /* 让导航栏占据剩余空间 */
     justify-content: space-around;
-    order: 2;
+    /* 移除order: 2; 如果我们不需要调整DOM的视觉顺序 */ 
 }
 
 nav a {
@@ -75,6 +79,7 @@ main {
     font-size: 2em;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 }
 
 /* Responsive styles */
