@@ -77,24 +77,45 @@ main {
 }
 
 /* Responsive styles */
-@media only screen and (min-width: 601px) {
+/* 适配小屏幕设备 */
+@media only screen and (max-width: 600px) {
     header {
-        flex-wrap: nowrap;
+        padding: 10px;
     }
+
     #logo {
-        flex: 0;
+        margin-left: auto;
+        margin-right: auto;
         order: 0;
     }
+
     nav {
-        gap: 50px;
-        flex: 1;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        order: 1;
     }
+
+    nav a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
     #buttons {
-        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+        order: 2;
     }
+
+    .button {
+        width: 100%;
+        box-sizing: border-box; /* 确保padding不会使按钮超出屏幕宽度 */
+    }
+
     main {
-        height: calc(100vh - 70px);
-        font-size: 3em;
+        padding: 20px;
+        box-sizing: border-box; /* 处理padding对宽度的影响 */
+        font-size: 1.5em;
+        height: auto; /* 适应不同内容高度 */
     }
 }
