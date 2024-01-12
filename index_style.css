@@ -97,6 +97,7 @@ main {
     nav {
         flex-direction: column;
         align-items: center;
+        gap: 30px;
         order: 1;
     }
 
@@ -108,7 +109,7 @@ main {
 
     #buttons {
         flex-direction: column;
-        align-items: center;
+        align-items: right;
         order: 2;
     }
 
