@@ -23,11 +23,11 @@
 <body>
 
 <div class="nav-bar">
-    <a href="javascript:void(0);" class="nav-item active" onclick="loadContent('technologyreview')">technologyreview</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('economist')">economist</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('WSJ')">WSJ</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('nytimes')">nytimes</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('FT')">FT</a>
+    <a href="javascript:void(0);" class="nav-item active" onclick="loadContent('techreview')">MIT TechnologyReview</a> |
+    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('economist')">Economist</a> |
+    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('wsj')">WSJ</a> |
+    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('nytimes')">The New York Times</a> |
+    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('ft')">Financial Times</a>
 </div>
 
 <div id="content" style="margin-top: 20px;">
@@ -36,18 +36,17 @@
 
 <script>
 function loadContent(site) {
-    // 移除所有的active类
+    // 移除所有的active类，并添加给当前点击的项
     var items = document.getElementsByClassName('nav-item');
     for (var i = 0; i < items.length; i++) {
         items[i].classList.remove('active');
     }
-
-    // 给点击的项添加active类
     event.target.classList.add('active');
 
     // 使用XMLHttpRequest来加载对应的html文件
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', site + '.html', true);
+    var url = '/news/' + site + '.html'; // 注意这里的路径需要与你的服务器结构相匹配
+    xhr.open('GET', url, true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             document.getElementById('content').innerHTML = xhr.responseText;
