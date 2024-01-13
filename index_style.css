@@ -33,11 +33,14 @@ header {
     max-width: 200px; /* 添加一个最大宽度 */
     width: auto; /* 保持宽度与高度的比例 */
     margin-right: 80px;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 nav {
     display: flex;
     gap: 50px;
+    margin-top: 5px;
     flex: 1; /* 让导航栏占据剩余空间 */
     justify-content: space-around;
     /* 移除order: 2; 如果我们不需要调整DOM的视觉顺序 */ 
@@ -46,7 +49,7 @@ nav {
 nav a {
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* 添加黑色的文本阴影 */
 }
@@ -86,7 +89,7 @@ main {
 /* 适配小屏幕设备 */
 @media only screen and (max-width: 600px) {
     header {
-        padding: 10px;
+        padding: 5px;
     }
 
     #logo {
@@ -98,7 +101,7 @@ main {
     nav {
         flex-direction: column;
         align-items: center;
-        gap: 30px;
+        gap: 10px;
         order: 1;
     }
 
@@ -120,7 +123,7 @@ main {
     }
 
     main {
-        padding: 20px;
+        padding: 10px;
         box-sizing: border-box; /* 处理padding对宽度的影响 */
         font-size: 1.5em;
         height: auto; /* 适应不同内容高度 */
