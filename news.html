@@ -23,11 +23,11 @@
 <body>
 
 <div class="nav-bar">
-    <a href="javascript:void(0);" class="nav-item active" onclick="loadContent('techreview')">MIT TechnologyReview</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('economist')">Economist</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('wsj')">WSJ</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('nytimes')">The New York Times</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('ft')">Financial Times</a>
+    <a href="javascript:void(0);" class="nav-item active" onclick="loadContent('techreview', this)">MIT TechnologyReview</a> |
+    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('economist', this)">The Economist</a> |
+    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('wsj', this)">The Wall Street Journal</a> |
+    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('nytimes', this)">The New York Times</a> |
+    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('ft', this)">Financial Times</a>
 </div>
 
 <div id="content" style="margin-top: 20px;">
@@ -35,13 +35,18 @@
 </div>
 
 <script>
-function loadContent(site) {
+function loadContent(site, element) {
     // 移除所有的active类，并添加给当前点击的项
     var items = document.getElementsByClassName('nav-item');
     for (var i = 0; i < items.length; i++) {
         items[i].classList.remove('active');
     }
-    event.target.classList.add('active');
+    // 如果element存在，则将active类添加到该元素上，否则默认为第一个元素
+    if (element) {
+        element.classList.add('active');
+    } else {
+        items[0].classList.add('active');
+    }
 
     // 使用XMLHttpRequest来加载对应的html文件
     var xhr = new XMLHttpRequest();
@@ -57,8 +62,9 @@ function loadContent(site) {
 
 // 页面加载时，自动加载默认的html文件
 window.onload = function() {
-    loadContent('techreview');
+    loadContent('techreview', null); // 修改这里，传递null作为第二个参数
 };
+
 </script>
 </body>
 </html>
