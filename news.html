@@ -23,12 +23,11 @@
 <body>
 
 <div class="nav-bar">
-    <a href="javascript:void(0);" class="nav-item active" onclick="loadContent('techreview', this)">MIT TechnologyReview</a> |
+    <a href="javascript:void(0);" class="nav-item active" onclick="loadContent('technologyreview', this)">MIT TechnologyReview</a> |
     <a href="javascript:void(0);" class="nav-item" onclick="loadContent('economist', this)">The Economist</a> |
     <a href="javascript:void(0);" class="nav-item" onclick="loadContent('wsj', this)">The Wall Street Journal</a> |
     <a href="javascript:void(0);" class="nav-item" onclick="loadContent('nytimes', this)">The New York Times</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('ft', this)">Financial Times</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('ftchinese', this)">FT中文网</a> |
+    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('FT', this)">Financial Times</a> |
     <a href="javascript:void(0);" class="nav-item" onclick="loadContent('nikkei', this)">Nikkei</a>
 </div>
 
@@ -64,7 +63,7 @@ function loadContent(site, element) {
 
 // 页面加载时，自动加载默认的html文件
 window.onload = function() {
-    loadContent('techreview', null); // 修改这里，传递null作为第二个参数
+    loadContent('technologyreview', null); // 修改这里，传递null作为第二个参数
 };
 
 </script>
