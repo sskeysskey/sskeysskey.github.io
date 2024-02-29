@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>商品展示页面</title>
+    <link rel="stylesheet" href="shopstyles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="categories">
+            <ul>
+                <li class="category">
+                    箱包
+                    <img src="arrow.png" class="arrow" onclick="toggleSubmenu(this)">
+                    <ul class="submenu">
+                        <li>爱马仕</li>
+                        <li>迪奥</li>
+                        <li>PRADA</li>
+                    </ul>
+                </li>
+                <!-- 其他分类... -->
+            </ul>
+        </div>
+        <div id="products">
+            <!-- 商品展示区，通过JavaScript动态填充 -->
+        </div>
+        <div id="pagination">
+            <!-- 分页按钮，通过JavaScript动态生成 -->
+        </div>
+    </div>
+    <script src="javascript/shopscript.js"></script>
+</body>
+</html>
