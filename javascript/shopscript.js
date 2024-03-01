@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
     fetchProducts();
     // 初始化分页按钮
     setupPagination();
+
+    // 绑定菜单按钮的点击事件
+    var menuButton = document.querySelector('.menu-btn');
+    if (menuButton) {
+        menuButton.addEventListener('click', toggleMenu);
+    }
 });
 
 function toggleMenu() {

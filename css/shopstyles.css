@@ -74,6 +74,7 @@
 
     /* 隐藏分类列表 */
     #categories {
+        display: none;
         position: fixed;
         left: -250px; /* 默认情况下分类列表在屏幕左侧隐藏 */
         top: 0;
