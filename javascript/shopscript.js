@@ -1,24 +1,63 @@
 document.addEventListener("DOMContentLoaded", function() {
     // 初始化商品展示
-    loadProducts(1);
+    fetchProducts();
     // 初始化分页按钮
     setupPagination();
 });
 
-function toggleSubmenu(arrowElement) {
-    let submenu = arrowElement.nextElementSibling;
-    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+function toggleMenu() {
+    var categories = document.getElementById('categories');
+    var mask = document.querySelector('.menu-mask');
+    
+    // 切换分类列表的显示状态
+    if (categories.classList.contains('active')) {
+        categories.classList.remove('active');
+        mask.classList.remove('active');
+    } else {
+        categories.classList.add('active');
+        mask.classList.add('active');
+    }
 }
 
-function loadProducts(pageNumber) {
-    // 假设有一个getProducts函数用于获取商品数据
-    let products = getProducts(pageNumber);
+// 修改已有的 toggleSubmenu 函数以适应小屏幕
+function toggleSubmenu(arrow) {
+    var submenu = arrow.nextElementSibling;
+    if (submenu.style.display === 'block') {
+        submenu.style.display = 'none';
+    } else {
+        // 隐藏其他所有子菜单
+        var submenus = document.getElementsByClassName('submenu');
+        for (var i = 0; i < submenus.length; i++) {
+            submenus[i].style.display = 'none';
+        }
+        // 显示当前子菜单
+        submenu.style.display = 'block';
+    }
+}
+
+function fetchProducts(page) {
+    fetch(`http://localhost:3000/api/products?page=${page}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        updateProductsDisplay(data.products);
+        // 这里还需要添加分页按钮的生成和处理代码
+      })
+      .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+      });
+  }
+
+function updateProductsDisplay(products) {
     let productsContainer = document.getElementById('products');
     productsContainer.innerHTML = ''; // 清空当前内容
     products.forEach(product => {
         let productDiv = document.createElement('div');
         productDiv.classList.add('product');
-        // 填充商品信息，此处简化，实际应根据产品属性填充
         productDiv.innerHTML = `
             <img src="${product.imageUrl}" alt="${product.name}">
             <div class="info">
@@ -30,18 +69,37 @@ function loadProducts(pageNumber) {
 }
 
 function setupPagination() {
-    // 假设有一个getPageCount函数用于获取总页数
-    let pageCount = getPageCount();
-    let paginationContainer = document.getElementById('pagination');
-    for (let i = 1; i <= pageCount; i++) {
-        let pageButton = document.createElement('span');
-        pageButton.classList.add('pagination-btn');
-        pageButton.textContent =i.toString();
-        pageButton.addEventListener('click', function() {
-            loadProducts(i);
-            updatePagination(i);
+    fetch(`http://localhost:3000/api/products/pages`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            let pageCount = data.pageCount; // 使用服务器返回的页数
+            updatePaginationButtons(pageCount);
+        })
+        .catch(error => {
+            console.error('Error fetching page count:', error);
         });
-        paginationContainer.appendChild(pageButton);
+}
+
+function updatePaginationButtons(pageCount) {
+    let paginationContainer = document.getElementById('pagination');
+    paginationContainer.innerHTML = '';
+    
+    for (let i = 1; i <= pageCount; i++) {
+        (function(page) {
+            let pageButton = document.createElement('button');
+            pageButton.classList.add('pagination-btn');
+            pageButton.textContent = page.toString();
+            pageButton.addEventListener('click', function() {
+                fetchProducts(page);
+                updatePagination(page);
+            });
+            paginationContainer.appendChild(pageButton);
+        })(i); // 立即执行该函数，并将当前的i值作为参数传递
     }
     updatePagination(1);
 }
@@ -55,21 +113,4 @@ function updatePagination(activePage) {
             button.classList.remove('active');
         }
     });
-}
-
-// 示例函数，实际开发中应从服务器获取数据
-function getProducts(pageNumber) {
-    // 此处应该是一个AJAX请求，获取服务器上的产品数据
-    // 以下是模拟数据
-    return [
-        { name: "产品1", imageUrl: "product1.jpg", uploadDate: "2024.2.29" },
-        { name: "产品2", imageUrl: "product2.jpg", uploadDate: "2024.2.30" },
-        // 更多商品...
-    ];
-}
-
-function getPageCount() {
-    // 此处应从服务器获取实际的页数
-    // 以下是假定的页面数量
-    return 10;
 }

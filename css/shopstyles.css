@@ -1,13 +1,15 @@
 #container {
-    display: flex;
+    display: block; /* 或者你可以使用 flex 布局，但需要确保 #products 和 #pagination 是兄弟元素 */
 }
 
 #categories {
     width: 200px;
+    float: left; /* 如果保持 #container 的 flex 布局，这里的 float 将不起作用 */
 }
 
 .category .arrow {
-    cursor: pointer;
+    width: 8px;
+    height: 8px;
 }
 
 .submenu {
@@ -20,7 +22,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: calc(100% - 200px);
+    margin-left: 200px; /* 确保左侧留出 categories 宽度的空间 */
 }
 
 .product {
@@ -39,13 +41,63 @@
 #pagination {
     text-align: center;
     margin-top: 20px;
+    clear: both; /* 确保 #pagination 不会与浮动元素相邻，并在它们下方显示 */
 }
 
 .pagination-btn {
     cursor: pointer;
     padding: 5px 10px;
+    margin: 0 5px; /* 可选，为分页按钮之间添加一些间隔 */
 }
 
 .pagination-btn.active {
     font-weight: bold;
+}
+
+/* 适用于手机屏幕的媒体查询 */
+@media screen and (max-width: 600px) {
+    /* 隐藏分类列表 */
+    #categories {
+        position: fixed;
+        left: -250px; /* 默认情况下分类列表在屏幕左侧隐藏 */
+        top: 0;
+        width: 250px;
+        height: 100%;
+        overflow-y: auto;
+        background: #fff;
+        transition: left 0.3s ease; /* 添加动画效果 */
+    }
+
+    /* 菜单按钮样式 */
+    .menu-btn {
+        display: block; /* 显示菜单按钮 */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        /* 其他样式... */
+    }
+
+    /* 显示分类列表时的样式 */
+    #categories.active {
+        left: 0; /* 当添加了active类时，分类列表从左侧滑入 */
+    }
+
+    /* 当分类列表显示时，添加一个遮罩层 */
+    .menu-mask {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .menu-mask.active {
+        display: block; /* 当添加了active类时，显示遮罩层 */
+    }
+
+    /* 其他可能需要调整的样式 */
 }
