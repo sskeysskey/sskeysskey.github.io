@@ -1,0 +1,171 @@
+/* 基本样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: relative;
+}
+
+#menu-btn {
+    background-color: #444;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.side-menu {
+    /* background-color: #555; */
+    color: white;
+    position: fixed;
+    top: 0;
+    height: 100vh; /* 高度占满视口 */
+    bottom: 0;
+    left: -100%;
+    width: 200px;
+    transition: left 0.3s;
+    z-index: 1000;
+    overflow-y: auto;
+    margin-top: 60px; /* 根据需要调整间距 */
+    margin-left: 10px; /* 根据需要调整间距 */
+}
+
+.submenu {
+    margin-left: 20px; /* 根据需要调整间距 */
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+#main-content {
+    padding: 20px;
+}
+
+#products {
+    /* display: grid; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 10px;
+}
+
+.product {
+    width: calc(100% - 10px);
+    margin-bottom: 15px;
+}
+
+.product img {
+    width: 100%;
+}
+
+.product .info {
+    text-align: center;
+}
+
+#pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#pagination-btn {
+    margin: 0 5px;
+    padding: 5px 15px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+/* 响应式样式 */
+@media screen and (min-width: 768px) {
+    /* 设置外层容器flex布局 */
+    #container {
+        display: flex;
+    }
+
+    #navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+    #category-menu {
+        width: 200px; /* 根据需要设置合适的宽度 */
+        flex-shrink: 0; /* 防止菜单栏缩小 */
+        position: static;
+        left: auto;
+        transition: none;
+        /* 可以添加一些padding或者其他样式来调整外观 */
+    }
+
+    .side-menu {
+        flex-basis: 200px; /* 根据实际宽度调整 */
+        flex-shrink: 0; /* 不让分类列表缩小 */
+        height: 100vh; /* 可选，如果你希望它高度占满视口 */
+        position: static;
+        width: auto;
+        left: 0;
+        overflow-y: visible;
+        margin-left: 50px; /* 根据需要调整间距 */
+    }
+
+    .submenu {
+        margin-left: 10px; /* 根据需要调整间距 */
+        padding: 0;
+    }
+    
+    #main-content {
+        display: flex;
+        flex-direction: column; /* 确保子元素按列排列 */
+        flex-grow: 1; /* 占据剩余空间 */
+    }
+
+    #products {
+        flex-grow: 1;
+        grid-template-columns: repeat(4, 1fr);
+        padding-left: 20px; /* 或者根据需要调整间隔 */
+    }
+
+    .product {
+        width: calc(33.333% - 10px);
+        margin-bottom: 15px;
+    }
+
+    .product img {
+        width: 100%;
+    }
+
+    .product .info {
+        text-align: center;
+    }
+
+    #pagination {
+        /* 分页部分保持在商品网格的下方 */
+        margin-top: 10px; /* 根据需要调整间距 */
+        text-align: center;
+        clear: both; /* 确保 #pagination 不会与浮动元素相邻，并在它们下方显示 */
+    }
+
+    .pagination-btn {
+        cursor: pointer;
+        padding: 5px 10px;
+        margin: 0 5px; /* 可选，为分页按钮之间添加一些间隔 */
+    }
+    
+    .pagination-btn.active {
+        font-weight: bold;
+    }
+}

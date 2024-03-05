@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>商品展示页面</title>
-    <link rel="stylesheet" href="css/shopstyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电商网页</title>
+    <link rel="stylesheet" href="css/shop_styles.css">
 </head>
 <body>
+    <nav id="navbar">
+        <button id="menu-btn">菜单</button>
+    </nav>
     <div id="container">
-        <!-- 遮罩层 -->
-        <div class="menu-mask" onclick="toggleMenu()"></div>
-        <!-- 菜单按钮 -->
-        <div class="menu-btn" onclick="toggleMenu()">☰</div>
-    
-        <div id="categories">
+        <div id="category-menu" class="side-menu">
+            <!-- 商品分类列表 -->
             <ul>
                 <li class="category">
                     箱包
@@ -20,7 +20,6 @@
                     <ul class="submenu">
                         <li>爱马仕</li>
                         <li>迪奥</li>
-                        
                     </ul>
                 </li>
                 <li class="category">
@@ -44,13 +43,15 @@
                 <!-- 其他分类... -->
             </ul>
         </div>
-        <div id="products">
-            <!-- 商品展示区，通过JavaScript动态填充 -->
-        </div>
-        <div id="pagination">
-            <!-- 分页按钮，通过JavaScript动态生成 -->
-        </div>
+        <main id="main-content">
+            <div id="products">
+                <!-- 在这里动态插入商品 -->
+            </div>
+            <div id="pagination">
+                <!-- 翻页按钮 -->
+            </div>
+        </main>
     </div>
-    <script src="javascript/shopscript.js"></script>
+    <script src="javascript/shop_script.js"></script>
 </body>
 </html>

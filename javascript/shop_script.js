@@ -1,29 +1,19 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const sideMenu = document.getElementById('category-menu');
+
+    // 切换侧滑菜单的显示和隐藏
+    menuBtn.addEventListener('click', () => {
+        sideMenu.style.left = sideMenu.style.left === '0px' ? '-100%' : '0px';
+    });
+});
+
 document.addEventListener("DOMContentLoaded", function() {
     // 初始化商品展示
     fetchProducts();
     // 初始化分页按钮
     setupPagination();
-
-    // 绑定菜单按钮的点击事件
-    var menuButton = document.querySelector('.menu-btn');
-    if (menuButton) {
-        menuButton.addEventListener('click', toggleMenu);
-    }
 });
-
-function toggleMenu() {
-    var categories = document.getElementById('categories');
-    var mask = document.querySelector('.menu-mask');
-    
-    // 切换分类列表的显示状态
-    if (categories.classList.contains('active')) {
-        categories.classList.remove('active');
-        mask.classList.remove('active');
-    } else {
-        categories.classList.add('active');
-        mask.classList.add('active');
-    }
-}
 
 // 修改已有的 toggleSubmenu 函数以适应小屏幕
 function toggleSubmenu(arrow) {
@@ -56,7 +46,7 @@ function fetchProducts(page) {
       .catch(error => {
         console.error('There has been a problem with your fetch operation:', error);
       });
-  }
+}
 
 function updateProductsDisplay(products) {
     let productsContainer = document.getElementById('products');
