@@ -1,73 +1,78 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-<meta charset="UTF-8">
-<title>News Navigation</title>
-<style>
-    .nav-bar {
-        background-color: orange;
-        padding: 10px 0;
-        text-align: center;
-    }
-    .nav-item {
-        color: black;
-        text-decoration: none;
-        padding: 0 10px;
-        font-weight: bold;
-    }
-    .nav-item.active {
-        color: white;
-    }
-</style>
+    <meta charset="UTF-8">
+    <title>News Navigation</title>
+    <style>
+        .nav-bar {
+            background-color: orange;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .nav-item {
+            color: black;
+            text-decoration: none;
+            padding: 0 10px;
+            font-weight: bold;
+        }
+
+        .nav-item.active {
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="nav-bar">
-    <a href="javascript:void(0);" class="nav-item active" onclick="loadContent('technologyreview', this)">MIT TechnologyReview</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('economist', this)">The Economist</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('wsj', this)">The Wall Street Journal</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('nytimes', this)">The New York Times</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('ft', this)">Financial Times</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('nikkei', this)">Nikkei</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('bloomberg', this)">Bloomberg</a> |
-    <a href="javascript:void(0);" class="nav-item" onclick="loadContent('hbr', this)">Harvard business review</a>
-</div>
+    <div class="nav-bar">
+        <a href="javascript:void(0);" class="nav-item active" onclick="loadContent('technologyreview', this)">MIT
+            TechnologyReview</a> |
+        <a href="javascript:void(0);" class="nav-item" onclick="loadContent('economist', this)">The Economist</a> |
+        <a href="javascript:void(0);" class="nav-item" onclick="loadContent('nytimes', this)">The New York Times</a> |
+        <a href="javascript:void(0);" class="nav-item" onclick="loadContent('ft', this)">Financial Times</a> |
+        <a href="javascript:void(0);" class="nav-item" onclick="loadContent('nikkei', this)">Nikkei</a> |
+        <a href="javascript:void(0);" class="nav-item" onclick="loadContent('bloomberg', this)">Bloomberg</a> |
+        <a href="javascript:void(0);" class="nav-item" onclick="loadContent('hbr', this)">Harvard business review</a>
+    </div>
 
-<div id="content" style="margin-top: 20px;">
-    <!-- 这里将显示点击导航条后的内容 -->
-</div>
+    <div id="content" style="margin-top: 20px;">
+        <!-- 这里将显示点击导航条后的内容 -->
+    </div>
 
-<script>
-function loadContent(site, element) {
-    // 移除所有的active类，并添加给当前点击的项
-    var items = document.getElementsByClassName('nav-item');
-    for (var i = 0; i < items.length; i++) {
-        items[i].classList.remove('active');
-    }
-    // 如果element存在，则将active类添加到该元素上，否则默认为第一个元素
-    if (element) {
-        element.classList.add('active');
-    } else {
-        items[0].classList.add('active');
-    }
+    <script>
+        function loadContent(site, element) {
+            // 移除所有的active类，并添加给当前点击的项
+            var items = document.getElementsByClassName('nav-item');
+            for (var i = 0; i < items.length; i++) {
+                items[i].classList.remove('active');
+            }
+            // 如果element存在，则将active类添加到该元素上，否则默认为第一个元素
+            if (element) {
+                element.classList.add('active');
+            } else {
+                items[0].classList.add('active');
+            }
 
-    // 使用XMLHttpRequest来加载对应的html文件
-    var xhr = new XMLHttpRequest();
-    var url = '/news/' + site + '.html'; // 注意这里的路径需要与你的服务器结构相匹配
-    xhr.open('GET', url, true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            document.getElementById('content').innerHTML = xhr.responseText;
+            // 使用XMLHttpRequest来加载对应的html文件
+            var xhr = new XMLHttpRequest();
+            var url = '/news/' + site + '.html'; // 注意这里的路径需要与你的服务器结构相匹配
+            xhr.open('GET', url, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById('content').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
         }
-    };
-    xhr.send();
-}
 
-// 页面加载时，自动加载默认的html文件
-window.onload = function() {
-    loadContent('technologyreview', null); // 修改这里，传递null作为第二个参数
-};
+        // 页面加载时，自动加载默认的html文件
+        window.onload = function () {
+            loadContent('technologyreview', null); // 修改这里，传递null作为第二个参数
+        };
 
-</script>
+    </script>
 </body>
+
 </html>
