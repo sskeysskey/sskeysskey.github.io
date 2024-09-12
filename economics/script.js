@@ -84,8 +84,16 @@ function searchCategory(items, keywordsArray, category) {
 
         // 使用模糊匹配进行symbol匹配
         const symbolMatch = keywordsArray.some(k => levenshteinDistance(item.symbol.toLowerCase(), k) <= 1);
-        const nameMatch = keywordsArray.some(k => item.name && item.name.toLowerCase().includes(k));
-        const tagMatch = keywordsArray.some(k => item.tag.some(tag => tag.toLowerCase().includes(k)));
+        const nameMatch = keywordsArray.some(k =>
+            levenshteinDistance(item.name ? item.name.toLowerCase() : '', k) <= 1 ||
+            (item.name ? item.name.toLowerCase().includes(k) : false)
+        );
+        // Tag 匹配：使用 Levenshtein 距离或者检查部分匹配
+        const tagMatch = keywordsArray.some(k =>
+            item.tag.some(tag =>
+                levenshteinDistance(tag.toLowerCase(), k) <= 1 || tag.toLowerCase().includes(k)
+            )
+        );
 
         // 如果symbol匹配，将name和tag一起显示
         if (symbolMatch) {

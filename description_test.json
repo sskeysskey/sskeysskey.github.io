@@ -1,0 +1,23 @@
+[
+    {
+        "symbol": "HST",
+        "name": "Host Hotels & Resorts",
+        "tag": [
+            "高端酒店度假村房地产投资信托",
+            "万豪希尔顿凯悦"
+        ],
+        "description1": "**Host Hotels & Resorts, Inc. (HST)**",
+        "description2": "其投资组合包含了许多知名品牌的酒店，例如万豪（Marriott）、希尔顿（Hilton）、凯悦（Hyatt）等"
+    },
+    {
+        "symbol": "HLT",
+        "name": "Hilton",
+        "tag": [
+            "希尔顿",
+            "酒店",
+            "度假村"
+        ],
+        "description1": " **HLT** 是 **希尔顿酒店集团（Hilton Worldwide Holdings Inc.）** 的股票代码",
+        "description2": "HLT是希尔顿全球控股有限公司（Hilton Worldwide Holdings, Inc.）的股票代码，"
+    }
+]
