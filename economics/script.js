@@ -1,3 +1,8 @@
+// 页面加载完成后自动聚焦输入框
+window.onload = function () {
+    document.getElementById('searchInput').focus();
+};
+
 // JSON文件路径
 const jsonPath = "description.json";
 
@@ -60,10 +65,10 @@ async function startSearch() {
 
     displayResults('Stock_tag', matchedStocks.tag);
     displayResults('ETF_tag', matchedETFs.tag);
-    displayResults('Stock_symbol', matchedStocks.symbol);
-    displayResults('ETF_symbol', matchedETFs.symbol);
     displayResults('Stock_name', matchedStocks.name);
     displayResults('ETF_name', matchedETFs.name);
+    displayResults('Stock_symbol', matchedStocks.symbol);
+    displayResults('ETF_symbol', matchedETFs.symbol);
     displayResults('Stock_Description', matchedStocks.description);
     displayResults('ETFs_Description', matchedETFs.description);
 
@@ -73,46 +78,58 @@ async function startSearch() {
 // 搜索特定类别
 function searchCategory(items, keywordsArray, category) {
     const results = {
-        tag: [],
-        name: [],
-        symbol: [],
-        description: []
+        tag: { exact: [], partial: [], fuzzy: [] },
+        name: { exact: [], partial: [], fuzzy: [] },
+        symbol: { exact: [], partial: [], fuzzy: [] },
+        description: { exact: [], partial: [], fuzzy: [] }
     };
 
     items.forEach(item => {
         const descriptionText = (item.description1 + ' ' + item.description2).toLowerCase();
 
         // 使用模糊匹配进行symbol匹配
-        const symbolMatch = keywordsArray.some(k => levenshteinDistance(item.symbol.toLowerCase(), k) <= 1);
-        const nameMatch = keywordsArray.some(k =>
-            levenshteinDistance(item.name ? item.name.toLowerCase() : '', k) <= 1 ||
-            (item.name ? item.name.toLowerCase().includes(k) : false)
-        );
-        // Tag 匹配：使用 Levenshtein 距离或者检查部分匹配
-        const tagMatch = keywordsArray.some(k =>
-            item.tag.some(tag =>
-                levenshteinDistance(tag.toLowerCase(), k) <= 1 || tag.toLowerCase().includes(k)
-            )
-        );
+        const symbolExactMatch = keywordsArray.some(k => item.symbol.toLowerCase() === k);
+        const symbolPartialMatch = keywordsArray.some(k => item.symbol.toLowerCase().includes(k));
+        const symbolFuzzyMatch = keywordsArray.some(k => levenshteinDistance(item.symbol.toLowerCase(), k) <= 1);
 
-        // 如果symbol匹配，将name和tag一起显示
-        if (symbolMatch) {
-            results.symbol.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+        const nameExactMatch = keywordsArray.some(k => item.name && item.name.toLowerCase() === k);
+        const namePartialMatch = keywordsArray.some(k => item.name && item.name.toLowerCase().includes(k));
+        const nameFuzzyMatch = keywordsArray.some(k => item.name && levenshteinDistance(item.name.toLowerCase(), k) <= 1);
+
+        const tagExactMatch = keywordsArray.some(k => item.tag.some(tag => tag.toLowerCase() === k));
+        const tagPartialMatch = keywordsArray.some(k => item.tag.some(tag => tag.toLowerCase().includes(k)));
+        const tagFuzzyMatch = keywordsArray.some(k => item.tag.some(tag => levenshteinDistance(tag.toLowerCase(), k) <= 1));
+
+        // Symbol结果分类
+        if (symbolExactMatch) {
+            results.symbol.exact.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+        } else if (symbolPartialMatch) {
+            results.symbol.partial.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+        } else if (symbolFuzzyMatch) {
+            results.symbol.fuzzy.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
         }
 
-        // 如果description匹配
+        // Name结果分类
+        if (nameExactMatch) {
+            results.name.exact.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+        } else if (namePartialMatch) {
+            results.name.partial.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+        } else if (nameFuzzyMatch) {
+            results.name.fuzzy.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+        }
+
+        // Tag结果分类
+        if (tagExactMatch) {
+            results.tag.exact.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+        } else if (tagPartialMatch) {
+            results.tag.partial.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+        } else if (tagFuzzyMatch) {
+            results.tag.fuzzy.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+        }
+
+        // Description匹配
         if (keywordsArray.every(k => descriptionText.includes(k))) {
-            results.description.push(`${item.symbol} - ${item.name || ''} - ${item.tag.join(', ')}`);
-        }
-
-        // 如果name匹配，将symbol和tag一起显示
-        if (nameMatch) {
-            results.name.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
-        }
-
-        // 如果tag匹配，将symbol和name一起显示
-        if (tagMatch) {
-            results.tag.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+            results.description.exact.push(`${item.symbol} - ${item.name || ''} - ${item.tag.join(', ')}`);
         }
     });
 
@@ -122,13 +139,20 @@ function searchCategory(items, keywordsArray, category) {
 // 显示搜索结果
 function displayResults(category, results) {
     const resultsContainer = document.getElementById('results');
-    if (results.length > 0) {
+    if (
+        results.exact.length > 0 ||
+        results.partial.length > 0 ||
+        results.fuzzy.length > 0
+    ) {
         const categoryElement = document.createElement('div');
         categoryElement.className = 'result-category';
         categoryElement.textContent = category;
         resultsContainer.appendChild(categoryElement);
 
-        results.forEach(result => {
+        // 按顺序合并结果
+        const combinedResults = [...results.exact, ...results.partial, ...results.fuzzy];
+
+        combinedResults.forEach(result => {
             const resultElement = document.createElement('div');
             resultElement.className = 'result-item';
             resultElement.textContent = result;
