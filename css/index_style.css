@@ -1,131 +1,235 @@
-html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-image: url('../images/background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --header-height: 60px;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
 body {
-    font-family: Arial, sans-serif;
     height: 100%;
-    margin: 0;
-    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-/* 适配大屏幕设备 */
-@media only screen and (min-width: 601px) {
-    /* ...保持现有样式不变... */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 
 header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
     display: flex;
-    flex-wrap: nowrap; /* 不允许换行，确保所有元素在一行显示 */
-    justify-content: space-between; /* 两端对齐 */
+    flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 10px 0;
 }
 
 #logo {
-    height: 50px;
-    flex: 0 0 auto;
-    max-width: 200px; /* 添加一个最大宽度 */
-    width: auto; /* 保持宽度与高度的比例 */
-    margin-right: 80px;
-    margin-left: 10px;
-    margin-top: 10px;
+    height: 40px;
+    width: auto;
+    margin-bottom: 10px;
 }
 
 nav {
     display: flex;
-    gap: 50px;
-    margin-top: 5px;
-    flex: 1; /* 让导航栏占据剩余空间 */
-    justify-content: space-around;
-    /* 移除order: 2; 如果我们不需要调整DOM的视觉顺序 */ 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 nav a {
     text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* 添加黑色的文本阴影 */
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
 }
 
 nav a:hover {
-    text-decoration: underline;
-    color: #ddd;
+    color: var(--primary-color);
+}
+
+nav a i {
+    margin-right: 5px;
 }
 
 #buttons {
     display: flex;
-    gap: 20px;
-    justify-content: flex-end; /* 改变对齐方式为右对齐 */
-    flex: 100%;
+    gap: 10px;
 }
 
 .button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 20px;
     text-decoration: none;
-    background-color: #4CAF50;
-    color: white;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.button:first-child {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.button:last-child {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 main {
+    padding-top: calc(var(--header-height) + 60px);
+    min-height: calc(100vh - var(--header-height));
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: calc(100vh - 140px);
-    font-size: 2em;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
+    justify-content: center;
 }
 
-/* Responsive styles */
-/* 适配小屏幕设备 */
-@media only screen and (max-width: 600px) {
-    header {
-        padding: 5px;
+.hero {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.greeting {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* 桌面端样式 */
+@media (min-width: 768px) {
+    :root {
+        --header-height: 70px;
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: center;
+        /* 将整个header内容居中 */
+        padding: 0;
+        height: var(--header-height);
     }
 
     #logo {
-        margin-left: auto;
-        margin-right: auto;
-        order: 0;
+        margin-bottom: 0;
+        margin-right: 20px;
+        /* 为logo添加一些右侧间距 */
     }
 
     nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        order: 1;
+        flex-grow: 0;
+        /* 防止nav自动扩展 */
     }
 
     nav a {
-        padding: 10px;
-        text-align: center;
-        width: 100%;
-    }
-
-    #buttons {
-        flex-direction: column;
-        align-items: right;
-        order: 2;
+        font-size: 1em;
     }
 
     .button {
-        width: 100%;
-        box-sizing: border-box; /* 确保padding不会使按钮超出屏幕宽度 */
+        font-size: 1em;
     }
 
     main {
-        padding: 10px;
-        box-sizing: border-box; /* 处理padding对宽度的影响 */
+        padding-top: var(--header-height);
+    }
+
+    .hero {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .subtitle {
         font-size: 1.5em;
-        height: auto; /* 适应不同内容高度 */
+    }
+
+    .greeting {
+        font-size: 1.2em;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+    }
+}
+
+/* 大屏幕桌面端样式 */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 3.5em;
     }
 }

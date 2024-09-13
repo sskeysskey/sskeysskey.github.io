@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
 <head>
-    <title>Alex and Steven</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张小岩的个人网站</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/index_style.css">
     <link rel="icon" href="images/logo.png" type="image/x-icon">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
@@ -10,29 +13,35 @@
 
 <body>
     <header>
-        <img src="images/logo.png" alt="logo" id="logo">
-        <nav>
-            <a href="games.html">Games</a>
-            <a href="news.html">News</a>
-            <a href="economics/finance_comparison.html">Economics</a>
-            <a href="economics/search.html">Search</a>
-            <a href="books.html">Books</a>
-            <a href="tools.html">Tools</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <div id="buttons">
-            <a href="login.html" class="button">Login</a>
-            <a href="signup.html" class="button">Sign Up</a>
+        <div class="container">
+            <!-- <img src="images/logo.png" alt="logo" id="logo"> -->
+            <nav>
+                <a href="games.html"><i class="fas fa-gamepad"></i> 游戏</a>
+                <a href="news.html"><i class="fas fa-newspaper"></i> 新闻</a>
+                <a href="economics/finance_comparison.html"><i class="fas fa-chart-line"></i> 经济</a>
+                <a href="economics/search.html"><i class="fas fa-search"></i> 搜索</a>
+                <a href="books.html"><i class="fas fa-book"></i> 书籍</a>
+                <a href="tools.html"><i class="fas fa-tools"></i> 工具</a>
+                <!-- <a href="privacy.html"><i class="fas fa-user-shield"></i> 隐私</a> -->
+                <a href="contact.html"><i class="fas fa-envelope"></i> 联系我</a>
+            </nav>
+            <!-- <div id="buttons">
+                <a href="login.html" class="button">登录</a>
+                <a href="signup.html" class="button">注册</a>
+            </div> -->
         </div>
     </header>
     <main>
-        <h1>
-            <p>欢迎来到张小岩的网站</p>
-            <p>我是人大附西山的高一学生</p>
-            <p>很高兴认识你！</p>
-        </h1>
+        <div class="hero">
+            <h1>欢迎来到张小岩的网站</h1>
+            <p class="subtitle">我是人大附西山的高一学生</p>
+            <p class="greeting">很高兴认识你！</p>
+            <a href="#about" class="cta-button">了解更多</a>
+        </div>
     </main>
+    <footer>
+        <p>&copy; 2024 张小岩. 保留所有权利。</p>
+    </footer>
 </body>
 
 </html>
