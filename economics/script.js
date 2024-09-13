@@ -1,10 +1,12 @@
+console.log("Script loaded. Version: 1.0");
+
 // 页面加载完成后自动聚焦输入框
 window.onload = function () {
     document.getElementById('searchInput').focus();
 };
 
 // JSON文件路径
-const jsonPath = "description.json";
+const jsonPath = "sskeysskey.github.io/economics/description.json";
 
 // Levenshtein距离计算函数
 function levenshteinDistance(a, b) {
@@ -53,26 +55,35 @@ async function startSearch() {
     resultsContainer.innerHTML = '';
     loadingIndicator.style.display = 'block';
 
-    // 读取JSON文件
-    const response = await fetch(jsonPath);
-    const data = await response.json();
+    try {
+        // 读取JSON文件
+        const response = await fetch(jsonPath, { mode: 'cors' });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
 
-    const keywordsArray = keywords.split(/\s+/).map(k => k.toLowerCase());
+        const keywordsArray = keywords.split(/\s+/).map(k => k.toLowerCase());
 
-    // 搜索股票和ETF
-    const matchedStocks = searchCategory(data.stocks, keywordsArray, 'stocks');
-    const matchedETFs = searchCategory(data.etfs, keywordsArray, 'etfs');
+        // 搜索股票和ETF
+        const matchedStocks = searchCategory(data.stocks, keywordsArray, 'stocks');
+        const matchedETFs = searchCategory(data.etfs, keywordsArray, 'etfs');
 
-    displayResults('Stock_tag', matchedStocks.tag);
-    displayResults('ETF_tag', matchedETFs.tag);
-    displayResults('Stock_name', matchedStocks.name);
-    displayResults('ETF_name', matchedETFs.name);
-    displayResults('Stock_symbol', matchedStocks.symbol);
-    displayResults('ETF_symbol', matchedETFs.symbol);
-    displayResults('Stock_Description', matchedStocks.description);
-    displayResults('ETFs_Description', matchedETFs.description);
+        displayResults('Stock_tag', matchedStocks.tag);
+        displayResults('ETF_tag', matchedETFs.tag);
+        displayResults('Stock_name', matchedStocks.name);
+        displayResults('ETF_name', matchedETFs.name);
+        displayResults('Stock_symbol', matchedStocks.symbol);
+        displayResults('ETF_symbol', matchedETFs.symbol);
+        displayResults('Stock_Description', matchedStocks.description);
+        displayResults('ETFs_Description', matchedETFs.description);
 
-    loadingIndicator.style.display = 'none';
+    } catch (error) {
+        console.error("搜索出错:", error);
+        resultsContainer.innerHTML = `<div class="error">搜索时发生错误: ${error.message}</div>`;
+    } finally {
+        loadingIndicator.style.display = 'none';
+    }
 }
 
 // 搜索特定类别

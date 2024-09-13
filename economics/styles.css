@@ -62,3 +62,9 @@ button:disabled {
     text-decoration: underline;
     margin: 5px 0;
 }
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
