@@ -4,7 +4,7 @@ window.onload = function () {
 };
 
 // JSON文件路径
-const jsonPath = "description.json";
+const jsonPath = "economics/description.json";
 
 // Levenshtein距离计算函数
 function levenshteinDistance(a, b) {
