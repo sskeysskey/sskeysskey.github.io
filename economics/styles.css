@@ -31,6 +31,52 @@ input[type="text"] {
     border-radius: 4px;
 }
 
+.input-wrapper {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.clear-button {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    /* 增大字体大小 */
+    cursor: pointer;
+    color: #999;
+    padding: 5px;
+    /* 增加内边距 */
+    margin: 0;
+    width: 30px;
+    /* 设置固定宽度 */
+    height: 30px;
+    /* 设置固定高度 */
+    line-height: 1;
+    /* 确保垂直居中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    /* 使按钮呈圆形 */
+    transition: background-color 0.3s, color 0.3s;
+    /* 添加过渡效果 */
+}
+
+.clear-button:hover {
+    color: #333;
+    background-color: #f0f0f0;
+    /* 悬停时添加背景色 */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding-right: 40px;
+    /* 增加右侧内边距，为更大的按钮留出空间 */
+}
+
 button {
     padding: 10px 20px;
     font-size: 18px;

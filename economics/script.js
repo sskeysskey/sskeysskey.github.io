@@ -1,9 +1,38 @@
 console.log("Script loaded. Version: 1.0");
 
-// 页面加载完成后自动聚焦输入框
-window.onload = function () {
-    document.getElementById('searchInput').focus();
-};
+// 页面加载完成后的初始化函数
+function initializePage() {
+    const searchInput = document.getElementById('searchInput');
+    const clearButton = document.getElementById('clearButton');
+
+    // 自动聚焦输入框
+    searchInput.focus();
+
+    function toggleClearButton() {
+        clearButton.style.display = searchInput.value ? 'block' : 'none';
+    }
+
+    searchInput.addEventListener('input', toggleClearButton);
+
+    clearButton.addEventListener('click', function () {
+        searchInput.value = '';
+        toggleClearButton();
+        searchInput.focus();
+    });
+
+    // 初始化时检查一次
+    toggleClearButton();
+
+    // 监听回车按键进行搜索
+    searchInput.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            startSearch();
+        }
+    });
+}
+
+// 页面加载完成后执行初始化
+window.addEventListener('load', initializePage);
 
 // JSON文件路径
 const jsonPath = "description.json";

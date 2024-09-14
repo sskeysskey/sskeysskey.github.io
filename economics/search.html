@@ -13,7 +13,10 @@
     <div class="container">
         <h1>股票搜索</h1>
         <div class="input-container">
-            <input type="text" id="searchInput" placeholder="请输入要搜索的关键字" />
+            <div class="input-wrapper">
+                <input type="text" id="searchInput" placeholder="请输入要搜索的关键字" />
+                <button id="clearButton" class="clear-button" style="display: none;">&times;</button>
+            </div>
             <button id="searchButton" onclick="startSearch()">搜索</button>
         </div>
 
