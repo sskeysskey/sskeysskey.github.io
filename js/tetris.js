@@ -139,6 +139,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function setupMobileControls() {
         let touchStartX, touchStartY;
+        let lastMoveTime = 0;
+        const moveThreshold = 30; // 移动阈值（像素）
+        const moveInterval = 150; // 移动间隔（毫秒）
 
         canvas.addEventListener('touchstart', (e) => {
             if (!isGameRunning) return;
@@ -149,26 +152,37 @@ document.addEventListener('DOMContentLoaded', () => {
         canvas.addEventListener('touchmove', (e) => {
             if (!isGameRunning) return;
             e.preventDefault();
+            const currentTime = Date.now();
+            if (currentTime - lastMoveTime < moveInterval) return;
+
             const touchEndX = e.touches[0].clientX;
             const touchEndY = e.touches[0].clientY;
             const dx = touchEndX - touchStartX;
             const dy = touchEndY - touchStartY;
 
-            if (Math.abs(dx) > Math.abs(dy)) {
+            if (Math.abs(dx) > moveThreshold) {
                 if (dx > 0) {
                     movePiece(1, 0);
                 } else {
                     movePiece(-1, 0);
                 }
-            } else if (dy > 0) {
-                dropPiece();
+                touchStartX = touchEndX;
+                lastMoveTime = currentTime;
             }
-
-            touchStartX = touchEndX;
-            touchStartY = touchEndY;
         });
 
-        canvas.addEventListener('click', rotatePiece);
+        canvas.addEventListener('touchend', (e) => {
+            if (!isGameRunning) return;
+            const touchEndY = e.changedTouches[0].clientY;
+            const canvasRect = canvas.getBoundingClientRect();
+            const pieceBottom = (currentPiece.y + currentPiece.shape.length) * blockSize + canvasRect.top;
+
+            if (touchEndY > pieceBottom) {
+                dropPiece();
+            } else {
+                rotatePiece();
+            }
+        });
     }
 
     function updateGhostPiece() {
