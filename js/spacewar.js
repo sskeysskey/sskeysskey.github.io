@@ -5,6 +5,27 @@ document.addEventListener('DOMContentLoaded', () => {
     let gameLoop, enemyInterval;
     let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     let isGameRunning = false;
+    let images = {};
+    const IMAGE_PATH = 'images/game/';  // 新增：定义图片路径
+
+    // 修改预加载图片函数
+    function loadImages() {
+        const imageNames = ['background', 'enemy', 'player_bullet', 'player'];
+        const loadPromises = imageNames.map(name => {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = () => resolve({ name, img });
+                img.onerror = reject;
+                img.src = `${IMAGE_PATH}${name}.png`;  // 修改：使用新的图片路径
+            });
+        });
+
+        return Promise.all(loadPromises).then(loadedImages => {
+            loadedImages.forEach(({ name, img }) => {
+                images[name] = img;
+            });
+        });
+    }
 
     function initGame() {
         canvas = document.createElement('canvas');
@@ -12,15 +33,23 @@ document.addEventListener('DOMContentLoaded', () => {
         spaceShooterGame.appendChild(canvas);
         ctx = canvas.getContext('2d');
 
+        // 设置固定的宽高比，适应手机屏幕
+        const aspectRatio = 9 / 16; // 更窄更高的比例
         canvas.width = spaceShooterGame.clientWidth;
-        canvas.height = spaceShooterGame.clientHeight;
+        canvas.height = canvas.width / aspectRatio;
+
+        // 确保 canvas 不会超出屏幕高度
+        if (canvas.height > window.innerHeight) {
+            canvas.height = window.innerHeight;
+            canvas.width = canvas.height * aspectRatio;
+        }
 
         player = {
-            x: canvas.width / 2,
-            y: canvas.height - 30,
-            width: 30,
-            height: 30,
-            speed: 5
+            x: canvas.width / 2 - 25, // 调整初始位置
+            y: canvas.height - 70,
+            width: 50,
+            height: 50,
+            speed: canvas.height / 100 // 根据画布高度调整速度
         };
 
         enemies = [];
@@ -33,42 +62,48 @@ document.addEventListener('DOMContentLoaded', () => {
             setupKeyboardControls();
         }
 
-        gameLoop = setInterval(update, 1000 / 60);
+        gameLoop = requestAnimationFrame(update);
         enemyInterval = setInterval(spawnEnemy, 2000);
         isGameRunning = true;
     }
 
     playButton.addEventListener('click', () => {
         if (!isGameRunning) {
-            initGame();
-            playButton.style.display = 'none'; // 隐藏开始按钮
+            loadImages().then(() => {
+                initGame();
+                playButton.style.display = 'none';
+            });
         }
     });
 
     function setupKeyboardControls() {
+        const keys = { ArrowLeft: false, ArrowRight: false, ArrowUp: false, ArrowDown: false, KeyA: false, KeyD: false, KeyW: false, KeyS: false };
+
         document.addEventListener('keydown', (e) => {
-            switch (e.key) {
-                case 'ArrowLeft':
-                case 'a':
-                    player.x -= player.speed;
-                    break;
-                case 'ArrowRight':
-                case 'd':
-                    player.x += player.speed;
-                    break;
-                case 'ArrowUp':
-                case 'w':
-                    player.y -= player.speed;
-                    break;
-                case 'ArrowDown':
-                case 's':
-                    player.y += player.speed;
-                    break;
-                case 'j':
-                    fireBullet();
-                    break;
+            if (keys.hasOwnProperty(e.code)) {
+                keys[e.code] = true;
+            } else if (e.code === 'Space' || e.code === 'KeyJ') {
+                fireBullet();
             }
         });
+
+        document.addEventListener('keyup', (e) => {
+            if (keys.hasOwnProperty(e.code)) {
+                keys[e.code] = false;
+            }
+        });
+
+        function updatePlayerPosition() {
+            if (keys.ArrowLeft || keys.KeyA) player.x -= player.speed;
+            if (keys.ArrowRight || keys.KeyD) player.x += player.speed;
+            if (keys.ArrowUp || keys.KeyW) player.y -= player.speed;
+            if (keys.ArrowDown || keys.KeyS) player.y += player.speed;
+
+            player.x = Math.max(0, Math.min(canvas.width - player.width, player.x));
+            player.y = Math.max(0, Math.min(canvas.height - player.height, player.y));
+        }
+
+        return updatePlayerPosition;
     }
 
     function setupMobileControls() {
@@ -84,43 +119,48 @@ document.addEventListener('DOMContentLoaded', () => {
             const touchEndX = e.touches[0].clientX;
             const touchEndY = e.touches[0].clientY;
 
-            player.x += touchEndX - touchStartX;
-            player.y += touchEndY - touchStartY;
+            player.x += (touchEndX - touchStartX) * 1.5;  // 提高灵敏度
+            player.y += (touchEndY - touchStartY) * 1.5;
+
+            player.x = Math.max(0, Math.min(canvas.width - player.width, player.x));
+            player.y = Math.max(0, Math.min(canvas.height - player.height, player.y));
 
             touchStartX = touchEndX;
             touchStartY = touchEndY;
         });
+
+        return () => { };  // 移动设备不需要额外的更新函数
     }
 
     function spawnEnemy() {
         const enemy = {
             x: Math.random() * (canvas.width - 30),
-            y: 0,
-            width: 30,
-            height: 30,
-            speed: 2
+            y: -30,
+            width: canvas.width / 10, // 根据画布宽度调整大小
+            height: canvas.width / 10,
+            speed: canvas.height / 200 + Math.random() * (canvas.height / 200) // 根据画布高度调整速度
         };
         enemies.push(enemy);
     }
 
+    // 在 fireBullet 函数中调整子弹的大小和速度
     function fireBullet() {
         const bullet = {
-            x: player.x + player.width / 2,
+            x: player.x + player.width / 2 - canvas.width / 200,
             y: player.y,
-            width: 5,
-            height: 10,
-            speed: 7
+            width: canvas.width / 100,
+            height: canvas.height / 40,
+            speed: canvas.height / 50 // 根据画布高度调整速度
         };
         bullets.push(bullet);
     }
 
     function update() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(images.background, 0, 0, canvas.width, canvas.height);
 
-        // Update and draw player
+        updatePlayerPosition();
         drawPlayer();
 
-        // Update and draw enemies
         enemies.forEach((enemy, index) => {
             enemy.y += enemy.speed;
             drawEnemy(enemy);
@@ -131,10 +171,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (collision(player, enemy)) {
                 gameOver();
+                return;
             }
         });
 
-        // Update and draw bullets
         bullets.forEach((bullet, index) => {
             bullet.y -= bullet.speed;
             drawBullet(bullet);
@@ -152,29 +192,33 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Draw score
-        ctx.fillStyle = '#000';
-        ctx.font = '20px Arial';
-        ctx.fillText('得分: ' + score, 10, 30);
+        drawScore();
 
-        if (isMobile) {
+        if (isMobile && Math.random() < 0.1) {
             fireBullet();
+        }
+
+        if (isGameRunning) {
+            gameLoop = requestAnimationFrame(update);
         }
     }
 
     function drawPlayer() {
-        ctx.fillStyle = '#00F';
-        ctx.fillRect(player.x, player.y, player.width, player.height);
+        ctx.drawImage(images.player, player.x, player.y, player.width, player.height);
     }
 
     function drawEnemy(enemy) {
-        ctx.fillStyle = '#F00';
-        ctx.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
+        ctx.drawImage(images.enemy, enemy.x, enemy.y, enemy.width, enemy.height);
     }
 
     function drawBullet(bullet) {
-        ctx.fillStyle = '#0F0';
-        ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+        ctx.drawImage(images.player_bullet, bullet.x, bullet.y, bullet.width, bullet.height);
+    }
+
+    function drawScore() {
+        ctx.fillStyle = '#FFF';
+        ctx.font = 'bold 20px Arial';
+        ctx.fillText('得分: ' + score, 10, 30);
     }
 
     function collision(rect1, rect2) {
@@ -185,9 +229,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function gameOver() {
-        clearInterval(gameLoop);
+        cancelAnimationFrame(gameLoop);
         clearInterval(enemyInterval);
         isGameRunning = false;
-        playButton.style.display = 'block'; // 重新显示开始按钮
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#FFF';
+        ctx.font = 'bold 40px Arial';
+        ctx.fillText('游戏结束', canvas.width / 2 - 80, canvas.height / 2);
+        ctx.font = 'bold 20px Arial';
+        ctx.fillText('点击开始按钮重新开始', canvas.width / 2 - 100, canvas.height / 2 + 40);
+        playButton.style.display = 'block'; // 确保这行代码存在
+        playButton.style.position = 'absolute';
+        playButton.style.left = '50%';
+        playButton.style.top = '70%';
+        playButton.style.transform = 'translate(-50%, -50%)';
     }
+
+    const updatePlayerPosition = isMobile ? setupMobileControls() : setupKeyboardControls();
 });
