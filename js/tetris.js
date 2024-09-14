@@ -143,13 +143,16 @@ document.addEventListener('DOMContentLoaded', () => {
         let lastMoveTime = 0;
         const moveThreshold = 20;
         const moveInterval = 100;
+        const dropThreshold = 10; // 新增：下落阈值，设置得更小以增加敏感度
         let hasMoved = false;
+        let hasDropped = false; // 新增：用于跟踪是否已经触发了下落
 
         canvas.addEventListener('touchstart', (e) => {
             if (!isGameRunning) return;
             touchStartX = e.touches[0].clientX;
             touchStartY = e.touches[0].clientY;
             hasMoved = false;
+            hasDropped = false; // 重置下落状态
         });
 
         canvas.addEventListener('touchmove', (e) => {
@@ -174,11 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 hasMoved = true;
             }
 
-            if (dy > moveThreshold) {
+            if (dy > dropThreshold && !hasDropped) { // 使用新的 dropThreshold
                 movePiece(0, 1);
                 touchStartY = touchEndY;
                 lastMoveTime = currentTime;
                 hasMoved = true;
+                hasDropped = true; // 标记已经触发了下落
             }
         });
 
@@ -187,14 +191,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const touchEndY = e.changedTouches[0].clientY;
             const dy = touchEndY - touchStartY;
 
-            if (Math.abs(dy) > moveThreshold * 3) {
+            if (dy > dropThreshold * 3) { // 仍然保留快速下落的功能
                 dropPiece();
             } else if (!hasMoved) {
                 rotatePiece();
             }
 
-            // 重置移动标志
+            // 重置标志
             hasMoved = false;
+            hasDropped = false;
         });
     }
 
