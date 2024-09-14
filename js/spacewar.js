@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const playButton = spaceShooterGame.querySelector('.play-button');
     let canvas, ctx, player, enemies, bullets, score;
     let gameLoop, enemyInterval;
-    let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     let isGameRunning = false;
     let images = {};
+    let isMobile = false;
     const IMAGE_PATH = 'images/game/';  // 新增：定义图片路径
 
     // 修改预加载图片函数
@@ -33,16 +33,29 @@ document.addEventListener('DOMContentLoaded', () => {
         spaceShooterGame.appendChild(canvas);
         ctx = canvas.getContext('2d');
 
-        // 设置固定的宽高比，适应手机屏幕
-        const aspectRatio = 9 / 16; // 更窄更高的比例
-        canvas.width = spaceShooterGame.clientWidth;
-        canvas.height = canvas.width / aspectRatio;
+        // 检测是否为移动设备
+        isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-        // 确保 canvas 不会超出屏幕高度
-        if (canvas.height > window.innerHeight) {
-            canvas.height = window.innerHeight;
-            canvas.width = canvas.height * aspectRatio;
+        if (isMobile) {
+            // 移动设备上使用窄高型布局
+            const aspectRatio = 9 / 16;
+            canvas.width = spaceShooterGame.clientWidth;
+            canvas.height = canvas.width / aspectRatio;
+
+            // 确保 canvas 不会超出屏幕高度
+            if (canvas.height > window.innerHeight) {
+                canvas.height = window.innerHeight;
+                canvas.width = canvas.height * aspectRatio;
+            }
+        } else {
+            // 桌面设备上使用更宽的布局
+            const aspectRatio = 4 / 3;
+            canvas.width = Math.min(spaceShooterGame.clientWidth, window.innerWidth * 0.8);
+            canvas.height = canvas.width / aspectRatio;
         }
+
+        // 调整游戏元素大小和位置
+        adjustGameElements();
 
         player = {
             x: canvas.width / 2 - 25, // 调整初始位置
@@ -67,12 +80,56 @@ document.addEventListener('DOMContentLoaded', () => {
         isGameRunning = true;
     }
 
+    function adjustGameElements() {
+        const scaleFactor = canvas.width / 800; // 假设原始设计基于 800px 宽度
+
+        player = {
+            x: canvas.width / 2 - 25 * scaleFactor,
+            y: canvas.height - 70 * scaleFactor,
+            width: 50 * scaleFactor,
+            height: 50 * scaleFactor,
+            speed: 5 * scaleFactor
+        };
+
+        // 调整子弹大小和速度的函数
+        fireBullet = () => {
+            const bullet = {
+                x: player.x + player.width / 2 - 2.5 * scaleFactor,
+                y: player.y,
+                width: 5 * scaleFactor,
+                height: 15 * scaleFactor,
+                speed: 7 * scaleFactor
+            };
+            bullets.push(bullet);
+        };
+
+        // 调整敌人生成函数
+        spawnEnemy = () => {
+            const enemy = {
+                x: Math.random() * (canvas.width - 30 * scaleFactor),
+                y: -30 * scaleFactor,
+                width: 30 * scaleFactor,
+                height: 30 * scaleFactor,
+                speed: (2 + Math.random() * 2) * scaleFactor
+            };
+            enemies.push(enemy);
+        };
+    }
+
     playButton.addEventListener('click', () => {
         if (!isGameRunning) {
             loadImages().then(() => {
                 initGame();
                 playButton.style.display = 'none';
             });
+        }
+    });
+
+    // 添加窗口大小变化监听
+    window.addEventListener('resize', () => {
+        initGame();
+        if (!isGameRunning) {
+            gameOver();
         }
     });
 
@@ -235,11 +292,12 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = '#FFF';
-        ctx.font = 'bold 40px Arial';
-        ctx.fillText('游戏结束', canvas.width / 2 - 80, canvas.height / 2);
-        ctx.font = 'bold 20px Arial';
-        ctx.fillText('点击开始按钮重新开始', canvas.width / 2 - 100, canvas.height / 2 + 40);
-        playButton.style.display = 'block'; // 确保这行代码存在
+        ctx.font = `bold ${20 * canvas.width / 800}px Arial`;
+        ctx.textAlign = 'center';
+        ctx.fillText('游戏结束', canvas.width / 2, canvas.height / 2);
+        ctx.font = `bold ${14 * canvas.width / 800}px Arial`;
+        ctx.fillText('点击开始按钮重新开始', canvas.width / 2, canvas.height / 2 + 30 * canvas.width / 800);
+        playButton.style.display = 'block';
         playButton.style.position = 'absolute';
         playButton.style.left = '50%';
         playButton.style.top = '70%';
