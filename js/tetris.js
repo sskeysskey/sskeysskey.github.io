@@ -141,13 +141,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function setupMobileControls() {
         let touchStartX, touchStartY;
         let lastMoveTime = 0;
-        const moveThreshold = 20; // 降低移动阈值
-        const moveInterval = 100; // 降低移动间隔
+        const moveThreshold = 20;
+        const moveInterval = 100;
+        let hasMoved = false;
 
         canvas.addEventListener('touchstart', (e) => {
             if (!isGameRunning) return;
             touchStartX = e.touches[0].clientX;
             touchStartY = e.touches[0].clientY;
+            hasMoved = false;
         });
 
         canvas.addEventListener('touchmove', (e) => {
@@ -169,12 +171,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 touchStartX = touchEndX;
                 lastMoveTime = currentTime;
+                hasMoved = true;
             }
 
             if (dy > moveThreshold) {
                 movePiece(0, 1);
                 touchStartY = touchEndY;
                 lastMoveTime = currentTime;
+                hasMoved = true;
             }
         });
 
@@ -183,11 +187,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const touchEndY = e.changedTouches[0].clientY;
             const dy = touchEndY - touchStartY;
 
-            if (Math.abs(dy) > moveThreshold * 3) { // 大幅下滑才触发快速下落
+            if (Math.abs(dy) > moveThreshold * 3) {
                 dropPiece();
-            } else {
+            } else if (!hasMoved) {
                 rotatePiece();
             }
+
+            // 重置移动标志
+            hasMoved = false;
         });
     }
 
