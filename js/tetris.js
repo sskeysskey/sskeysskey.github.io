@@ -144,10 +144,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const moveThreshold = 10; // 减小移动阈值，使移动更敏感
         const moveInterval = 50; // 缩短移动间隔时间，使移动更快
         const dropThreshold = 5; // 减小下落阈值，使下落更敏感
+        const dropInterval = 0; // 添加下落间隔时间，防止过快下落
         let hasMoved = false;
         let hasDropped = false;
         let lastDropTime = 0;
-        const dropInterval = 50; // 添加下落间隔时间，防止过快下落
 
         canvas.addEventListener('touchstart', (e) => {
             if (!isGameRunning) return;
@@ -394,12 +394,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function gameOver() {
         clearInterval(gameInterval);
-        alert('游戏结束！得分：' + score);
         isGameRunning = false;
-        playButton.style.display = 'block';
+
+        // 调用 draw() 以更新画面并显示游戏结束的文字
+        draw();
+
+        // 在画布上绘制半透明的黑色遮罩
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // 设置文本样式
+        ctx.fillStyle = 'white';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+
+        // 绘制"游戏结束"文字
+        ctx.font = 'bold 40px Arial';
+        ctx.fillText('游戏结束', canvas.width / 2, canvas.height / 2 - 40);
+
+        // 绘制得分
+        ctx.font = '30px Arial';
+        ctx.fillText('得分: ' + score, canvas.width / 2, canvas.height / 2 + 20);
     }
 
     function draw() {
+        // 如果游戏已经结束，只绘制游戏结束画面，不再更新其他内容
+        if (!isGameRunning) {
+            // 这里可以只绘制游戏结束的内容，防止其他元素覆盖
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.font = 'bold 40px Arial';
+            ctx.fillText('游戏结束', canvas.width / 2, canvas.height / 2 - 40);
+
+            ctx.font = '30px Arial';
+            ctx.fillText('得分: ' + score, canvas.width / 2, canvas.height / 2 + 20);
+            return;
+        }
+
         // 清除画布
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -435,6 +470,11 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.font = '20px Arial';
         ctx.fillText('得分: ' + score, 10, 30);
 
+        // 绘制特效
+        drawEffects();
+    }
+
+    function drawEffects() {
         // 绘制闪光特效
         if (effects.flash.active) {
             const elapsed = Date.now() - effects.flash.startTime;
