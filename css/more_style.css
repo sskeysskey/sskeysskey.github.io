@@ -57,6 +57,13 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#search iframe {
+    width: 100%;
+    height: 900px;
+    border: none;
+    overflow: hidden;
+}
+
 section.active {
     display: block;
 }
