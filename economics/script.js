@@ -66,13 +66,6 @@ function levenshteinDistance(a, b) {
     return matrix[an][bn];
 }
 
-// 监听回车按键进行搜索
-document.getElementById('searchInput').addEventListener('keydown', function (event) {
-    if (event.key === 'Enter') {
-        startSearch();
-    }
-});
-
 // 执行搜索
 async function startSearch() {
     const keywords = document.getElementById('searchInput').value.toLowerCase().trim();
