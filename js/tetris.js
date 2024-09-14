@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let gameInterval;
     let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     let isGameRunning = false;
+    let isFullscreen = false;
 
     // 新增：特效状态管理
     let effects = {
@@ -26,6 +27,45 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         consecutiveQuads: 0 // 连续消除四行的计数
     };
+
+    function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(err => {
+                console.error(`Error attempting to enable fullscreen: ${err.message}`);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    }
+
+    document.addEventListener('fullscreenchange', () => {
+        isFullscreen = !!document.fullscreenElement;
+        if (isFullscreen) {
+            tetrisGame.style.position = 'fixed';
+            tetrisGame.style.top = '0';
+            tetrisGame.style.left = '0';
+            tetrisGame.style.width = '100%';
+            tetrisGame.style.height = '100%';
+        } else {
+            tetrisGame.style.position = '';
+            tetrisGame.style.top = '';
+            tetrisGame.style.left = '';
+            tetrisGame.style.width = '';
+            tetrisGame.style.height = '';
+        }
+        resizeGame();
+    });
+
+    function resizeGame() {
+        const gameWidth = tetrisGame.clientWidth;
+        const gameHeight = tetrisGame.clientHeight;
+        canvas.width = gameWidth;
+        canvas.height = gameHeight;
+        blockSize = Math.floor(gameWidth / width);
+        draw();
+    }
+
+    window.addEventListener('resize', resizeGame);
 
     function initGame() {
         canvas = document.createElement('canvas');
@@ -69,6 +109,25 @@ document.addEventListener('DOMContentLoaded', () => {
         // 居中画布
         canvas.style.display = 'block';
         canvas.style.margin = '0 auto';
+
+        if (isMobile) {
+            toggleFullscreen();
+            const exitButton = document.createElement('button');
+            exitButton.innerHTML = '❌';
+            exitButton.style.position = 'absolute';
+            exitButton.style.top = '10px';
+            exitButton.style.right = '10px';
+            exitButton.style.fontSize = '24px';
+            exitButton.style.background = 'none';
+            exitButton.style.border = 'none';
+            exitButton.style.color = 'white';
+            exitButton.addEventListener('click', () => {
+                document.exitFullscreen();
+            });
+            tetrisGame.appendChild(exitButton);
+        }
+
+        resizeGame();
 
         board = Array(height).fill().map(() => Array(width).fill(0));
         currentPiece = getRandomPiece();
@@ -140,8 +199,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function setupMobileControls() {
         let touchStartX, touchStartY;
         let lastMoveTime = 0;
-        const moveThreshold = 30; // 移动阈值（像素）
-        const moveInterval = 150; // 移动间隔（毫秒）
+        const moveThreshold = 20; // 降低移动阈值
+        const moveInterval = 100; // 降低移动间隔
 
         canvas.addEventListener('touchstart', (e) => {
             if (!isGameRunning) return;
@@ -169,15 +228,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 touchStartX = touchEndX;
                 lastMoveTime = currentTime;
             }
+
+            if (dy > moveThreshold) {
+                movePiece(0, 1);
+                touchStartY = touchEndY;
+                lastMoveTime = currentTime;
+            }
         });
 
         canvas.addEventListener('touchend', (e) => {
             if (!isGameRunning) return;
             const touchEndY = e.changedTouches[0].clientY;
-            const canvasRect = canvas.getBoundingClientRect();
-            const pieceBottom = (currentPiece.y + currentPiece.shape.length) * blockSize + canvasRect.top;
+            const dy = touchEndY - touchStartY;
 
-            if (touchEndY > pieceBottom) {
+            if (Math.abs(dy) > moveThreshold * 3) { // 大幅下滑才触发快速下落
                 dropPiece();
             } else {
                 rotatePiece();
