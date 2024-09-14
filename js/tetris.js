@@ -415,6 +415,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // 绘制得分
         ctx.font = '30px Arial';
         ctx.fillText('得分: ' + score, canvas.width / 2, canvas.height / 2 + 20);
+
+        // 绘制提示
+        ctx.font = 'bold 20px Arial';
+        ctx.fillText('点击刷新页面重新开始', canvas.width / 2, canvas.height / 2 + 60);
     }
 
     function draw() {
