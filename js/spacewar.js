@@ -194,11 +194,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function spawnEnemy() {
         const enemy = {
-            x: Math.random() * (canvas.width - 30),
-            y: -30,
-            width: canvas.width / 10, // 根据画布宽度调整大小
-            height: canvas.width / 10,
-            speed: canvas.height / 200 + Math.random() * (canvas.height / 200) // 根据画布高度调整速度
+            x: Math.random() * (canvas.width - player.width),  // 敌机生成位置
+            y: -player.height,  // 敌机从画布顶端生成
+            width: player.width,  // 敌机宽度与玩家一致
+            height: player.height,  // 敌机高度与玩家一致
+            speed: player.speed * (1 + Math.random() * 0.5)  // 敌机速度与玩家速度保持相似，增加一点随机性
         };
         enemies.push(enemy);
     }
