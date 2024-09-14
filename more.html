@@ -143,6 +143,17 @@
     <script src="js/navigation.js"></script>
     <script src="js/tetris.js"></script>
     <script src="js/spacewar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hash = window.location.hash;
+            if (hash) {
+                const targetNav = document.querySelector(`#main-nav a[href="${hash}"]`);
+                if (targetNav) {
+                    targetNav.click();
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
