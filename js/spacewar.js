@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const spaceShooterGame = document.getElementById('space-shooter-game');
-    const playButton = spaceShooterGame.querySelector('.play-button');
+    const spacewarGame = document.getElementById('spacewar-game');
+    const playButton = spacewarGame.querySelector('.play-button');
     let canvas, ctx, player, enemies, bullets, score;
     let gameLoop, enemyInterval;
     let isGameRunning = false;
     let images = {};
     let isMobile = false;
+    let backgroundY = 0;
+    const backgroundSpeed = 1;
     const IMAGE_PATH = 'images/game/';  // 新增：定义图片路径
 
     // 修改预加载图片函数
@@ -28,9 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function initGame() {
+        playButton.style.display = 'none';
         canvas = document.createElement('canvas');
-        spaceShooterGame.innerHTML = '';
-        spaceShooterGame.appendChild(canvas);
+        spacewarGame.innerHTML = '';
+        spacewarGame.appendChild(canvas);
         ctx = canvas.getContext('2d');
 
         // 检测是否为移动设备
@@ -39,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isMobile) {
             // 移动设备上使用窄高型布局
             const aspectRatio = 9 / 16;
-            canvas.width = spaceShooterGame.clientWidth;
+            canvas.width = spacewarGame.clientWidth;
             canvas.height = canvas.width / aspectRatio;
 
             // 确保 canvas 不会超出屏幕高度
@@ -50,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             // 桌面设备上使用更宽的布局
             const aspectRatio = 4 / 3;
-            canvas.width = Math.min(spaceShooterGame.clientWidth, window.innerWidth * 0.8);
+            canvas.width = Math.min(spacewarGame.clientWidth, window.innerWidth * 0.8);
             canvas.height = canvas.width / aspectRatio;
         }
 
@@ -106,10 +109,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // 调整敌人生成函数
         spawnEnemy = () => {
             const enemy = {
-                x: Math.random() * (canvas.width - 30 * scaleFactor),
-                y: -30 * scaleFactor,
-                width: 30 * scaleFactor,
-                height: 30 * scaleFactor,
+                x: Math.random() * (canvas.width - 50 * scaleFactor),
+                y: -50 * scaleFactor,
+                width: 50 * scaleFactor,
+                height: 50 * scaleFactor,
                 speed: (2 + Math.random() * 2) * scaleFactor
             };
             enemies.push(enemy);
@@ -213,7 +216,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function update() {
-        ctx.drawImage(images.background, 0, 0, canvas.width, canvas.height);
+        // 更新背景位置
+        backgroundY = (backgroundY + backgroundSpeed) % canvas.height;
+
+        // 绘制滚动背景
+        ctx.drawImage(images.background, 0, backgroundY, canvas.width, canvas.height);
+        ctx.drawImage(images.background, 0, backgroundY - canvas.height, canvas.width, canvas.height);
 
         updatePlayerPosition();
         drawPlayer();
@@ -292,16 +300,9 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = '#FFF';
-        ctx.font = `bold ${20 * canvas.width / 800}px Arial`;
-        ctx.textAlign = 'center';
-        ctx.fillText('游戏结束', canvas.width / 2, canvas.height / 2);
-        ctx.font = `bold ${14 * canvas.width / 800}px Arial`;
-        ctx.fillText('点击开始按钮重新开始', canvas.width / 2, canvas.height / 2 + 30 * canvas.width / 800);
-        playButton.style.display = 'block';
-        playButton.style.position = 'absolute';
-        playButton.style.left = '50%';
-        playButton.style.top = '70%';
-        playButton.style.transform = 'translate(-50%, -50%)';
+        ctx.font = 'bold 40px Arial';
+        ctx.fillText('游戏结束', canvas.width / 2 - 80, canvas.height / 2);
+        ctx.font = 'bold 20px Arial';
     }
 
     const updatePlayerPosition = isMobile ? setupMobileControls() : setupKeyboardControls();
