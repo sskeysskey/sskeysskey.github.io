@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playButton.addEventListener('click', () => {
         if (!isGameRunning) {
             initGame();
+            playButton.style.display = 'none'; // 隐藏开始按钮
         }
     });
 
@@ -186,8 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function gameOver() {
         clearInterval(gameLoop);
         clearInterval(enemyInterval);
-        alert('游戏结束！得分：' + score);
+        isGameRunning = false;
+        playButton.style.display = 'block'; // 重新显示开始按钮
     }
-
-    initGame();
 });
