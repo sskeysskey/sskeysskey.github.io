@@ -64,6 +64,20 @@ section {
     overflow: hidden;
 }
 
+#finance iframe {
+    width: 100%;
+    height: 900px;
+    border: none;
+    overflow: hidden;
+}
+
+#news iframe {
+    width: 100%;
+    height: 900px;
+    border: none;
+    overflow: hidden;
+}
+
 section.active {
     display: block;
 }
