@@ -28,45 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         consecutiveQuads: 0 // 连续消除四行的计数
     };
 
-    function toggleFullscreen() {
-        if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen().catch(err => {
-                console.error(`Error attempting to enable fullscreen: ${err.message}`);
-            });
-        } else {
-            document.exitFullscreen();
-        }
-    }
-
-    document.addEventListener('fullscreenchange', () => {
-        isFullscreen = !!document.fullscreenElement;
-        if (isFullscreen) {
-            tetrisGame.style.position = 'fixed';
-            tetrisGame.style.top = '0';
-            tetrisGame.style.left = '0';
-            tetrisGame.style.width = '100%';
-            tetrisGame.style.height = '100%';
-        } else {
-            tetrisGame.style.position = '';
-            tetrisGame.style.top = '';
-            tetrisGame.style.left = '';
-            tetrisGame.style.width = '';
-            tetrisGame.style.height = '';
-        }
-        resizeGame();
-    });
-
-    function resizeGame() {
-        const gameWidth = tetrisGame.clientWidth;
-        const gameHeight = tetrisGame.clientHeight;
-        canvas.width = gameWidth;
-        canvas.height = gameHeight;
-        blockSize = Math.floor(gameWidth / width);
-        draw();
-    }
-
-    window.addEventListener('resize', resizeGame);
-
     function initGame() {
         canvas = document.createElement('canvas');
         tetrisGame.innerHTML = '';
@@ -109,25 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // 居中画布
         canvas.style.display = 'block';
         canvas.style.margin = '0 auto';
-
-        if (isMobile) {
-            toggleFullscreen();
-            const exitButton = document.createElement('button');
-            exitButton.innerHTML = '❌';
-            exitButton.style.position = 'absolute';
-            exitButton.style.top = '10px';
-            exitButton.style.right = '10px';
-            exitButton.style.fontSize = '24px';
-            exitButton.style.background = 'none';
-            exitButton.style.border = 'none';
-            exitButton.style.color = 'white';
-            exitButton.addEventListener('click', () => {
-                document.exitFullscreen();
-            });
-            tetrisGame.appendChild(exitButton);
-        }
-
-        resizeGame();
 
         board = Array(height).fill().map(() => Array(width).fill(0));
         currentPiece = getRandomPiece();
