@@ -141,36 +141,32 @@ document.addEventListener('DOMContentLoaded', () => {
     function setupMobileControls() {
         let touchStartX, touchStartY;
         let lastMoveTime = 0;
-        const moveThreshold = 10; // 减小移动阈值，使移动更敏感
-        const moveInterval = 50; // 缩短移动间隔时间，使移动更快
-        const dropThreshold = 5; // 减小下落阈值，使下落更敏感
-        const dropInterval = 0; // 添加下落间隔时间，防止过快下落
+        const moveThreshold = 10;
+        const moveInterval = 30;
+        const dropThreshold = 50; // 新增：下落阈值，设置得更小以增加敏感度
         let hasMoved = false;
-        let hasDropped = false;
-        let lastDropTime = 0;
+        let hasDropped = false; // 新增：用于跟踪是否已经触发了下落
 
         canvas.addEventListener('touchstart', (e) => {
             if (!isGameRunning) return;
             touchStartX = e.touches[0].clientX;
             touchStartY = e.touches[0].clientY;
             hasMoved = false;
-            hasDropped = false;
-            lastMoveTime = 0;
-            lastDropTime = 0;
+            hasDropped = false; // 重置下落状态
         });
 
         canvas.addEventListener('touchmove', (e) => {
             if (!isGameRunning) return;
             e.preventDefault();
             const currentTime = Date.now();
+            if (currentTime - lastMoveTime < moveInterval) return;
 
             const touchEndX = e.touches[0].clientX;
             const touchEndY = e.touches[0].clientY;
             const dx = touchEndX - touchStartX;
             const dy = touchEndY - touchStartY;
 
-            // 横向移动逻辑
-            if (Math.abs(dx) > moveThreshold && currentTime - lastMoveTime > moveInterval) {
+            if (Math.abs(dx) > moveThreshold) {
                 if (dx > 0) {
                     movePiece(1, 0);
                 } else {
@@ -181,13 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 hasMoved = true;
             }
 
-            // 下落逻辑
-            if (dy > dropThreshold && currentTime - lastDropTime > dropInterval) {
+            if (dy > dropThreshold && !hasDropped) { // 使用新的 dropThreshold
                 movePiece(0, 1);
                 touchStartY = touchEndY;
-                lastDropTime = currentTime;
+                lastMoveTime = currentTime;
                 hasMoved = true;
-                hasDropped = true;
+                hasDropped = true; // 标记已经触发了下落
             }
         });
 
@@ -196,12 +191,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const touchEndY = e.changedTouches[0].clientY;
             const dy = touchEndY - touchStartY;
 
-            if (dy > dropThreshold * 3) {
+            if (dy > dropThreshold * 3) { // 仍然保留快速下落的功能
                 dropPiece();
             } else if (!hasMoved) {
                 rotatePiece();
             }
 
+            // 重置标志
             hasMoved = false;
             hasDropped = false;
         });
