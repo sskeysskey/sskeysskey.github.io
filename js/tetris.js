@@ -8,6 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
     let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     let isGameRunning = false;
 
+    // 新增：特效状态管理
+    let effects = {
+        flash: {
+            active: false,
+            type: 'none', // 'single', 'double', 'triple', 'quad'
+            opacity: 0,
+            duration: 0,
+            maxOpacity: 0
+        },
+        combo: {
+            active: false,
+            text: '',
+            opacity: 0,
+            duration: 0,
+            maxOpacity: 0
+        },
+        consecutiveQuads: 0 // 连续消除四行的计数
+    };
+
     function initGame() {
         canvas = document.createElement('canvas');
         tetrisGame.innerHTML = '';
@@ -168,7 +187,8 @@ document.addEventListener('DOMContentLoaded', () => {
             currentPiece.y -= dy;
             if (dy > 0) {
                 mergePiece();
-                clearLines();
+                const cleared = clearLines();
+                handleEffects(cleared);
                 currentPiece = nextPiece;
                 nextPiece = getRandomPiece();
                 updateGhostPiece();
@@ -187,25 +207,44 @@ document.addEventListener('DOMContentLoaded', () => {
             currentPiece.shape.map(row => row[i]).reverse()
         );
         const previousShape = currentPiece.shape;
+        const previousX = currentPiece.x;
+
         currentPiece.shape = rotated;
-        if (checkCollision(currentPiece)) {
+
+        // 尝试墙踢
+        const kicks = [0, -1, 1, -2, 2]; // 尝试的顺序：原位置，左1，右1，左2，右2
+        let kicked = false;
+
+        for (let kick of kicks) {
+            currentPiece.x = previousX + kick;
+            if (!checkCollision(currentPiece)) {
+                kicked = true;
+                break;
+            }
+        }
+
+        if (!kicked) {
+            // 如果所有踢墙尝试都失败，恢复原始状态
             currentPiece.shape = previousShape;
+            currentPiece.x = previousX;
         } else {
             updateGhostPiece();
         }
+
         draw();
     }
 
     function dropPiece() {
-        while (!collision()) {
+        while (!checkCollision({ ...currentPiece, y: currentPiece.y + 1 })) {
             currentPiece.y++;
         }
-        currentPiece.y--;
         mergePiece();
-        clearLines();
+        const cleared = clearLines();
+        handleEffects(cleared);
         currentPiece = nextPiece;
         nextPiece = getRandomPiece();
-        if (collision()) {
+        updateGhostPiece();
+        if (checkCollision(currentPiece)) {
             gameOver();
         }
         draw();
@@ -252,12 +291,68 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function clearLines() {
+        let linesCleared = 0;
         for (let y = height - 1; y >= 0; y--) {
             if (board[y].every(cell => cell)) {
                 board.splice(y, 1);
                 board.unshift(Array(width).fill(0));
-                score += 100;
+                linesCleared++;
+                y++; // 重复检查当前行，因为新的行被插入后需要重新检查
             }
+        }
+        if (linesCleared > 0) {
+            score += linesCleared * 100;
+        }
+        return linesCleared;
+    }
+
+    function handleEffects(cleared) {
+        if (cleared > 0) {
+            // 设置闪光特效
+            switch (cleared) {
+                case 1:
+                    effects.flash.type = 'single';
+                    effects.flash.maxOpacity = 0.2;
+                    effects.flash.duration = 300;
+                    break;
+                case 2:
+                    effects.flash.type = 'double';
+                    effects.flash.maxOpacity = 0.4;
+                    effects.flash.duration = 400;
+                    break;
+                case 3:
+                    effects.flash.type = 'triple';
+                    effects.flash.maxOpacity = 0.6;
+                    effects.flash.duration = 500;
+                    break;
+                case 4:
+                    effects.flash.type = 'quad';
+                    effects.flash.maxOpacity = 0.8;
+                    effects.flash.duration = 600;
+                    break;
+                default:
+                    effects.flash.type = 'none';
+            }
+            effects.flash.opactiy = effects.flash.maxOpacity;
+            effects.flash.active = true;
+            effects.flash.startTime = Date.now();
+
+            // 处理连击逻辑
+            if (cleared === 4) {
+                effects.consecutiveQuads++;
+                if (effects.consecutiveQuads >= 2) {
+                    // 显示连击特效
+                    effects.combo.active = true;
+                    effects.combo.text = '连击！两个四行消除！';
+                    effects.combo.opacity = 1;
+                    effects.combo.duration = 1000;
+                }
+            } else {
+                effects.consecutiveQuads = 0;
+            }
+        } else {
+            // 没有消除行，重置连续四行计数
+            effects.consecutiveQuads = 0;
         }
     }
 
@@ -303,6 +398,32 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.fillStyle = 'white';
         ctx.font = '20px Arial';
         ctx.fillText('得分: ' + score, 10, 30);
+
+        // 绘制闪光特效
+        if (effects.flash.active) {
+            const elapsed = Date.now() - effects.flash.startTime;
+            if (elapsed < effects.flash.duration) {
+                // 计算当前透明度
+                const progress = elapsed / effects.flash.duration;
+                ctx.fillStyle = `rgba(255, 255, 255, ${effects.flash.maxOpacity * (1 - progress)})`;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            } else {
+                effects.flash.active = false;
+            }
+        }
+
+        // 绘制连击特效
+        if (effects.combo.active) {
+            const elapsed = Date.now() - (effects.flash.startTime || 0);
+            if (elapsed < effects.combo.duration) {
+                ctx.fillStyle = `rgba(255, 0, 0, ${effects.combo.opacity * (1 - elapsed / effects.combo.duration)})`;
+                ctx.font = '30px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText(effects.combo.text, canvas.width / 2, canvas.height / 2);
+            } else {
+                effects.combo.active = false;
+            }
+        }
     }
 
     function drawPiece(piece, isGhost) {
