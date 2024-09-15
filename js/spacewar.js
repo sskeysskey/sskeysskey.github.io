@@ -10,6 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let backgroundY = 0;
     let lastShootTime = 0;
 
+    // 记录按键状态
+    const keys = {
+        left: false,
+        right: false,
+        up: false,
+        down: false,
+        shoot: false
+    };
+
     // 加载图片资源
     const images = {};
     const imageSources = {
@@ -93,29 +102,43 @@ document.addEventListener('DOMContentLoaded', () => {
     function setupKeyboardControls() {
         document.addEventListener('keydown', (e) => {
             if (!isGameRunning) return;
-            switch (e.key) {
+            switch (e.key.toLowerCase()) {
                 case 'a':
-                case 'A':
-                    player.x -= player.speed;
+                    keys.left = true;
                     break;
                 case 'd':
-                case 'D':
-                    player.x += player.speed;
+                    keys.right = true;
                     break;
                 case 'w':
-                case 'W':
-                    player.y -= player.speed;
+                    keys.up = true;
                     break;
                 case 's':
-                case 'S':
-                    player.y += player.speed;
+                    keys.down = true;
                     break;
                 case 'j':
-                case 'J':
-                    shootPlayerBullet();
+                    keys.shoot = true;
                     break;
             }
-            keepPlayerInBounds();
+        });
+
+        document.addEventListener('keyup', (e) => {
+            switch (e.key.toLowerCase()) {
+                case 'a':
+                    keys.left = false;
+                    break;
+                case 'd':
+                    keys.right = false;
+                    break;
+                case 'w':
+                    keys.up = false;
+                    break;
+                case 's':
+                    keys.down = false;
+                    break;
+                case 'j':
+                    keys.shoot = false;
+                    break;
+            }
         });
     }
 
@@ -305,6 +328,16 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.fillText('得分: ' + score, 10, 40);
     }
 
+    function updatePlayerPosition() {
+        if (keys.left) player.x -= player.speed;
+        if (keys.right) player.x += player.speed;
+        if (keys.up) player.y -= player.speed;
+        if (keys.down) player.y += player.speed;
+        if (keys.shoot) shootPlayerBullet();
+
+        keepPlayerInBounds();
+    }
+
     function gameLoop() {
         if (!isGameRunning) return;
 
@@ -313,8 +346,10 @@ document.addEventListener('DOMContentLoaded', () => {
         moveBullets();
         checkCollisions();
 
+        updatePlayerPosition();
+
         if (isMobile) {
-            shootPlayerBullet(); // 在移动设备上自动射击
+            shootPlayerBullet(); // 移动设备上自动射击
         }
 
         draw();
