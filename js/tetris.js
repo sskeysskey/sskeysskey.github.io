@@ -141,9 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function setupMobileControls() {
         let touchStartX, touchStartY;
         let lastMoveTime = 0;
-        const moveThreshold = 10;
-        const moveInterval = 30;
-        const dropThreshold = 10; // 新增：下落阈值，设置得更小以增加敏感度
+        const moveThreshold = 15;
+        const moveInterval = 40;
+        const dropThreshold = 5; // 新增：下落阈值，设置得更小以增加敏感度
         let hasMoved = false;
         let hasDropped = false; // 新增：用于跟踪是否已经触发了下落
 
