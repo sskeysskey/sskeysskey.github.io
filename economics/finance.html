@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- 引入Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- 引入Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- 自定义CSS -->
     <style>
         body {
@@ -22,6 +24,7 @@
             border-bottom: none;
             color: #495057;
             transition: background-color 0.3s;
+            cursor: pointer;
         }
 
         .nav-tabs .nav-link.active {
@@ -42,6 +45,7 @@
             border-bottom: 1px solid #f1f1f1;
             align-items: center;
             transition: background-color 0.3s;
+            cursor: pointer;
         }
 
         .symbol-item:hover {
@@ -66,6 +70,23 @@
                 margin-top: 5px;
             }
         }
+
+        /* Modal Custom Styles */
+        .modal-header {
+            background-color: #f8f9fa;
+        }
+
+        .modal-title {
+            font-weight: 600;
+        }
+
+        .close-button {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            line-height: 1;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -81,6 +102,39 @@
         </div>
     </div>
 
+    <!-- Chart Modal -->
+    <div class="modal fade" id="chartModal" tabindex="-1" aria-labelledby="chartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="chartModalLabel" class="modal-title">价格走势图</h5>
+                    <button type="button" class="close-button" data-bs-dismiss="modal" aria-label="Close">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <canvas id="priceChart" width="100%" height="50"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalLabel">错误</h5>
+                    <button type="button" class="close-button" data-bs-dismiss="modal" aria-label="Close">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body" id="errorModalBody">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 引入Bootstrap JS和依赖 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- 自定义JavaScript -->
@@ -88,117 +142,248 @@
         document.addEventListener('DOMContentLoaded', () => {
             const sectorTabs = document.getElementById('sectorTabs');
             const sectorTabsContent = document.getElementById('sectorTabsContent');
-            const DEFAULT_ACTIVE_TAB = 'Indices';  // 设置默认激活的 TAB
+            const DEFAULT_ACTIVE_TAB = 'Indices'; // 设置默认激活的 TAB
+            let financeData = {};
+            let symbolsData = {}; // 用于存储所有的 symbols 数据
 
-            fetch('sectors_panel.json')
-                .then(response => response.json())
-                .then(sectorsData => {
-                    fetch('compare_all.txt')
-                        .then(response => response.text())
-                        .then(txtData => {
-                            const compareMap = {};
-                            txtData.split('\n').forEach(line => {
-                                const [key, value] = line.split(':').map(item => item.trim());
-                                if (key && value !== undefined) {
-                                    compareMap[key] = value;
+            // 初始化所有的 Modal
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => new bootstrap.Modal(modal));
+
+            // 加载所有需要的JSON文件
+            Promise.all([
+                fetch('sectors_panel.json').then(response => response.json()),
+                fetch('compare_all.txt').then(response => response.text()),
+                fetch('finance.json').then(response => response.json())
+            ]).then(([sectorsData, txtData, financeJson]) => {
+                financeData = financeJson; // 存储finance.json数据
+                symbolsData = sectorsData; // 存储所有的 symbols 数据
+
+                // 解析compare_all.txt
+                const compareMap = {};
+                txtData.split('\n').forEach(line => {
+                    const [key, value] = line.split(':').map(item => item.trim());
+                    if (key && value !== undefined) {
+                        compareMap[key] = value;
+                    }
+                });
+
+                const sectors = Object.keys(sectorsData);
+                let activeTabSet = false;
+                let defaultTabExists = false;
+
+                sectors.forEach((sector, index) => {
+                    const symbolsObj = sectorsData[sector];
+                    const symbols = Object.keys(symbolsObj);
+
+                    // 检查这个板块是否有有效的symbol
+                    const validSymbols = symbols.filter(symbol => compareMap.hasOwnProperty(symbol));
+
+                    if (validSymbols.length > 0) {
+                        const isDefaultTab = sector === DEFAULT_ACTIVE_TAB;
+                        if (isDefaultTab) defaultTabExists = true;
+
+                        // 创建TAB
+                        const tab = document.createElement('li');
+                        tab.className = 'nav-item';
+                        const tabButton = document.createElement('button');
+                        tabButton.className = `nav-link ${isDefaultTab ? 'active' : ''}`;
+                        tabButton.id = `${sector}-tab`;
+                        tabButton.setAttribute('data-bs-toggle', 'tab');
+                        tabButton.setAttribute('data-bs-target', `#${sector}`);
+                        tabButton.setAttribute('type', 'button');
+                        tabButton.setAttribute('role', 'tab');
+                        tabButton.setAttribute('aria-controls', sector);
+                        tabButton.setAttribute('aria-selected', isDefaultTab ? 'true' : 'false');
+                        tabButton.textContent = sector.replace(/_/g, ' ');
+                        tab.appendChild(tabButton);
+                        sectorTabs.appendChild(tab);
+
+                        // 创建TAB内容
+                        const tabPane = document.createElement('div');
+                        tabPane.className = `tab-pane fade ${isDefaultTab ? 'show active' : ''}`;
+                        tabPane.id = sector;
+                        tabPane.setAttribute('role', 'tabpanel');
+                        tabPane.setAttribute('aria-labelledby', `${sector}-tab`);
+
+                        validSymbols.forEach(symbol => {
+                            const symbolValue = compareMap[symbol];
+                            const symbolDisplayName = symbolsObj[symbol] || symbol;
+
+                            const symbolItem = document.createElement('div');
+                            symbolItem.className = 'symbol-item';
+                            symbolItem.dataset.symbol = symbol;
+                            symbolItem.dataset.sector = sector;
+
+                            const nameDiv = document.createElement('div');
+                            nameDiv.className = 'symbol-name';
+                            if (symbolsObj[symbol]) {
+                                nameDiv.textContent = `${symbol} - ${symbolsObj[symbol]}`;
+                            } else {
+                                nameDiv.textContent = symbol;
+                            }
+
+                            const valueDiv = document.createElement('div');
+                            valueDiv.className = 'symbol-value';
+                            valueDiv.textContent = symbolValue;
+
+                            // 根据符号值添加颜色
+                            if (symbolValue.includes('+')) {
+                                valueDiv.style.color = '#28a745'; // 绿色
+                            } else if (symbolValue.includes('-')) {
+                                valueDiv.style.color = '#dc3545'; // 红色
+                            } else {
+                                valueDiv.style.color = '#6c757d'; // 灰色
+                            }
+
+                            symbolItem.appendChild(nameDiv);
+                            symbolItem.appendChild(valueDiv);
+                            tabPane.appendChild(symbolItem);
+                        });
+
+                        sectorTabsContent.appendChild(tabPane);
+
+                        if (!activeTabSet && !isDefaultTab) {
+                            activeTabSet = true;
+                        }
+                    }
+                });
+
+                // 设置默认激活的 TAB
+                if (!defaultTabExists && !activeTabSet) {
+                    const firstTab = sectorTabs.querySelector('.nav-link');
+                    const firstTabPane = sectorTabsContent.querySelector('.tab-pane');
+                    if (firstTab && firstTabPane) {
+                        firstTab.classList.add('active');
+                        firstTab.setAttribute('aria-selected', 'true');
+                        firstTabPane.classList.add('show', 'active');
+                    } else {
+                        sectorTabsContent.innerHTML = '<p class="text-info">暂无可用数据。</p>';
+                    }
+                }
+
+                // 添加点击事件监听器到所有的symbol-item
+                const symbolItems = document.querySelectorAll('.symbol-item');
+                symbolItems.forEach(item => {
+                    item.addEventListener('click', () => {
+                        const symbol = item.dataset.symbol;
+                        let sector = item.dataset.sector;
+
+                        // 处理板块名称映射
+                        if (['ETFs_Oversea', 'ETFs_US'].includes(sector)) {
+                            sector = 'ETFs';
+                        }
+                        if (['Commodity'].includes(sector)) {
+                            sector = 'Commodities';
+                        }
+
+                        // 查找finance.json中对应的组别
+                        if (financeData.hasOwnProperty(sector)) {
+                            const sectorData = financeData[sector];
+                            // 查找symbol的数据
+                            const symbolData = sectorData.filter(entry => entry.name === symbol);
+
+                            if (symbolData.length > 0) {
+                                // 按日期排序
+                                symbolData.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+                                // 提取日期和价格
+                                const labels = symbolData.map(entry => entry.date);
+                                const prices = symbolData.map(entry => entry.price);
+
+                                // 绘制图表
+                                drawChart(`${symbol}`, labels, prices);
+                            } else {
+                                showError(`未找到符号 ${symbol} 的财务数据。`);
+                            }
+                        } else {
+                            showError(`未找到板块 ${sector} 的财务数据。`);
+                        }
+                    });
+                });
+            }).catch(err => {
+                console.error('加载数据文件时出错:', err);
+                sectorTabsContent.innerHTML = '<p class="text-danger">无法加载必要的数据文件。</p>';
+            });
+
+            // 显示错误信息
+            function showError(message) {
+                const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+                document.getElementById('errorModalBody').textContent = message;
+                errorModal.show();
+            }
+
+            // 绘制Chart.js图表
+            function drawChart(title, labels, data) {
+                const ctx = document.getElementById('priceChart').getContext('2d');
+
+                // 释放之前的图表实例（如果有）
+                if (window.priceChartInstance) {
+                    window.priceChartInstance.destroy();
+                }
+
+                window.priceChartInstance = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: '价格 ($)',
+                            data: data,
+                            borderColor: '#007bff',
+                            backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                            fill: true,
+                            tension: 0.1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: title,
+                                font: {
+                                    size: 18
                                 }
-                            });
-
-                            const sectors = Object.keys(sectorsData);
-                            let activeTabSet = false;
-                            let defaultTabExists = false;
-
-                            sectors.forEach((sector, index) => {
-                                const symbolsObj = sectorsData[sector];
-                                const symbols = Object.keys(symbolsObj);
-
-                                // 检查这个板块是否有有效的symbol
-                                const validSymbols = symbols.filter(symbol => compareMap.hasOwnProperty(symbol));
-
-                                if (validSymbols.length > 0) {
-                                    const isDefaultTab = sector === DEFAULT_ACTIVE_TAB;
-                                    if (isDefaultTab) defaultTabExists = true;
-
-                                    const tab = document.createElement('li');
-                                    tab.className = 'nav-item';
-                                    const tabButton = document.createElement('button');
-                                    tabButton.className = `nav-link ${isDefaultTab ? 'active' : ''}`;
-                                    tabButton.id = `${sector}-tab`;
-                                    tabButton.setAttribute('data-bs-toggle', 'tab');
-                                    tabButton.setAttribute('data-bs-target', `#${sector}`);
-                                    tabButton.setAttribute('type', 'button');
-                                    tabButton.setAttribute('role', 'tab');
-                                    tabButton.setAttribute('aria-controls', sector);
-                                    tabButton.setAttribute('aria-selected', isDefaultTab ? 'true' : 'false');
-                                    tabButton.textContent = sector.replace(/_/g, ' ');
-                                    tab.appendChild(tabButton);
-                                    sectorTabs.appendChild(tab);
-
-                                    // 创建TAB内容
-                                    const tabPane = document.createElement('div');
-                                    tabPane.className = `tab-pane fade ${isDefaultTab ? 'show active' : ''}`;
-                                    tabPane.id = sector;
-                                    tabPane.setAttribute('role', 'tabpanel');
-                                    tabPane.setAttribute('aria-labelledby', `${sector}-tab`);
-
-                                    validSymbols.forEach(symbol => {
-                                        const symbolValue = compareMap[symbol];
-                                        const symbolDisplayName = symbolsObj[symbol] || symbol;
-
-                                        const symbolItem = document.createElement('div');
-                                        symbolItem.className = 'symbol-item';
-
-                                        const nameDiv = document.createElement('div');
-                                        nameDiv.className = 'symbol-name';
-                                        nameDiv.textContent = symbolDisplayName;
-
-                                        const valueDiv = document.createElement('div');
-                                        valueDiv.className = 'symbol-value';
-                                        valueDiv.textContent = symbolValue;
-
-                                        if (symbolValue.includes('+')) {
-                                            valueDiv.style.color = '#28a745';
-                                        } else if (symbolValue.includes('-')) {
-                                            valueDiv.style.color = '#dc3545';
-                                        } else {
-                                            valueDiv.style.color = '#6c757d';
-                                        }
-
-                                        symbolItem.appendChild(nameDiv);
-                                        symbolItem.appendChild(valueDiv);
-                                        tabPane.appendChild(symbolItem);
-                                    });
-
-                                    sectorTabsContent.appendChild(tabPane);
-
-                                    if (!activeTabSet && !isDefaultTab) {
-                                        activeTabSet = true;
-                                    }
+                            },
+                            tooltip: {
+                                mode: 'index',
+                                intersect: false,
+                            },
+                            legend: {
+                                display: false
+                            }
+                        },
+                        interaction: {
+                            mode: 'nearest',
+                            intersect: false
+                        },
+                        scales: {
+                            x: {
+                                display: true,
+                                title: {
+                                    display: true,
+                                    text: '日期'
                                 }
-                            });
-
-                            // 如果默认 TAB 不存在或没有有效数据，激活第一个 TAB
-                            if (!defaultTabExists && !activeTabSet) {
-                                const firstTab = sectorTabs.querySelector('.nav-link');
-                                const firstTabPane = sectorTabsContent.querySelector('.tab-pane');
-                                if (firstTab && firstTabPane) {
-                                    firstTab.classList.add('active');
-                                    firstTab.setAttribute('aria-selected', 'true');
-                                    firstTabPane.classList.add('show', 'active');
-                                } else {
-                                    sectorTabsContent.innerHTML = '<p class="text-info">暂无可用数据。</p>';
+                            },
+                            y: {
+                                display: true,
+                                title: {
+                                    display: true,
+                                    text: '价格 ($)'
                                 }
                             }
-                        })
-                        .catch(err => {
-                            console.error('读取 compare_all.txt 文件时出错:', err);
-                            sectorTabsContent.innerHTML = '<p class="text-danger">无法加载数据文件。</p>';
-                        });
-                })
-                .catch(err => {
-                    console.error('读取 sectors_panel.json 文件时出错:', err);
-                    sectorTabsContent.innerHTML = '<p class="text-danger">无法加载板块数据。</p>';
+                        }
+                    }
                 });
+
+                // 设置模态框标题
+                document.getElementById('chartModalLabel').textContent = title;
+
+                // 显示模态框
+                const chartModal = new bootstrap.Modal(document.getElementById('chartModal'));
+                chartModal.show();
+            }
         });
     </script>
 </body>
