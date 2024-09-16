@@ -327,7 +327,7 @@
                     data: {
                         labels: labels,
                         datasets: [{
-                            label: '价格 ($)',
+                            label: '价格趋势',
                             data: data,
                             borderColor: '#007bff',
                             backgroundColor: 'rgba(0, 123, 255, 0.1)',
@@ -339,40 +339,43 @@
                         responsive: true,
                         maintainAspectRatio: false,
                         plugins: {
-                            title: {
-                                display: true,
-                                // text: title,
-                                // font: {
-                                //     size: 18
-                                // }
-                            },
                             tooltip: {
                                 mode: 'index',
                                 intersect: false,
+                                callbacks: {
+                                    label: function (context) {
+                                        return '价格: $' + context.parsed.y.toFixed(2);
+                                    }
+                                }
                             },
                             legend: {
                                 display: false
                             }
                         },
-                        interaction: {
-                            mode: 'nearest',
-                            intersect: false
-                        },
                         scales: {
                             x: {
                                 display: true,
-                                title: {
-                                    display: true,
-                                    // text: '日期'
+                                grid: {
+                                    display: false
+                                },
+                                ticks: {
+                                    display: false // 隐藏 X 轴刻度
                                 }
                             },
                             y: {
                                 display: true,
-                                title: {
-                                    display: true,
-                                    // text: '价格 ($)'
+                                grid: {
+                                    display: false
+                                },
+                                ticks: {
+                                    display: false // 隐藏 Y 轴刻度
                                 }
                             }
+                        },
+                        interaction: {
+                            mode: 'nearest',
+                            intersect: false,
+                            axis: 'x'
                         }
                     }
                 });
