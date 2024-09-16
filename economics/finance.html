@@ -322,6 +322,9 @@
                     window.priceChartInstance.destroy();
                 }
 
+                // 检测是否为移动设备
+                const isMobile = window.innerWidth <= 768;
+
                 window.priceChartInstance = new Chart(ctx, {
                     type: 'line',
                     data: {
@@ -332,7 +335,10 @@
                             borderColor: '#007bff',
                             backgroundColor: 'rgba(0, 123, 255, 0.1)',
                             fill: true,
-                            tension: 0.1
+                            tension: 0.1,
+                            borderWidth: isMobile ? 1 : 2, // 在移动设备上使用更细的线条
+                            pointRadius: 0, // 移除数据点
+                            pointHitRadius: 5 // 增加点击/触摸区域，但不显示点
                         }]
                     },
                     options: {
@@ -376,6 +382,11 @@
                             mode: 'nearest',
                             intersect: false,
                             axis: 'x'
+                        },
+                        elements: {
+                            line: {
+                                borderWidth: isMobile ? 1 : 2 // 在移动设备上使用更细的线条
+                            }
                         }
                     }
                 });
