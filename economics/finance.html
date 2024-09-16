@@ -71,7 +71,6 @@
 
 <body>
     <div class="container my-5">
-        <h1 class="text-center mb-4">经济数据</h1>
         <!-- TAB导航 -->
         <ul class="nav nav-tabs" id="sectorTabs" role="tablist">
             <!-- 动态生成TAB -->
@@ -89,6 +88,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const sectorTabs = document.getElementById('sectorTabs');
             const sectorTabsContent = document.getElementById('sectorTabsContent');
+            const DEFAULT_ACTIVE_TAB = 'Indices';  // 设置默认激活的 TAB
 
             fetch('sectors_panel.json')
                 .then(response => response.json())
@@ -106,6 +106,7 @@
 
                             const sectors = Object.keys(sectorsData);
                             let activeTabSet = false;
+                            let defaultTabExists = false;
 
                             sectors.forEach((sector, index) => {
                                 const symbolsObj = sectorsData[sector];
@@ -115,25 +116,27 @@
                                 const validSymbols = symbols.filter(symbol => compareMap.hasOwnProperty(symbol));
 
                                 if (validSymbols.length > 0) {
-                                    // 创建TAB
+                                    const isDefaultTab = sector === DEFAULT_ACTIVE_TAB;
+                                    if (isDefaultTab) defaultTabExists = true;
+
                                     const tab = document.createElement('li');
                                     tab.className = 'nav-item';
                                     const tabButton = document.createElement('button');
-                                    tabButton.className = `nav-link ${!activeTabSet ? 'active' : ''}`;
+                                    tabButton.className = `nav-link ${isDefaultTab ? 'active' : ''}`;
                                     tabButton.id = `${sector}-tab`;
                                     tabButton.setAttribute('data-bs-toggle', 'tab');
                                     tabButton.setAttribute('data-bs-target', `#${sector}`);
                                     tabButton.setAttribute('type', 'button');
                                     tabButton.setAttribute('role', 'tab');
                                     tabButton.setAttribute('aria-controls', sector);
-                                    tabButton.setAttribute('aria-selected', !activeTabSet ? 'true' : 'false');
+                                    tabButton.setAttribute('aria-selected', isDefaultTab ? 'true' : 'false');
                                     tabButton.textContent = sector.replace(/_/g, ' ');
                                     tab.appendChild(tabButton);
                                     sectorTabs.appendChild(tab);
 
                                     // 创建TAB内容
                                     const tabPane = document.createElement('div');
-                                    tabPane.className = `tab-pane fade ${!activeTabSet ? 'show active' : ''}`;
+                                    tabPane.className = `tab-pane fade ${isDefaultTab ? 'show active' : ''}`;
                                     tabPane.id = sector;
                                     tabPane.setAttribute('role', 'tabpanel');
                                     tabPane.setAttribute('aria-labelledby', `${sector}-tab`);
@@ -168,14 +171,23 @@
 
                                     sectorTabsContent.appendChild(tabPane);
 
-                                    if (!activeTabSet) {
+                                    if (!activeTabSet && !isDefaultTab) {
                                         activeTabSet = true;
                                     }
                                 }
                             });
 
-                            if (!activeTabSet) {
-                                sectorTabsContent.innerHTML = '<p class="text-info">暂无可用数据。</p>';
+                            // 如果默认 TAB 不存在或没有有效数据，激活第一个 TAB
+                            if (!defaultTabExists && !activeTabSet) {
+                                const firstTab = sectorTabs.querySelector('.nav-link');
+                                const firstTabPane = sectorTabsContent.querySelector('.tab-pane');
+                                if (firstTab && firstTabPane) {
+                                    firstTab.classList.add('active');
+                                    firstTab.setAttribute('aria-selected', 'true');
+                                    firstTabPane.classList.add('show', 'active');
+                                } else {
+                                    sectorTabsContent.innerHTML = '<p class="text-info">暂无可用数据。</p>';
+                                }
                             }
                         })
                         .catch(err => {
