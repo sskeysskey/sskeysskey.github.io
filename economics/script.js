@@ -108,6 +108,11 @@ async function startSearch() {
     }
 }
 
+// 辅助函数：根据关键字长度决定是否进行模糊匹配
+function shouldFuzzyMatch(keyword) {
+    return keyword.length > 1;
+}
+
 // 搜索特定类别
 function searchCategory(items, keywordsArray, category) {
     const results = {
@@ -120,18 +125,20 @@ function searchCategory(items, keywordsArray, category) {
     items.forEach(item => {
         const descriptionText = (item.description1 + ' ' + item.description2).toLowerCase();
 
-        // 使用模糊匹配进行symbol匹配
+        // Symbol匹配
         const symbolExactMatch = keywordsArray.some(k => item.symbol.toLowerCase() === k);
         const symbolPartialMatch = keywordsArray.some(k => item.symbol.toLowerCase().includes(k));
-        const symbolFuzzyMatch = keywordsArray.some(k => levenshteinDistance(item.symbol.toLowerCase(), k) <= 1);
+        const symbolFuzzyMatch = keywordsArray.some(k => shouldFuzzyMatch(k) && levenshteinDistance(item.symbol.toLowerCase(), k) <= 1);
 
+        // Name匹配
         const nameExactMatch = keywordsArray.some(k => item.name && item.name.toLowerCase() === k);
         const namePartialMatch = keywordsArray.some(k => item.name && item.name.toLowerCase().includes(k));
-        const nameFuzzyMatch = keywordsArray.some(k => item.name && levenshteinDistance(item.name.toLowerCase(), k) <= 1);
+        const nameFuzzyMatch = keywordsArray.some(k => shouldFuzzyMatch(k) && item.name && levenshteinDistance(item.name.toLowerCase(), k) <= 1);
 
+        // Tag匹配
         const tagExactMatch = keywordsArray.some(k => item.tag.some(tag => tag.toLowerCase() === k));
         const tagPartialMatch = keywordsArray.some(k => item.tag.some(tag => tag.toLowerCase().includes(k)));
-        const tagFuzzyMatch = keywordsArray.some(k => item.tag.some(tag => levenshteinDistance(tag.toLowerCase(), k) <= 1));
+        const tagFuzzyMatch = keywordsArray.some(k => shouldFuzzyMatch(k) && item.tag.some(tag => levenshteinDistance(tag.toLowerCase(), k) <= 1));
 
         // Symbol结果分类
         if (symbolExactMatch) {
