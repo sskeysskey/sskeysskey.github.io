@@ -166,23 +166,28 @@ document.addEventListener('DOMContentLoaded', () => {
             const dx = touchEndX - touchStartX;
             const dy = touchEndY - touchStartY;
 
-            if (Math.abs(dx) > moveThreshold) {
-                if (dx > 0) {
-                    movePiece(1, 0);
-                } else {
-                    movePiece(-1, 0);
+            // 判断移动方向
+            if (Math.abs(dy) > Math.abs(dx)) {
+                // 垂直移动优先
+                if (dy > dropThreshold && !hasDropped) {
+                    movePiece(0, 1);
+                    touchStartY = touchEndY;
+                    lastMoveTime = currentTime;
+                    hasMoved = true;
+                    hasDropped = true;
                 }
-                touchStartX = touchEndX;
-                lastMoveTime = currentTime;
-                hasMoved = true;
-            }
-
-            if (dy > dropThreshold && !hasDropped) { // 使用新的 dropThreshold
-                movePiece(0, 1);
-                touchStartY = touchEndY;
-                lastMoveTime = currentTime;
-                hasMoved = true;
-                hasDropped = true; // 标记已经触发了下落
+            } else {
+                // 水平移动
+                if (Math.abs(dx) > moveThreshold) {
+                    if (dx > 0) {
+                        movePiece(1, 0);
+                    } else {
+                        movePiece(-1, 0);
+                    }
+                    touchStartX = touchEndX;
+                    lastMoveTime = currentTime;
+                    hasMoved = true;
+                }
             }
         });
 
