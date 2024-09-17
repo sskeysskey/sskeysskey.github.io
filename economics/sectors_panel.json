@@ -15,10 +15,7 @@
         "LULU": "",
         "NKE": "Nike",
         "MBLY": "",
-        "LKQ": "汽车部件",
-        "STLA": "",
-        "ABNB": "",
-        "BBWI": ""
+        "ABNB": ""
     },
     "Energy": {
         "PBF": "石油精炼",
@@ -38,10 +35,8 @@
         "SNOW": "",
         "STM": "意法",
         "LSCC": "FPGA",
-        "INTC": "",
         "JBL": "",
         "PATH": "UiPath",
-        "RMBS": "",
         "QLYS": ""
     },
     "Utilities": {},
@@ -64,7 +59,8 @@
         "CVS": "",
         "EW": "爱德华兹",
         "DXCM": "德康血糖",
-        "MRNA": ""
+        "MRNA": "",
+        "BMRN": ""
     },
     "Crypto": {
         "Bitcoin": "",
@@ -76,6 +72,7 @@
         "VIX": "恐慌指数",
         "NASDAQ": "",
         "S&P500": "",
+        "DowJones": "",
         "HANGSENG": "恒生",
         "Shanghai": "上证",
         "Shenzhen": "深证",
@@ -129,7 +126,7 @@
         "LIT": "锂矿电池",
         "URA": "铀矿核能",
         "DBC": "大宗商品",
-        "IBIT": "比特币"
+        "IBIT": ""
     },
     "Commodity": {
         "Lithium": "",
