@@ -74,7 +74,7 @@ async function startSearch() {
 
     if (!keywords) return;
 
-    resultsContainer.innerHTML = '';
+    resultsContainer.innerHTML = '<div class="searching">正在搜索中....</div>';
     loadingIndicator.style.display = 'block';
 
     try {
@@ -91,14 +91,22 @@ async function startSearch() {
         const matchedStocks = searchCategory(data.stocks, keywordsArray, 'stocks');
         const matchedETFs = searchCategory(data.etfs, keywordsArray, 'etfs');
 
-        displayResults('Stock_tag', matchedStocks.tag);
-        displayResults('ETF_tag', matchedETFs.tag);
-        displayResults('Stock_name', matchedStocks.name);
-        displayResults('ETF_name', matchedETFs.name);
-        displayResults('Stock_symbol', matchedStocks.symbol);
-        displayResults('ETF_symbol', matchedETFs.symbol);
-        displayResults('Stock_Description', matchedStocks.description);
-        displayResults('ETFs_Description', matchedETFs.description);
+        resultsContainer.innerHTML = ''; // 清空搜索中的提示
+
+        let hasResults = false;
+
+        hasResults |= displayResults('Stock_tag', matchedStocks.tag);
+        hasResults |= displayResults('ETF_tag', matchedETFs.tag);
+        hasResults |= displayResults('Stock_name', matchedStocks.name);
+        hasResults |= displayResults('ETF_name', matchedETFs.name);
+        hasResults |= displayResults('Stock_symbol', matchedStocks.symbol);
+        hasResults |= displayResults('ETF_symbol', matchedETFs.symbol);
+        hasResults |= displayResults('Stock_Description', matchedStocks.description);
+        hasResults |= displayResults('ETFs_Description', matchedETFs.description);
+
+        if (!hasResults) {
+            resultsContainer.innerHTML = '<div class="no-results">没有搜索到任何结果</div>';
+        }
 
     } catch (error) {
         console.error("搜索出错:", error);
@@ -198,5 +206,8 @@ function displayResults(category, results) {
             resultElement.textContent = result;
             resultsContainer.appendChild(resultElement);
         });
+
+        return true; // 表示有结果
     }
+    return false; // 表示没有结果
 }
