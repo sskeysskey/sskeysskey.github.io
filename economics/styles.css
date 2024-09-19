@@ -104,6 +104,12 @@ button:disabled {
     margin-top: 20px;
 }
 
+.results-container {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    /* 为 iOS 设备提供平滑滚动 */
+}
+
 .result-category {
     font-size: 18px;
     color: yellow;

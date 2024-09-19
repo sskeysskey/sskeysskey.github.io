@@ -256,19 +256,7 @@ function displayResults(category, results) {
 function addResultClickListeners() {
     const resultItems = document.querySelectorAll('.result-item');
     resultItems.forEach(item => {
-        let startY;
-        item.addEventListener('touchstart', e => {
-            startY = e.touches[0].clientY;
-        });
-        item.addEventListener('touchend', e => {
-            const endY = e.changedTouches[0].clientY;
-            const diffY = Math.abs(endY - startY);
-            if (diffY < 10) { // 如果垂直移动小于10px，视为点击
-                handleItemClick.call(item, e);
-            }
-        });
         item.addEventListener('click', handleItemClick);
-        item.addEventListener('touchend', handleItemClick);
     });
 }
 
