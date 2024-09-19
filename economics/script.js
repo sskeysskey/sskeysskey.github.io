@@ -36,6 +36,40 @@ window.addEventListener('load', initializePage);
 
 // JSON文件路径
 const jsonPath = "description.json";
+const sectorsPath = "sectors_all.json";
+const financePath = "finance.json";
+
+// 全局变量缓存 sectors 和 finance 数据
+let sectorsData = null;
+let financeData = null;
+
+// 加载 sectors_all.json
+async function loadSectors() {
+    if (sectorsData) return sectorsData;
+    try {
+        const response = await fetch(sectorsPath, { mode: 'cors' });
+        if (!response.ok) throw new Error(`无法加载 sectors 数据: ${response.status}`);
+        sectorsData = await response.json();
+        return sectorsData;
+    } catch (error) {
+        console.error(error);
+        alert("加载 sectors 数据时出错。");
+    }
+}
+
+// 加载 finance.json
+async function loadFinance() {
+    if (financeData) return financeData;
+    try {
+        const response = await fetch(financePath, { mode: 'cors' });
+        if (!response.ok) throw new Error(`无法加载 finance 数据: ${response.status}`);
+        financeData = await response.json();
+        return financeData;
+    } catch (error) {
+        console.error(error);
+        alert("加载 finance 数据时出错。");
+    }
+}
 
 // Levenshtein距离计算函数
 function levenshteinDistance(a, b) {
@@ -106,6 +140,9 @@ async function startSearch() {
 
         if (!hasResults) {
             resultsContainer.innerHTML = '<div class="no-results">没有搜索到任何结果</div>';
+        } else {
+            // 为所有结果项添加点击事件
+            addResultClickListeners();
         }
 
     } catch (error) {
@@ -204,10 +241,162 @@ function displayResults(category, results) {
             const resultElement = document.createElement('div');
             resultElement.className = 'result-item';
             resultElement.textContent = result;
+            // 设置 data-symbol 属性以存储 symbol
+            const symbol = result.split(' - ')[0];
+            resultElement.setAttribute('data-symbol', symbol.toUpperCase());
+            resultElement.style.cursor = 'pointer'; // 显示为可点击
             resultsContainer.appendChild(resultElement);
         });
 
         return true; // 表示有结果
     }
     return false; // 表示没有结果
+}
+
+// 为搜索结果项添加点击事件监听器
+function addResultClickListeners() {
+    const resultItems = document.querySelectorAll('.result-item');
+    resultItems.forEach(item => {
+        item.addEventListener('click', async function () {
+            const symbol = this.getAttribute('data-symbol');
+            if (!symbol) {
+                alert("无效的股票代码。");
+                return;
+            }
+
+            // 加载 sectors 和 finance 数据
+            const sectors = await loadSectors();
+            const finance = await loadFinance();
+
+            if (!sectors || !finance) {
+                alert("无法加载必要的数据。");
+                return;
+            }
+
+            // 查找 symbol 对应的 sector
+            let sectorFound = null;
+            for (const [sector, symbols] of Object.entries(sectors)) {
+                // 注意：确保 symbol 与 sectors 的符号类型一致（可能大小写或格式不同）
+                if (symbols.map(s => s.toUpperCase()).includes(symbol)) {
+                    sectorFound = sector;
+                    break;
+                }
+            }
+
+            if (!sectorFound) {
+                alert(`未找到 symbol "${symbol}" 对应的 sector。`);
+                return;
+            }
+
+            // 从 finance 数据中获取该 sector 和 symbol 的数据
+            if (!finance[sectorFound]) {
+                alert(`Finance 数据中未包含 sector "${sectorFound}"。`);
+                return;
+            }
+
+            const symbolData = finance[sectorFound].filter(item => item.name.toUpperCase() === symbol);
+            if (symbolData.length === 0) {
+                alert(`Finance 数据中未找到 symbol "${symbol}" 的数据。`);
+                return;
+            }
+
+            // 假设 finance.json 中每个 symbol 只有一条记录，如果有多条，可根据需要调整
+            // 如果有多条记录，例如不同日期，可以累积成多个数据点
+            // 这里假设有多条记录，根据日期排序后绘制价格走势图
+
+            // 准备数据
+            const sortedData = symbolData.sort((a, b) => new Date(a.date) - new Date(b.date));
+            const labels = sortedData.map(item => item.date);
+            const prices = sortedData.map(item => item.price);
+
+            // 绘制图表
+            drawChart(`${symbol} 价格走势图`, labels, prices);
+        });
+    });
+}
+
+// 绘制Chart.js图表
+function drawChart(title, labels, data) {
+    const ctx = document.getElementById('priceChart').getContext('2d');
+
+    // 释放之前的图表实例（如果有）
+    if (window.priceChartInstance) {
+        window.priceChartInstance.destroy();
+    }
+
+    // 检测是否为移动设备
+    const isMobile = window.innerWidth <= 768;
+
+    window.priceChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: '价格趋势',
+                data: data,
+                borderColor: '#007bff',
+                backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                fill: true,
+                tension: 0.1,
+                borderWidth: isMobile ? 1 : 2, // 在移动设备上使用更细的线条
+                pointRadius: 0, // 移除数据点
+                pointHitRadius: 5 // 增加点击/触摸区域，但不显示点
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                    callbacks: {
+                        label: function (context) {
+                            return '价格: $' + context.parsed.y.toFixed(2);
+                        }
+                    }
+                },
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                x: {
+                    display: true,
+                    grid: {
+                        display: false
+                    },
+                    ticks: {
+                        display: false // 隐藏 X 轴刻度
+                    }
+                },
+                y: {
+                    display: true,
+                    grid: {
+                        display: false
+                    },
+                    ticks: {
+                        display: false // 隐藏 Y 轴刻度
+                    }
+                }
+            },
+            interaction: {
+                mode: 'nearest',
+                intersect: false,
+                axis: 'x'
+            },
+            elements: {
+                line: {
+                    borderWidth: isMobile ? 1 : 2 // 在移动设备上使用更细的线条
+                }
+            }
+        }
+    });
+
+    // 设置模态框标题
+    document.getElementById('chartModalLabel').textContent = title;
+
+    // 显示模态框
+    const chartModal = new bootstrap.Modal(document.getElementById('chartModal'));
+    chartModal.show();
 }
