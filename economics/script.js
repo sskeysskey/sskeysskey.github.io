@@ -257,62 +257,67 @@ function displayResults(category, results) {
 function addResultClickListeners() {
     const resultItems = document.querySelectorAll('.result-item');
     resultItems.forEach(item => {
-        item.addEventListener('click', async function () {
-            const symbol = this.getAttribute('data-symbol');
-            if (!symbol) {
-                alert("无效的股票代码。");
-                return;
-            }
-
-            // 加载 sectors 和 finance 数据
-            const sectors = await loadSectors();
-            const finance = await loadFinance();
-
-            if (!sectors || !finance) {
-                alert("无法加载必要的数据。");
-                return;
-            }
-
-            // 查找 symbol 对应的 sector
-            let sectorFound = null;
-            for (const [sector, symbols] of Object.entries(sectors)) {
-                // 注意：确保 symbol 与 sectors 的符号类型一致（可能大小写或格式不同）
-                if (symbols.map(s => s.toUpperCase()).includes(symbol)) {
-                    sectorFound = sector;
-                    break;
-                }
-            }
-
-            if (!sectorFound) {
-                alert(`未找到 symbol "${symbol}" 对应的 sector。`);
-                return;
-            }
-
-            // 从 finance 数据中获取该 sector 和 symbol 的数据
-            if (!finance[sectorFound]) {
-                alert(`Finance 数据中未包含 sector "${sectorFound}"。`);
-                return;
-            }
-
-            const symbolData = finance[sectorFound].filter(item => item.name.toUpperCase() === symbol);
-            if (symbolData.length === 0) {
-                alert(`Finance 数据中未找到 symbol "${symbol}" 的数据。`);
-                return;
-            }
-
-            // 假设 finance.json 中每个 symbol 只有一条记录，如果有多条，可根据需要调整
-            // 如果有多条记录，例如不同日期，可以累积成多个数据点
-            // 这里假设有多条记录，根据日期排序后绘制价格走势图
-
-            // 准备数据
-            const sortedData = symbolData.sort((a, b) => new Date(a.date) - new Date(b.date));
-            const labels = sortedData.map(item => item.date);
-            const prices = sortedData.map(item => item.price);
-
-            // 绘制图表
-            drawChart(`${symbol} 价格走势图`, labels, prices);
-        });
+        // 兼容触摸设备
+        item.addEventListener('click', handleItemClick);
+        item.addEventListener('touchend', handleItemClick);
     });
+}
+
+async function handleItemClick(event) {
+    event.preventDefault(); // 防止默认行为
+    const symbol = this.getAttribute('data-symbol');
+    if (!symbol) {
+        alert("无效的股票代码。");
+        return;
+    }
+
+    // 加载 sectors 和 finance 数据
+    const sectors = await loadSectors();
+    const finance = await loadFinance();
+
+    if (!sectors || !finance) {
+        alert("无法加载必要的数据。");
+        return;
+    }
+
+    // 查找 symbol 对应的 sector
+    let sectorFound = null;
+    for (const [sector, symbols] of Object.entries(sectors)) {
+        // 注意：确保 symbol 与 sectors 的符号类型一致（可能大小写或格式不同）
+        if (symbols.map(s => s.toUpperCase()).includes(symbol.toUpperCase())) {
+            sectorFound = sector;
+            break;
+        }
+    }
+
+    if (!sectorFound) {
+        alert(`未找到 symbol "${symbol}" 对应的 sector。`);
+        return;
+    }
+
+    // 从 finance 数据中获取该 sector 和 symbol 的数据
+    if (!finance[sectorFound]) {
+        alert(`Finance 数据中未包含 sector "${sectorFound}"。`);
+        return;
+    }
+
+    const symbolData = finance[sectorFound].filter(item => item.name.toUpperCase() === symbol.toUpperCase());
+    if (symbolData.length === 0) {
+        alert(`Finance 数据中未找到 symbol "${symbol}" 的数据。`);
+        return;
+    }
+
+    // 假设 finance.json 中每个 symbol 只有一条记录，如果有多条，可根据需要调整
+    // 如果有多条记录，例如不同日期，可以累积成多个数据点
+    // 这里假设有多条记录，根据日期排序后绘制价格走势图
+
+    // 准备数据
+    const sortedData = symbolData.sort((a, b) => new Date(a.date) - new Date(b.date));
+    const labels = sortedData.map(item => item.date);
+    const prices = sortedData.map(item => item.price);
+
+    // 绘制图表
+    drawChart(`${symbol} 价格走势图`, labels, prices);
 }
 
 // 绘制Chart.js图表
