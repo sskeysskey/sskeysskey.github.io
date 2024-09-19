@@ -109,18 +109,36 @@
             .container-fluid {
                 padding-left: 0 !important;
                 padding-right: 0 !important;
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
             }
 
-            /* 放大导航标签的字体和内边距 */
+            /* 移除 nav-tabs 的上下外边距和内边距 */
+            .nav-tabs {
+                margin-top: 0;
+                margin-bottom: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            /* 移除 nav-item 的上下外边距 */
+            .nav-tabs .nav-item {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            /* 调整 nav-link 的上下内边距以减少空间 */
             .nav-tabs .nav-link {
-                padding: 12px 24px;
-                font-size: 1.1rem;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                font-size: 0.7rem;
+                /* 放大字体 */
             }
 
             /* 放大符号项的字体和内边距 */
             .symbol-item {
                 padding: 12px 16px;
-                font-size: 1.1rem;
+                font-size: 1.5rem;
             }
 
             /* 放大符号名称 */
@@ -135,12 +153,12 @@
 
             /* 放大模态框标题 */
             .modal-title {
-                font-size: 1.4rem;
+                font-size: 1.0rem;
             }
 
             /* 调整TAB内容的内边距 */
             .tab-content {
-                padding: 15px;
+                padding: 2px;
             }
 
             /* 放大加载指示器的字体 */
@@ -198,7 +216,7 @@
         <p class="mt-2">页面加载中，请稍候...</p>
     </div>
 
-    <div class="container-fluid my-5 px-0">
+    <div class="container-fluid my-md-5 my-0 px-0">
         <!-- TAB导航 -->
         <ul class="nav nav-tabs" id="sectorTabs" role="tablist">
             <!-- 动态生成TAB -->
