@@ -108,7 +108,6 @@ async function startSearch() {
 
     if (!keywords) return;
 
-    resultsContainer.innerHTML = '<div class="searching">正在搜索中....</div>';
     loadingIndicator.style.display = 'block';
 
     try {
@@ -275,6 +274,11 @@ function addResultClickListeners() {
 
 async function handleItemClick(event) {
     event.preventDefault(); // 防止默认行为
+    // 添加这个检查
+    if (document.body.classList.contains('modal-open')) {
+        return; // 如果模态框已经打开，不执行任何操作
+    }
+
     const symbol = this.getAttribute('data-symbol');
     if (!symbol) {
         alert("无效的股票代码。");
@@ -425,4 +429,13 @@ function drawChart(title, labels, data) {
     // 显示模态框
     const chartModal = new bootstrap.Modal(document.getElementById('chartModal'));
     chartModal.show();
+
+    // 添加这段新代码
+    document.getElementById('chartModal').addEventListener('hidden.bs.modal', function () {
+        document.body.classList.remove('modal-open');
+        const modalBackdrop = document.querySelector('.modal-backdrop');
+        if (modalBackdrop) {
+            modalBackdrop.remove();
+        }
+    });
 }
