@@ -1,6 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
 body {
+    height: 100%;
+    overflow-x: hidden;
+    /* 防止水平滚动 */
     font-family: Arial, sans-serif;
-    background-color: #080808;
+    background-color: #121212;
+    /* 稍微亮一点的深色背景 */
     margin: 0;
     padding: 0;
 }
@@ -9,13 +18,15 @@ body {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #010000;
+    background-color: #1e1e1e;
+    /* 容器背景色 */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #fff;
+    /* 标题改为白色 */
 }
 
 #loading {
@@ -29,6 +40,8 @@ h1 {
 .input-container {
     display: flex;
     margin-bottom: 20px;
+    flex-direction: row;
+    /* 确保默认为行方向 */
 }
 
 input[type="text"] {
@@ -121,6 +134,12 @@ button:disabled {
     color: cyan;
     text-decoration: underline;
     margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.result-item:hover {
+    transform: translateX(5px);
+    color: #fff;
 }
 
 .error {
@@ -130,21 +149,29 @@ button:disabled {
 }
 
 @media (max-width: 767px) {
-    .modal-dialog {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) !important;
-        margin: 0;
-        max-width: 90%;
-        /* 控制模态框的最大宽度 */
-        width: 100%;
-    }
+    /* 移除对 .modal-dialog 的自定义样式，依赖 Bootstrap */
 
     .modal-content {
         max-height: 80vh;
-        /* 控制模态框的最大高度 */
         overflow-y: auto;
-        /* 允许内容滚动 */
+        border-radius: 10px;
+    }
+
+    .modal-body {
+        padding: 15px;
+    }
+
+    /* 处理输入框容器的布局 */
+    .input-container {
+        flex-direction: column;
+    }
+
+    input[type="text"] {
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin-left: 0;
     }
 }

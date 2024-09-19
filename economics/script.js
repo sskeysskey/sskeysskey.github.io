@@ -345,14 +345,6 @@ function drawChart(title, labels, data) {
     // 检测是否为移动设备
     const isMobile = window.innerWidth <= 768;
 
-    // 调整图表容器的大小
-    const chartContainer = ctx.canvas.parentNode;
-    if (isMobile) {
-        chartContainer.style.height = '50vh'; // 在移动设备上使用视口高度的50%
-    } else {
-        chartContainer.style.height = '400px'; // 桌面设备上的固定高度
-    }
-
     window.priceChartInstance = new Chart(ctx, {
         type: 'line',
         data: {
