@@ -14,28 +14,19 @@
     "Consumer_Cyclical": {
         "LULU": "",
         "NKE": "Nike",
-        "MBLY": "",
-        "ABNB": ""
+        "MBLY": ""
     },
     "Energy": {
         "PBF": "石油精炼",
-        "CHK": "",
         "MTDR": "",
         "CHRD": "",
         "NE": "",
-        "VAL": "",
-        "CVX": "",
-        "HES": "",
-        "COP": "",
-        "EQNR": "",
-        "DINO": ""
+        "VAL": ""
     },
     "Technology": {
-        "U": "Unity",
         "SNOW": "",
         "STM": "意法",
-        "LSCC": "FPGA",
-        "JBL": "",
+        "INTC": "",
         "PATH": "UiPath",
         "QLYS": "",
         "ADBE": ""
@@ -48,19 +39,15 @@
         "DAR": ""
     },
     "Industrials": {
-        "AAL": "美国航空",
         "ATKR": "",
-        "BA": "波音",
-        "GTLS": ""
+        "BA": "波音"
     },
     "Real_Estate": {},
     "Financial_Services": {},
     "Healthcare": {
         "CVS": "",
-        "EW": "爱德华兹",
         "DXCM": "德康血糖",
-        "MRNA": "",
-        "BMRN": ""
+        "MRNA": ""
     },
     "Crypto": {
         "Bitcoin": "",
