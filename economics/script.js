@@ -257,19 +257,57 @@ function displayResults(category, results) {
 function addResultClickListeners() {
     const resultItems = document.querySelectorAll('.result-item');
     resultItems.forEach(item => {
-        // 兼容触摸设备
-        item.addEventListener('click', handleItemClick);
-        item.addEventListener('touchend', handleItemClick);
+        let touchStartX = 0;
+        let touchStartY = 0;
+        const threshold = 10; // 滑动阈值（像素）
+
+        item.addEventListener('touchstart', function (e) {
+            if (e.touches.length === 1) {
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+            }
+        });
+
+        item.addEventListener('touchend', function (e) {
+            const touchEndX = e.changedTouches[0].clientX;
+            const touchEndY = e.changedTouches[0].clientY;
+
+            const deltaX = Math.abs(touchEndX - touchStartX);
+            const deltaY = Math.abs(touchEndY - touchStartY);
+
+            if (deltaX < threshold && deltaY < threshold) {
+                touchHandled = true;
+                handleItemClick.call(this, e);
+            }
+        });
+
+        item.addEventListener('click', function (e) {
+            if (touchHandled) {
+                // 如果已经通过 touchend 处理过点击，不再处理 click 事件
+                touchHandled = false;
+                return;
+            }
+            handleItemClick.call(this, e);
+        });
     });
 }
 
+// 处理搜索结果项点击事件
 async function handleItemClick(event) {
+    if (isHandling) return; // 防止重复触发
+    isHandling = true;
+
     event.preventDefault(); // 防止默认行为
     const symbol = this.getAttribute('data-symbol');
     if (!symbol) {
         alert("无效的股票代码。");
+        isHandling = false;
         return;
     }
+
+    // 显示“页面加载中...”并隐藏图表
+    document.getElementById('chartLoading').style.display = 'block';
+    document.getElementById('priceChart').style.display = 'none';
 
     // 加载 sectors 和 finance 数据
     const sectors = await loadSectors();
@@ -277,13 +315,15 @@ async function handleItemClick(event) {
 
     if (!sectors || !finance) {
         alert("无法加载必要的数据。");
+        document.getElementById('chartLoading').style.display = 'none';
+        isHandling = false;
         return;
     }
 
     // 查找 symbol 对应的 sector
     let sectorFound = null;
     for (const [sector, symbols] of Object.entries(sectors)) {
-        // 注意：确保 symbol 与 sectors 的符号类型一致（可能大小写或格式不同）
+        // 注意：确保 symbol 与 sectors 的符号类型一致（统一为大写）
         if (symbols.map(s => s.toUpperCase()).includes(symbol.toUpperCase())) {
             sectorFound = sector;
             break;
@@ -292,18 +332,24 @@ async function handleItemClick(event) {
 
     if (!sectorFound) {
         alert(`未找到 symbol "${symbol}" 对应的 sector。`);
+        document.getElementById('chartLoading').style.display = 'none';
+        isHandling = false;
         return;
     }
 
     // 从 finance 数据中获取该 sector 和 symbol 的数据
     if (!finance[sectorFound]) {
         alert(`Finance 数据中未包含 sector "${sectorFound}"。`);
+        document.getElementById('chartLoading').style.display = 'none';
+        isHandling = false;
         return;
     }
 
     const symbolData = finance[sectorFound].filter(item => item.name.toUpperCase() === symbol.toUpperCase());
     if (symbolData.length === 0) {
         alert(`Finance 数据中未找到 symbol "${symbol}" 的数据。`);
+        document.getElementById('chartLoading').style.display = 'none';
+        isHandling = false;
         return;
     }
 
