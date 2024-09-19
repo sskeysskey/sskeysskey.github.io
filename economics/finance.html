@@ -121,6 +121,18 @@
                 padding-bottom: 0;
             }
 
+            .nav-tabs-sticky {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                background-color: #f4f6f9;
+                padding: 10px 15px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+            }
+
             /* 移除 nav-item 的上下外边距 */
             .nav-tabs .nav-item {
                 margin-top: 0;
@@ -270,6 +282,9 @@
             const sectorTabs = document.getElementById('sectorTabs');
             const sectorTabsContent = document.getElementById('sectorTabsContent');
             const DEFAULT_ACTIVE_TAB = 'Indices'; // 设置默认激活的 TAB
+            // 添加滚动事件监听器
+            const navTabs = document.getElementById('sectorTabs');
+            const navTabsOffsetTop = navTabs.offsetTop;
 
             let financeData = {};
             let symbolsData = {}; // 用于存储所有的 symbols 数据
@@ -436,6 +451,21 @@
                 console.error('加载数据文件时出错:', err);
                 sectorTabsContent.innerHTML = '<p class="text-danger">无法加载必要的数据文件。</p>';
             });
+
+            function handleScroll() {
+                if (window.innerWidth <= 768) {
+                    if (window.pageYOffset > navTabsOffsetTop) {
+                        navTabs.classList.add('nav-tabs-sticky');
+                    } else {
+                        navTabs.classList.remove('nav-tabs-sticky');
+                    }
+                } else {
+                    navTabs.classList.remove('nav-tabs-sticky');
+                }
+            }
+
+            window.addEventListener('scroll', handleScroll);
+            window.addEventListener('resize', handleScroll);
 
             // 显示错误信息
             function showError(message) {
