@@ -16,8 +16,6 @@
             font-family: 'Roboto', sans-serif;
             background: #f4f6f9;
             color: #333;
-            font-size: 16px;
-            /* 增大基础字体大小 */
         }
 
         .loading-overlay {
@@ -37,8 +35,6 @@
         .nav-tabs {
             border-bottom: none;
             margin-bottom: 20px;
-            flex-wrap: wrap;
-            justify-content: flex-start;
         }
 
         .nav-tabs .nav-item {
@@ -57,8 +53,6 @@
             transition: all 0.3s ease;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             cursor: pointer;
-            font-size: 16px;
-            /* 增大标签字体大小 */
         }
 
         .nav-tabs .nav-link:hover {
@@ -78,8 +72,6 @@
             border: 1px solid #dee2e6;
             padding: 20px;
             background: #fff;
-            font-size: 16px;
-            /* 增大内容区域字体大小 */
         }
 
         /* 优化符号项样式 */
@@ -92,9 +84,6 @@
             transition: all 0.3s ease;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
             cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-            /* 增大符号项字体大小 */
         }
 
         .symbol-item:hover {
@@ -107,48 +96,18 @@
         }
 
         .symbol-value {
-            font-size: 1em;
-            /* 增大符号值的字体大小 */
+            font-size: 0.9em;
         }
 
         @media (max-width: 768px) {
-            .container-fluid {
-                padding-left: 0;
-                /* 移除左侧内边距 */
-                padding-right: 0;
-                /* 移除右侧内边距 */
-            }
-
             .nav-tabs .nav-link {
-                padding: 10px 15px;
-                /* 增大按钮的内边距 */
-                font-size: 16px;
-                /* 增大标签字体大小 */
+                padding: 8px 15px;
+                font-size: 14px;
             }
 
             .symbol-item {
-                padding: 12px 15px;
-                /* 增大符号项的内边距 */
-                font-size: 16px;
-                /* 增大符号项字体大小 */
-            }
-
-            .tab-content {
-                padding: 15px;
-                /* 增大内容区域的内边距 */
-                font-size: 16px;
-                /* 增大内容区域字体大小 */
-            }
-
-            .modal-title {
-                font-size: 1.25rem;
-                /* 增大模态框标题字体大小 */
-            }
-
-            /* 移动设备下调整模态框内容 */
-            .modal-body {
-                padding: 0;
-                /* 移除模态框 body 的内边距 */
+                padding: 8px 12px;
+                font-size: 14px;
             }
         }
 
@@ -159,8 +118,6 @@
 
         .modal-title {
             font-weight: 600;
-            font-size: 1.5rem;
-            /* 增大模态框标题字体大小 */
         }
 
         .close-button {
@@ -182,7 +139,7 @@
         <p class="mt-2">页面加载中，请稍候...</p>
     </div>
 
-    <div class="container-fluid my-3 px-3">
+    <div class="container my-5">
         <!-- TAB导航 -->
         <ul class="nav nav-tabs" id="sectorTabs" role="tablist">
             <!-- 动态生成TAB -->
@@ -195,7 +152,7 @@
 
     <!-- Chart Modal -->
     <div class="modal fade" id="chartModal" tabindex="-1" aria-labelledby="chartModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 id="chartModalLabel" class="modal-title">价格走势图</h5>
@@ -203,8 +160,8 @@
                         &times;
                     </button>
                 </div>
-                <div class="modal-body p-0"> <!-- 移除内边距 -->
-                    <canvas id="priceChart" style="width: 100%; height: 100%;"></canvas>
+                <div class="modal-body">
+                    <canvas id="priceChart" width="100%" height="50"></canvas>
                 </div>
             </div>
         </div>
@@ -212,7 +169,7 @@
 
     <!-- Error Modal -->
     <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="errorModalLabel">错误</h5>
@@ -232,6 +189,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const loadingIndicator = document.getElementById('loading-indicator');
+            const content = document.getElementById('content');
             const sectorTabs = document.getElementById('sectorTabs');
             const sectorTabsContent = document.getElementById('sectorTabsContent');
             const DEFAULT_ACTIVE_TAB = 'Indices'; // 设置默认激活的 TAB
@@ -265,7 +223,7 @@
                 let activeTabSet = false;
                 let defaultTabExists = false;
 
-                sectors.forEach((sector) => {
+                sectors.forEach((sector, index) => {
                     const symbolsObj = sectorsData[sector];
                     const symbols = Object.keys(symbolsObj);
 
@@ -394,7 +352,7 @@
                         }
                     });
                 });
-                // 隐藏加载指示器
+                // 在这里添加隐藏加载指示器和显示内容的代码
                 loadingIndicator.style.display = 'none';
 
             }).catch(err => {
