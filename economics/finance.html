@@ -35,6 +35,8 @@
         .nav-tabs {
             border-bottom: none;
             margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
         }
 
         .nav-tabs .nav-item {
@@ -84,6 +86,7 @@
             transition: all 0.3s ease;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
             cursor: pointer;
+            width: 100%;
         }
 
         .symbol-item:hover {
@@ -100,14 +103,23 @@
         }
 
         @media (max-width: 768px) {
+            .container-fluid {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
             .nav-tabs .nav-link {
                 padding: 8px 15px;
                 font-size: 14px;
             }
 
             .symbol-item {
-                padding: 8px 12px;
+                padding: 8px 10px;
                 font-size: 14px;
+            }
+
+            .tab-content {
+                padding: 10px;
             }
         }
 
@@ -139,7 +151,7 @@
         <p class="mt-2">页面加载中，请稍候...</p>
     </div>
 
-    <div class="container my-5">
+    <div class="container-fluid my-3 px-3">
         <!-- TAB导航 -->
         <ul class="nav nav-tabs" id="sectorTabs" role="tablist">
             <!-- 动态生成TAB -->
@@ -152,7 +164,7 @@
 
     <!-- Chart Modal -->
     <div class="modal fade" id="chartModal" tabindex="-1" aria-labelledby="chartModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 id="chartModalLabel" class="modal-title">价格走势图</h5>
@@ -169,7 +181,7 @@
 
     <!-- Error Modal -->
     <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="errorModalLabel">错误</h5>
@@ -189,7 +201,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const loadingIndicator = document.getElementById('loading-indicator');
-            const content = document.getElementById('content');
             const sectorTabs = document.getElementById('sectorTabs');
             const sectorTabsContent = document.getElementById('sectorTabsContent');
             const DEFAULT_ACTIVE_TAB = 'Indices'; // 设置默认激活的 TAB
@@ -223,7 +234,7 @@
                 let activeTabSet = false;
                 let defaultTabExists = false;
 
-                sectors.forEach((sector, index) => {
+                sectors.forEach((sector) => {
                     const symbolsObj = sectorsData[sector];
                     const symbols = Object.keys(symbolsObj);
 
@@ -352,7 +363,7 @@
                         }
                     });
                 });
-                // 在这里添加隐藏加载指示器和显示内容的代码
+                // 隐藏加载指示器
                 loadingIndicator.style.display = 'none';
 
             }).catch(err => {
