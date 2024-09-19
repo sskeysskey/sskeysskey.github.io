@@ -18,6 +18,14 @@ h1 {
     color: #333;
 }
 
+#loading {
+    color: white;
+}
+
+.searching {
+    color: white;
+}
+
 .input-container {
     display: flex;
     margin-bottom: 20px;
