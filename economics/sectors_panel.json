@@ -15,8 +15,7 @@
         "LULU": "",
         "NKE": "Nike",
         "MBLY": "",
-        "ABNB": "",
-        "AZO": ""
+        "ABNB": ""
     },
     "Energy": {
         "PBF": "石油精炼",
@@ -38,7 +37,8 @@
         "LSCC": "FPGA",
         "JBL": "",
         "PATH": "UiPath",
-        "QLYS": ""
+        "QLYS": "",
+        "ADBE": ""
     },
     "Utilities": {},
     "Consumer_Defensive": {
@@ -49,7 +49,6 @@
     },
     "Industrials": {
         "AAL": "美国航空",
-        "SYM": "仓储机器",
         "ATKR": "",
         "BA": "波音",
         "GTLS": ""
@@ -61,8 +60,7 @@
         "EW": "爱德华兹",
         "DXCM": "德康血糖",
         "MRNA": "",
-        "BMRN": "",
-        "BDX": ""
+        "BMRN": ""
     },
     "Crypto": {
         "Bitcoin": "",
