@@ -467,15 +467,19 @@
             });
 
             function handleScroll() {
-                if (window.pageYOffset >= navTabsOffsetTop) {
-                    navTabs.classList.add('fixed'); // 添加固定类
+                if (window.innerWidth <= 768) {
+                    if (window.pageYOffset > navTabsOffsetTop) {
+                        navTabs.classList.add('nav-tabs-sticky');
+                    } else {
+                        navTabs.classList.remove('nav-tabs-sticky');
+                    }
                 } else {
-                    navTabs.classList.remove('fixed'); // 移除固定类
+                    navTabs.classList.remove('nav-tabs-sticky');
                 }
             }
 
             window.addEventListener('scroll', handleScroll);
-
+            window.addEventListener('resize', handleScroll);
 
             // 显示错误信息
             function showError(message) {
