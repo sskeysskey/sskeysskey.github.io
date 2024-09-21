@@ -122,15 +122,28 @@
             }
 
             .nav-tabs-sticky {
-                position: fixed;
+                position: sticky;
                 top: 0;
                 left: 0;
                 right: 0;
                 z-index: 1000;
                 background-color: #f4f6f9;
-                padding: 10px 15px;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                transition: all 0.3s ease;
+                transition: none;
+                /* 避免滚动时产生视觉上的跳动 */
+            }
+
+            /* 取消滚动时的跳动效果，保持一致的布局 */
+            .nav-tabs-sticky.fixed {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 9999;
+                background-color: #f4f6f9;
+                margin-top: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             }
 
             /* 移除 nav-item 的上下外边距 */
@@ -141,9 +154,10 @@
 
             /* 调整 nav-link 的上下内边距以减少空间 */
             .nav-tabs .nav-link {
-                padding-top: 8px;
-                padding-bottom: 8px;
-                font-size: 0.7rem;
+                padding: 2px 4px;
+                border-radius: 20px;
+                transition: all 0.3s ease;
+                font-size: 1.0rem;
                 /* 放大字体 */
             }
 
@@ -230,7 +244,7 @@
 
     <div class="container-fluid my-md-5 my-0 px-0">
         <!-- TAB导航 -->
-        <ul class="nav nav-tabs" id="sectorTabs" role="tablist">
+        <ul class="nav nav-tabs nav-tabs-sticky" id="sectorTabs" role="tablist">
             <!-- 动态生成TAB -->
         </ul>
         <!-- TAB内容 -->
@@ -453,19 +467,15 @@
             });
 
             function handleScroll() {
-                if (window.innerWidth <= 768) {
-                    if (window.pageYOffset > navTabsOffsetTop) {
-                        navTabs.classList.add('nav-tabs-sticky');
-                    } else {
-                        navTabs.classList.remove('nav-tabs-sticky');
-                    }
+                if (window.pageYOffset >= navTabsOffsetTop) {
+                    navTabs.classList.add('fixed'); // 添加固定类
                 } else {
-                    navTabs.classList.remove('nav-tabs-sticky');
+                    navTabs.classList.remove('fixed'); // 移除固定类
                 }
             }
 
             window.addEventListener('scroll', handleScroll);
-            window.addEventListener('resize', handleScroll);
+
 
             // 显示错误信息
             function showError(message) {
@@ -561,6 +571,7 @@
             }
         });
     </script>
+
 </body>
 
 </html>
