@@ -519,7 +519,9 @@
     "IMTM",
     "HTUS",
     "QLC",
-    "BCD"
+    "BCD",
+    "IVLU",
+    "MUNI"
   ],
   "Basic_Materials": [
     "LIN",
@@ -1585,7 +1587,6 @@
     "EPRT",
     "KRG",
     "LINE",
-    "SITC",
     "EPR-PG",
     "PECO"
   ],
