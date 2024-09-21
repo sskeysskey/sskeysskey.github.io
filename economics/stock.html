@@ -30,12 +30,19 @@
             margin: 0 auto;
         }
 
+        /* 确保nav-tabs在滚动时固定在页面顶部 */
         .nav-tabs {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #f8f9fa;
             border-bottom: none;
             margin-bottom: 5px;
             margin-top: 5px;
             margin-left: 5px;
             margin-right: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            /* 增加阴影效果 */
         }
 
         .nav-tabs .nav-item {
