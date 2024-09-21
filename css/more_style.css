@@ -57,6 +57,25 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.intro-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 220px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.intro-quote {
+    flex: 1;
+}
+
 #search iframe {
     width: 100%;
     height: 900px;
@@ -185,5 +204,15 @@ a:hover {
 @media (max-width: 768px) {
     .game {
         width: 100%;
+    }
+
+    .intro-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 }
