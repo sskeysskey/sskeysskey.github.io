@@ -60,8 +60,10 @@ section {
 .intro-header {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
-    margin-left: 220px;
+    flex-wrap: wrap;
+    padding: 0 5%;
 }
 
 .profile-image {
@@ -69,11 +71,13 @@ section {
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    margin-right: 20px;
+    margin: 0 20px 20px 0;
 }
 
 .intro-quote {
     flex: 1;
+    min-width: 200px;
+    text-align: left;
 }
 
 #search iframe {
@@ -201,18 +205,25 @@ a:hover {
     text-decoration: underline;
 }
 
+@media (min-width: 769px) {
+    .intro-header {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media (max-width: 768px) {
     .game {
         width: 100%;
     }
 
     .intro-header {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        padding: 0 20px;
     }
 
     .profile-image {
-        margin-right: 0;
-        margin-bottom: 20px;
+        margin: 0 20px 20px 0;
     }
 }
