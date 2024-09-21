@@ -32,12 +32,15 @@
 
         .nav-tabs {
             border-bottom: none;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
         }
 
         .nav-tabs .nav-item {
-            margin-bottom: 10px;
-            margin-right: 10px;
+            margin-bottom: none;
+            margin-right: none;
             cursor: pointer;
         }
 
@@ -51,7 +54,7 @@
             cursor: pointer;
             font-size: 1rem;
             /* 增加导航标签字体大小 */
-            padding: 12px 24px;
+            padding: 5px 6px;
             /* 增加内边距 */
         }
 
@@ -70,7 +73,7 @@
 
         .tab-content {
             border: 1px solid #dee2e6;
-            padding: 20px;
+            padding: 1px;
             background: #fff;
         }
 
@@ -214,8 +217,8 @@
                     // 处理comparestock.txt和finance.json
                     let lines = compareText.trim().split('\n');
 
-                    let topGainersLines = lines.slice(0, 15);
-                    let last15Lines = lines.slice(-15);
+                    let topGainersLines = lines.slice(0, 20);
+                    let last15Lines = lines.slice(-20);
                     let topLosersLines = last15Lines.reverse();
 
                     const topGainerContent = document.getElementById('topGainerContent');
