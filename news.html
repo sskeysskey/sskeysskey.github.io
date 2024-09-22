@@ -17,9 +17,12 @@
     </div>
     <style>
         header {
-            background: #35424a;
-            color: #ffffff;
-            padding-top: none;
+            background: #ffffff;
+            /* 将背景色改为白色 */
+            color: #35424a;
+            /* 将文字颜色改为深灰色，以确保可读性 */
+            padding-top: 0;
+            /* 修正了 'none' 为正确的值 '0' */
             min-height: 40px;
             border-bottom: #e8491d 3px solid;
         }
@@ -44,8 +47,9 @@
             font-weight: bold;
         }
 
-        .nav-item.active {
-            color: white;
+        header a:hover {
+            color: #e8491d;
+            /* 鼠标悬停时的颜色，与底部边框颜色一致 */
         }
     </style>
 </head>
