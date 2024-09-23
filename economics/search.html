@@ -456,14 +456,14 @@
                 // 加载 MarketCap 数据
                 const marketCapData = await loadMarketCapData();
 
-                hasResults |= displayResults('Stock_tag', matchedStocks.tag, marketCapData);
-                hasResults |= displayResults('ETF_tag', matchedETFs.tag, marketCapData);
-                hasResults |= displayResults('Stock_name', matchedStocks.name, marketCapData);
-                hasResults |= displayResults('ETF_name', matchedETFs.name, marketCapData);
-                hasResults |= displayResults('Stock_symbol', matchedStocks.symbol, marketCapData);
-                hasResults |= displayResults('ETF_symbol', matchedETFs.symbol, marketCapData);
-                hasResults |= displayResults('Stock_Description', matchedStocks.description, marketCapData);
-                hasResults |= displayResults('ETFs_Description', matchedETFs.description, marketCapData);
+                hasResults |= displayResults('Stock_tag', matchedStocks.tag, marketCapData, 'stocks');
+                hasResults |= displayResults('ETF_tag', matchedETFs.tag, marketCapData, 'etfs');
+                hasResults |= displayResults('Stock_name', matchedStocks.name, marketCapData, 'stocks');
+                hasResults |= displayResults('ETF_name', matchedETFs.name, marketCapData, 'etfs');
+                hasResults |= displayResults('Stock_symbol', matchedStocks.symbol, marketCapData, 'stocks');
+                hasResults |= displayResults('ETF_symbol', matchedETFs.symbol, marketCapData, 'etfs');
+                hasResults |= displayResults('Stock_Description', matchedStocks.description, marketCapData, 'stocks');
+                hasResults |= displayResults('ETFs_Description', matchedETFs.description, marketCapData, 'etfs');
 
                 if (!hasResults) {
                     resultsContainer.innerHTML = '<div class="no-results">没有搜索到任何结果</div>';
@@ -552,7 +552,7 @@
         }
 
         // 显示搜索结果
-        function displayResults(category, results, marketCapData) {
+        function displayResults(category, results, marketCapData, itemType) {
             const resultsContainer = document.getElementById('results');
             if (
                 results.exact.length > 0 ||
@@ -572,12 +572,14 @@
                     resultElement.className = 'result-item';
                     let resultText = `${result.symbol} - ${result.name} - ${result.tag.join(', ')}`;
 
-                    // 查找 MarketCap 和 PE Ratio
-                    const marketCapInfo = marketCapData[result.symbol.toUpperCase()];
-                    if (marketCapInfo) {
-                        const formattedMarketCap = formatMarketCap(marketCapInfo.marketCap); // 格式化marketcap为Billion
-                        const peRatio = marketCapInfo.peRatio === "--" ? "--" : marketCapInfo.peRatio.toFixed(2);
-                        resultText += ` - ${formattedMarketCap} ${peRatio}`;
+                    // 如果是股票类，尝试查找 MarketCap 和 PE Ratio
+                    if (itemType === 'stocks') {
+                        const marketCapInfo = marketCapData[result.symbol.toUpperCase()];
+                        if (marketCapInfo) {
+                            const formattedMarketCap = formatMarketCap(marketCapInfo.marketCap); // 格式化marketcap为Billion
+                            const peRatio = marketCapInfo.peRatio === "--" ? "--" : marketCapInfo.peRatio.toFixed(2);
+                            resultText += ` - ${formattedMarketCap} ${peRatio}`;
+                        }
                     }
 
                     resultElement.textContent = resultText;
@@ -657,17 +659,16 @@
 
                 // 假设 finance.json 中每个 symbol 只有一条记录，如果有多条，可根据需要调整
                 // 如果有多条记录，例如不同日期，可以累积成多个数据点
-
                 // 准备数据
                 const sortedData = symbolData.sort((a, b) => new Date(a.date) - new Date(b.date));
                 const labels = sortedData.map(item => item.date);
                 const prices = sortedData.map(item => item.price);
 
                 // 获取 MarketCap 和 PE Ratio
-                const marketCapInfo = marketCapData[symbol.toUpperCase()];
-                const marketCap = marketCapInfo ? formatMarketCap(marketCapInfo.marketCap) : "未知";
-                // 如果 peRatio 是 "--"，则直接显示 "--"，否则显示保留两位小数的市盈率
-                const peRatio = marketCapInfo && marketCapInfo.peRatio === "--" ? "--" : marketCapInfo.peRatio.toFixed(2);
+                const marketCapInfo = marketCapData[symbol.toUpperCase()] || {};  // 使用空对象作为默认值
+                const marketCap = marketCapInfo.marketCap ? formatMarketCap(marketCapInfo.marketCap) : "";
+                // 如果 peRatio 是 undefined 或 "--"，则直接显示 "--"，否则显示保留两位小数的市盈率
+                const peRatio = marketCapInfo.peRatio === undefined || marketCapInfo.peRatio === "--" ? "" : marketCapInfo.peRatio.toFixed(2);
 
                 // 更新图表标题（去掉 "价格走势图" 并显示 MarketCap 和 PE）
                 const chartTitle = `${symbol} ${marketCap} ${peRatio}`;
