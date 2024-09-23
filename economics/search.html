@@ -32,10 +32,6 @@
             /* 添加一些内边距 */
         }
 
-        title {
-            color: white;
-        }
-
         .container {
             max-width: 800px;
             margin: 10px auto;
@@ -164,6 +160,12 @@
             /* 为 iOS 设备提供平滑滚动 */
         }
 
+        .modal-content {
+            max-height: 80vh;
+            overflow-y: auto;
+            border-radius: 10px;
+        }
+
         .result-category {
             font-size: 18px;
             color: blue;
@@ -277,8 +279,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <!-- 嵌入 JavaScript -->
     <script>
-        console.log("Script loaded. Version: 1.0");
-
         // 页面加载完成后的初始化函数
         function initializePage() {
             const searchInput = document.getElementById('searchInput');
@@ -313,14 +313,56 @@
         // 页面加载完成后执行初始化
         window.addEventListener('load', initializePage);
 
+        // 全局变量缓存 sectors 和 finance 数据
+        let sectorsData = null;
+        let financeData = null;
+
         // JSON文件路径
         const jsonPath = "description.json";
         const sectorsPath = "sectors_all.json";
         const financePath = "finance.json";
+        const marketCapFilePath = "marketcap_pe.txt";
+        // 定义全局变量存储 marketcap_pe 数据
+        let marketCapData = null;
 
-        // 全局变量缓存 sectors 和 finance 数据
-        let sectorsData = null;
-        let financeData = null;
+        // 加载 marketcap_pe.txt 文件
+        async function loadMarketCapData() {
+            if (marketCapData) return marketCapData;
+            try {
+                const response = await fetch(marketCapFilePath);
+                if (!response.ok) throw new Error(`无法加载 MarketCap 数据: ${response.status}`);
+                const text = await response.text();
+                marketCapData = parseMarketCapData(text);
+                return marketCapData;
+            } catch (error) {
+                console.error(error);
+                alert("加载 MarketCap 数据时出错。");
+            }
+        }
+
+        // 解析 marketcap_pe.txt 数据
+        function parseMarketCapData(text) {
+            const data = {};
+            const lines = text.split("\n");
+            for (let line of lines) {
+                const [symbol, values] = line.split(": ");
+                if (symbol && values) {
+                    const [marketCap, peRatio] = values.split(", ");
+                    const parsedMarketCap = parseFloat(marketCap);
+                    // 如果 peRatio 为 "--"，则保留为字符串 "--"，否则解析为数字
+                    const parsedPeRatio = peRatio === "--" ? "--" : parseFloat(peRatio);
+                    data[symbol.toUpperCase()] = { marketCap: parsedMarketCap, peRatio: parsedPeRatio };
+                }
+            }
+            return data;
+        }
+
+        // 将 marketCap 转换为 Billion
+        function formatMarketCap(marketCap) {
+            return (marketCap / 1e9).toFixed(1) + "B"; // 将单位转换为 Billion
+        }
+
+
 
         // 加载 sectors_all.json
         async function loadSectors() {
@@ -411,14 +453,17 @@
 
                 let hasResults = false;
 
-                hasResults |= displayResults('Stock_tag', matchedStocks.tag);
-                hasResults |= displayResults('ETF_tag', matchedETFs.tag);
-                hasResults |= displayResults('Stock_name', matchedStocks.name);
-                hasResults |= displayResults('ETF_name', matchedETFs.name);
-                hasResults |= displayResults('Stock_symbol', matchedStocks.symbol);
-                hasResults |= displayResults('ETF_symbol', matchedETFs.symbol);
-                hasResults |= displayResults('Stock_Description', matchedStocks.description);
-                hasResults |= displayResults('ETFs_Description', matchedETFs.description);
+                // 加载 MarketCap 数据
+                const marketCapData = await loadMarketCapData();
+
+                hasResults |= displayResults('Stock_tag', matchedStocks.tag, marketCapData);
+                hasResults |= displayResults('ETF_tag', matchedETFs.tag, marketCapData);
+                hasResults |= displayResults('Stock_name', matchedStocks.name, marketCapData);
+                hasResults |= displayResults('ETF_name', matchedETFs.name, marketCapData);
+                hasResults |= displayResults('Stock_symbol', matchedStocks.symbol, marketCapData);
+                hasResults |= displayResults('ETF_symbol', matchedETFs.symbol, marketCapData);
+                hasResults |= displayResults('Stock_Description', matchedStocks.description, marketCapData);
+                hasResults |= displayResults('ETFs_Description', matchedETFs.description, marketCapData);
 
                 if (!hasResults) {
                     resultsContainer.innerHTML = '<div class="no-results">没有搜索到任何结果</div>';
@@ -472,34 +517,34 @@
 
                 // Symbol结果分类
                 if (symbolExactMatch) {
-                    results.symbol.exact.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+                    results.symbol.exact.push(item);
                 } else if (symbolPartialMatch) {
-                    results.symbol.partial.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+                    results.symbol.partial.push(item);
                 } else if (symbolFuzzyMatch) {
-                    results.symbol.fuzzy.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+                    results.symbol.fuzzy.push(item);
                 }
 
                 // Name结果分类
                 if (nameExactMatch) {
-                    results.name.exact.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+                    results.name.exact.push(item);
                 } else if (namePartialMatch) {
-                    results.name.partial.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+                    results.name.partial.push(item);
                 } else if (nameFuzzyMatch) {
-                    results.name.fuzzy.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+                    results.name.fuzzy.push(item);
                 }
 
                 // Tag结果分类
                 if (tagExactMatch) {
-                    results.tag.exact.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+                    results.tag.exact.push(item);
                 } else if (tagPartialMatch) {
-                    results.tag.partial.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+                    results.tag.partial.push(item);
                 } else if (tagFuzzyMatch) {
-                    results.tag.fuzzy.push(`${item.symbol} - ${item.name} - ${item.tag.join(', ')}`);
+                    results.tag.fuzzy.push(item);
                 }
 
                 // Description匹配
                 if (keywordsArray.every(k => descriptionText.includes(k))) {
-                    results.description.exact.push(`${item.symbol} - ${item.name || ''} - ${item.tag.join(', ')}`);
+                    results.description.exact.push(item);
                 }
             });
 
@@ -507,7 +552,7 @@
         }
 
         // 显示搜索结果
-        function displayResults(category, results) {
+        function displayResults(category, results, marketCapData) {
             const resultsContainer = document.getElementById('results');
             if (
                 results.exact.length > 0 ||
@@ -525,9 +570,19 @@
                 combinedResults.forEach(result => {
                     const resultElement = document.createElement('div');
                     resultElement.className = 'result-item';
-                    resultElement.textContent = result;
+                    let resultText = `${result.symbol} - ${result.name} - ${result.tag.join(', ')}`;
+
+                    // 查找 MarketCap 和 PE Ratio
+                    const marketCapInfo = marketCapData[result.symbol.toUpperCase()];
+                    if (marketCapInfo) {
+                        const formattedMarketCap = formatMarketCap(marketCapInfo.marketCap); // 格式化marketcap为Billion
+                        const peRatio = marketCapInfo.peRatio === "--" ? "--" : marketCapInfo.peRatio.toFixed(2);
+                        resultText += ` - ${formattedMarketCap} ${peRatio}`;
+                    }
+
+                    resultElement.textContent = resultText;
                     // 设置 data-symbol 属性以存储 symbol
-                    const symbol = result.split(' - ')[0];
+                    const symbol = result.symbol;
                     resultElement.setAttribute('data-symbol', symbol.toUpperCase());
                     resultElement.style.cursor = 'pointer'; // 显示为可点击
                     resultsContainer.appendChild(resultElement);
@@ -567,8 +622,9 @@
                 // 加载 sectors 和 finance 数据
                 const sectors = await loadSectors();
                 const finance = await loadFinance();
+                const marketCapData = await loadMarketCapData(); // 加载 MarketCap 数据
 
-                if (!sectors || !finance) {
+                if (!sectors || !finance || !marketCapData) {
                     throw new Error("无法加载必要的数据。");
                 }
 
@@ -601,15 +657,21 @@
 
                 // 假设 finance.json 中每个 symbol 只有一条记录，如果有多条，可根据需要调整
                 // 如果有多条记录，例如不同日期，可以累积成多个数据点
-                // 这里假设有多条记录，根据日期排序后绘制价格走势图
 
                 // 准备数据
                 const sortedData = symbolData.sort((a, b) => new Date(a.date) - new Date(b.date));
                 const labels = sortedData.map(item => item.date);
                 const prices = sortedData.map(item => item.price);
 
-                // 绘制图表
-                drawChart(`${symbol} 价格走势图`, labels, prices);
+                // 获取 MarketCap 和 PE Ratio
+                const marketCapInfo = marketCapData[symbol.toUpperCase()];
+                const marketCap = marketCapInfo ? formatMarketCap(marketCapInfo.marketCap) : "未知";
+                // 如果 peRatio 是 "--"，则直接显示 "--"，否则显示保留两位小数的市盈率
+                const peRatio = marketCapInfo && marketCapInfo.peRatio === "--" ? "--" : marketCapInfo.peRatio.toFixed(2);
+
+                // 更新图表标题（去掉 "价格走势图" 并显示 MarketCap 和 PE）
+                const chartTitle = `${symbol} ${marketCap} ${peRatio}`;
+                drawChart(chartTitle, labels, prices);
             } catch (error) {
                 alert(error.message);
             } finally {

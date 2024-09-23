@@ -281,29 +281,12 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 id="chartModalLabel" class="modal-title">价格走势图</h5>
-                    <button type="button" class="close-button" data-bs-dismiss="modal" aria-label="Close">
-                        &times;
-                    </button>
+                    <h5 id="chartModalLabel" class="modal-title"></h5>
+                    <button type="button" class="close-button" data-bs-dismiss="modal"
+                        aria-label="Close">&times;</button>
                 </div>
                 <div class="modal-body">
                     <canvas id="priceChart" width="100%" height="50"></canvas>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Error Modal -->
-    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="errorModalLabel">错误</h5>
-                    <button type="button" class="close-button" data-bs-dismiss="modal" aria-label="Close">
-                        &times;
-                    </button>
-                </div>
-                <div class="modal-body" id="errorModalBody">
                 </div>
             </div>
         </div>
@@ -313,7 +296,48 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- 自定义JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        const marketCapFilePath = "marketcap_pe.txt";
+        // 定义全局变量存储 marketcap_pe 数据
+        let marketCapData = null;
+
+        // 加载 marketcap_pe.txt 文件
+        async function loadMarketCapData() {
+            if (marketCapData) return marketCapData;
+            try {
+                const response = await fetch(marketCapFilePath);
+                if (!response.ok) throw new Error(`无法加载 MarketCap 数据: ${response.status}`);
+                const text = await response.text();
+                marketCapData = parseMarketCapData(text);
+                return marketCapData;
+            } catch (error) {
+                console.error(error);
+                alert("加载 MarketCap 数据时出错。");
+            }
+        }
+
+        // 解析 marketcap_pe.txt 数据
+        function parseMarketCapData(text) {
+            const data = {};
+            const lines = text.split("\n");
+            for (let line of lines) {
+                const [symbol, values] = line.split(": ");
+                if (symbol && values) {
+                    const [marketCap, peRatio] = values.split(", ");
+                    const parsedMarketCap = parseFloat(marketCap);
+                    // 如果 peRatio 为 "--"，则保留为字符串 "--"，否则解析为数字
+                    const parsedPeRatio = peRatio === "--" ? "--" : parseFloat(peRatio);
+                    data[symbol.toUpperCase()] = { marketCap: parsedMarketCap, peRatio: parsedPeRatio };
+                }
+            }
+            return data;
+        }
+
+        // 将 marketCap 转换为 Billion
+        function formatMarketCap(marketCap) {
+            return (marketCap / 1e9).toFixed(1) + "B"; // 将单位转换为 Billion
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
             const loadingIndicator = document.getElementById('loading-indicator');
             const sectorTabs = document.getElementById('sectorTabs');
             const sectorTabsContent = document.getElementById('sectorTabsContent');
@@ -324,6 +348,7 @@
 
             let financeData = {};
             let symbolsData = {}; // 用于存储所有的 symbols 数据
+            let marketCapData = await loadMarketCapData(); // 加载 marketcap_pe.txt 数据
 
             // 初始化所有的 Modal
             const modals = document.querySelectorAll('.modal');
@@ -470,8 +495,7 @@
                                 const labels = symbolData.map(entry => entry.date);
                                 const prices = symbolData.map(entry => entry.price);
 
-                                // 绘制图表
-                                drawChart(`${symbol}`, labels, prices);
+                                drawChart(symbol, labels, prices);
                             } else {
                                 showError(`未找到符号 ${symbol} 的财务数据。`);
                             }
@@ -511,7 +535,7 @@
             }
 
             // 绘制Chart.js图表
-            function drawChart(title, labels, data) {
+            function drawChart(symbol, labels, data) {
                 const ctx = document.getElementById('priceChart').getContext('2d');
 
                 // 释放之前的图表实例（如果有）
@@ -521,6 +545,19 @@
 
                 // 检测是否为移动设备
                 const isMobile = window.innerWidth <= 768;
+                // 检查symbol是否在marketcap_pe数据中
+                const symbolData = marketCapData[symbol];
+                let marketCapFormatted = '';
+                let peRatioFormatted = '';
+
+                if (symbolData) {
+                    marketCapFormatted = formatMarketCap(symbolData.marketCap);
+                    peRatioFormatted = symbolData.peRatio !== "--" ? symbolData.peRatio : "--";
+                }
+
+                // 设置模态框标题：{symbol} {marketCapFormatted} {peRatioFormatted}
+                const modalTitle = `${symbol} ${marketCapFormatted} ${peRatioFormatted}`;
+                document.getElementById('chartModalLabel').textContent = modalTitle;
 
                 window.priceChartInstance = new Chart(ctx, {
                     type: 'line',
@@ -588,10 +625,6 @@
                     }
                 });
 
-                // 设置模态框标题
-                document.getElementById('chartModalLabel').textContent = title;
-
-                // 显示模态框
                 const chartModal = new bootstrap.Modal(document.getElementById('chartModal'));
                 chartModal.show();
             }

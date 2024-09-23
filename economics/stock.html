@@ -231,11 +231,25 @@
     <!-- 自定义JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            let marketCapData = {}; // 存储marketcap_pe.txt中的数据
+
             Promise.all([
                 fetch('comparestock.txt').then(response => response.text()),
-                fetch('finance.json').then(response => response.json())
+                fetch('finance.json').then(response => response.json()),
+                fetch('marketcap_pe.txt').then(response => response.text()) // 读取marketcap_pe.txt文件
             ])
-                .then(([compareText, financeData]) => {
+                .then(([compareText, financeData, marketcapText]) => {
+                    // 处理marketcap_pe.txt，存储为对象
+                    let marketCapLines = marketcapText.trim().split('\n');
+                    marketCapLines.forEach(line => {
+                        const [symbol, rest] = line.split(':');
+                        const [marketCap, pe] = rest.trim().split(',').map(item => item.trim());
+                        marketCapData[symbol.trim()] = {
+                            marketCap: parseFloat(marketCap),
+                            pe: pe
+                        };
+                    });
+
                     // 处理comparestock.txt和finance.json
                     let lines = compareText.trim().split('\n');
 
@@ -324,10 +338,7 @@
 
                     function onSymbolClick(symbolString, groupName) {
                         // 提取符号
-                        let symbol = symbolString;
-                        if (symbolString.includes('.')) {
-                            symbol = symbolString.split('.')[0];
-                        }
+                        let symbol = symbolString.includes('.') ? symbolString.split('.')[0] : symbolString;
 
                         // 查找financeData中的数据
                         if (financeData.hasOwnProperty(groupName)) {
@@ -342,7 +353,7 @@
                                 const labels = symbolData.map(item => item.date);
                                 const prices = symbolData.map(item => item.price);
 
-                                // 绘制图表
+                                // 绘制图表并显示Market Cap和PE值
                                 drawChart(symbol, labels, prices);
                             } else {
                                 alert('未找到符号 ' + symbol + ' 的财务数据。');
@@ -352,7 +363,7 @@
                         }
                     }
 
-                    function drawChart(title, labels, data) {
+                    function drawChart(symbol, labels, data) {
                         const ctx = document.getElementById('priceChart').getContext('2d');
 
                         // 如果已有图表实例，先销毁
@@ -436,8 +447,19 @@
                             }
                         });
 
-                        // 设置模态框标题
-                        document.getElementById('chartModalLabel').textContent = title;
+                        // 获取Market Cap和PE值
+                        let marketCapInfo = marketCapData[symbol];
+
+                        if (marketCapInfo) {
+                            let marketCapBillion = (marketCapInfo.marketCap / 1e9).toFixed(1) + 'B'; // 转换为Billion单位
+                            let peValue = marketCapInfo.pe === '--' ? '--' : marketCapInfo.pe;
+
+                            // 设置模态框标题，包含symbol，Market Cap和PE值
+                            document.getElementById('chartModalLabel').textContent = `${symbol} ${marketCapBillion} ${peValue}`;
+                        } else {
+                            // 如果找不到Market Cap信息，显示symbol
+                            document.getElementById('chartModalLabel').textContent = symbol;
+                        }
 
                         // 显示模态框
                         const chartModal = new bootstrap.Modal(document.getElementById('chartModal'));
