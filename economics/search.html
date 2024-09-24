@@ -583,9 +583,14 @@
                     }
 
                     resultElement.textContent = resultText;
+
                     // 设置 data-symbol 属性以存储 symbol
                     const symbol = result.symbol;
                     resultElement.setAttribute('data-symbol', symbol.toUpperCase());
+
+                    // 设置 data-type 属性为 stocks 或 etfs
+                    resultElement.setAttribute('data-type', itemType);
+
                     resultElement.style.cursor = 'pointer'; // 显示为可点击
                     resultsContainer.appendChild(resultElement);
                 });
@@ -611,6 +616,8 @@
             }
 
             const symbol = this.getAttribute('data-symbol');
+            const itemType = this.getAttribute('data-type');  // 获取是 stocks 还是 etfs
+
             if (!symbol) {
                 alert("无效的股票代码。");
                 return;
@@ -624,9 +631,8 @@
                 // 加载 sectors 和 finance 数据
                 const sectors = await loadSectors();
                 const finance = await loadFinance();
-                const marketCapData = await loadMarketCapData(); // 加载 MarketCap 数据
 
-                if (!sectors || !finance || !marketCapData) {
+                if (!sectors || !finance) {
                     throw new Error("无法加载必要的数据。");
                 }
 
@@ -664,14 +670,19 @@
                 const labels = sortedData.map(item => item.date);
                 const prices = sortedData.map(item => item.price);
 
-                // 获取 MarketCap 和 PE Ratio
-                const marketCapInfo = marketCapData[symbol.toUpperCase()] || {};  // 使用空对象作为默认值
-                const marketCap = marketCapInfo.marketCap ? formatMarketCap(marketCapInfo.marketCap) : "";
-                // 如果 peRatio 是 undefined 或 "--"，则直接显示 "--"，否则显示保留两位小数的市盈率
-                const peRatio = marketCapInfo.peRatio === undefined || marketCapInfo.peRatio === "--" ? "" : marketCapInfo.peRatio.toFixed(2);
+                // 如果是股票类型，则加载 MarketCap 和 PE Ratio 数据
+                let marketCap = "";
+                let peRatio = "";
 
-                // 更新图表标题（去掉 "价格走势图" 并显示 MarketCap 和 PE）
-                const chartTitle = `${symbol} ${marketCap} ${peRatio}`;
+                if (itemType === 'stocks') {
+                    const marketCapData = await loadMarketCapData(); // 加载 MarketCap 数据
+                    const marketCapInfo = marketCapData[symbol.toUpperCase()] || {};  // 使用空对象作为默认值
+                    marketCap = marketCapInfo.marketCap ? formatMarketCap(marketCapInfo.marketCap) : "";
+                    peRatio = marketCapInfo.peRatio === undefined || marketCapInfo.peRatio === "--" ? "" : marketCapInfo.peRatio.toFixed(2);
+                }
+
+                // 更新图表标题（去掉 "价格走势图" 并根据类型显示 MarketCap 和 PE）
+                const chartTitle = itemType === 'stocks' ? `${symbol} ${marketCap} ${peRatio}` : `${symbol}`;
                 drawChart(chartTitle, labels, prices);
             } catch (error) {
                 alert(error.message);
