@@ -21,10 +21,10 @@
     },
     "Energy": {
         "PBF": "石油精炼",
-        "MTDR": "",
         "CHRD": "",
         "NE": "",
-        "VAL": ""
+        "VAL": "",
+        "NFE": ""
     },
     "Technology": {
         "SNOW": "",
@@ -112,6 +112,7 @@
     "ETFs": {
         "DBC": "大宗商品",
         "IBIT": "比特币",
+        "SMH": "半导体",
         "CQQQ": "中国科技",
         "CNYA": "A股",
         "DXJ": "日本",
