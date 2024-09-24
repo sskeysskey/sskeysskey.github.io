@@ -16,7 +16,8 @@
         "LULU": "",
         "NKE": "Nike",
         "MBLY": "",
-        "STLA": ""
+        "STLA": "",
+        "MNSO": ""
     },
     "Energy": {
         "PBF": "石油精炼",
@@ -50,7 +51,10 @@
         "CVS": "",
         "DXCM": "德康血糖",
         "MRNA": "",
-        "NVO": ""
+        "NVO": "",
+        "VRTX": "",
+        "GMAB": "",
+        "BMRN": ""
     },
     "Crypto": {
         "Bitcoin": "",
@@ -68,6 +72,7 @@
         "Shenzhen": "深证",
         "Nikkei": "",
         "India": "",
+        "Singapore": "",
         "Russia": "",
         "Korea": "",
         "Australia": "",
@@ -130,8 +135,9 @@
         "EURUSD": ""
     },
     "Economics": {
-        "USRetailM": "17 USRetailM",
-        "USInitial": "19 USInitial"
+        "CorePCEY": "27 CorePCEY",
+        "CorePCEM": "27 CorePCEM",
+        "USInitial": "26 USInitial"
     },
     "ETFs_US": {
         "EDV": "长期国债",
