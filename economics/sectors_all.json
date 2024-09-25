@@ -525,7 +525,8 @@
     "IVLU",
     "MUNI",
     "HYEM",
-    "HAWX"
+    "HAWX",
+    "FXI"
   ],
   "Basic_Materials": [
     "LIN",
@@ -1189,7 +1190,8 @@
     "THG",
     "GAB-PG",
     "BNT",
-    "VIRT"
+    "VIRT",
+    "CEF"
   ],
   "Healthcare": [
     "LLY",
