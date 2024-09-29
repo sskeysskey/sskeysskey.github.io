@@ -456,14 +456,17 @@
                 // 加载 MarketCap 数据
                 const marketCapData = await loadMarketCapData();
 
+                // 加载 Finance 数据
+                const financeData = await loadFinance(); // 加载 finance.json 数据
+
                 hasResults |= displayResults('Stock_tag', matchedStocks.tag, marketCapData, 'stocks');
-                hasResults |= displayResults('ETF_tag', matchedETFs.tag, marketCapData, 'etfs');
+                hasResults |= displayResults('ETF_tag', matchedETFs.tag, marketCapData, 'etfs', financeData);
                 hasResults |= displayResults('Stock_name', matchedStocks.name, marketCapData, 'stocks');
-                hasResults |= displayResults('ETF_name', matchedETFs.name, marketCapData, 'etfs');
+                hasResults |= displayResults('ETF_name', matchedETFs.name, marketCapData, 'etfs', financeData);
                 hasResults |= displayResults('Stock_symbol', matchedStocks.symbol, marketCapData, 'stocks');
-                hasResults |= displayResults('ETF_symbol', matchedETFs.symbol, marketCapData, 'etfs');
+                hasResults |= displayResults('ETF_symbol', matchedETFs.symbol, marketCapData, 'etfs', financeData);
                 hasResults |= displayResults('Stock_Description', matchedStocks.description, marketCapData, 'stocks');
-                hasResults |= displayResults('ETFs_Description', matchedETFs.description, marketCapData, 'etfs');
+                hasResults |= displayResults('ETFs_Description', matchedETFs.description, marketCapData, 'etfs', financeData);
 
                 if (!hasResults) {
                     resultsContainer.innerHTML = '<div class="no-results">没有搜索到任何结果</div>';
@@ -552,7 +555,7 @@
         }
 
         // 显示搜索结果
-        function displayResults(category, results, marketCapData, itemType) {
+        function displayResults(category, results, marketCapData, itemType, financeData) {
             const resultsContainer = document.getElementById('results');
             if (
                 results.exact.length > 0 ||
@@ -579,6 +582,15 @@
                             const formattedMarketCap = formatMarketCap(marketCapInfo.marketCap); // 格式化marketcap为Billion
                             const peRatio = marketCapInfo.peRatio === "--" ? "--" : marketCapInfo.peRatio.toFixed(2);
                             resultText += ` - ${formattedMarketCap} ${peRatio}`;
+                        }
+                    }
+
+                    // 如果是 ETF 类，查找 finance.json 中的 volume 信息
+                    if (itemType === 'etfs') {
+                        const etfData = financeData.ETFs.find(etf => etf.name.toUpperCase() === result.symbol.toUpperCase());
+                        if (etfData && etfData.volume) {
+                            const formattedVolume = `${(etfData.volume / 1000).toFixed(0)}K`; // 将 volume 转换为 K 单位
+                            resultText += ` - ${formattedVolume}`;
                         }
                     }
 
