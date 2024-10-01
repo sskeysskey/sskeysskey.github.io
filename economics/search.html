@@ -723,6 +723,22 @@
             // 检测是否为移动设备
             const isMobile = window.innerWidth <= 768;
 
+            // 检查数据是否足够计算百分比变化
+            if (data.length > 1) {
+                // 计算最新价格和最早价格
+                const latestPrice = data[data.length - 1];
+                const earliestPrice = data[0];
+
+                // 计算百分比变化
+                const priceChangePercentage = ((latestPrice - earliestPrice) / earliestPrice) * 100;
+
+                // 格式化为百分比并添加到标题
+                title += ` (${priceChangePercentage.toFixed(2)}%)`;
+            } else {
+                // 如果数据不足，提示不可计算
+                title += ' (N/A)';
+            }
+
             window.priceChartInstance = new Chart(ctx, {
                 type: 'line',
                 data: {
@@ -789,7 +805,7 @@
                 }
             });
 
-            // 设置模态框标题
+            // 设置模态框标题，包含百分比变化
             document.getElementById('chartModalLabel').textContent = title;
 
             // 显示模态框

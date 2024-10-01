@@ -545,7 +545,8 @@
 
                 // 检测是否为移动设备
                 const isMobile = window.innerWidth <= 768;
-                // 检查symbol是否在marketcap_pe数据中
+
+                // 检查 symbol 是否在 marketCapData 数据中
                 const symbolData = marketCapData[symbol];
                 let marketCapFormatted = '';
                 let peRatioFormatted = '';
@@ -555,10 +556,22 @@
                     peRatioFormatted = symbolData.peRatio !== "--" ? symbolData.peRatio : "--";
                 }
 
-                // 设置模态框标题：{symbol} {marketCapFormatted} {peRatioFormatted}
-                const modalTitle = `${symbol} ${marketCapFormatted} ${peRatioFormatted}`;
+                // 计算百分比变化
+                let priceChangePercentage = '';
+                if (data.length > 1) {
+                    const latestPrice = data[data.length - 1];
+                    const earliestPrice = data[0];
+                    priceChangePercentage = ((latestPrice - earliestPrice) / earliestPrice) * 100;
+                    priceChangePercentage = ` (${priceChangePercentage.toFixed(2)}%)`;
+                } else {
+                    priceChangePercentage = ' (N/A)';
+                }
+
+                // 设置模态框标题：{symbol} {marketCapFormatted} {peRatioFormatted} {priceChangePercentage}
+                const modalTitle = `${symbol} ${marketCapFormatted} ${peRatioFormatted}${priceChangePercentage}`;
                 document.getElementById('chartModalLabel').textContent = modalTitle;
 
+                // 创建图表
                 window.priceChartInstance = new Chart(ctx, {
                     type: 'line',
                     data: {
@@ -625,6 +638,7 @@
                     }
                 });
 
+                // 显示模态框
                 const chartModal = new bootstrap.Modal(document.getElementById('chartModal'));
                 chartModal.show();
             }

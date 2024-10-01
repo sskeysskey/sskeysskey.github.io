@@ -447,19 +447,32 @@
                             }
                         });
 
-                        // 获取Market Cap和PE值
+                        // 获取 Market Cap 和 PE 值
                         let marketCapInfo = marketCapData[symbol];
+                        let marketCapBillion = '';
+                        let peValue = '';
 
                         if (marketCapInfo) {
-                            let marketCapBillion = (marketCapInfo.marketCap / 1e9).toFixed(1) + 'B'; // 转换为Billion单位
-                            let peValue = marketCapInfo.pe === '--' ? '--' : marketCapInfo.pe;
-
-                            // 设置模态框标题，包含symbol，Market Cap和PE值
-                            document.getElementById('chartModalLabel').textContent = `${symbol} ${marketCapBillion} ${peValue}`;
+                            marketCapBillion = (marketCapInfo.marketCap / 1e9).toFixed(1) + 'B'; // 转换为Billion单位
+                            peValue = marketCapInfo.pe === '--' ? '--' : marketCapInfo.pe;
                         } else {
-                            // 如果找不到Market Cap信息，显示symbol
-                            document.getElementById('chartModalLabel').textContent = symbol;
+                            marketCapBillion = 'N/A';
+                            peValue = 'N/A';
                         }
+
+                        // 计算百分比变化
+                        let priceChangePercentage = '';
+                        if (data.length > 1) {
+                            const latestPrice = data[data.length - 1];
+                            const earliestPrice = data[0];
+                            priceChangePercentage = ((latestPrice - earliestPrice) / earliestPrice) * 100;
+                            priceChangePercentage = ` (${priceChangePercentage.toFixed(2)}%)`;
+                        } else {
+                            priceChangePercentage = ' (N/A)';
+                        }
+
+                        // 设置模态框标题，包含 symbol、Market Cap、PE 和百分比变化
+                        document.getElementById('chartModalLabel').textContent = `${symbol} ${marketCapBillion} ${peValue}${priceChangePercentage}`;
 
                         // 显示模态框
                         const chartModal = new bootstrap.Modal(document.getElementById('chartModal'));
