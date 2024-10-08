@@ -1,6 +1,7 @@
 {
     "Basic_Materials": {
         "MOS": "美盛化肥",
+        "ALTM": "",
         "VALE": "",
         "CLF": ""
     },
@@ -29,7 +30,8 @@
         "STM": "意法",
         "INTC": "",
         "QLYS": "",
-        "ADBE": ""
+        "ADBE": "",
+        "INTU": ""
     },
     "Utilities": {
         "NFE": ""
@@ -40,7 +42,8 @@
     },
     "Industrials": {
         "ATKR": "",
-        "BA": "波音"
+        "BA": "波音",
+        "RTO": ""
     },
     "Real_Estate": {
         "LINE": ""
@@ -54,7 +57,13 @@
         "MCK": "",
         "BIIB": "",
         "HUM": "",
-        "REGN": ""
+        "REGN": "",
+        "MRK": "",
+        "ELV": "",
+        "VRTX": "",
+        "ZBH": "",
+        "ACHC": "",
+        "APLS": ""
     },
     "Crypto": {
         "Bitcoin": "",
@@ -146,9 +155,6 @@
     "ETFs_US": {
         "TLT": "",
         "EDV": "",
-        "USHY": "高收益债",
-        "DVY": "高股息",
-        "TDTF": "通胀保护",
         "XLK": "科技",
         "IYH": "医疗",
         "RTH": "零售",
