@@ -133,6 +133,34 @@ h2 {
     align-items: center;
 }
 
+#tetris-game {
+    position: relative;
+    /* 确保子元素以此为参考进行定位 */
+    width: 100%;
+    /* 根据需求设置宽度 */
+    height: 500px;
+    /* 根据需求设置高度 */
+    border: 1px solid #ccc;
+    /* 可选：给游戏区域添加边框方便调试 */
+    overflow: hidden;
+    /* 防止游戏内容溢出 */
+}
+
+#tetris-game button.fullscreen-button {
+    position: absolute;
+    bottom: 10px;
+    /* 距离底部10px */
+    right: 10px;
+    /* 距离右侧10px */
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    /* 确保按钮在其他内容之上 */
+}
+
 .play-button {
     padding: 10px 20px;
     font-size: 16px;

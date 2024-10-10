@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let gameInterval;
     let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     let isGameRunning = false;
-    let isFullscreen = false;
+    let isFullscreen = false; // 新增：全屏状态
 
     // 新增：特效状态管理
     let effects = {
@@ -85,6 +85,15 @@ document.addEventListener('DOMContentLoaded', () => {
         gameInterval = setInterval(gameLoop, 1000);
         isGameRunning = true;
         draw();
+
+        // 创建全屏按钮
+        const fullscreenButton = document.createElement('button');
+        fullscreenButton.innerText = '全屏';
+        fullscreenButton.classList.add('fullscreen-button'); // 添加类名
+        tetrisGame.appendChild(fullscreenButton);  // 将按钮添加到 tetris-game 容器内
+
+        // 全屏按钮点击事件
+        fullscreenButton.addEventListener('click', toggleFullscreen);
     }
 
     playButton.addEventListener('click', () => {
@@ -93,6 +102,55 @@ document.addEventListener('DOMContentLoaded', () => {
             playButton.style.display = 'none';
         }
     });
+
+    // 切换全屏状态
+    function toggleFullscreen() {
+        if (!isFullscreen) {
+            enterFullscreen();
+        } else {
+            exitFullscreen();
+        }
+    }
+
+    // 进入全屏模式
+    function enterFullscreen() {
+        if (tetrisGame.requestFullscreen) {
+            tetrisGame.requestFullscreen();
+        } else if (tetrisGame.mozRequestFullScreen) { // Firefox
+            tetrisGame.mozRequestFullScreen();
+        } else if (tetrisGame.webkitRequestFullscreen) { // Chrome, Safari and Opera
+            tetrisGame.webkitRequestFullscreen();
+        } else if (tetrisGame.msRequestFullscreen) { // IE/Edge
+            tetrisGame.msRequestFullscreen();
+        }
+        isFullscreen = true;
+        updateFullscreenButton();
+    }
+
+    // 退出全屏模式
+    function exitFullscreen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) { // Firefox
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { // IE/Edge
+            document.msExitFullscreen();
+        }
+        isFullscreen = false;
+        updateFullscreenButton();
+    }
+
+    // 更新全屏按钮文本
+    function updateFullscreenButton() {
+        const fullscreenButton = tetrisGame.querySelector('.fullscreen-button');
+        if (isFullscreen) {
+            fullscreenButton.innerText = '退出全屏';
+        } else {
+            fullscreenButton.innerText = '全屏';
+        }
+    }
 
     function getRandomPiece() {
         const pieces = [
