@@ -114,6 +114,9 @@ h2 {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    /* position: relative;
+    display: inline-block; */
+    /* 保持容器宽度紧随内容 */
 }
 
 .game {
@@ -133,32 +136,33 @@ h2 {
     align-items: center;
 }
 
+/* 针对 tetris-game 的样式 */
 #tetris-game {
-    position: relative;
-    /* 确保子元素以此为参考进行定位 */
     width: 100%;
-    /* 根据需求设置宽度 */
+    /* 根据需求调整宽度 */
     height: 500px;
-    /* 根据需求设置高度 */
+    /* 根据需求调整高度 */
     border: 1px solid #ccc;
-    /* 可选：给游戏区域添加边框方便调试 */
+    position: relative;
     overflow: hidden;
-    /* 防止游戏内容溢出 */
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#tetris-game button.fullscreen-button {
+/* 全屏按钮样式，放置在父容器的右下角外边缘 */
+#tetris-fullscreen-btn {
     position: absolute;
     bottom: 10px;
-    /* 距离底部10px */
     right: 10px;
-    /* 距离右侧10px */
+    /* 避免负值，使按钮在右下角可见 */
     padding: 10px;
     background-color: #333;
     color: white;
     border: none;
     cursor: pointer;
     z-index: 1000;
-    /* 确保按钮在其他内容之上 */
 }
 
 .play-button {
@@ -253,5 +257,22 @@ a:hover {
 
     .profile-image {
         margin: 0 20px 20px 0;
+    }
+
+    #tetris-fullscreen-btn {
+        position: static;
+        /* 取消绝对定位 */
+        margin: 10px auto 0 auto;
+        /* 居中并添加上边距 */
+        display: block;
+        width: 100px;
+        /* 可根据需要调整 */
+    }
+
+    /* 确保tetris-game容器为块级元素以支持按钮居中 */
+    #tetris-game {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }

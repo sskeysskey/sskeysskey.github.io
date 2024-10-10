@@ -1,6 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 处理页面跳转
+    const hash = window.location.hash;
+    if (hash) {
+        const targetNav = document.querySelector(`header nav a[href="${hash}"]`);
+        if (targetNav) {
+            targetNav.click();
+        }
+    }
+
+    // 获取全屏按钮并绑定事件
+    const fullscreenButton = document.getElementById('tetris-fullscreen-btn');
+    if (fullscreenButton) {
+        fullscreenButton.addEventListener('click', toggleFullscreen);
+    }
+
     const tetrisGame = document.getElementById('tetris-game');
     const playButton = tetrisGame.querySelector('.play-button');
+
     let canvas, ctx, blockSize, width, height;
     let board, currentPiece, nextPiece, ghostPiece;
     let score = 0;
@@ -87,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         draw();
 
         // 创建全屏按钮
-        const fullscreenButton = document.createElement('button');
+        const fullscreenButton = document.getElementById('tetris-fullscreen-btn');
         fullscreenButton.innerText = '全屏';
         fullscreenButton.classList.add('fullscreen-button'); // 添加类名
         tetrisGame.appendChild(fullscreenButton);  // 将按钮添加到 tetris-game 容器内
@@ -97,10 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     playButton.addEventListener('click', () => {
-        if (!isGameRunning) {
-            initGame();
-            playButton.style.display = 'none';
-        }
+        initGame();
+        playButton.style.display = 'none'; // 隐藏开始按钮
     });
 
     // 切换全屏状态
@@ -144,7 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 更新全屏按钮文本
     function updateFullscreenButton() {
-        const fullscreenButton = tetrisGame.querySelector('.fullscreen-button');
         if (isFullscreen) {
             fullscreenButton.innerText = '退出全屏';
         } else {
@@ -587,4 +600,30 @@ document.addEventListener('DOMContentLoaded', () => {
     function gameLoop() {
         movePiece(0, 1);
     }
+
+    // 监听全屏变化，确保按钮状态同步
+    document.addEventListener('fullscreenchange', () => {
+        if (!document.fullscreenElement) {
+            isFullscreen = false;
+            updateFullscreenButton();
+        }
+    });
+    document.addEventListener('webkitfullscreenchange', () => {
+        if (!document.webkitFullscreenElement) {
+            isFullscreen = false;
+            updateFullscreenButton();
+        }
+    });
+    document.addEventListener('mozfullscreenchange', () => {
+        if (!document.mozFullScreenElement) {
+            isFullscreen = false;
+            updateFullscreenButton();
+        }
+    });
+    document.addEventListener('MSFullscreenChange', () => {
+        if (!document.msFullscreenElement) {
+            isFullscreen = false;
+            updateFullscreenButton();
+        }
+    });
 });
