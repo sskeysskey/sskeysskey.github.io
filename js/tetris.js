@@ -1,29 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 处理页面跳转
-    const hash = window.location.hash;
-    if (hash) {
-        const targetNav = document.querySelector(`header nav a[href="${hash}"]`);
-        if (targetNav) {
-            targetNav.click();
-        }
-    }
-
-    // 获取全屏按钮并绑定事件
-    const fullscreenButton = document.getElementById('tetris-fullscreen-btn');
-    if (fullscreenButton) {
-        fullscreenButton.addEventListener('click', toggleFullscreen);
-    }
-
     const tetrisGame = document.getElementById('tetris-game');
     const playButton = tetrisGame.querySelector('.play-button');
-
     let canvas, ctx, blockSize, width, height;
     let board, currentPiece, nextPiece, ghostPiece;
     let score = 0;
     let gameInterval;
     let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     let isGameRunning = false;
-    let isFullscreen = false; // 新增：全屏状态
+    let isFullscreen = false;
 
     // 新增：特效状态管理
     let effects = {
@@ -101,69 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
         gameInterval = setInterval(gameLoop, 1000);
         isGameRunning = true;
         draw();
-
-        // 创建全屏按钮
-        const fullscreenButton = document.getElementById('tetris-fullscreen-btn');
-        fullscreenButton.innerText = '全屏';
-        fullscreenButton.classList.add('fullscreen-button'); // 添加类名
-        tetrisGame.appendChild(fullscreenButton);  // 将按钮添加到 tetris-game 容器内
-
-        // 全屏按钮点击事件
-        fullscreenButton.addEventListener('click', toggleFullscreen);
     }
 
     playButton.addEventListener('click', () => {
-        initGame();
-        playButton.style.display = 'none'; // 隐藏开始按钮
+        if (!isGameRunning) {
+            initGame();
+            playButton.style.display = 'none';
+        }
     });
-
-    // 切换全屏状态
-    function toggleFullscreen() {
-        if (!isFullscreen) {
-            enterFullscreen();
-        } else {
-            exitFullscreen();
-        }
-    }
-
-    // 进入全屏模式
-    function enterFullscreen() {
-        if (tetrisGame.requestFullscreen) {
-            tetrisGame.requestFullscreen();
-        } else if (tetrisGame.mozRequestFullScreen) { // Firefox
-            tetrisGame.mozRequestFullScreen();
-        } else if (tetrisGame.webkitRequestFullscreen) { // Chrome, Safari and Opera
-            tetrisGame.webkitRequestFullscreen();
-        } else if (tetrisGame.msRequestFullscreen) { // IE/Edge
-            tetrisGame.msRequestFullscreen();
-        }
-        isFullscreen = true;
-        updateFullscreenButton();
-    }
-
-    // 退出全屏模式
-    function exitFullscreen() {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        } else if (document.mozCancelFullScreen) { // Firefox
-            document.mozCancelFullScreen();
-        } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
-            document.webkitExitFullscreen();
-        } else if (document.msExitFullscreen) { // IE/Edge
-            document.msExitFullscreen();
-        }
-        isFullscreen = false;
-        updateFullscreenButton();
-    }
-
-    // 更新全屏按钮文本
-    function updateFullscreenButton() {
-        if (isFullscreen) {
-            fullscreenButton.innerText = '退出全屏';
-        } else {
-            fullscreenButton.innerText = '全屏';
-        }
-    }
 
     function getRandomPiece() {
         const pieces = [
@@ -600,30 +529,4 @@ document.addEventListener('DOMContentLoaded', () => {
     function gameLoop() {
         movePiece(0, 1);
     }
-
-    // 监听全屏变化，确保按钮状态同步
-    document.addEventListener('fullscreenchange', () => {
-        if (!document.fullscreenElement) {
-            isFullscreen = false;
-            updateFullscreenButton();
-        }
-    });
-    document.addEventListener('webkitfullscreenchange', () => {
-        if (!document.webkitFullscreenElement) {
-            isFullscreen = false;
-            updateFullscreenButton();
-        }
-    });
-    document.addEventListener('mozfullscreenchange', () => {
-        if (!document.mozFullScreenElement) {
-            isFullscreen = false;
-            updateFullscreenButton();
-        }
-    });
-    document.addEventListener('MSFullscreenChange', () => {
-        if (!document.msFullscreenElement) {
-            isFullscreen = false;
-            updateFullscreenButton();
-        }
-    });
 });
