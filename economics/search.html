@@ -464,11 +464,11 @@
                 // 加载 Finance 数据
                 const financeData = await loadFinance(); // 加载 finance.json 数据
 
+                hasResults |= displayResults('Stock_symbol', matchedStocks.symbol, marketCapData, 'stocks');
                 hasResults |= displayResults('Stock_tag', matchedStocks.tag, marketCapData, 'stocks');
                 hasResults |= displayResults('ETF_tag', matchedETFs.tag, marketCapData, 'etfs', financeData);
                 hasResults |= displayResults('Stock_name', matchedStocks.name, marketCapData, 'stocks');
                 hasResults |= displayResults('ETF_name', matchedETFs.name, marketCapData, 'etfs', financeData);
-                hasResults |= displayResults('Stock_symbol', matchedStocks.symbol, marketCapData, 'stocks');
                 hasResults |= displayResults('ETF_symbol', matchedETFs.symbol, marketCapData, 'etfs', financeData);
                 hasResults |= displayResults('Stock_Description', matchedStocks.description, marketCapData, 'stocks');
                 hasResults |= displayResults('ETFs_Description', matchedETFs.description, marketCapData, 'etfs', financeData);
@@ -682,7 +682,6 @@
 
                 // 假设 finance.json 中每个 symbol 只有一条记录，如果有多条，可根据需要调整
                 // 如果有多条记录，例如不同日期，可以累积成多个数据点
-                // 准备数据
                 const sortedData = symbolData.sort((a, b) => new Date(a.date) - new Date(b.date));
                 const labels = sortedData.map(item => item.date);
                 const prices = sortedData.map(item => item.price);
