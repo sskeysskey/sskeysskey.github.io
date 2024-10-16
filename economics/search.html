@@ -320,17 +320,50 @@
         // 页面加载完成后执行初始化
         window.addEventListener('load', initializePage);
 
-        // 全局变量缓存 sectors 和 finance 数据
+        // 全局变量缓存 sectors, finance 数据和 compare 数据
         let sectorsData = null;
         let financeData = null;
+        let compareData = null; // 新增全局变量存储 compare_all 数据
 
         // JSON文件路径
         const jsonPath = "description.json";
         const sectorsPath = "sectors_all.json";
         const financePath = "finance.json";
         const marketCapFilePath = "marketcap_pe.txt";
+        const compareFilePath = "compare_all.txt";  // compare_all.txt 文件路径
+
         // 定义全局变量存储 marketcap_pe 数据
         let marketCapData = null;
+
+        // 新增：加载 compare_all.txt 文件
+        async function loadCompareData() {
+            if (compareData) return compareData;
+            try {
+                const response = await fetch(compareFilePath);
+                if (!response.ok) throw new Error(`无法加载 compare 数据: ${response.status}`);
+                const text = await response.text();
+                compareData = parseCompareData(text);
+                console.log("compareData:", compareData);  // 输出 compareData 以检查其格式
+                return compareData;
+            } catch (error) {
+                console.error(error);
+                alert("加载 compare 数据时出错。");
+            }
+        }
+
+        // 解析 compare_all.txt 数据
+        function parseCompareData(text) {
+            const data = {};
+            const lines = text.split("\n");
+            for (let line of lines) {
+                const [symbol, value] = line.split(": ");
+                if (symbol && value) {
+                    console.log(`Parsed line: symbol=${symbol}, value=${value}`);  // 输出解析的每一行
+                    data[symbol.toUpperCase()] = value.trim();
+                }
+            }
+            return data;
+        }
 
         // 加载 marketcap_pe.txt 文件
         async function loadMarketCapData() {
@@ -463,15 +496,15 @@
 
                 // 加载 Finance 数据
                 const financeData = await loadFinance(); // 加载 finance.json 数据
-
-                hasResults |= displayResults('Stock_symbol', matchedStocks.symbol, marketCapData, 'stocks');
-                hasResults |= displayResults('Stock_tag', matchedStocks.tag, marketCapData, 'stocks');
-                hasResults |= displayResults('ETF_tag', matchedETFs.tag, marketCapData, 'etfs', financeData);
-                hasResults |= displayResults('Stock_name', matchedStocks.name, marketCapData, 'stocks');
-                hasResults |= displayResults('ETF_name', matchedETFs.name, marketCapData, 'etfs', financeData);
-                hasResults |= displayResults('ETF_symbol', matchedETFs.symbol, marketCapData, 'etfs', financeData);
-                hasResults |= displayResults('Stock_Description', matchedStocks.description, marketCapData, 'stocks');
-                hasResults |= displayResults('ETFs_Description', matchedETFs.description, marketCapData, 'etfs', financeData);
+                const compareData = await loadCompareData();  // 新增：加载 compare 数据
+                hasResults |= displayResults('Stock_symbol', matchedStocks.symbol, marketCapData, 'stocks', compareData);
+                hasResults |= displayResults('Stock_tag', matchedStocks.tag, marketCapData, 'stocks', compareData);
+                hasResults |= displayResults('ETF_tag', matchedETFs.tag, marketCapData, 'etfs', compareData);
+                hasResults |= displayResults('Stock_name', matchedStocks.name, marketCapData, 'stocks', compareData);
+                hasResults |= displayResults('ETF_name', matchedETFs.name, marketCapData, 'etfs', compareData);
+                hasResults |= displayResults('ETF_symbol', matchedETFs.symbol, marketCapData, 'etfs', compareData);
+                hasResults |= displayResults('Stock_Description', matchedStocks.description, marketCapData, 'stocks', compareData);
+                hasResults |= displayResults('ETFs_Description', matchedETFs.description, marketCapData, 'etfs', compareData);
 
                 if (!hasResults) {
                     resultsContainer.innerHTML = '<div class="no-results">没有搜索到任何结果</div>';
@@ -560,13 +593,9 @@
         }
 
         // 显示搜索结果
-        function displayResults(category, results, marketCapData, itemType, financeData) {
+        function displayResults(category, results, marketCapData, itemType, compareData = null) {
             const resultsContainer = document.getElementById('results');
-            if (
-                results.exact.length > 0 ||
-                results.partial.length > 0 ||
-                results.fuzzy.length > 0
-            ) {
+            if (results.exact.length > 0 || results.partial.length > 0 || results.fuzzy.length > 0) {
                 const categoryElement = document.createElement('div');
                 categoryElement.className = 'result-category';
                 categoryElement.textContent = category;
@@ -580,13 +609,21 @@
                     resultElement.className = 'result-item';
                     let resultText = `${result.symbol} - ${result.name} - ${result.tag.join(', ')}`;
 
+                    // 新增：与 compareData 中的 symbol 匹配，并附加 compare 值
+                    if (compareData && compareData[result.symbol.toUpperCase()]) {
+                        const compareValue = compareData[result.symbol.toUpperCase()];
+                        if (compareValue) {
+                            resultText += ` ${compareValue}`;
+                        }
+                    }
+
                     // 如果是股票类，尝试查找 MarketCap 和 PE Ratio
                     if (itemType === 'stocks') {
                         const marketCapInfo = marketCapData[result.symbol.toUpperCase()];
                         if (marketCapInfo) {
                             const formattedMarketCap = formatMarketCap(marketCapInfo.marketCap); // 格式化marketcap为Billion
                             const peRatio = marketCapInfo.peRatio === "--" ? "--" : marketCapInfo.peRatio.toFixed(2);
-                            resultText += ` - ${formattedMarketCap} ${peRatio}`;
+                            resultText += ` ${formattedMarketCap} ${peRatio}`;
                         }
                     }
 
@@ -595,7 +632,7 @@
                         const etfData = financeData.ETFs.find(etf => etf.name.toUpperCase() === result.symbol.toUpperCase());
                         if (etfData && etfData.volume) {
                             const formattedVolume = `${(etfData.volume / 1000).toFixed(0)}K`; // 将 volume 转换为 K 单位
-                            resultText += ` - ${formattedVolume}`;
+                            resultText += ` ${formattedVolume}`;
                         }
                     }
 
