@@ -218,6 +218,16 @@
             <button class="nav-link" id="topLoser-tab" data-bs-toggle="tab" data-bs-target="#topLoser" type="button"
                 role="tab" aria-controls="topLoser" aria-selected="false">TopLoser</button>
         </li>
+        <!-- 新增的ETFGainer Tab -->
+        <li class="nav-item">
+            <button class="nav-link" id="ETFGainer-tab" data-bs-toggle="tab" data-bs-target="#ETFGainer" type="button"
+                role="tab" aria-controls="ETFGainer" aria-selected="false">ETFGainer</button>
+        </li>
+        <!-- 新增的ETFLoser Tab -->
+        <li class="nav-item">
+            <button class="nav-link" id="ETFLoser-tab" data-bs-toggle="tab" data-bs-target="#ETFLoser" type="button"
+                role="tab" aria-controls="ETFLoser" aria-selected="false">ETFLoser</button>
+        </li>
     </ul>
 
     <!-- TAB内容 -->
@@ -227,6 +237,14 @@
         </div>
         <div class="tab-pane fade" id="topLoser" role="tabpanel" aria-labelledby="topLoser-tab">
             <div id="topLoserContent"></div>
+        </div>
+        <!-- 新增的ETFGainer内容 -->
+        <div class="tab-pane fade" id="ETFGainer" role="tabpanel" aria-labelledby="ETFGainer-tab">
+            <div id="ETFGainerContent"></div>
+        </div>
+        <!-- 新增的ETFLoser内容 -->
+        <div class="tab-pane fade" id="ETFLoser" role="tabpanel" aria-labelledby="ETFLoser-tab">
+            <div id="ETFLoserContent"></div>
         </div>
     </div>
 
@@ -260,39 +278,42 @@
 
             Promise.all([
                 fetch('comparestock.txt').then(response => response.text()),
+                fetch('compareetfs.txt').then(response => response.text()), // 新增的ETF文件读取
                 fetch('finance.json').then(response => response.json()),
-                fetch('marketcap_pe.txt').then(response => response.text()) // 读取marketcap_pe.txt文件
+                fetch('marketcap_pe.txt').then(response => response.text())
             ])
-                .then(([compareText, financeData, marketcapText]) => {
+                .then(([compareText, compareETFText, financeData, marketcapText]) => {
                     // 处理marketcap_pe.txt，存储为对象
                     let marketCapLines = marketcapText.trim().split('\n');
                     marketCapLines.forEach(line => {
                         const [symbol, rest] = line.split(':');
-                        const [marketCap, pe] = rest.trim().split(',').map(item => item.trim());
-                        marketCapData[symbol.trim()] = {
-                            marketCap: parseFloat(marketCap),
-                            pe: pe
-                        };
+                        if (rest) {
+                            const [marketCap, pe] = rest.trim().split(',').map(item => item.trim());
+                            marketCapData[symbol.trim()] = {
+                                marketCap: parseFloat(marketCap),
+                                pe: pe
+                            };
+                        }
                     });
 
                     // 处理comparestock.txt和finance.json
                     let lines = compareText.trim().split('\n');
 
                     let topGainersLines = lines.slice(0, 20);
-                    let last15Lines = lines.slice(-20);
-                    let topLosersLines = last15Lines.reverse();
+                    let last20Lines = lines.slice(-20);
+                    let topLosersLines = last20Lines.reverse();
 
                     const topGainerContent = document.getElementById('topGainerContent');
                     const topLoserContent = document.getElementById('topLoserContent');
 
-                    function parseLine(line) {
+                    function parseStockLine(line) {
                         const regex = /^(.*?)\s+(\S+)\s*:\s*([+-]?[\d\.-]+%)\s*(.*)$/;
                         const match = line.match(regex);
                         if (match) {
                             return {
                                 groupName: match[1].trim(),
-                                symbolString: match[2],
-                                value: match[3],
+                                symbolString: match[2].trim(),
+                                value: match[3].trim(),
                                 descriptions: match[4].trim()
                             };
                         } else {
@@ -318,9 +339,10 @@
                         valueDiv.textContent = data.value;
 
                         // 根据值设置颜色
-                        if (parseFloat(data.value) > 0) {
+                        const numericValue = parseFloat(data.value.replace('%', ''));
+                        if (numericValue > 0) {
                             valueDiv.style.color = '#28a745'; // 绿色
-                        } else if (parseFloat(data.value) < 0) {
+                        } else if (numericValue < 0) {
                             valueDiv.style.color = '#dc3545'; // 红色
                         } else {
                             valueDiv.style.color = '#6c757d'; // 灰色
@@ -345,7 +367,7 @@
 
                     // 填充TopGainer内容
                     topGainersLines.forEach(line => {
-                        const data = parseLine(line);
+                        const data = parseStockLine(line);
                         if (data) {
                             const symbolItem = createSymbolItem(data);
                             topGainerContent.appendChild(symbolItem);
@@ -354,11 +376,116 @@
 
                     // 填充TopLoser内容
                     topLosersLines.forEach(line => {
-                        const data = parseLine(line);
+                        const data = parseStockLine(line);
                         if (data) {
                             const symbolItem = createSymbolItem(data);
                             topLoserContent.appendChild(symbolItem);
                         }
+                    });
+
+                    // 处理compareetfs.txt
+                    let etfLines = compareETFText.trim().split('\n');
+
+                    // 解析ETF行
+                    function parseETFLine(line) {
+                        // 预期格式: "EWT.*.+   :   2.70%   5329688     111.87%   台湾, 股票"
+                        const parts = line.split(':');
+                        if (parts.length < 2) {
+                            console.error('无法解析ETF行：', line);
+                            return null;
+                        }
+                        const symbolString = parts[0].trim();
+                        const rest = parts[1].trim();
+
+                        // 使用正则提取value和descriptions
+                        const regex = /^([+-]?[\d\.-]+%)\s+\d+\s+[+-]?[\d\.-]+%\s+(.*)$/;
+                        const match = rest.match(regex);
+                        if (match) {
+                            const value = match[1].trim();
+                            const descriptions = match[2].trim();
+                            return {
+                                groupName: "ETFs",
+                                symbolString,
+                                value,
+                                descriptions
+                            };
+                        } else {
+                            console.error('无法解析ETF行的详细部分：', line);
+                            return null;
+                        }
+                    }
+
+                    // 解析所有ETF行
+                    let parsedETFs = etfLines.map(line => parseETFLine(line)).filter(item => item !== null);
+
+                    // 分离涨幅和跌幅
+                    let etfGainers = parsedETFs.filter(item => parseFloat(item.value.replace('%', '')) > 0);
+                    let etfLosers = parsedETFs.filter(item => parseFloat(item.value.replace('%', '')) < 0);
+
+                    // 排序并限制为20个条目
+                    etfGainers.sort((a, b) => parseFloat(b.value) - parseFloat(a.value)); // 从高到低
+                    etfGainers = etfGainers.slice(0, 20);
+
+                    etfLosers.sort((a, b) => parseFloat(a.value) - parseFloat(b.value)); // 从低到高（最负的在前）
+                    etfLosers = etfLosers.slice(0, 20);
+
+                    const etfGainerContent = document.getElementById('ETFGainerContent');
+                    const etfLoserContent = document.getElementById('ETFLoserContent');
+
+                    // 创建ETF符号项
+                    function createETFSymbolItem(data) {
+                        const symbolItem = document.createElement('div');
+                        symbolItem.className = 'symbol-item';
+                        symbolItem.dataset.symbolString = data.symbolString;
+                        symbolItem.dataset.groupName = data.groupName;
+
+                        // 符号名称
+                        const nameDiv = document.createElement('div');
+                        nameDiv.className = 'symbol-name';
+                        nameDiv.textContent = data.groupName + ' ' + data.symbolString;
+
+                        // 值
+                        const valueDiv = document.createElement('div');
+                        valueDiv.className = 'symbol-value';
+                        valueDiv.textContent = data.value;
+
+                        // 根据值设置颜色
+                        const numericValue = parseFloat(data.value.replace('%', ''));
+                        if (numericValue > 0) {
+                            valueDiv.style.color = '#28a745'; // 绿色
+                        } else if (numericValue < 0) {
+                            valueDiv.style.color = '#dc3545'; // 红色
+                        } else {
+                            valueDiv.style.color = '#6c757d'; // 灰色
+                        }
+
+                        // 描述
+                        const descDiv = document.createElement('div');
+                        descDiv.className = 'symbol-desc';
+                        descDiv.textContent = data.descriptions;
+
+                        symbolItem.appendChild(nameDiv);
+                        symbolItem.appendChild(valueDiv);
+                        symbolItem.appendChild(descDiv);
+
+                        // 添加点击事件
+                        symbolItem.addEventListener('click', () => {
+                            onSymbolClick(data.symbolString, data.groupName);
+                        });
+
+                        return symbolItem;
+                    }
+
+                    // 填充ETFGainer内容
+                    etfGainers.forEach(data => {
+                        const symbolItem = createETFSymbolItem(data);
+                        etfGainerContent.appendChild(symbolItem);
+                    });
+
+                    // 填充ETFLoser内容
+                    etfLosers.forEach(data => {
+                        const symbolItem = createETFSymbolItem(data);
+                        etfLoserContent.appendChild(symbolItem);
                     });
 
                     function onSymbolClick(symbolString, groupName) {
@@ -366,25 +493,29 @@
                         let symbol = symbolString.includes('.') ? symbolString.split('.')[0] : symbolString;
 
                         // 查找financeData中的数据
-                        if (financeData.hasOwnProperty(groupName)) {
-                            const groupData = financeData[groupName];
-                            const symbolData = groupData.filter(item => item.name === symbol);
+                        if (groupName) {
+                            if (financeData.hasOwnProperty(groupName)) {
+                                const groupData = financeData[groupName];
+                                const symbolData = groupData.filter(item => item.name === symbol);
 
-                            if (symbolData.length > 0) {
-                                // 按日期排序
-                                symbolData.sort((a, b) => new Date(a.date) - new Date(b.date));
+                                if (symbolData.length > 0) {
+                                    // 按日期排序
+                                    symbolData.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-                                // 提取日期和价格数组
-                                const labels = symbolData.map(item => item.date);
-                                const prices = symbolData.map(item => item.price);
+                                    // 提取日期和价格数组
+                                    const labels = symbolData.map(item => item.date);
+                                    const prices = symbolData.map(item => item.price);
 
-                                // 绘制图表并显示Market Cap和PE值
-                                drawChart(symbol, labels, prices);
+                                    // 绘制图表并显示Market Cap和PE值
+                                    drawChart(symbol, labels, prices);
+                                } else {
+                                    alert('未找到符号 ' + symbol + ' 的财务数据。');
+                                }
                             } else {
-                                alert('未找到符号 ' + symbol + ' 的财务数据。');
+                                alert('未找到组名 ' + groupName + ' 的财务数据。');
                             }
                         } else {
-                            alert('未找到组名 ' + groupName + ' 的财务数据。');
+                            alert('组名未定义，无法查找数据。');
                         }
                     }
 
@@ -503,6 +634,7 @@
                         const chartModal = new bootstrap.Modal(document.getElementById('chartModal'));
                         chartModal.show();
                     }
+
                     loadingIndicator.style.display = 'none';
                 })
                 .catch(error => {
