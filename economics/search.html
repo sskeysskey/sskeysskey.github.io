@@ -497,12 +497,28 @@
                 // 加载 Finance 数据
                 const financeData = await loadFinance(); // 加载 finance.json 数据
                 const compareData = await loadCompareData();  // 新增：加载 compare 数据
-                hasResults |= displayResults('Stock_symbol', matchedStocks.symbol, marketCapData, 'stocks', compareData);
-                hasResults |= displayResults('Stock_tag', matchedStocks.tag, marketCapData, 'stocks', compareData);
-                hasResults |= displayResults('ETF_tag', matchedETFs.tag, marketCapData, 'etfs', compareData);
-                hasResults |= displayResults('Stock_name', matchedStocks.name, marketCapData, 'stocks', compareData);
-                hasResults |= displayResults('ETF_name', matchedETFs.name, marketCapData, 'etfs', compareData);
-                hasResults |= displayResults('ETF_symbol', matchedETFs.symbol, marketCapData, 'etfs', compareData);
+
+                // Check for spaces in the search keywords
+                const hasSpaces = keywordsArray.length > 1;
+
+                if (hasSpaces) {
+                    // If the search contains spaces, prioritize stock_name and stock_tag
+                    hasResults |= displayResults('Stock_name', matchedStocks.name, marketCapData, 'stocks', compareData);
+                    hasResults |= displayResults('ETF_name', matchedETFs.name, marketCapData, 'etfs', compareData);
+                    hasResults |= displayResults('Stock_tag', matchedStocks.tag, marketCapData, 'stocks', compareData);
+                    hasResults |= displayResults('ETF_tag', matchedETFs.tag, marketCapData, 'etfs', compareData);
+                    hasResults |= displayResults('Stock_symbol', matchedStocks.symbol, marketCapData, 'stocks', compareData);
+                    hasResults |= displayResults('ETF_symbol', matchedETFs.symbol, marketCapData, 'etfs', compareData);
+                } else {
+                    // If no spaces, prioritize stock_symbol
+                    hasResults |= displayResults('Stock_symbol', matchedStocks.symbol, marketCapData, 'stocks', compareData);
+                    hasResults |= displayResults('ETF_symbol', matchedETFs.symbol, marketCapData, 'etfs', compareData);
+                    hasResults |= displayResults('Stock_name', matchedStocks.name, marketCapData, 'stocks', compareData);
+                    hasResults |= displayResults('Stock_tag', matchedStocks.tag, marketCapData, 'stocks', compareData);
+                    hasResults |= displayResults('ETF_tag', matchedETFs.tag, marketCapData, 'etfs', compareData);
+                    hasResults |= displayResults('ETF_name', matchedETFs.name, marketCapData, 'etfs', compareData);
+                }
+
                 hasResults |= displayResults('Stock_Description', matchedStocks.description, marketCapData, 'stocks', compareData);
                 hasResults |= displayResults('ETFs_Description', matchedETFs.description, marketCapData, 'etfs', compareData);
 
