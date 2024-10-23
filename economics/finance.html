@@ -110,6 +110,31 @@
             font-size: 0.9em;
         }
 
+        .symbol-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s;
+        }
+
+        .symbol-item:hover {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+
+        .symbol-name {
+            font-size: 0.95rem;
+            max-width: 60%;
+        }
+
+        .symbol-value {
+            font-size: 0.9rem;
+        }
+
+        .badge {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 120px;
+            overflow: hidden;
+        }
+
         @media (max-width: 768px) {
 
             /* 使用container-fluid并移除水平内边距，使其占满整个屏幕宽度 */
@@ -218,6 +243,20 @@
             .modal-fullscreen-sm-down .modal-content {
                 height: 100%;
                 border-radius: 0;
+            }
+
+            .symbol-name {
+                font-size: 0.85rem;
+                max-width: 50%;
+            }
+
+            .badge {
+                font-size: 0.65rem !important;
+                max-width: 80px;
+            }
+
+            .symbol-value {
+                font-size: 0.8rem;
             }
         }
 
@@ -358,8 +397,15 @@
             Promise.all([
                 fetch('sectors_panel.json').then(response => response.json()),
                 fetch('compare_all.txt').then(response => response.text()),
-                fetch('finance.json').then(response => response.json())
-            ]).then(([sectorsData, txtData, financeJson]) => {
+                fetch('finance.json').then(response => response.json()),
+                fetch('description.json').then(response => response.json()) // 添加这行
+            ]).then(([sectorsData, txtData, financeJson, descriptionData]) => {
+                // 创建description映射，合并stocks和etfs数组并建立查找映射
+                const descriptionMap = new Map([
+                    ...descriptionData.stocks.map(item => [item.symbol, item.tag]),
+                    ...descriptionData.etfs.map(item => [item.symbol, item.tag])
+                ]);
+
                 financeData = financeJson; // 存储finance.json数据
                 symbolsData = sectorsData; // 存储所有的 symbols 数据
 
@@ -415,10 +461,11 @@
                             const symbolDisplayName = symbolsObj[symbol] || symbol;
 
                             const symbolItem = document.createElement('div');
-                            symbolItem.className = 'symbol-item';
+                            symbolItem.className = 'symbol-item d-flex justify-content-between align-items-start py-2 px-3';
                             symbolItem.dataset.symbol = symbol;
                             symbolItem.dataset.sector = sector;
 
+                            // 左侧名称区域
                             const nameDiv = document.createElement('div');
                             nameDiv.className = 'symbol-name';
                             if (symbolsObj[symbol]) {
@@ -427,17 +474,43 @@
                                 nameDiv.textContent = symbol;
                             }
 
+                            // 右侧价格和标签区域
                             const valueDiv = document.createElement('div');
-                            valueDiv.className = 'symbol-value';
-                            valueDiv.textContent = symbolValue;
+                            valueDiv.className = 'symbol-value d-flex align-items-center flex-wrap justify-content-end';
 
-                            // 根据符号值添加颜色
+                            // 添加价格变化
+                            const priceChange = document.createElement('span');
+                            priceChange.textContent = symbolValue;
+                            priceChange.className = 'me-2';
+
+                            // 设置价格颜色
                             if (symbolValue.includes('+')) {
-                                valueDiv.style.color = '#28a745'; // 绿色
+                                priceChange.style.color = '#28a745';
                             } else if (symbolValue.includes('-')) {
-                                valueDiv.style.color = '#dc3545'; // 红色
+                                priceChange.style.color = '#dc3545';
                             } else {
-                                valueDiv.style.color = '#6c757d'; // 灰色
+                                priceChange.style.color = '#6c757d';
+                            }
+
+                            valueDiv.appendChild(priceChange);
+
+                            // 添加标签
+                            const tags = descriptionMap.get(symbol);
+                            if (tags && tags.length > 0) {
+                                const tagsContainer = document.createElement('div');
+                                tagsContainer.className = 'd-flex flex-wrap gap-1';
+
+                                tags.forEach(tag => {
+                                    const tagSpan = document.createElement('span');
+                                    tagSpan.className = 'badge rounded-pill bg-secondary small';
+                                    tagSpan.style.fontSize = '0.7rem';
+                                    tagSpan.style.fontWeight = 'normal';
+                                    tagSpan.style.opacity = '0.8';
+                                    tagSpan.textContent = tag;
+                                    tagsContainer.appendChild(tagSpan);
+                                });
+
+                                valueDiv.appendChild(tagsContainer);
                             }
 
                             symbolItem.appendChild(nameDiv);
