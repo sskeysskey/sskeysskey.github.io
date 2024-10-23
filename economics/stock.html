@@ -276,6 +276,15 @@
 
             loadingIndicator.style.display = 'flex';
 
+            // 监听tab切换事件，重置滚动位置
+            const tabElements = document.querySelectorAll('#myTab button');
+            tabElements.forEach((tab) => {
+                tab.addEventListener('shown.bs.tab', () => {
+                    // 每次切换tab时重置滚动条位置
+                    window.scrollTo(0, 0);
+                });
+            });
+
             Promise.all([
                 fetch('comparestock.txt').then(response => response.text()),
                 fetch('compareetfs.txt').then(response => response.text()), // 新增的ETF文件读取
