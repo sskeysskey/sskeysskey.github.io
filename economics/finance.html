@@ -110,31 +110,6 @@
             font-size: 0.9em;
         }
 
-        .symbol-item {
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            transition: background-color 0.2s;
-        }
-
-        .symbol-item:hover {
-            background-color: rgba(0, 0, 0, 0.02);
-        }
-
-        .symbol-name {
-            font-size: 0.95rem;
-            max-width: 60%;
-        }
-
-        .symbol-value {
-            font-size: 0.9rem;
-        }
-
-        .badge {
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            max-width: 120px;
-            overflow: hidden;
-        }
-
         @media (max-width: 768px) {
 
             /* 使用container-fluid并移除水平内边距，使其占满整个屏幕宽度 */
@@ -244,20 +219,6 @@
                 height: 100%;
                 border-radius: 0;
             }
-
-            .symbol-name {
-                font-size: 0.85rem;
-                max-width: 50%;
-            }
-
-            .badge {
-                font-size: 0.65rem !important;
-                max-width: 80px;
-            }
-
-            .symbol-value {
-                font-size: 0.8rem;
-            }
         }
 
         /* Modal Custom Styles */
@@ -339,6 +300,13 @@
         // 定义全局变量存储 marketcap_pe 数据
         let marketCapData = null;
 
+        // 监听 tab 切换事件
+        const sectorTabs = document.getElementById('sectorTabs');
+        sectorTabs.addEventListener('shown.bs.tab', function (event) {
+            // 每次切换 tab 时，将页面滚动到顶部
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
         // 加载 marketcap_pe.txt 文件
         async function loadMarketCapData() {
             if (marketCapData) return marketCapData;
@@ -398,16 +366,21 @@
                 fetch('sectors_panel.json').then(response => response.json()),
                 fetch('compare_all.txt').then(response => response.text()),
                 fetch('finance.json').then(response => response.json()),
-                fetch('description.json').then(response => response.json()) // 添加这行
+                fetch('description.json').then(response => response.json()) // 添加description.json的加载
             ]).then(([sectorsData, txtData, financeJson, descriptionData]) => {
-                // 创建description映射，合并stocks和etfs数组并建立查找映射
-                const descriptionMap = new Map([
-                    ...descriptionData.stocks.map(item => [item.symbol, item.tag]),
-                    ...descriptionData.etfs.map(item => [item.symbol, item.tag])
-                ]);
+                financeData = financeJson;
+                symbolsData = sectorsData;
 
-                financeData = financeJson; // 存储finance.json数据
-                symbolsData = sectorsData; // 存储所有的 symbols 数据
+                // 创建一个描述信息的映射，根据symbol来查找
+                const descriptionMap = {};
+
+                // 处理 description.json 中的 stocks 和 etfs 部分，构建 symbol 到 description 的映射
+                descriptionData.stocks.forEach(stock => {
+                    descriptionMap[stock.symbol] = stock;
+                });
+                descriptionData.etfs.forEach(etf => {
+                    descriptionMap[etf.symbol] = etf;
+                });
 
                 // 解析compare_all.txt
                 const compareMap = {};
@@ -461,7 +434,7 @@
                             const symbolDisplayName = symbolsObj[symbol] || symbol;
 
                             const symbolItem = document.createElement('div');
-                            symbolItem.className = 'symbol-item d-flex justify-content-between align-items-start py-2 px-3';
+                            symbolItem.className = 'symbol-item';
                             symbolItem.dataset.symbol = symbol;
                             symbolItem.dataset.sector = sector;
 
@@ -476,41 +449,27 @@
 
                             // 右侧价格和标签区域
                             const valueDiv = document.createElement('div');
-                            valueDiv.className = 'symbol-value d-flex align-items-center flex-wrap justify-content-end';
+                            valueDiv.className = 'symbol-value';
+                            valueDiv.textContent = symbolValue;
 
-                            // 添加价格变化
-                            const priceChange = document.createElement('span');
-                            priceChange.textContent = symbolValue;
-                            priceChange.className = 'me-2';
-
-                            // 设置价格颜色
-                            if (symbolValue.includes('+')) {
-                                priceChange.style.color = '#28a745';
-                            } else if (symbolValue.includes('-')) {
-                                priceChange.style.color = '#dc3545';
-                            } else {
-                                priceChange.style.color = '#6c757d';
+                            // 查找 descriptionMap 中的 symbol 信息
+                            const description = descriptionMap[symbol];
+                            if (description && description.tag) {
+                                const tagContent = description.tag.join(', ');
+                                const tagDiv = document.createElement('div');
+                                tagDiv.className = 'symbol-tag';
+                                tagDiv.textContent = `${tagContent}`;
+                                tagDiv.style.color = '#6c757d'; // 灰色
+                                valueDiv.appendChild(tagDiv);
                             }
 
-                            valueDiv.appendChild(priceChange);
-
-                            // 添加标签
-                            const tags = descriptionMap.get(symbol);
-                            if (tags && tags.length > 0) {
-                                const tagsContainer = document.createElement('div');
-                                tagsContainer.className = 'd-flex flex-wrap gap-1';
-
-                                tags.forEach(tag => {
-                                    const tagSpan = document.createElement('span');
-                                    tagSpan.className = 'badge rounded-pill bg-secondary small';
-                                    tagSpan.style.fontSize = '0.7rem';
-                                    tagSpan.style.fontWeight = 'normal';
-                                    tagSpan.style.opacity = '0.8';
-                                    tagSpan.textContent = tag;
-                                    tagsContainer.appendChild(tagSpan);
-                                });
-
-                                valueDiv.appendChild(tagsContainer);
+                            // 设置 symbolValue 的颜色
+                            if (symbolValue.includes('+')) {
+                                valueDiv.style.color = '#28a745'; // 绿色
+                            } else if (symbolValue.includes('-')) {
+                                valueDiv.style.color = '#dc3545'; // 红色
+                            } else {
+                                valueDiv.style.color = '#28a745'; // 绿色
                             }
 
                             symbolItem.appendChild(nameDiv);
@@ -581,6 +540,9 @@
                 console.error('加载数据文件时出错:', err);
                 sectorTabsContent.innerHTML = '<p class="text-danger">无法加载必要的数据文件。</p>';
             });
+
+            window.addEventListener('scroll', handleScroll);
+            window.addEventListener('resize', handleScroll);
 
             function handleScroll() {
                 if (window.innerWidth <= 768) {
