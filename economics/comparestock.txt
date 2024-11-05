@@ -1335,4 +1335,3 @@ Financial_Services       AMG.04.--      :  -8.64%  资产管理
 Communication_Services   BCE.07.*.-     :  -9.28%  加拿大, 电信运营商
 Utilities                CEG.04.*.-     : -12.46%  星座, 发电, 电力, 可再生, 核能
 Healthcare               PACS.07.*      : -27.78%  急症护理, 老年护理, 辅助生活, 长期护理
-Healthcare               RDY.05         : -80.07%  印度, 仿制药
