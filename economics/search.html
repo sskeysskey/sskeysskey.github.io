@@ -749,8 +749,6 @@
                 const matchedStocks = searchCategory(data.stocks, keywordsArray, 'stocks');
                 const matchedETFs = searchCategory(data.etfs, keywordsArray, 'etfs');
 
-                let hasResults = false;
-
                 // 加载 MarketCap 数据
                 const marketCapData = await loadMarketCapData();
 
@@ -761,26 +759,67 @@
                 // Check for spaces in the search keywords
                 const hasSpaces = keywordsArray.length > 1;
 
-                if (hasSpaces) {
-                    // If the search contains spaces, prioritize stock_name and stock_tag
-                    hasResults |= displayResults('Stock_name', matchedStocks.name, marketCapData, 'stocks', compareData);
-                    hasResults |= displayResults('ETF_name', matchedETFs.name, marketCapData, 'etfs', compareData);
-                    hasResults |= displayResults('Stock_tag', matchedStocks.tag, marketCapData, 'stocks', compareData);
-                    hasResults |= displayResults('ETF_tag', matchedETFs.tag, marketCapData, 'etfs', compareData);
-                    hasResults |= displayResults('Stock_symbol', matchedStocks.symbol, marketCapData, 'stocks', compareData);
-                    hasResults |= displayResults('ETF_symbol', matchedETFs.symbol, marketCapData, 'etfs', compareData);
-                } else {
-                    // If no spaces, prioritize stock_symbol
-                    hasResults |= displayResults('Stock_symbol', matchedStocks.symbol, marketCapData, 'stocks', compareData);
-                    hasResults |= displayResults('ETF_symbol', matchedETFs.symbol, marketCapData, 'etfs', compareData);
-                    hasResults |= displayResults('Stock_name', matchedStocks.name, marketCapData, 'stocks', compareData);
-                    hasResults |= displayResults('Stock_tag', matchedStocks.tag, marketCapData, 'stocks', compareData);
-                    hasResults |= displayResults('ETF_tag', matchedETFs.tag, marketCapData, 'etfs', compareData);
-                    hasResults |= displayResults('ETF_name', matchedETFs.name, marketCapData, 'etfs', compareData);
+                // 创建结果收集器
+                let resultsToDisplay = [];
+
+                // 定义一个函数来添加结果
+                function addToResults(category, matches, type, source) {
+                    if (matches.exact.length > 0 || matches.partial.length > 0 || matches.fuzzy.length > 0) {
+                        resultsToDisplay.push({
+                            category,
+                            matches,
+                            type,
+                            source,
+                            priority: category.includes('Description') ? 2 : // Description 永远最后
+                                matches.exact.length > 0 ? 0 : 1       // 精确匹配优先
+                        });
+                    }
                 }
 
-                hasResults |= displayResults('Stock_Description', matchedStocks.description, marketCapData, 'stocks', compareData);
-                hasResults |= displayResults('ETFs_Description', matchedETFs.description, marketCapData, 'etfs', compareData);
+                // 收集所有结果
+                if (hasSpaces) {
+                    // 按原顺序收集结果
+                    addToResults('Stock_name', matchedStocks.name, 'stocks', 'name');
+                    addToResults('ETF_name', matchedETFs.name, 'etfs', 'name');
+                    addToResults('Stock_tag', matchedStocks.tag, 'stocks', 'tag');
+                    addToResults('ETF_tag', matchedETFs.tag, 'etfs', 'tag');
+                    addToResults('Stock_symbol', matchedStocks.symbol, 'stocks', 'symbol');
+                    addToResults('ETF_symbol', matchedETFs.symbol, 'etfs', 'symbol');
+                } else {
+                    addToResults('Stock_symbol', matchedStocks.symbol, 'stocks', 'symbol');
+                    addToResults('ETF_symbol', matchedETFs.symbol, 'etfs', 'symbol');
+                    addToResults('Stock_name', matchedStocks.name, 'stocks', 'name');
+                    addToResults('Stock_tag', matchedStocks.tag, 'stocks', 'tag');
+                    addToResults('ETF_tag', matchedETFs.tag, 'etfs', 'tag');
+                    addToResults('ETF_name', matchedETFs.name, 'etfs', 'name');
+                }
+
+                // Description 永远最后显示
+                addToResults('Stock_Description', matchedStocks.description, 'stocks', 'description');
+                addToResults('ETFs_Description', matchedETFs.description, 'etfs', 'description');
+
+                // 排序结果
+                resultsToDisplay.sort((a, b) => {
+                    // 首先按优先级排序（Description=2, 非精确匹配=1, 精确匹配=0）
+                    if (a.priority !== b.priority) {
+                        return a.priority - b.priority;
+                    }
+
+                    // 如果优先级相同，保持原有顺序
+                    return resultsToDisplay.indexOf(a) - resultsToDisplay.indexOf(b);
+                });
+
+                // 显示排序后的结果
+                let hasResults = false;
+                for (const result of resultsToDisplay) {
+                    hasResults |= displayResults(
+                        result.category,
+                        result.matches,
+                        marketCapData,
+                        result.type,
+                        compareData
+                    );
+                }
 
                 if (!hasResults) {
                     resultsContainer.innerHTML = '<div class="no-results">没有搜索到任何结果</div>';
@@ -805,6 +844,35 @@
             return keyword.length > 1;
         }
 
+        // Levenshtein距离计算函数
+        function levenshteinDistance(a, b) {
+            const an = a ? a.length : 0;
+            const bn = b ? b.length : 0;
+            if (an === 0) return bn;
+            if (bn === 0) return an;
+
+            let matrix = Array(an + 1);
+            for (let i = 0; i <= an; i++) {
+                matrix[i] = Array(bn + 1).fill(0);
+                matrix[i][0] = i;
+            }
+            for (let j = 0; j <= bn; j++) {
+                matrix[0][j] = j;
+            }
+
+            for (let i = 1; i <= an; i++) {
+                for (let j = 1; j <= bn; j++) {
+                    let cost = a[i - 1] === b[j - 1] ? 0 : 1;
+                    matrix[i][j] = Math.min(
+                        matrix[i - 1][j] + 1,
+                        matrix[i][j - 1] + 1,
+                        matrix[i - 1][j - 1] + cost
+                    );
+                }
+            }
+            return matrix[an][bn];
+        }
+
         // 搜索特定类别
         function searchCategory(items, keywordsArray, category) {
             const results = {
@@ -814,52 +882,81 @@
                 description: { exact: [], partial: [], fuzzy: [] }
             };
 
+            // 如果是多关键词搜索
+            const isMultiKeywordSearch = keywordsArray.length > 1;
+
             items.forEach(item => {
                 const descriptionText = (item.description1 + ' ' + item.description2).toLowerCase();
 
-                // Symbol匹配
-                const symbolExactMatch = keywordsArray.some(k => item.symbol.toLowerCase() === k);
-                const symbolPartialMatch = keywordsArray.some(k => item.symbol.toLowerCase().includes(k));
-                const symbolFuzzyMatch = keywordsArray.some(k => shouldFuzzyMatch(k) && levenshteinDistance(item.symbol.toLowerCase(), k) <= 1);
+                // Symbol匹配 - 必须所有关键词都匹配
+                const symbolMatches = {
+                    exact: keywordsArray.every(k => item.symbol.toLowerCase() === k),
+                    partial: keywordsArray.every(k => item.symbol.toLowerCase().includes(k)),
+                    fuzzy: keywordsArray.every(k =>
+                        shouldFuzzyMatch(k) && levenshteinDistance(item.symbol.toLowerCase(), k) <= 1
+                    )
+                };
 
-                // Name匹配
-                const nameExactMatch = keywordsArray.some(k => item.name && item.name.toLowerCase() === k);
-                const namePartialMatch = keywordsArray.some(k => item.name && item.name.toLowerCase().includes(k));
-                const nameFuzzyMatch = keywordsArray.some(k => shouldFuzzyMatch(k) && item.name && levenshteinDistance(item.name.toLowerCase(), k) <= 1);
+                // Name匹配 - 必须所有关键词都匹配
+                const nameMatches = {
+                    exact: item.name && keywordsArray.every(k => item.name.toLowerCase() === k),
+                    partial: item.name && keywordsArray.every(k => item.name.toLowerCase().includes(k)),
+                    fuzzy: item.name && keywordsArray.every(k =>
+                        shouldFuzzyMatch(k) && levenshteinDistance(item.name.toLowerCase(), k) <= 1
+                    )
+                };
 
-                // Tag匹配
-                const tagExactMatch = keywordsArray.some(k => item.tag.some(tag => tag.toLowerCase() === k));
-                const tagPartialMatch = keywordsArray.some(k => item.tag.some(tag => tag.toLowerCase().includes(k)));
-                const tagFuzzyMatch = keywordsArray.some(k => shouldFuzzyMatch(k) && item.tag.some(tag => levenshteinDistance(tag.toLowerCase(), k) <= 1));
+                // Tag匹配 - 两种匹配方式
+                const tagMatches = {
+                    exact: false,
+                    partial: false,
+                    fuzzy: false
+                };
+
+                if (isMultiKeywordSearch) {
+                    // 方式1：每个tag必须包含所有关键词
+                    const tagContainsAllKeywords = item.tag.some(tag =>
+                        keywordsArray.every(k => tag.toLowerCase().includes(k))
+                    );
+
+                    // 方式2：关键词分别匹配不同的tag
+                    const keywordsMatchDifferentTags = keywordsArray.every(keyword =>
+                        item.tag.some(tag => tag.toLowerCase().includes(keyword))
+                    );
+
+                    // 只要满足任一方式即可
+                    tagMatches.partial = tagContainsAllKeywords || keywordsMatchDifferentTags;
+                } else {
+                    // 单关键词搜索保持原有逻辑
+                    tagMatches.exact = keywordsArray.some(k =>
+                        item.tag.some(tag => tag.toLowerCase() === k)
+                    );
+                    tagMatches.partial = keywordsArray.some(k =>
+                        item.tag.some(tag => tag.toLowerCase().includes(k))
+                    );
+                    tagMatches.fuzzy = keywordsArray.some(k =>
+                        shouldFuzzyMatch(k) && item.tag.some(tag =>
+                            levenshteinDistance(tag.toLowerCase(), k) <= 1
+                        )
+                    );
+                }
 
                 // Symbol结果分类
-                if (symbolExactMatch) {
-                    results.symbol.exact.push(item);
-                } else if (symbolPartialMatch) {
-                    results.symbol.partial.push(item);
-                } else if (symbolFuzzyMatch) {
-                    results.symbol.fuzzy.push(item);
-                }
+                if (symbolMatches.exact) results.symbol.exact.push(item);
+                else if (symbolMatches.partial) results.symbol.partial.push(item);
+                else if (symbolMatches.fuzzy) results.symbol.fuzzy.push(item);
 
                 // Name结果分类
-                if (nameExactMatch) {
-                    results.name.exact.push(item);
-                } else if (namePartialMatch) {
-                    results.name.partial.push(item);
-                } else if (nameFuzzyMatch) {
-                    results.name.fuzzy.push(item);
-                }
+                if (nameMatches.exact) results.name.exact.push(item);
+                else if (nameMatches.partial) results.name.partial.push(item);
+                else if (nameMatches.fuzzy) results.name.fuzzy.push(item);
 
                 // Tag结果分类
-                if (tagExactMatch) {
-                    results.tag.exact.push(item);
-                } else if (tagPartialMatch) {
-                    results.tag.partial.push(item);
-                } else if (tagFuzzyMatch) {
-                    results.tag.fuzzy.push(item);
-                }
+                if (tagMatches.exact) results.tag.exact.push(item);
+                else if (tagMatches.partial) results.tag.partial.push(item);
+                else if (tagMatches.fuzzy) results.tag.fuzzy.push(item);
 
-                // Description匹配
+                // Description匹配保持不变
                 if (keywordsArray.every(k => descriptionText.includes(k))) {
                     results.description.exact.push(item);
                 }
