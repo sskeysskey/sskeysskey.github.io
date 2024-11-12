@@ -762,16 +762,21 @@
                 // 创建结果收集器
                 let resultsToDisplay = [];
 
-                // 定义一个函数来添加结果
+                // 修改 addToResults 函数的优先级逻辑
                 function addToResults(category, matches, type, source) {
                     if (matches.exact.length > 0 || matches.partial.length > 0 || matches.fuzzy.length > 0) {
+                        const isDescription = category.includes('Description');
                         resultsToDisplay.push({
                             category,
                             matches,
                             type,
                             source,
-                            priority: category.includes('Description') ? 2 : // Description 永远最后
-                                matches.exact.length > 0 ? 0 : 1       // 精确匹配优先
+                            // 描述类别优先级固定为最低(100)，其他类别按匹配程度排序
+                            priority: isDescription ? 100 : (
+                                matches.exact.length > 0 ? 0 : // 精确匹配最高优先级
+                                    matches.partial.length > 0 ? 1 : // 部分匹配次之
+                                        2  // 模糊匹配最后
+                            )
                         });
                     }
                 }
@@ -798,14 +803,41 @@
                 addToResults('Stock_Description', matchedStocks.description, 'stocks', 'description');
                 addToResults('ETFs_Description', matchedETFs.description, 'etfs', 'description');
 
-                // 排序结果
+                // 修改排序逻辑
                 resultsToDisplay.sort((a, b) => {
-                    // 首先按优先级排序（Description=2, 非精确匹配=1, 精确匹配=0）
-                    if (a.priority !== b.priority) {
-                        return a.priority - b.priority;
+                    // 首先处理 Description，确保它们永远在最后
+                    const aIsDesc = a.category.includes('Description');
+                    const bIsDesc = b.category.includes('Description');
+                    if (aIsDesc !== bIsDesc) {
+                        return aIsDesc ? 1 : -1;
                     }
 
-                    // 如果优先级相同，保持原有顺序
+                    // 如果都不是 Description，按照之前的逻辑排序
+                    if (!aIsDesc && !bIsDesc) {
+                        // 首先按是否有精确匹配排序
+                        if (a.matches.exact.length !== b.matches.exact.length) {
+                            return a.matches.exact.length > 0 ? -1 : 1;
+                        }
+
+                        // 其次按优先级排序
+                        if (a.priority !== b.priority) {
+                            return a.priority - b.priority;
+                        }
+
+                        // 最后按类别排序
+                        const categoryOrder = {
+                            'Stock_symbol': 0,
+                            'ETF_symbol': 1,
+                            'Stock_name': 2,
+                            'ETF_name': 3,
+                            'Stock_tag': 4,
+                            'ETF_tag': 5
+                        };
+
+                        return categoryOrder[a.category] - categoryOrder[b.category];
+                    }
+
+                    // 如果都是 Description，保持原有顺序
                     return resultsToDisplay.indexOf(a) - resultsToDisplay.indexOf(b);
                 });
 
