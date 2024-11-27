@@ -1,1378 +1,1379 @@
-Consumer_Defensive       HIMS.*.++      :  23.77%  远程医疗, 性健康, 皮肤护理, 减肥药, 平替, 山寨减肥药, 医疗
-Consumer_Cyclical        BBWI.14.*      :  16.51%  沐浴, 护肤, 香氛, 美国
-Healthcare               BBIO.11.*.++   :  16.10%  孟德尔疾病, 淀粉样心肌病
-Technology               SMCI.*.++      :  15.87%  超微电脑, AI服务器, 存储, 数据中心, AI, 美国
-Industrials              JOBY.*.++      :  15.66%  电动垂直起降飞行器, 飞行器, 飞机, 航空
-Consumer_Cyclical        RIVN.*.+       :  13.28%  meme, 电动汽车
-Consumer_Cyclical        W.*.++         :   9.63%  家具, 家居装饰, 电子商务, 家居用品, 在线零售
-Technology               CLVT.*.++      :   9.33%  信息服务提供商, 专利, 商标, 版权, 学术研究, 药物研发, 知识产权, 品牌保护
-Healthcare               TEM.+          :   9.03%  癌症治疗, 数据分析, 人工智能, 肿瘤数据库
-Industrials              BLD.++         :   9.01%  建筑, 住宅, 隔热材料, 绝缘安装, 住宅建筑
-Consumer_Cyclical        IBP.++         :   8.60%  建筑, 建筑安装, 材料, 隔热材料, 绝缘材料
-Technology               ENPH.*.++      :   8.48%  太阳能, 微型逆变器, 储能, 利率敏感
-Real_Estate              JLL.++         :   7.75%  房地产, 租赁, 房地产管理
-Financial_Services       UPST.*.++      :   7.37%  贷款, 借贷平台, 个人贷款, 在线贷款, 人工智能, AI, 信用评估, 数字化, 美国
-Industrials              RXO.++         :   7.26%  北美, 货运, 运输, 物流, 卡车运输, 供应链, 3PL, XPO分拆, 配送, 第三大
-Consumer_Cyclical        ULTA           :   7.17%  美妆购物, 美容沙龙, 化妆品美甲护发
-Consumer_Cyclical        PSNYW          :   7.14%  瑞典, 电动车, 沃尔沃, 吉利, Polestar
-Consumer_Cyclical        KBH.+          :   7.09%  房地产, 住宅建筑
-Healthcare               DXCM.*         :   6.87%  德康医疗, 血糖监测, 医疗器械, 医疗
-Consumer_Cyclical        BIRK.++        :   6.76%  德国, 鞋, 鞋垫, 被LVMH旗下Financière Agache收购
-Healthcare               BNTX.++        :   6.74%  mRNA, 生物技术
-Industrials              TREX.++        :   6.71%  木材, 地板, 栏杆, 高端装修, 装修
-Technology               SATS.12        :   6.59%  卫星, 卫星电视, 机顶盒, 美国
-Basic_Materials          SSD.++         :   6.58%  建筑材料, 连接组件, 辛普森制造, 美国
-Technology               LYFT.*.+       :   6.55%  网约车, 共享出行, 出租车, 共享租车, 美国
-Consumer_Cyclical        TOL.++         :   6.48%  房地产, 高端住宅
-Healthcare               ALGN           :   6.48%  医疗器械, 牙齿矫正, 正畸
-Consumer_Cyclical        ETSY.*.++      :   6.46%  电子商务, 手工制品, 复古商品
-Consumer_Cyclical        FND.++         :   6.45%  硬表面地板, 地板, 家装, 装修, 瓷砖
-Industrials              POOL.++        :   6.42%  游泳池, 水疗设备, 泳池产品
-Consumer_Cyclical        GME.*.+        :   6.34%  meme, 模因股, Roaring Kitty
-Consumer_Defensive       OLLI.++        :   6.31%  折扣零售, 低价商品, 低价, 零售, 美国
-Healthcare               MRNA.*.++      :   6.20%  莫德纳, mRNA, 疫苗, 新冠肺炎
-Consumer_Cyclical        MTH.+          :   6.19%  房地产, 节能住宅, 智能家居
-Consumer_Cyclical        BOOT.++        :   6.13%  西部风格, 零售, 服装, 鞋, 靴子, 牛仔, 农场
-Consumer_Cyclical        PHM.++         :   6.08%  土地采购, 住宅建筑, 销售, 贷款金融服务
-Basic_Materials          BCC.++         :   6.06%  木材, 建筑材料, 美国
-Financial_Services       RKT.12.+       :   6.04%  金融科技, 在线抵押贷款, 房地产, 抵押贷款, 在线贷款
-Technology               LSCC.++        :   6.03%  半导体, FPGA, 可编程逻辑电路
-Financial_Services       ONB.*.++       :   5.96%  历史悠久银行, 抵押贷款, 银行, 美国
-Industrials              BLDR.++        :   5.89%  建筑材料, 装修, 美国
-Industrials              FBIN.++        :   5.83%  橱柜, 卫浴, 洁具, 安全智能家居, 门窗
-Healthcare               OGN.++         :   5.82%  健康护理, 生物仿制药, 默克分拆, 药品经销商, 渠道销售, 仿制药, 药品
-Real_Estate              CIGI.++        :   5.79%  房地产, 商业地产服务, 租赁, 估价
-Consumer_Cyclical        DHI.+          :   5.75%  德尔惠, 房地产, 住宅建筑, 美国
-Consumer_Cyclical        RH.++          :   5.74%  家具, 照明, 家居装饰
-Consumer_Cyclical        TPX.++         :   5.70%  床上用品, 床垫, 枕头
-Healthcare               INSP.++        :   5.61%  Inspire疗法, 阻塞性睡眠呼吸暂停OSA
-Consumer_Cyclical        LEN.+          :   5.61%  房地产, 住宅建筑
-Consumer_Cyclical        COLM.++        :   5.50%  哥伦比亚, 运动服装, 美国
-Industrials              ATKR.++        :   5.49%  电气管道, 电缆支架, 镀锌机械管
-Healthcare               OSCR           :   5.44%  奥斯卡, 保险, 医疗保险, 健康保险
-Consumer_Cyclical        FIVE.++        :   5.40%  折扣连锁, 折扣零售, 1~5美元商品, 折扣, 低价, 零售连锁
-Technology               ST.++          :   5.30%  传感器, 保护控制器, 汽车行业
-Basic_Materials          WFG            :   5.27%  加拿大, 木材
-Healthcare               CRSP.+         :   5.26%  CRISPR, Cas9, 基因编辑
-Consumer_Cyclical        TMHC.++        :   5.23%  住宅建筑, 房地产, 美国
-Consumer_Cyclical        SHAK.++        :   5.21%  连锁, 快餐, 汉堡, 餐饮, 美国
-Technology               STM.*          :   5.19%  意法半导体, 芯片, 传统半导体, 欧洲
-Consumer_Cyclical        CPRI.*.+       :   5.18%  时尚, 奢侈品, Michael Kors, Versace, Jimmy Choo
-Consumer_Defensive       DLTR.++        :   5.09%  美元树, 低价折扣, 零售, 连锁, 商店
-Industrials              SITE.++        :   5.07%  景观供应, 草坪园艺, 照明灌溉
-Consumer_Cyclical        APTV.*.++      :   5.06%  汽车零部件, 自动驾驶, 电气架构, 车载软件
-Technology               GFS.++         :   5.02%  半导体, 晶圆代工, 芯片代工
-Industrials              CNM.+          :   5.01%  市政水务, 废水处理
-Consumer_Cyclical        AS.++          :   4.98%  亚玛芬, 体育用品, 户外用品, 零售
-Basic_Materials          SMG.++         :   4.97%  园艺, 草坪护理, 销售Roundup, 大麻, 杀虫剂, 除草剂
-Financial_Services       NYCB.*.++      :   4.96%  纽约社区银行, 区域性银行, 房地产抵押贷款, 抵押贷款
-Financial_Services       FLG.*.++       :   4.96%  银行, 金融, 纽约社区银行, 纽约商业银行
-Consumer_Cyclical        ROST.14.*.++   :   4.93%  罗斯百货, 折扣
-Technology               ALAB.*         :   4.92%  AI基础设施, 芯片, AI, 半导体
-Consumer_Cyclical        WHR.++         :   4.87%  惠而浦, 家电制造商, 洗衣机, 冰箱
-Consumer_Cyclical        LEVI.++        :   4.84%  牛仔裤
-Consumer_Cyclical        CZR.+          :   4.84%  凯撒娱乐, 拉斯维加斯, 赌场娱乐
-Consumer_Cyclical        DOOO.++        :   4.80%  加拿大, 雪地摩托, 水上摩托, 摩托艇, 利率敏感
-Healthcare               VEEV.++        :   4.79%  云计算, 生命科学
-Technology               ALGM.++        :   4.79%  磁性传感器, 模拟电源集成电路, 半导体
-Technology               MCHP.*.++      :   4.74%  半导体, 单片机, 电子设备
-Basic_Materials          CTVA.*.++      :   4.74%  农业, 种子, 农作物保护, 小麦育种, 美国
-Consumer_Cyclical        MELI.++        :   4.74%  南美, 阿根廷, 电子商务, 电商平台
-Industrials              AZEK.++        :   4.63%  户外, 建材, 建筑材料
-Healthcare               WBA.*.++       :   4.62%  连锁药店, 药品零售, 药店, 药品
-Healthcare               ACHC           :   4.60%  精神疾病, 药物滥用
-Technology               PCOR.++        :   4.60%  建筑项目管理, 云计算
-Basic_Materials          CX.*.++        :   4.55%  墨西哥, 建材, 水泥, 低碳混凝土
-Technology               WDC.*.++       :   4.52%  西部数据, 硬盘HDD, 固态硬盘SSD, 数据中心, 存储
-Consumer_Cyclical        MHK.++         :   4.51%  莫霍克工业, 地毯, 地板, 瓷砖
-Utilities                BEPC           :   4.50%  可再生能源
-Consumer_Cyclical        DRI.++         :   4.49%  快餐, 高端餐饮
-Basic_Materials          UFPI.++        :   4.47%  环球森林产品, 木材, 建筑材料
-Healthcare               PRCT           :   4.47%  泌尿外科, 手术机器人, 前列腺BPH, Aquablation, 医疗设备
-Industrials              CSL.++         :   4.45%  绝缘建筑材料, 高性能电缆, 建筑材料
-Consumer_Cyclical        SN             :   4.44%  小家电, 吸尘器, 扫地机器人, 搅拌机, 榨汁机, 空气炸锅, 美国
-Consumer_Cyclical        DDS.++         :   4.44%  迪拉德百货, 百货, 商店, 零售, 美国
-Consumer_Defensive       TGT.*.+        :   4.42%  塔吉特, 零售, 百货, 商店, 连锁, 美国
-Financial_Services       UWMC.+         :   4.39%  住房抵押贷款, 金融, 抵押贷款
-Healthcare               TECH.++        :   4.36%  生物技术, 重组蛋白, 基因编辑, 细胞疗法
-Consumer_Cyclical        KMX.++         :   4.35%  车美仕, 二手车零售, 抵押贷款, 二手车, 美国
-Consumer_Defensive       EL.*.++        :   4.35%  雅诗兰黛, 倩碧, 化妆, 护肤
-Healthcare               RNA.+          :   4.35%  RNA靶向药物, 肌肉萎缩性侧索硬化症, 杜氏肌营养不良
-Basic_Materials          JHX.+          :   4.32%  建筑材料, 纤维, 水泥
-Consumer_Cyclical        ZK.+           :   4.29%  极氪, 电动车, 中国, 隶属于吉利汽车, 吉利
-Technology               NICE.14.++     :   4.28%  以色列, 云计算, 企业平台, 金融犯罪, AI
-Healthcare               LEGN.12.+      :   4.27%  中国, 传奇生物, CAR-T细胞疗法
-Consumer_Cyclical        GLBE           :   4.27%  以色列, 跨境电商解决方案, 电商
-Consumer_Cyclical        EAT.+          :   4.27%  布林克国际, 连锁餐厅, 餐饮, Chili's Grill & Bar
-Healthcare               IONS.+         :   4.26%  生物制药, 反义技术
-Financial_Services       APO.*.++       :   4.26%  阿波罗全球, 资产管理, 投资管理
-Communication_Services   FWONA          :   4.25%  一级方程式赛车, 卫星广播, 流媒体
-Technology               AFRM.*.++      :   4.21%  消费金融, 支付, 分期付款, 先买后付
-Technology               ADI.*.++       :   4.19%  半导体, 集成电路, 模拟信号处理
-Consumer_Cyclical        BC.++          :   4.19%  船只制造商, 钓鱼船, 游艇, lifeFitness健身器械, 利率敏感
-Technology               PEGA.++        :   4.16%  CRM, BPM, 软件服务
-Consumer_Cyclical        AN.++          :   4.13%  汽车零售, 抵押贷款, 汽车贷款, 美国
-Industrials              CNH.*.++       :   4.12%  依维柯Iveco, 农业机械, 机械, 建筑设备
-Industrials              EFX.++         :   4.07%  消费者信用报告, 信用信息分析决策, 信息分析, 信用
-Real_Estate              EQIX.++        :   4.06%  数据中心, 云计算, 互联托管
-Technology               MNDY.11.++     :   4.04%  以色列, 云平台, 工作流程, 项目管理, 云计算, 软件平台
-Technology               PSTG.++        :   4.03%  数据存储, 全闪存, AI, 美国
-Consumer_Cyclical        LOW            :   4.02%  劳氏, 家居装修零售, 仅次于HomeDepot家得宝, 装修, 零售, 家装, 建材
-Industrials              MAS.++         :   4.00%  家居装饰, 建筑产品, 管道橱柜
-Technology               BOX.++         :   4.00%  云存储, 企业软件, SaaS, 云服务
-Healthcare               XRAY.++        :   4.00%  登士柏, 牙科, 牙科产品, 口腔健康, 正畸, 种植牙, 牙科设备, 牙科诊断, 牙齿修复, 美国
-Technology               NXT.+          :   3.99%  太阳能, 追踪器, 跟踪器, 光伏追踪, 利率敏感
-Technology               ON.*.++        :   3.98%  安森美半导体, 独立自摩托罗拉, 半导体, 汽车芯片
-Industrials              OC.++          :   3.97%  建筑复合材料, 绝缘, 玻璃纤维
-Real_Estate              COLD.++        :   3.94%  美国冷库, 冷藏仓储, 温控仓库, 冷链, 房地产, 仓库, 仓储
-Consumer_Defensive       TAL.*          :   3.91%  好未来, 学而思, 教育, 培训, 中国, 在线教育
-Consumer_Cyclical        BBY.*.+        :   3.90%  百思买, 电子产品, 零售, 消费品, 连锁, 商店, 美国
-Basic_Materials          AA.*           :   3.85%  美国铝业, 铝
-Consumer_Cyclical        PAG.++         :   3.84%  汽车零售, 商用卡车销售, 特许经销店, 汽车保险, 汽车金融, 汽车贷款
-Technology               CRUS.++        :   3.82%  半导体, 模拟集成电路, 音频芯片, 传统半导体
-Technology               SHOP.12.*.++   :   3.78%  加拿大, 电子商务, 网店
-Industrials              AAL.*.+        :   3.76%  美国航空, 货运客运, 航空公司
-Consumer_Cyclical        GPC.++         :   3.74%  汽车零部件, 工业零件, 电子材料
-Financial_Services       HDB.*.++       :   3.74%  印度, 银行
-Industrials              LPX.++         :   3.74%  建筑材料, 定向刨花板, 外墙挂板, 工程木制品
-Communication_Services   IPG.*.++       :   3.72%  广告, 广告营销
-Healthcare               APLS.++        :   3.70%  生物制药, C3免疫调节疗法
-Consumer_Cyclical        TXRH.+         :   3.70%  美式牛排, 连锁餐厅
-Consumer_Cyclical        RL.++          :   3.70%  时尚, 服装, 拉夫劳伦, 美国
-Technology               MANH.++        :   3.69%  供应链管理软件, 供应链管理, 软件平台
-Consumer_Cyclical        PVH.++         :   3.69%  服装, Calvin Klein, Tommy Hilfiger, CK, 内裤, 内衣
-Technology               ZM.*.++        :   3.67%  视频会议, 云端通讯
-Industrials              SWK.++         :   3.66%  史丹利, 五金, 工具, 安防, 门类
-Technology               FSLR.+         :   3.64%  第一太阳能, 太阳能, 光伏, 美国
-Industrials              DE.++          :   3.59%  迪尔, 农业设备, 建筑设备, 工程机械
-Technology               APPF.++        :   3.58%  房地产行业的云基础业务软件解决方案
-Healthcare               PCVX.++        :   3.57%  生物科技, 肺炎球菌疫苗
-Healthcare               CVS.*.++       :   3.57%  西维斯健康, 药品, 零售药店, 处方药, 医疗保险, 安泰保险Aetna
-Consumer_Cyclical        VFC.++         :   3.50%  服装, 鞋, North Face, 北面, 美国
-Consumer_Cyclical        DPZ.++         :   3.49%  达美乐披萨, 快餐, 连锁
-Financial_Services       BEN.*.++       :   3.46%  富兰克林坦普顿投资, 共同基金, ETF, 养老金管理, 投资管理
-Real_Estate              ARE.++         :   3.45%  生命科学领域的房地产投资信托, 亚历山大房地产
-Technology               MPWR.++        :   3.45%  芯源系统, 集成电路, 半导体, 电源转换器, 电压调节模块, 电源管理IC, AI, 芯片
-Technology               YOU.+          :   3.44%  生物识别, 身份验证, 机场, 体育馆, 演唱会, 云安全, 安全
-Consumer_Cyclical        WSM.14         :   3.41%  零售, 高端厨具, 家居用品, 美国
-Financial_Services       LAZ.++         :   3.40%  金融咨询, 资产管理, 投资银行, 并购重组
-Financial_Services       FCFS.+         :   3.39%  拉丁美洲, 典当, 小额贷款, 美国
-Industrials              FERG.++        :   3.38%  建筑材料, 管道供暖
-Industrials              MIDD.++        :   3.38%  商业厨房设备, 食品加工设备, 食品加工
-Financial_Services       MC.++          :   3.37%  投资银行, 战略咨询, 财务咨询, 并购, 资本重组, 债务重组, 债务融资, 美国
-Real_Estate              KRC.++         :   3.37%  房地产, 投资信托, 租赁, 物业
-Industrials              APG.++         :   3.35%  防火安全, 施工维护
-Healthcare               TMDX           :   3.34%  器官移植, OCS近生理条件器官保存运输
-Consumer_Cyclical        LCID.*.++      :   3.33%  电动汽车, 亚马逊合作, 美国
-Communication_Services   MTCH.*.++      :   3.33%  Tinder, 在线约会, 约会软件, Hinge
-Technology               NXPI.++        :   3.30%  荷兰, 恩智浦, 半导体, 汽车芯片, 传统半导体
-Financial_Services       TRU.++         :   3.28%  信用报告, 评级评分, 风险评估
-Consumer_Cyclical        TPR.*.++       :   3.28%  时尚, 奢侈品, coach
-Financial_Services       HOOD.11.*.+    :   3.27%  meme, 股票交易, 比特币, 加密货币交易
-Technology               OS.++          :   3.27%  企业软件, 绩效管理软件, 财务软件, 软件开发, 人工智能, CPM
-Consumer_Cyclical        LKQ.++         :   3.27%  汽车零部件, 维修保养, 美国
-Industrials              JBHT.+         :   3.26%  运输, 物流
-Financial_Services       MTG.++         :   3.25%  从事私人抵押贷款保险业务, 抵押贷款保险
-Consumer_Cyclical        RUSHB.++       :   3.24%  商用车辆, 卡车, 销售, 汽车维修, 汽车保险
-Industrials              GTLS.++        :   3.23%  工业气体生物制品绝对零度低温储存运输, 低温储存, 低温运输, 储存, 运输
-Healthcare               BRKR.++        :   3.21%  生物技术, 科学仪器, 仪器制造, 仪器设备
-Basic_Materials          FMC.++         :   3.20%  化学, 农业解决方案, 美国
-Technology               ACLS.++        :   3.20%  半导体, 离子注入机, 单晶圆工具
-Technology               ESTC.++        :   3.19%  荷兰, 数据分析, 企业搜索
-Consumer_Cyclical        NVR.+          :   3.17%  房地产, 新房建造销售, 美国
-Real_Estate              WY.+           :   3.17%  林业管理, 木材产品, 房地产
-Consumer_Cyclical        LEA.++         :   3.16%  汽车座椅, 电子系统
-Industrials              LII.++         :   3.15%  暖通空调, 制冷产品, AI, 数据中心, 制冷
-Industrials              SPXC.++        :   3.15%  暖通空调, 冷却塔, 锅炉加热, 检测与测量
-Consumer_Defensive       COKE.++        :   3.15%  瓶装商, 可乐, 瓶
-Technology               NTAP           :   3.14%  云数据, 存储系统
-Industrials              BCO.++         :   3.11%  现金, 贵重物品, 运输, 物流, 安全解决方案
-Consumer_Cyclical        BWA.++         :   3.11%  汽车零部件供应商, 传动系统, 发动机
-Technology               LFUS.++        :   3.10%  工业技术, 电路保护, 功率控制, 传感器
-Technology               HPQ.*.++       :   3.07%  AI, 惠普, AI服务器, 服务器, 个人电脑
-Consumer_Cyclical        MGA.++         :   3.06%  麦格纳国际, 汽车零部件
-Financial_Services       FNF.++         :   3.05%  产权保险, 抵押贷款
-Real_Estate              PSA.++         :   3.04%  自助存储, 仓储租赁, 公共仓库
-Consumer_Cyclical        LULU.++        :   3.03%  加拿大, 瑜伽服, 时尚运动品牌
-Industrials              LECO.++        :   3.01%  林肯电气, 焊接切割
-Industrials              AL.++          :   3.00%  航空租赁, 飞机租赁
-Consumer_Cyclical        THO.++         :   3.00%  索尔工业, 房车, 利率敏感, 美国
-Healthcare               PHG.++         :   2.99%  荷兰, 飞利浦, 照明, 医疗, 电器
-Technology               DOCU.*.++      :   2.99%  电子签名, 数字交易
-Financial_Services       ALLY.++        :   2.99%  汽车贷款, 信用卡, 贷款, 汽车金融
-Technology               SWKS.12.++     :   2.95%  模拟与混合信号半导体, 半导体, 射频芯片, 功率放大器
-Consumer_Cyclical        MBLY.*.++      :   2.95%  以色列, 自动驾驶
-Consumer_Cyclical        BABA.15.*      :   2.95%  阿里巴巴, 电子商务, 阿里云, 蚂蚁金服, 支付宝, 淘宝, 中国
-Basic_Materials          SHW.++         :   2.94%  涂料, 油漆, 化学品, 宣伟
-Financial_Services       BCS.*          :   2.93%  巴克莱, 英国, 银行
-Financial_Services       FAF.++         :   2.93%  房地产, 产权保险
-Consumer_Cyclical        HAS.++         :   2.93%  孩之宝, 玩具, 变形金刚, 大富翁GO手游
-Financial_Services       PNFP.++        :   2.92%  区域性银行, 金融服务, 贷款, 抵押贷款, 美国
-Financial_Services       EQH.*.++       :   2.92%  保险, 人寿, 退休, 理财, 年金
-Communication_Services   BIDU           :   2.91%  中国百度, 搜索引擎, 广告, 地图, AI, 在线广告
-Utilities                UGI.*.++       :   2.91%  丙烷分销, 第一大, 液化石油气, 美国, 天然气
-Consumer_Cyclical        SKX.++         :   2.90%  斯凯奇, 鞋, 服装
-Consumer_Defensive       BF-B.++        :   2.90%  杰克丹尼
-Basic_Materials          CBT.++         :   2.89%  化学品, 性能材料, 用于轮胎的炭黑, 喷墨着色, 美国
-Industrials              SAIA           :   2.88%  货运, 物流, 运输
-Technology               WK.++          :   2.88%  企业软件, 生成报告, 合规管理, Workiva, SaaS, 云平台
-Financial_Services       BPOP.++        :   2.87%  大众银行, 波多黎各, 银行
-Consumer_Defensive       COTY.*.++      :   2.87%  科蒂集团, 美容, 香水, 化妆品
-Communication_Services   WBD.*          :   2.87%  华纳兄弟, 探索频道, Discovery+, HBO
-Consumer_Cyclical        GPI.++         :   2.87%  汽车零售, 汽车维修, 汽车保险, 美国
-Technology               WIX            :   2.86%  以色列, 云计算, 网站开发
-Industrials              UNP.++         :   2.86%  联合太平洋, 铁路, 运输, 货运, 物流
-Financial_Services       RNR.++         :   2.86%  文艺复兴, 保险服务, 再保险
-Consumer_Cyclical        GM.*.++        :   2.85%  通用汽车, 汽车制造, 汽车, 上汽, 五菱, 雪佛兰, 凯迪拉克, 别克, 美国
-Consumer_Cyclical        HOG.++         :   2.83%  哈雷戴维森, 哈雷, 摩托, 利率敏感
-Healthcare               CRL.++         :   2.82%  生物制药, 提供临床实验室服务
-Technology               OTEX.++        :   2.82%  企业信息管理软件
-Consumer_Cyclical        CPNG.*.++      :   2.80%  韩国, 电子商务
-Utilities                ELP.+          :   2.80%  巴西, 电力
-Financial_Services       AXS.++         :   2.79%  保险, 再保险
-Financial_Services       MCO.++         :   2.78%  穆迪, 信用评级
-Consumer_Defensive       ELF.++         :   2.78%  化妆品, 性价比, 美国
-Consumer_Cyclical        EBAY.*.++      :   2.77%  电子商务
-Financial_Services       SLM.*.++       :   2.76%  学贷美, 教育金融, 学生贷款, 贷款, 美国
-Financial_Services       PUK            :   2.76%  英国保诚, 保险, 金融服务
-Healthcare               MASI.++        :   2.74%  医疗技术, 脉搏血氧仪
-Technology               LOGI.++        :   2.74%  罗技, 计算机外设, 游戏设备, 鼠标
-Industrials              RRX.++         :   2.73%  工业动力传动传输解决方案, 电动机, 发电机
-Consumer_Cyclical        TJX.*.++       :   2.73%  折扣零售, 服装, 家居用品
-Healthcare               IDXX           :   2.72%  动物健康诊断, 水牛奶检测
-Technology               ARM.+          :   2.71%  meme, 芯片, AI, 半导体
-Consumer_Cyclical        ALV.++         :   2.71%  瑞典, 汽车, 汽车零部件, 安全气囊, 安全带
-Industrials              AOS.++         :   2.71%  AO, 史密斯, 热水器
-Industrials              ROK.+          :   2.70%  工业自动化信息化
-Financial_Services       SSB.++         :   2.69%  银行, 金融服务, 抵押贷款
-Technology               CRDO           :   2.68%  高性能高速数据传输解决方案, 有源电缆, AI
-Technology               UBER.*.++      :   2.67%  共享租车, 外卖递送, 出租车, 拼车, 共享出行, 网约车
-Technology               MDB.++         :   2.66%  MongoDB, 数据库
-Industrials              AGCO.++        :   2.65%  农业机械, 拖拉机, 收割机
-Consumer_Cyclical        AVY.++         :   2.64%  压敏标签技术及物料, 材料科学
-Consumer_Cyclical        LVS.*.++       :   2.64%  拉斯维加斯金沙集团, 赌场, 度假村
-Industrials              HRI.++         :   2.63%  设备租赁, 建筑设备, 工业设备, 租赁, 二手设备
-Healthcare               ILMN.++        :   2.63%  基因测序, 血液筛查, 癌症筛查
-Industrials              GATX.++        :   2.62%  铁路, 车辆, 租赁, 管理
-Consumer_Cyclical        ABNB.*.+       :   2.61%  短租长租平台, 在线租房
-Financial_Services       TROW.++        :   2.61%  共同基金, 投资管理
-Consumer_Cyclical        H.++           :   2.61%  凯悦酒店, 豪华酒店, 度假村
-Consumer_Cyclical        KTB.++         :   2.60%  服装, 威富分拆, 牛仔服, Wrangler, Lee, 服饰
-Industrials              NSC.++         :   2.60%  诺福克南方, 货运, 铁路, 运输
-Financial_Services       COF.++         :   2.58%  第一资本, 信用卡, 金融, 美国
-Industrials              CLH.++         :   2.57%  第三方危险废物处理, 废物处理, 废物
-Technology               KD.++          :   2.57%  IBM分拆, IT基础设施, 云服务, 数据, AI
-Basic_Materials          PPG            :   2.56%  涂料, 化学品
-Technology               NSIT.+         :   2.55%  云计算, 信息技术
-Industrials              BA.*.+         :   2.55%  波音, 飞机制造, 飞机, 五大军事承包商之一, 美国
-Financial_Services       CACC.++        :   2.54%  汽车经销商, 汽车融资, 汽车贷款
-Healthcare               UNH            :   2.53%  联合健康集团, Optum, 医疗, 医疗保险, 保险, 健康, 美国
-Industrials              TTC.++         :   2.53%  割草机, 草坪维护设备
-Industrials              WSO.++         :   2.52%  北美, 第一大, 空调, 采暖, 制冷
-Technology               DAY.++         :   2.52%  云计算, 人力资源管理平台
-Healthcare               INCY.+         :   2.51%  生物制药, 肿瘤, 炎症, 自身免疫
-Financial_Services       PJT.++         :   2.49%  投资银行, 战略咨询, 私募配售
-Consumer_Defensive       EDU            :   2.49%  新东方, 在线教育, 培训, 中国
-Technology               TXN.*          :   2.49%  德州仪器, 半导体, 模拟芯片, 基础芯片, 传统半导体, 美国
-Financial_Services       COIN.*.+       :   2.49%  加密货币, 交易所
-Healthcare               ALNY           :   2.49%  RNA干扰RNAi疗法, 基因沉默技术
-Technology               TYL.+          :   2.48%  为公共部门提供软件和技术服务, 公共事业, 软件服务
-Consumer_Defensive       HRL.++         :   2.48%  荷美尔, 肉类, 食品, 美国
-Financial_Services       OZK.++         :   2.47%  阿肯色州, 区域性银行, 抵押贷款, 美国
-Healthcare               MOH            :   2.47%  医疗保险, 长期护理
-Technology               BILL.++        :   2.46%  云计算, 金融服务软件, 云平台, 中小企业, 财务会计, 软件平台
-Financial_Services       BN.14.++       :   2.45%  布鲁克菲尔德, 资产管理, 房地产, 可再生能源, 基础设施, 私募股权
-Consumer_Cyclical        STLA.*.+       :   2.45%  意大利, 菲亚特, 克莱斯勒, 标致雪铁龙, 汽车制造, 荷兰, 汽车
-Financial_Services       BNT.++         :   2.45%  金融, 退休服务, 财富保护, 定制资本
-Industrials              ARMK.11.++     :   2.45%  食品, 设施, 制服, 设施管理, 管理黄石公园
-Financial_Services       SFBS.++        :   2.44%  金融, 银行, 贷款, 美国
-Healthcare               RGEN.12.++     :   2.44%  生物技术, 重组蛋白质, 医疗健康
-Industrials              CARR.*.++      :   2.43%  暖通空调, 制冷, 安防
-Consumer_Cyclical        DKS.++         :   2.41%  体育用品, 零售, 商店, 连锁
-Real_Estate              SBAC.++        :   2.41%  无线通讯基础设施, 通信塔, 小型基站
-Basic_Materials          CE             :   2.41%  赛莱默, 化工, 材料, 化学品, 汽车行业, 原材料
-Real_Estate              CBRE.+         :   2.41%  房地产, 商业地产, 物业, 租赁
-Consumer_Cyclical        NKE.*.++       :   2.40%  耐克, 体育品牌, 运动装备, 鞋, 运动鞋, 运动
-Financial_Services       ESNT.++        :   2.40%  私人住房抵押贷款保险和再保险, 抵押贷款保险, 保险, 再保险
-Industrials              LSTR.++        :   2.39%  北美, 物流, 卡车运输, 供应链, 空运, 海运
-Consumer_Cyclical        VVV.++         :   2.39%  胜牌, 汽车润滑油, 冷却液, 机油, 刹车液, 工业润滑油, 汽车行业
-Healthcare               VRTX.+         :   2.38%  囊性纤维化, 贫血症, 痛风, 1型糖尿病, 自身免疫疾病
-Financial_Services       PIPR.++        :   2.38%  投资银行, 资产管理, 机构券商, 金融服务, 美国
-Technology               SNOW.*         :   2.38%  云数据仓库, 数据管理, 数据分析
-Real_Estate              FSV.++         :   2.37%  房地产, 住宅物业管理
-Real_Estate              LINE.+         :   2.37%  温控仓库, 房地产投资信托, 食物饮料供应链
-Healthcare               RMD.++         :   2.37%  瑞思迈, 医疗器械, 呼吸机, 睡眠呼吸障碍, 慢性阻塞性肺病
-Consumer_Cyclical        WYNN           :   2.37%  永利, 赌场, 酒店, 度假村, 澳门, 博彩
-Industrials              VMI.+          :   2.36%  基础设施, 通信塔, 交通信号灯柱, 灯柱, 电塔, 护栏, 农业灌溉设备
-Real_Estate              LAMR.++        :   2.36%  户外广告, 数字广告牌, 交通广告, 广告, 广告平台, 广告营销
-Industrials              HXL.++         :   2.35%  高性能复合材料, 碳纤维, 蜂窝芯, 赫氏
-Technology               PCTY.++        :   2.35%  云计算, 人力资源薪酬管理
-Industrials              CSX.*.++       :   2.35%  加拿大, 铁路运输, 美国
-Healthcare               RVTY.+         :   2.35%  癌症传染病基因检测诊断设备, 实验室服务, 研究试剂
-Healthcare               HSIC.++        :   2.34%  医疗保健, 牙科, 兽医, 医疗设备
-Healthcare               CYTK.+         :   2.34%  调节心肌细胞和肌肉功能, 急性心衰, 肌营养不良
-Financial_Services       FHN.*.++       :   2.34%  第一地平线, 区域性银行, 美国
-Industrials              ULS.++         :   2.33%  测试, 检验, 认证, TIC服务, 软件咨询
-Industrials              TKR.++         :   2.32%  圆锥滚子轴承, 齿轮链条离合器, 汽车行业, 轴承, 传动系统
-Financial_Services       IVZ.++         :   2.31%  景顺, 投资管理
-Consumer_Cyclical        CROX.++        :   2.31%  洞洞鞋, 鞋, HEYDUDE
-Financial_Services       CMA.++         :   2.31%  银行, 金融服务, 抵押贷款
-Industrials              EXPO.++        :   2.31%  工程和科学咨询, 事故预防, 技术评估
-Financial_Services       NU.13.*.++     :   2.30%  拉美, 巴西, 数字, 线上, 银行, 数字银行, 信贷, 金融
-Technology               BSY.++         :   2.29%  建筑行业, 工程领域, 软件开发
-Industrials              R.++           :   2.29%  运输, 物流, 供应链, 车队管理
-Basic_Materials          SCCO           :   2.28%  南方铜业, 墨西哥, 秘鲁
-Technology               TER.++         :   2.27%  自动测试系统, 为半导体无线电子提供测试解决方案
-Consumer_Cyclical        VIPS.12        :   2.27%  唯品会, 电子商务, 名牌, 奢侈品, 折扣, 中国
-Consumer_Cyclical        DECK.++        :   2.26%  鞋, UGG, 户外, 凉鞋, Hoka, Teva
-Technology               CFLT.*.++      :   2.25%  实时数据处理, 数据分析, 数据流平台, Apache Kafka
-Technology               SPSC.++        :   2.25%  云计算, 供应链管理, SPS Commerce平台, 赋能B2B
-Consumer_Cyclical        GNTX.++        :   2.24%  后视镜, 玻璃, 智能玻璃, 飞机调光玻璃
-Consumer_Defensive       DG.++          :   2.22%  达乐, 折扣连锁, 折扣零售, 低价, 零售, 美国
-Industrials              ODFL.++        :   2.21%  运输, 物流, 美国
-Communication_Services   PARA.*         :   2.21%  派拉蒙, 电视, 电影, 流媒体
-Consumer_Cyclical        AMZN.*         :   2.20%  亚马逊, 电子商务, 云服务, 流媒体
-Technology               JBL.++         :   2.20%  捷普, 电子制造, 给苹果供应零部件, 也供应汽车和医疗
-Healthcare               KRYS.++        :   2.18%  皮肤病, 基因疗法
-Financial_Services       USB.*.++       :   2.17%  合众银行, 美国
-Communication_Services   KT.++          :   2.17%  韩国, 第二大, 电信运营商
-Communication_Services   OMC.++         :   2.17%  广告, 市场营销, 企业传播
-Technology               CCCS.++        :   2.17%  云服务, 赋能保险, 美国
-Technology               ZI.12.*.+      :   2.16%  云计算, 数据分析
-Healthcare               EXEL.++        :   2.16%  生物制药, 制药, 癌症小分子疗法, 卡波替尼cabozantinib
-Industrials              CRS.++         :   2.16%  特种金属, 合金材料, 不锈钢, 材料
-Financial_Services       WAL.++         :   2.15%  阿莱恩斯西部银行, 银行, 区域性银行, 住房抵押贷款, 美国
-Technology               NOVT.+         :   2.14%  激光解决方案, 激光, 精密运动控制, 医疗设备, 工业制造
-Utilities                SWX.++         :   2.13%  西南燃气, 天然气运输分销, 能源, 天然气
-Technology               CGNX.++        :   2.11%  机器视觉, 工业自动化
-Consumer_Cyclical        ABG.++         :   2.11%  汽车零售, 零部件维修, 汽车相关金融服务, 汽车贷款, 汽车
-Consumer_Cyclical        HRB.++         :   2.11%  税务服务, 纳税申报, 税务, 报税软件, Spruce, 美国
-Consumer_Cyclical        SKY.++         :   2.11%  模块化, 预制住宅制造商, 住宅建筑
-Technology               KSPI.+         :   2.11%  哈萨克斯坦, 电子商务, 支付平台, 扩张到土耳其
-Utilities                BEP            :   2.11%  多伦多, 可再生能源, 发电
-Consumer_Cyclical        LNW.12.++      :   2.11%  手机电脑游戏, 博彩游戏, 赌场游戏, 游戏
-Industrials              OSK.++         :   2.08%  国防, 特种车辆, 装甲车, 消防车, 卡车
-Financial_Services       VLY.*.++       :   2.08%  硅谷国家银行, 银行, 金融服务, 贷款, 理财
-Technology               U.*.++         :   2.08%  3D引擎, 游戏开发
-Financial_Services       UMBF.++        :   2.08%  金融, 银行, 投资管理, 区域性
-Consumer_Cyclical        CHH.++         :   2.06%  精选国际, 酒店特许经营, 酒店品牌管理运营
-Consumer_Cyclical        HD.12.++       :   2.06%  家得宝, 家居装修, 建筑材料, 草坪花园, 装修
-Communication_Services   VOD.12.*       :   2.06%  英国, 沃达丰, 电信运营商
-Industrials              EMR.+          :   2.06%  艾默生电气, 工业自动化, 暖风空调, 爱默生
-Financial_Services       CNS.++         :   2.06%  资产管理, 投资管理, 房地产投资信托, 基础设施, 房地产证券化, 自然资源股权
-Financial_Services       PFSI.++        :   2.05%  住宅抵押贷款银行
-Industrials              CAT.++         :   2.05%  卡特彼勒, 重型机械, 工程设备制造
-Healthcare               HUM.++         :   2.04%  医疗保险, 健康保健
-Consumer_Cyclical        MCD.+          :   2.04%  麦当劳, 快餐, 连锁, 汉堡
-Consumer_Cyclical        MAT.++         :   2.03%  美泰, 玩具制造, 芭比娃娃
-Technology               ARW.++         :   2.03%  电子元器件, 企业计算解决方案
-Healthcare               PFE.*.++       :   2.03%  辉瑞, mRNA疫苗, mRNA, 疫苗, 新冠, Paxlovid, 制药
-Basic_Materials          VMC.++         :   2.02%  建筑骨料, 建筑材料, 砂石碎石沥青, 混凝土
-Industrials              SARO           :   2.02%  航空航天, 发动机维护, 发动机修理, 发动机
-Industrials              UPS.+          :   2.02%  物流, 联合包裹, 快递
-Technology               AMD.*.+        :   2.01%  半导体, 显卡, 芯片, 数据中心, AI
-Technology               QLYS.++        :   2.00%  云安全, IT合规解决方案
-Healthcare               MRK.*          :   2.00%  生物医药, Keytruda, 默沙东, 药王, 美国
-Technology               GRMN.++        :   1.99%  佳明, 瑞士, GPS, 手表, 可穿戴, 全球定位设备
-Technology               SITM.++        :   1.99%  传统半导体, 微电机, MEMS振荡器, 精确计时, 时钟解决方案
-Financial_Services       SAN            :   1.98%  桑坦德银行, 西班牙
-Consumer_Cyclical        SEE.++         :   1.98%  食品包装, 医药包装, 运输保护, 包装
-Utilities                EBR.+          :   1.97%  巴西, 电力
-Communication_Services   LBTYK.++       :   1.97%  自由全球, 有线电视宽带, 电信
-Consumer_Cyclical        F.*.++         :   1.97%  福特, 汽车
-Consumer_Cyclical        SON.++         :   1.96%  消费品包装, 工业包装, 包装
-Industrials              GFL.++         :   1.96%  加拿大, 环境服务, 废物处理
-Industrials              KNX.++         :   1.96%  货运, 物流, 卡车运输
-Real_Estate              PLD.+          :   1.96%  工业房地产, 物流仓储, 供应链
-Technology               VERX.++        :   1.95%  企业税务技术解决方案
-Industrials              ALK.+          :   1.95%  阿拉斯加, 航空, 美国
-Industrials              VLTO.++        :   1.95%  水质分析, 水, 水处理, 提供安全饮用水
-Real_Estate              CUBE.++        :   1.94%  自助存储, 仓储租赁, 公共仓库, 房地产
-Communication_Services   VZ.*.++        :   1.92%  威瑞森通信, 电信, 电信运营商, 美国
-Consumer_Cyclical        BURL.++        :   1.92%  伯灵顿百货, 折扣
-Industrials              WMS.++         :   1.91%  塑料水管, 排水产品, 水管理
-Technology               DOX.12.++      :   1.90%  云计算, 软件服务, 软件
-Real_Estate              REXR.+         :   1.90%  工业房地产, 投资信托, 房地产
-Basic_Materials          AXTA.++        :   1.90%  涂料, 工业, 杜邦分拆
-Financial_Services       ZION.++        :   1.90%  银行, 抵押贷款, 齐昂银行, 美国
-Technology               DBX.++         :   1.89%  云存储, 文件同步
-Financial_Services       MORN.++        :   1.89%  金融服务, 投资研究分析
-Technology               SONY           :   1.89%  日本, 索尼, 游戏机, 电视机, 影像
-Financial_Services       CINF.++        :   1.89%  财产保险, 意外伤害保险, 寿险, 保险
-Financial_Services       DFS.++         :   1.89%  信用卡, 贷款
-Industrials              MSM.++         :   1.89%  零散型工业产品分销商
-Industrials              RYAAY.+        :   1.88%  瑞安航空, 爱尔兰, 低成本廉价航空
-Technology               AKAM.++        :   1.87%  内容分发网络, CDN, 阿克迈
-Technology               PAYC.++        :   1.87%  云计算, 人力资源管理, 美国
-Real_Estate              STAG.++        :   1.86%  工业房地产投资信托, 仓库, 物流设施, 二三线市场
-Communication_Services   TU             :   1.84%  加拿大, 电信运营商
-Industrials              WWD.++         :   1.84%  控制燃料空气流体电力运动和燃烧的系统组件
-Industrials              GXO.++         :   1.84%  仓储配送, 物流, 供应链管理
-Communication_Services   SIRI.*.++      :   1.83%  卫星, 无线电广播, 广播, 娱乐
-Technology               PATH.*.++      :   1.83%  机器人, 自动化
-Financial_Services       SNV.++         :   1.82%  金融, 银行, 抵押贷款, 美国
-Financial_Services       BOKF.++        :   1.82%  金融控股银行, 抵押贷款, 美国
-Industrials              DAL.*          :   1.82%  达美航空, 航空, 飞机, 航空公司, 美国
-Industrials              AWI.++         :   1.81%  工业吊顶, 天花板, 地板, 装修, 工业装修, 工业
-Real_Estate              BXP            :   1.81%  波士顿地产, 房地产, 办公楼, 高端物业
-Technology               SNX.++         :   1.81%  信息技术, IT产品, 分销, 解决方案
-Industrials              UHAL.++        :   1.81%  搬家, 存储租赁, 房地产, 房地产你, 美国
-Healthcare               FMS.++         :   1.81%  肾病服务, 透析
-Technology               MU.*           :   1.79%  美光, 内存, 硬盘
-Financial_Services       HWC.++         :   1.78%  区域性银行, 金融服务, 银行, 美国
-Financial_Services       AFG.++         :   1.78%  保险, 年金
-Real_Estate              NSA.++         :   1.78%  自助存储, 仓储租赁, 公共仓库, 仓库, 房地产
-Basic_Materials          CMC.++         :   1.78%  钢铁, 金属回收, 特朗普概念, 美国
-Industrials              URI.++         :   1.77%  联合租赁, 挖掘设备, 高空作业
-Industrials              XPO            :   1.76%  世界十大运输和物流服务供应商之一, 运输, 物流, 卡车运输
-Healthcare               CNC.*.++       :   1.76%  医疗保险, 为政府资助的医疗保健计划提供服务和产品, 保险, 长期护理, 医疗保健
-Financial_Services       ACT.++         :   1.75%  商业与住宅私人抵押贷款保险, 抵押贷款保险
-Communication_Services   GOOGL.*        :   1.75%  谷歌, 搜索引擎, 地图, Android, Chrome, Youtube, Gemini, AI
-Industrials              CAE.12         :   1.75%  模拟建模, 民航, 国防, 医疗仿真, 仿真, 美国飞行员培训
-Technology               STX            :   1.75%  希捷, 数据存储, 硬盘
-Consumer_Defensive       POST.14.++     :   1.74%  早餐谷物, 冷冻食品, 食品, 蛋白质棒, 乳制品
-Industrials              FSS.++         :   1.74%  环境解决方案, 安保系统, 美国
-Basic_Materials          RPM.++         :   1.73%  涂料, 密封剂, 建筑材料
-Financial_Services       HBAN.*.++      :   1.73%  美国亨廷顿银行, 区域性银行, 银行
-Financial_Services       DB             :   1.73%  德意志银行
-Basic_Materials          ICL.11.++      :   1.73%  以色列, 化学品, 农业增强技术, 农业
-Industrials              FDX.++         :   1.73%  联邦快递, 物流, 速递, 运输, 托运
-Utilities                CNP.*.++       :   1.72%  电力, 天然气
-Technology               ASML.++        :   1.72%  光刻机, 半导体, 赋能芯片制造, 芯片, 荷兰
-Financial_Services       WBS.++         :   1.72%  金融服务, 银行业务, 储蓄账户, 财富管理
-Consumer_Defensive       BJ.++          :   1.72%  会员制, 零售, 批发, 超市
-Energy                   CSAN.13.+      :   1.71%  巴西, 天然气, 糖
-Consumer_Defensive       MNST.*.++      :   1.70%  能量饮料, "爪痕"标志
-Financial_Services       CFG.++         :   1.70%  第14大, 银行, 抵押贷款, 美国
-Industrials              KEX            :   1.70%  石油驳船, 水路运输, 柴油发动机服务, 驳船, 运输, 拖船, 运输液体散货
-Industrials              AER.++         :   1.69%  爱尔兰, 飞机租赁, 发动机租赁, 机队管理, 租赁
-Communication_Services   NYT.++         :   1.68%  纽约时报, 新闻, 数字媒体, 媒体
-Basic_Materials          OLN.++         :   1.68%  化学品, 氯碱, 弹药, 枪支, 美国
-Industrials              CPRT.14.*.++   :   1.67%  在线汽车拍卖, 车辆再营销, 汽车拍卖, 车辆拍卖
-Industrials              UAL.+          :   1.67%  联合航空, 航空, 美国, 航空公司
-Financial_Services       BGC.*          :   1.67%  金融产品, 金融经纪, 场外交易, OTC, 电子交易平台, 房地产经纪, 美国
-Real_Estate              DOC.*          :   1.67%  医疗保健房地产投资信托
-Technology               RMBS.++        :   1.66%  内存芯片, 高速接口技术, 半导体, 用于Intel平台
-Consumer_Cyclical        ANF.++         :   1.65%  年轻人, 休闲服装
-Financial_Services       CIB.+          :   1.65%  哥伦比亚银行, 业务覆盖拉丁美洲
-Communication_Services   PINS.*.++      :   1.63%  图片分享, 社交媒体, 视觉搜索
-Industrials              XYL.++         :   1.63%  水处理, 水泵, 水质检测
-Real_Estate              HR.*           :   1.62%  门诊医疗, 房地产物业, 美国
-Technology               FTV.++         :   1.61%  专业仪器, 工业医疗技术
-Real_Estate              STWD.++        :   1.61%  房地产投资信托, 抵押贷款支持证券
-Financial_Services       SYF.*.++       :   1.59%  消费者金融服务, 信用卡, 分期贷款, 金融
-Healthcare               COO.++         :   1.59%  医疗保健, 隐形眼镜, 眼镜, 辅助生殖医疗设备, 医疗设备
-Industrials              WCC.++         :   1.59%  电气产品, 工业电器, 工业
-Technology               EPAM.++        :   1.59%  软件开发, 中东欧开发人员
-Real_Estate              AMT.++         :   1.59%  无线广播通信基础设施, 分布式天线系统, 塔租赁
-Utilities                ORA.++         :   1.59%  地热发电, 可再生能源, 能源, 发电, 地热, 地热能
-Communication_Services   WPP.++         :   1.58%  第一大, 公关传媒, 广告
-Industrials              RTO.+          :   1.58%  害虫控制
-Communication_Services   SNAP.*.++      :   1.58%  Snapchat, 社交
-Real_Estate              DLR.++         :   1.57%  数据中心, 互联托管
-Consumer_Cyclical        MTN.++         :   1.57%  滑雪度假村, 滑雪, 度假村, 美国
-Utilities                BIPC           :   1.56%  能源、运输、数据、公用事业基础设施资产管理运营
-Consumer_Defensive       FMX.+          :   1.56%  墨西哥, 可口可乐瓶装, 可口可乐, 连锁便利店
-Industrials              PCAR.++        :   1.56%  重型卡车制造商, 卡车
-Healthcare               REGN           :   1.56%  再生元制药, 生物制药, 眼科, 皮炎哮喘
-Industrials              AMTM           :   1.56%  工程技术, 情报, 政府服务, 政府承包商
-Industrials              WCN.++         :   1.55%  北美, 废物处理, 环境服务
-Real_Estate              RITM.++        :   1.55%  房地产投资信托, 抵押贷款, 投资管理
-Healthcare               AVTR.*.++      :   1.54%  生物技术, 实验室产品, 生产制造材料
-Consumer_Cyclical        SCI.++         :   1.54%  殡葬, 火化, 墓地
-Industrials              IEX.++         :   1.53%  流体与计量技术, 工程解决方案
-Financial_Services       KNSL.++        :   1.53%  超额过剩市场, 保险
-Industrials              WTS.++         :   1.53%  沃茨水工业, 用水安全, 水质管理
-Healthcare               TFX.++         :   1.53%  泰利福, 医疗器械, 介入治疗设备, 冠状动脉手术
-Financial_Services       PFG.++         :   1.53%  金融集团, 退休金计划, 保险
-Utilities                BIP            :   1.53%  基础设施供应商
-Consumer_Cyclical        TSCO.++        :   1.52%  农用设备, 牲畜饲料, 美国
-Basic_Materials          SQM            :   1.52%  智利, 锂, 碘, 硝酸盐
-Technology               WEX.++         :   1.52%  信用卡, 支付, 企业支付, 金融科技
-Industrials              RHI.++         :   1.51%  罗伯特哈夫国际, 人力资源服务, 人力资源
-Technology               INTC.*.++      :   1.51%  英特尔, 芯片, 半导体, 美国
-Basic_Materials          FCX.*          :   1.51%  麦克莫兰, 矿业, 铜, 金, 镍
-Financial_Services       VOYA.++        :   1.51%  退休, 人寿保险, 投资, 节税, 拆分自荷兰国际集团
-Consumer_Cyclical        IHG            :   1.50%  洲际酒店集团, 皇冠假日酒店, Holiday Inn
-Technology               PTC.++         :   1.49%  产品生命周期管理PLM, 计算机辅助设计CAD, CAD, 辅助设计, 工业
-Industrials              MMM.+          :   1.48%  多元化, 工业用品, 医疗保健, 消费品, 电子用品
-Basic_Materials          ALB            :   1.48%  雅宝, 锂, 溴, 特种化学品
-Technology               LRCX.*         :   1.47%  拉姆研究, 半导体, 刻蚀, 沉积, 清洗
-Financial_Services       SMFG.14.++     :   1.47%  三井住友金融集团
-Consumer_Defensive       KR.++          :   1.47%  连锁, 仅次于沃尔玛, 克罗格, 超市, 美国
-Utilities                WTRG.++        :   1.47%  水务, 废水, 天然气服务
-Industrials              ADT.*          :   1.46%  防盗, 火灾报警, 报警, 监控, 安全
-Financial_Services       RDN.++         :   1.46%  抵押贷款保险, 保险
-Technology               CYBR.13        :   1.45%  以色列, 网络安全
-Financial_Services       RYAN.++        :   1.44%  保险经纪, 保险代理
-Technology               CWAN.++        :   1.44%  云平台, 投资数据分析报告, 风险评估
-Industrials              LUV.++         :   1.44%  西南航空, 航空, 美国
-Consumer_Defensive       SYY.++         :   1.44%  西斯科, 食品, 食物, 肉, 餐具, 食品分销, 餐具, 厨具
-Industrials              ATI.++         :   1.43%  专业金属材料, 合金, 不锈钢
-Consumer_Defensive       FLO.++         :   1.43%  面包, 烘焙食品, 食品
-Technology               GEN.++         :   1.42%  长期护理, 短期康复, 临终关怀, 护理
-Technology               FOUR.12.++     :   1.42%  支付, POS终端, 支付解决方案, 金融
-Industrials              BECN.+         :   1.42%  屋顶建筑材料, 建筑材料, 北美
-Real_Estate              RHP.++         :   1.42%  酒店度假村开发运营, 房地产投资信托
-Technology               IBM.*.++       :   1.42%  咨询服务, 混合云, 开源软件
-Financial_Services       OMF.++         :   1.41%  个人贷款, 保险, 金融服务
-Communication_Services   RCI.+          :   1.41%  加拿大, 无线通信, 有线电视
-Consumer_Defensive       CPB.++         :   1.41%  金宝汤, 食品, 饮料, 汤, 美国
-Industrials              J.++           :   1.41%  工程设计, 建筑, 运营, 维护
-Real_Estate              IRM.++         :   1.41%  记录和信息管理, 艺术品存储, 数据保护与恢复
-Consumer_Cyclical        TCOM           :   1.40%  携程, 旅游, 机票酒店预定, 中国
-Financial_Services       IBN.*.++       :   1.40%  印度, 工业信贷, 投资银行
-Industrials              FLS.++         :   1.39%  泵, 阀门, 机械密封, 核电, 核能, 核
-Healthcare               CI             :   1.39%  信诺保险, 牙科、药房、视力保险产品, 医疗保险, 健康保险
-Healthcare               PODD.+         :   1.39%  银休特, 胰岛素泵, 医疗器械, OmniPod, 健康
-Consumer_Cyclical        BROS           :   1.39%  荷兰兄弟咖啡, 特许经营, 咖啡, 连锁, 免下车咖啡店
-Basic_Materials          CRH.++         :   1.38%  爱尔兰, 建材
-Technology               GRAB.11.*      :   1.38%  东南亚, 打车, 在线叫车, 外卖, 送餐, 快递
-Financial_Services       CG.++          :   1.38%  凯雷, 私募股权投资, 信贷, 贷款
-Technology               AVT.++         :   1.38%  电子元器件, 半导体, AI
-Industrials              GNRC.++        :   1.38%  发电设备, 备用发电机, 应对飓风等自然灾害, 发动机
-Healthcare               STVN.++        :   1.37%  意大利, 药瓶, 药筒, 注射器, 药盒, 耗材, 医疗耗材
-Basic_Materials          KNF.++         :   1.37%  房地产, 建筑材料, 承包服务, 美国
-Technology               CTSH.++        :   1.37%  信息技术, 咨询, 外包
-Healthcare               ADMA           :   1.37%  生物制药, 免疫疗法, 免疫球蛋白, 治疗免疫疾病, BIVIGAM, ASCENIV
-Technology               MKSI.++        :   1.37%  半导体, 光学仪器, 真空技术
-Financial_Services       BBVA           :   1.36%  西班牙银行, 墨西哥, 第一大, 银行
-Industrials              MATX.++        :   1.36%  航运, 海运, 物流, 集装箱运输
-Technology               PI.++          :   1.36%  RFID标签芯片和阅读器, 无线电频率识别
-Consumer_Cyclical        BFAM.++        :   1.35%  儿童早教, 幼儿园, 学前班, 保育, 教育, 学校
-Real_Estate              EXR.++         :   1.35%  自助存储, 仓储租赁, 公共仓库, 房地产
-Consumer_Cyclical        MGM            :   1.35%  米高梅, 赌场, 度假酒店, 博彩
-Financial_Services       BK.*.++        :   1.35%  纽约梅隆银行, 银行, 美国
-Financial_Services       WTM.++         :   1.34%  白山保险集团, 保险, 再保险, 财产保险, 意外保险
-Real_Estate              FR.+           :   1.34%  房地产投资信托, 工业地产
-Consumer_Defensive       PFGC.++        :   1.34%  食品服务分销商, 肉, 冷冻, 食品, 零食
-Communication_Services   SPOT.12.*.++   :   1.33%  音乐, 流媒体
-Basic_Materials          DD.++          :   1.33%  杜邦, 材料, 化学品
-Real_Estate              ESS.++         :   1.33%  房地产, 公寓社区
-Technology               CDW.++         :   1.33%  信息技术, IT, IT解决方案
-Industrials              GGG.++         :   1.33%  工业设备制造商, 流体处理系统, 涂料喷涂设备
-Financial_Services       MKTX.+         :   1.33%  金融, 电子交易, 固定收益债券
-Financial_Services       BSBR.+         :   1.32%  桑坦德, 银行, 巴西
-Financial_Services       STT.++         :   1.32%  道富银行, 托管银行, 资产管理, 美国
-Healthcare               RVMD           :   1.32%  癌症分子靶点技术
-Consumer_Cyclical        MNSO           :   1.32%  中国名创优品, 快时尚, 零售批发
-Technology               AMKR.++        :   1.32%  半导体, 封装测试, AI
-Consumer_Cyclical        YUM.++         :   1.32%  百胜餐饮集团, 肯德基, 必胜客
-Consumer_Cyclical        SG.++          :   1.31%  快餐连锁, 餐饮, 沙拉, 美国
-Utilities                EIX            :   1.31%  爱迪生国际, 公共事业, 电力, 能源
-Financial_Services       JXN.++         :   1.31%  退休储蓄, 可变年金, 固定年金
-Technology               AAPL.*.+       :   1.31%  苹果, iPad平板, iPhone手机, Mac电脑, 智能手机, Vision Pro, 手机, 电脑
-Consumer_Cyclical        MAR.++         :   1.31%  万豪, 酒店, 喜来登, 丽思卡尔顿
-Financial_Services       C.*.++         :   1.30%  花旗, 银行
-Industrials              ROAD.++        :   1.30%  基础设施, 公路桥梁, 建筑材料, 美国
-Technology               BR.++          :   1.30%  为金融行业提供通讯和技术解决方案
-Industrials              IR.+           :   1.30%  工业设备, 空气压缩机, 泵阀门, 工业, 工业制造
-Financial_Services       AXP.++         :   1.30%  运通, 巴菲特持股, 美国
-Industrials              SNDR.++        :   1.30%  卡车, 运输, 物流, 北美
-Technology               QCOM.*.++      :   1.29%  高通, 移动芯片, 无线通信, 专利授权, 射频芯片, 汽车芯片, 物联网设备芯片, 传统半导体, 美国
-Healthcare               BMRN.++        :   1.29%  生物技术, 罕见遗传病
-Financial_Services       SF.++          :   1.29%  金融, 银行, 财富管理
-Technology               WIT.+          :   1.29%  IT服务, 外包, 印度
-Healthcare               INSM           :   1.29%  生物制药, 肺部呼吸系统疾病
-Technology               ADBE.++        :   1.28%  软件, 创意, 修图, 图片编辑, 视频编辑, AI, Photoshop, AcrobatReader, PremierPro
-Financial_Services       IX             :   1.28%  欧力士, 金融服务, 融资租赁
-Industrials              GPN.++         :   1.28%  支付解决方案
-Technology               YMM.*          :   1.28%  满帮集团, 卡车, 货物运输
-Industrials              SNA.++         :   1.28%  专业工具, 专业设备制造
-Financial_Services       DNB.++         :   1.27%  邓白氏, 商业信息供应商, 商业数据与分析, 业务决策
-Financial_Services       MMC.++         :   1.27%  保险经纪, 再保险, 人力财务咨询
-Consumer_Defensive       KOF.+          :   1.26%  可口可乐瓶装, 可口可乐, 业务覆盖南美, 拉丁美洲
-Financial_Services       HOMB.++        :   1.26%  区域性银行, 银行, 美国
-Healthcare               WAT.++         :   1.26%  沃特世, 分析仪器, 实验室解决方案
-Healthcare               ELV            :   1.25%  医疗, 保险, 前身为安泰保险, 医疗保险, 美国
-Industrials              CSWI.++        :   1.25%  专业化学品, 密封材料, 机械零部件, 建筑产品
-Financial_Services       WRB.++         :   1.25%  保险, 柏克利
-Industrials              OTIS.++        :   1.25%  奥的斯, 电梯
-Industrials              ESAB.++        :   1.24%  切割, 焊接, 气体控制
-Financial_Services       WFC.*.++       :   1.24%  富国银行, 银行, 美国
-Consumer_Defensive       INGR.++        :   1.24%  食品饮料行业的配料解决方案, 甜味剂, 食品, 饮料, 配料, 宜瑞安
-Utilities                CWEN           :   1.23%  太阳能, 风能, 发电厂
-Industrials              FELE.++        :   1.23%  富兰克林电子, 水泵, 电机, 电动机, 水处理, 工业基础设施, 工业, 基础设施, 美国
-Consumer_Defensive       LANC.++        :   1.21%  兰卡斯特食品, 沙拉酱, 冷冻面包甜点
-Technology               EXLS.++        :   1.21%  云计算, 业务流程管理
-Industrials              EME            :   1.20%  电气, 机械, 从事电气和机械结构以及设施服务
-Industrials              ESLT.++        :   1.20%  以色列, 国防, 无人机, 电子战系统, 武器
-Financial_Services       BCH            :   1.20%  智利银行
-Financial_Services       HSBC           :   1.20%  汇丰, 银行
-Basic_Materials          RS.++          :   1.19%  Reliance, 金属, 钢铁, 分销
-Consumer_Cyclical        ROL.++         :   1.19%  害虫防治, 美国
-Technology               UI.++          :   1.18%  网络设备, UniFi平台, 无线电通信, 视频监控
-Basic_Materials          GGB.*          :   1.18%  巴西, 钢铁
-Financial_Services       SPGI.++        :   1.18%  提供标准普尔指数, 指数, 评级, 分析
-Technology               BDC.++         :   1.17%  信号传输, 网络基础设施, 电缆, 网络设备, 工业, 工业自动化, 美国
-Healthcare               AZN.12.*.++    :   1.17%  阿斯利康, 优赫得®Enhertu, 德曲妥珠单抗, 度伐利尤单抗
-Healthcare               ICLR.++        :   1.17%  爱尔兰, 生物制药, 医疗器械
-Financial_Services       COLB.++        :   1.17%  哥伦比亚银行系统, 区域性银行, 抵押贷款, 美国
-Healthcare               OPCH.++        :   1.17%  家庭输液服务提供商, 静脉输液, 医疗保健, 护理
-Consumer_Cyclical        CCL.*          :   1.16%  嘉年华, 邮轮, 游轮, 旅游, 利率敏感
-Technology               DDOG.*.++      :   1.16%  云监控, 云平台
-Healthcare               NBIX.++        :   1.16%  抑郁症, 迟发性运动障碍TD, 亨廷顿舞蹈症HD
-Financial_Services       BAM            :   1.15%  布鲁克菲尔德资产管理, 资产管理
-Financial_Services       PYPL.*.++      :   1.15%  在线支付
-Financial_Services       JEF.++         :   1.15%  杰富瑞, 投资银行, 金融服务
-Communication_Services   VIV.+          :   1.14%  巴西电信, 电信
-Financial_Services       PNC.++         :   1.14%  银行, 贷款, 金融
-Healthcare               DOCS.+         :   1.14%  医疗保健, 医疗人士的LinkedIn, 社交网络, 网络平台, 远程医疗
-Industrials              TNET.+         :   1.14%  人力资源解决方案, 薪酬福利管理
-Basic_Materials          WLK.++         :   1.13%  化学品, 塑料
-Financial_Services       RJF.++         :   1.13%  瑞杰金融, 金融
-Healthcare               SOLV.++        :   1.13%  舒万诺, 伤口护理, 口腔护理, 3M分拆
-Utilities                ED             :   1.13%  爱迪生联合电气, 电力, 天然气
-Financial_Services       FITB.++        :   1.13%  五三银行, 美国
-Real_Estate              TRNO.++        :   1.13%  沿海市场收购、出租、经营工业房地产
-Financial_Services       CFR.++         :   1.12%  金融, 银行
-Financial_Services       UBSI.++        :   1.12%  社区银行业务, 抵押贷款, 区域性, 美国
-Healthcare               EW.*.++        :   1.12%  爱德华兹, 生命科学, 心血管治疗
-Real_Estate              SUI            :   1.11%  房地产, 房车度假村, 露营地
-Industrials              FCN.+          :   1.11%  商业咨询, 战略重组, 法律诉讼, 网络技术
-Industrials              STN            :   1.11%  加拿大, 斯坦泰克, 建筑设计, 工程服务, 项目管理
-Financial_Services       FSK.++         :   1.10%  直接贷款, 夹层融资, 股权投资
-Financial_Services       MA.++          :   1.10%  万事达卡, 支付, 信用卡, 借记卡
-Healthcare               QGEN.++        :   1.10%  生物科学, 分子诊断, 药物开发
-Consumer_Cyclical        GPK.++         :   1.09%  纸质包装, 包装
-Consumer_Cyclical        MUSA.++        :   1.09%  加油站, 加油站网络经营, 汽油零售, 便利店, 美国
-Healthcare               IQV.++         :   1.09%  医疗领域临床研究服务提供商
-Industrials              AYI.++         :   1.09%  照明, 灯具, 建筑材料, 美国
-Utilities                EXC.*          :   1.08%  电力, 核能, 发电, 美国
-Consumer_Cyclical        YUMC           :   1.08%  百胜, 中国, 肯德基, 必胜客, 小肥羊, 黄记煌
-Consumer_Cyclical        NCLH.*.++      :   1.08%  挪威, 游轮, 邮轮, 利率敏感
-Communication_Services   TIMB.+         :   1.08%  巴西, 第三大电信, 电信运营商
-Consumer_Cyclical        MMYT           :   1.08%  印度, 在线旅游, 旅游, 机票, 酒店, 住宿
-Financial_Services       KEY.*.++       :   1.07%  银行, 金融服务
-Communication_Services   META.*         :   1.07%  Facebook, 元宇宙, 扎克伯格, 在线广告, 社交网络, 开源人工智能AI, 虚拟现实VR
-Real_Estate              UDR.++         :   1.06%  房地产, 多户型公寓, 住宅物业
-Financial_Services       BAC.*.++       :   1.06%  美国银行, 银行, 贷款, 美国
-Industrials              DCI.++         :   1.06%  发动机过滤, 工业过滤器
-Financial_Services       V.*.++         :   1.06%  全球, 支付, 信用卡, 借记卡, 预付卡
-Financial_Services       CADE.++        :   1.05%  金融, 银行, 美国
-Utilities                POR            :   1.05%  天然气, 发电, 配电
-Communication_Services   DASH.++        :   1.05%  食品配送物流, 外卖平台
-Financial_Services       LNC.++         :   1.05%  寿险, 保险, 退休规划, 资产管理
-Basic_Materials          TX.+           :   1.05%  拉丁美洲, 钢铁
-Real_Estate              EPRT           :   1.05%  房地产投资信托, 物业出租管理
-Financial_Services       EWBC.++        :   1.04%  华美, 银行, 大中华区, 抵押贷款, 美国
-Consumer_Cyclical        SLGN.++        :   1.04%  制造销售刚性包装, 瓶盖, 容器, 服务于金宝汤雀巢, 包装
-Technology               EEFT.++        :   1.04%  电子支付, ATM, POS, 汇款
-Real_Estate              AMH.++         :   1.04%  房地产, 住宅出租, 住宅租赁, 租赁
-Basic_Materials          MLM.++         :   1.04%  建筑材料, 石灰石, 混凝土
-Consumer_Cyclical        WH.++          :   1.03%  温德姆酒店集团, 经济型, 度假村, 酒店
-Consumer_Cyclical        QSR            :   1.03%  加拿大, 快餐连锁, 汉堡王
-Financial_Services       RLI            :   1.02%  保险, 财产和意外伤害保险
-Technology               TWLO.*.++      :   1.02%  提供API接口的云通讯平台
-Financial_Services       HLNE.++        :   1.01%  私募投资, 资产管理
-Healthcare               WST            :   1.01%  药物包装, 包装, 注射器, 药物注射, 医疗保健, 医疗设备
-Basic_Materials          RIO            :   1.01%  力拓, 采矿, 铁矿石
-Technology               DSGX.++        :   1.01%  加拿大, 云计算, 物流供应链, Saas
-Financial_Services       XP.*.+         :   1.01%  巴西, 金融, 资产管理, 保险, 信托
-Utilities                CIG.13         :   1.01%  巴西, 电力
-Basic_Materials          NUE.++         :   1.00%  钢铁制造, 钢铁回收, 纽柯钢铁, 钢铁
-Healthcare               SMMT.+         :   1.00%  双特异性Ivonescimab, 靶向PD-1和VEGF, 非小细胞肺癌, HARMONi, 肺癌, 医疗健康
-Basic_Materials          ESI.++         :   1.00%  电子硬件领域, 材料加工技术, 化学品, 材料, 特种化学品
-Healthcare               ZTS.++         :   0.99%  宠物, 家畜, 药品, 疫苗, 宠物药品, 宠物医疗, 家畜药品
-Technology               SSNC.++        :   0.99%  为金融服务和医疗保健行业提供软件解决方案, 软件
-Basic_Materials          STLD           :   0.98%  钢铁制造, 金属回收, 钢铁, 特朗普概念, 美国
-Financial_Services       NTRS.++        :   0.98%  北方信托, 资产托管, 私人银行, 银行, 资产管理, 信托
-Real_Estate              FRT.++         :   0.98%  房地产, 投资信托, 沿海地区, 零售物业, 美国
-Technology               G.*.++         :   0.97%  简伯特, 业务流程外包服务, 核心智能运营服务
-Consumer_Cyclical        VIK.++         :   0.97%  维京游轮, 利率敏感, 邮轮, 游轮
-Consumer_Cyclical        BALL.++        :   0.97%  金属包装生产商, 铝制饮料罐, 包装
-Industrials              CTAS.++        :   0.97%  制服租赁, 企业安全, 美国
-Financial_Services       AEG.*          :   0.96%  荷兰保险集团, 养老金, 资产管理
-Healthcare               HOLX.++        :   0.96%  豪洛捷, 早期检测疾病, 提高女性健康, 乳腺癌, 健康
-Financial_Services       GBCI.++        :   0.96%  区域性银行, 抵押贷款, 美国
-Healthcare               BIO.++         :   0.96%  基因组学, 蛋白质分析, 体外诊断
-Utilities                ETR            :   0.95%  电力, 发电, 第二大, 核电, 天然气, 核, 核能, 美国
-Industrials              MDU.++         :   0.95%  天然气, 电力, 能源
-Technology               KVYO.++        :   0.95%  电子商务, 通过邮件短信推送个性化营销信息, 营销自动化, 营销, 短信推送
-Utilities                ES.++          :   0.95%  电力, 天然气, 公共事业
-Industrials              PNR.++         :   0.94%  水处理, 泳池, 水疗, 水
-Technology               ZBRA.++        :   0.94%  条码打印机, RFID标签, 扫描仪
-Utilities                SO.*           :   0.94%  美国南方, 电力
-Healthcare               LLY            :   0.93%  礼来, 减肥药, GLP-1, Zepbound, 美国
-Communication_Services   BCE.+          :   0.93%  加拿大, 电信运营商, 贝尔, 电信
-Real_Estate              HST.*.++       :   0.93%  高端酒店度假村房地产投资信托, 万豪希尔顿凯悦
-Real_Estate              VICI           :   0.93%  三重净租赁房地产投资信托, 赌场, 娱乐物业, 凯撒宫
-Technology               QTWO.++        :   0.93%  数字银行平台, 赋能银行, 在线银行, 移动银行, 金融数字化
-Consumer_Cyclical        ORLY.++        :   0.93%  汽车售后, 零部件
-Financial_Services       SEIC.++        :   0.93%  投资管理, 金融服务, 美国
-Financial_Services       HLI.++         :   0.93%  投资银行, 财务重组, 并购咨询
-Utilities                AES.*          :   0.92%  爱依斯, 电力, 发电, 公共事业
-Financial_Services       PB.++          :   0.91%  银行, 美国
-Consumer_Cyclical        BYD.+          :   0.91%  赌场, 酒店管理, 美国
-Industrials              ALLE           :   0.91%  安防技术, 门控系统, 机械锁, 电子安全装置
-Basic_Materials          ASH.++         :   0.91%  化学品, 化工, 添加剂
-Financial_Services       NWG            :   0.91%  英国, 银行
-Financial_Services       AON.++         :   0.91%  怡安, 保险, 美国
-Consumer_Cyclical        CART.12.*      :   0.90%  Instacart, 在线, 代购, 配送, 快递, 物流
-Basic_Materials          DOW.*.++       :   0.90%  陶氏化学, 材料
-Consumer_Defensive       BG             :   0.90%  邦吉, 粮食, 农业, 油籽, 谷物, 食用油, Viterra
-Utilities                NJR.++         :   0.90%  天然气分销, 能源基础设施, 天然气, 能源, 清洁能源
-Industrials              NDSN.++        :   0.90%  粘合剂, 工业涂层
-Communication_Services   TEF.+          :   0.90%  西班牙, 拉丁美洲, 电信运营商
-Technology               GIB            :   0.90%  加拿大, 信息技术IT, 业务咨询
-Financial_Services       CBSH.++        :   0.90%  科默斯银行, 美国
-Industrials              ACA.++         :   0.90%  基础设施, 建筑产品, 建筑材料, 工程, 美国
-Healthcare               DVA.++         :   0.89%  肾脏护理, 透析服务, 透析, 护理, 医疗保健
-Financial_Services       TPG.++         :   0.89%  私募股权, 另类投资
-Industrials              ITW.++         :   0.88%  工业工具, 工业设备, 工业
-Financial_Services       WTFC.++        :   0.88%  银行, 贷款, 信托, 信达金融
-Industrials              EXPD.++        :   0.88%  物流, 货运, 海运空运
-Communication_Services   BILI.14        :   0.88%  哔哩哔哩, 中国, 在线视频, 流媒体
-Consumer_Cyclical        LAD.++         :   0.87%  利西亚车行, 汽车零售, 汽车贷款, 电动汽车, 美国
-Technology               TRMB.++        :   0.87%  GPS定位技术解决方案
-Healthcare               EHC.++         :   0.87%  康复医院, 家庭健康护理, 临终关怀, 医院, 护理
-Financial_Services       MET.++         :   0.87%  大都会人寿保险, 年金, 退休福利
-Consumer_Defensive       LOPE.++        :   0.86%  教育服务, 大峡谷大学, 在线教育, 教育, 美国
-Consumer_Cyclical        SE.12          :   0.85%  东南亚, 游戏, Garena, 电商, Shopee, 电子商务
-Financial_Services       SIGI.++        :   0.85%  保险, 美国
-Financial_Services       AMG.++         :   0.85%  资产管理, 金融
-Healthcare               RDY.+          :   0.85%  印度, 仿制药
-Utilities                NEE.*          :   0.84%  电力, 风能, 太阳能, 核能, 核
-Consumer_Defensive       STZ            :   0.84%  酒精饮料, 科罗娜, 美国
-Consumer_Defensive       MDLZ.*         :   0.84%  亿滋国际, 食品, 零食, 奥利奥饼干, 吉百利巧克力, 卡夫食品分拆
-Healthcare               STE            :   0.83%  感染预防, 灭菌, 手术支持
-Real_Estate              CPT.++         :   0.83%  房地产, 多户住宅, 公寓楼
-Technology               KEYS           :   0.82%  电子测试, 测量仪器, 美国
-Healthcare               TAK.++         :   0.82%  日本武田制药, 肿瘤, 消化, 神经系统, 药品, 制药
-Consumer_Cyclical        TM.++          :   0.82%  日本, 丰田汽车
-Industrials              FIX.++         :   0.82%  机械电气, 建筑系统, 暖风空调, AI, 机械
-Real_Estate              EQR.++         :   0.82%  房地产, 收购开发管理多户住宅租赁公寓, 投资信托
-Financial_Services       FNB.++         :   0.82%  社区银行, 金融, 抵押贷款, 美国
-Consumer_Defensive       GIS.++         :   0.82%  通用磨坊, 食品, 谷物早餐, 哈根达斯
-Financial_Services       GL.++          :   0.81%  保险, 人寿保险, 健康保险, 美国
-Real_Estate              EGP.+          :   0.81%  工业领域, 房地产投资信托, 房地产
-Technology               JNPR.*.+       :   0.81%  瞻博, 网络通讯设备, 路由器, 交换机
-Industrials              FAST.++        :   0.81%  工业, 紧固件, 五金, 美国
-Industrials              ZWS.++         :   0.80%  水管理解决方案, 管道系统, 阀门
-Healthcare               ASND.14.+      :   0.80%  丹麦, 生长激素
-Technology               KLAC.++        :   0.80%  科磊, 半导体, 印刷电路板PCB, AI
-Technology               PANW           :   0.79%  网络安全, 防火墙, 云安全
-Technology               CHKP           :   0.79%  以色列, 防火墙, VPN, 入侵防御
-Industrials              ITT.++         :   0.78%  为能源、交通和工业市场提供高度工程化的关键部件和定制技术解决方案
-Healthcare               DHR.++         :   0.78%  丹纳赫, 医疗耗材, 诊断设备, 环境测量
-Financial_Services       EVR.++         :   0.77%  投资银行, 并购重组
-Real_Estate              WPC.++         :   0.77%  房地产, 投资信托
-Basic_Materials          MOS.12.*       :   0.77%  美盛, 化肥, 美国
-Industrials              GWW.++         :   0.75%  工业品分销商, 各类工具, 维护修理
-Financial_Services       UBS.+          :   0.75%  瑞银集团, 瑞士, 银行, 收购瑞士信贷
-Communication_Services   TKO            :   0.75%  体育娱乐, 终极格斗, UFC, 摔角, WWE
-Technology               GLOB.14.++     :   0.74%  阿根廷, 信息技术, 软件开发, 媒体营销, 创意广告
-Industrials              TFII.++        :   0.74%  北美, 物流运输, 包裹, 快递, 卡车货运, 仓储
-Industrials              BE.*.+         :   0.74%  能源, 燃料电池, 固体氧化物, 清洁能源, 发电, 电力, 美国
-Technology               ACN            :   0.73%  埃森哲, 管理咨询, 外包服务
-Financial_Services       LYG.*          :   0.73%  劳埃德, 银行, 英国, 金融服务
-Financial_Services       SHG.++         :   0.73%  新韩金融集团, 韩国首尔, 银行
-Technology               ENTG.++        :   0.73%  高性能材料, 服务于半导体行业, 材料, 半导体, 英特格, 传统半导体
-Technology               INGM.+         :   0.73%  技术分销, IT, 云计算, 软件平台, 软件开发
-Healthcare               NUVL.++        :   0.73%  癌症, 小分子激酶抑制剂, 肺癌药物
+Healthcare               SRPT.++        :  13.82%  生物制药, 杜氏肌营养不良
+Utilities                NRG            :  10.11%  电力, 发电, 天然气发电, 煤炭发电, 风力发电, 核能
+Healthcare               DOCS.++        :   9.83%  医疗保健, 医疗人士的LinkedIn, 社交网络, 网络平台, 远程医疗
+Utilities                CEG            :   7.15%  星座, 发电, 电力, 可再生, 核能, 核
+Industrials              IESC.++        :   7.09%  工业基础设施, 电气, 机电, 网络基础设施, 工程, 机械, 美国
+Consumer_Cyclical        CPRI.*.++      :   6.04%  时尚, 奢侈品, Michael Kors, Versace, Jimmy Choo
+Utilities                ELP.++         :   5.89%  巴西, 电力
+Consumer_Defensive       SJM.+          :   5.69%  食品, 果酱
+Utilities                VST.*          :   5.53%  电力, 天然气, 核能, 核电, 伯克希尔哈撒韦, 美国
+Real_Estate              HR.*.+         :   5.52%  门诊医疗, 房地产物业, 美国
+Financial_Services       QFIN.14        :   5.41%  奇富, 360, 信用, 金融, 贷款, 中国
+Technology               WDC.*.++       :   5.17%  西部数据, 硬盘HDD, 固态硬盘SSD, 数据中心, 存储
+Technology               YMM.*.+        :   4.85%  满帮集团, 卡车, 货物运输
+Healthcare               LLY.*.+        :   4.55%  礼来, 减肥药, GLP-1, Zepbound, tirzepatide, 美国
+Healthcare               BHVN           :   4.53%  生物制药, 精神分裂, 偏头痛, Rimegepant, Nurtec, SCA
+Industrials              WWD.++         :   4.46%  控制燃料空气流体电力运动和燃烧的系统组件
+Consumer_Cyclical        MMYT.+         :   3.96%  印度, 在线旅游, 旅游, 机票, 酒店, 住宿
+Industrials              SNDR.++        :   3.94%  卡车, 运输, 物流, 北美
+Financial_Services       BMA            :   3.76%  阿根廷, 银行
+Consumer_Defensive       SFM.++         :   3.60%  连锁超市, 有机食品, 天然, 美国
+Technology               FTNT.+         :   3.57%  网络安全, 防火墙, Fortinet
+Healthcare               CYTK.++        :   3.52%  调节心肌细胞和肌肉功能, 急性心衰, 肌营养不良
+Consumer_Defensive       COKE.++        :   3.49%  瓶装商, 可乐, 瓶
+Healthcare               UHS.++         :   3.45%  全科医院, 美国
+Industrials              MTZ.++         :   3.40%  为通信电力石油天然气行业提供基础设施建设服务
+Utilities                TLN            :   3.37%  发电, 电力, 核能, 核
+Energy                   TBN            :   3.36%  澳大利亚, 天然气, 勘探生产
+Technology               KSPI.++        :   3.23%  哈萨克斯坦, 电子商务, 支付平台, 扩张到土耳其
+Energy                   LB             :   3.21%  石油, 天然气, 二叠纪盆地, 美国
+Utilities                CWEN.+         :   3.21%  太阳能, 风能, 发电厂
+Technology               APP            :   3.19%  移动平台, 广告营销, 数据分析, 广告购买, 广告投放, 在线广告
+Consumer_Cyclical        AMZN.*.+       :   3.18%  亚马逊, 电子商务, 云服务, 流媒体
+Consumer_Cyclical        VIK.++         :   3.15%  维京游轮, 利率敏感, 邮轮, 游轮
+Financial_Services       BAM.+          :   3.03%  布鲁克菲尔德资产管理, 资产管理
+Utilities                GEV            :   3.01%  可再生能源, 电力, 能源, 核能, 核电, 核
+Technology               FN             :   3.00%  泰国, 高精度制造, 光学, 电子电气, AI, 电信行业, 光通信, 硅光产品, 数据通信
+Consumer_Cyclical        MNSO.+         :   2.96%  中国名创优品, 快时尚, 零售批发
+Basic_Materials          AEM            :   2.92%  加拿大, 黄金, 黄金开采生产
+Financial_Services       ALL            :   2.89%  保险, 美国
+Healthcare               ASND.14.++     :   2.87%  丹麦, 生长激素
+Energy                   UGP.13         :   2.84%  巴西, 石油, 化工
+Industrials              ERJ            :   2.80%  巴西, 第三大, 飞机制造, 飞机
+Basic_Materials          X              :   2.72%  美国钢铁, 制铁
+Technology               NTAP.+         :   2.71%  云数据, 存储系统
+Utilities                KEP.11.+       :   2.69%  韩国电力公社, 发电, 输电, 配电
+Consumer_Defensive       DAR            :   2.67%  动物副产品加工, 动物饲料, 饲料, 生物营养素
+Communication_Services   KT.++          :   2.65%  韩国, 第二大, 电信运营商
+Healthcare               WAT.++         :   2.64%  沃特世, 分析仪器, 实验室解决方案
+Healthcare               ACHC.+         :   2.60%  精神疾病, 药物滥用
+Technology               PANW.+         :   2.59%  网络安全, 防火墙, 云安全
+Healthcare               TMDX.+         :   2.58%  器官移植, OCS近生理条件器官保存运输
+Utilities                CIG.13.+       :   2.49%  巴西, 电力
+Consumer_Cyclical        SHAK.++        :   2.46%  连锁, 快餐, 汉堡, 餐饮, 美国
+Industrials              GE             :   2.44%  通用电气, 航空发动机, 发电机, 医疗成像, 发动机
+Healthcare               PACS           :   2.40%  急症护理, 老年护理, 辅助生活, 长期护理, 护理
+Healthcare               NTRA.12        :   2.39%  基因检测, 产前/遗传病, 美国
+Consumer_Cyclical        JD.14.*        :   2.38%  京东, 电子商务, 自营物流, 京东健康
+Real_Estate              WELL           :   2.36%  房地产, 老年人辅助生活记忆保健社区, 急症后护理, 医疗办公楼, 老年人住房, 医院
+Real_Estate              IRM.++         :   2.34%  记录和信息管理, 艺术品存储, 数据保护与恢复
+Healthcare               ABBV.*.++      :   2.30%  艾伯维, 雅培分拆, 自身免疫性疾病, 阿达木单抗, 修美乐
+Energy                   CQP            :   2.30%  液化天然气, LNG, 天然气, 能源
+Consumer_Defensive       BRBR           :   2.30%  高蛋白饮料, 饮料, 蛋白质棒
+Healthcare               UTHR           :   2.26%  生物制药, 肺动脉高压
+Healthcare               APLS.++        :   2.26%  生物制药, C3免疫调节疗法
+Utilities                ETR.+          :   2.25%  电力, 发电, 第二大, 核电, 天然气, 核, 核能, 美国
+Utilities                ED.+           :   2.24%  爱迪生联合电气, 电力, 天然气
+Consumer_Cyclical        GME.*.++       :   2.22%  meme, 模因股, Roaring Kitty
+Utilities                UGI.*.++       :   2.22%  丙烷分销, 第一大, 液化石油气, 美国, 天然气
+Industrials              FTAI           :   2.20%  飞机, 租赁, 发动机, 出租, 飞机租赁
+Technology               MSFT.*.++      :   2.20%  微软, 软件开发, office, AI, 操作系统
+Financial_Services       CME.++         :   2.19%  芝加哥商品交易所集团, 期货, 期权交易市场
+Technology               ANET           :   2.15%  数据中心, 以太网交换机, 云服务, AI
+Healthcare               INSM.+         :   2.15%  生物制药, 肺部呼吸系统疾病
+Financial_Services       AJG.++         :   2.14%  保险, 保险经纪, 风险管理, 财产保险, 意外保险
+Industrials              AXON           :   2.13%  个人安全防卫, 电击武器, 摄像头, 安全
+Industrials              AAON.++        :   2.08%  暖通空调, 建材, 数据中心, AI
+Communication_Services   TMUS.++        :   2.08%  电信运营商, 电信, 德国电信控股, 美国
+Consumer_Cyclical        BKNG           :   2.07%  Priceline, Agoda, Kayak, 旅游, 订票
+Industrials              LHX            :   2.07%  航空航天, 国防, 太空, 卫星, 军工, 武器, 军事
+Consumer_Cyclical        BROS.+         :   2.04%  荷兰兄弟咖啡, 特许经营, 咖啡, 连锁, 免下车咖啡店
+Financial_Services       WRB.++         :   2.03%  保险, 柏克利
+Consumer_Defensive       WMT.*          :   2.02%  沃尔玛, 零售, 山姆会员, 连锁超市, 超市
+Industrials              MMM.++         :   2.02%  多元化, 工业用品, 医疗保健, 消费品, 电子用品
+Energy                   ENLC.*         :   1.99%  天然气原油, 加工运输
+Healthcare               RVMD.+         :   1.97%  癌症分子靶点技术
+Energy                   YPF            :   1.96%  阿根廷, 石油, 天然气
+Communication_Services   SKM.++         :   1.93%  韩国, 电信, 移动通信, 宽带互联网
+Healthcare               ROIV.12.*      :   1.93%  生物技术
+Technology               SATS.12.+      :   1.88%  卫星, 卫星电视, 机顶盒, 美国
+Real_Estate              SPG            :   1.86%  房地产, 投资信托, 购物中心
+Basic_Materials          WPM            :   1.85%  加拿大, 黄金, 白银, 钯金
+Communication_Services   USM            :   1.83%  第五大, 电信运营商, 电信, 美国
+Industrials              FIX.++         :   1.83%  机械电气, 建筑系统, 暖风空调, AI, 机械
+Technology               VRSN.+         :   1.79%  域名注册, 互联网基础设施
+Utilities                DUK.+          :   1.77%  杜克能源, 电力, 天然气, 美国
+Technology               TYL.++         :   1.76%  为公共部门提供软件和技术服务, 公共事业, 软件服务
+Industrials              AVAV           :   1.76%  航空航天, 国防, 军事, 无人机
+Healthcare               PEN            :   1.75%  中风介入治疗, 血栓取出
+Technology               CACI           :   1.75%  国防, 情报, 高科技解决方案, 政府服务, 政府承包商
+Healthcare               INCY.++        :   1.74%  生物制药, 肿瘤, 炎症, 自身免疫
+Real_Estate              BEKE.*         :   1.74%  中国, 房地产, 在线
+Healthcare               EHC.++         :   1.74%  康复医院, 家庭健康护理, 临终关怀, 医院, 护理
+Healthcare               ACLX           :   1.73%  生物技术, 免疫疗法, CAR-T, 白血病, 淋巴瘤, 细胞疗法
+Basic_Materials          KGC.*          :   1.73%  金罗斯黄金, 加拿大, 黄金白银开采, 黄金
+Energy                   OKE            :   1.73%  天然气, 天然气液体, 管道运输储存
+Technology               APPF.++        :   1.73%  房地产行业的云基础业务软件解决方案
+Healthcare               COR            :   1.73%  药品采购, 药品供应链, 药品分销, 医疗保健, 品牌药, 仿制药
+Consumer_Cyclical        RCL            :   1.71%  皇家加勒比, 邮轮, 游轮, 利率敏感
+Real_Estate              OHI            :   1.70%  医疗保健设施房地产投资信托
+Healthcare               ITCI           :   1.69%  精神分裂症, 双相情感障碍, 重度抑郁症, 抑郁症
+Energy                   LNG            :   1.69%  液化天然气LNG, 生产, 出口
+Technology               PLTR.*.++      :   1.69%  AI, 大数据分析, AI工具, 政府服务, 政府承包商
+Technology               MSI            :   1.68%  摩托罗拉拆分, 通信设备, 监控摄像头, 视频指挥中心
+Financial_Services       ERIE.++        :   1.66%  伊瑞保险, 保险, 美国
+Real_Estate              VTR            :   1.66%  老年人住宅, 医疗办公楼, 后期护理设施, 房地产
+Basic_Materials          FNV            :   1.66%  加拿大, 黄金金融
+Industrials              RTX            :   1.65%  雷神, 航空航天, 国防, 五大军事承包商之一, 军事
+Technology               NOW            :   1.65%  云计算, 企业自动化, 人力资源, IT服务
+Healthcare               ADMA.+         :   1.63%  生物制药, 免疫疗法, 免疫球蛋白, 治疗免疫疾病, BIVIGAM, ASCENIV
+Healthcare               THC            :   1.62%  医院运营, 医院, 诊所服务, 医疗保健
+Utilities                EBR.++         :   1.61%  巴西, 电力
+Energy                   EPD            :   1.61%  天然气, 天然气液体NGL, 储存管道服务
+Communication_Services   PINS.*.++      :   1.61%  图片分享, 社交媒体, 视觉搜索
+Utilities                PEG.++         :   1.60%  电力, 天然气, 核能, 核, 核电
+Technology               PSTG.++        :   1.60%  数据存储, 全闪存, AI, 美国
+Financial_Services       ARES.++        :   1.59%  资产管理, 信贷, 私募, 房地产
+Technology               DUOL           :   1.59%  多邻国, 在线语言学习, 游戏化软件, 多语种培训, 在线教育
+Healthcare               IBRX           :   1.59%  免疫疗法, 卡介苗, Anktiva, 膀胱癌
+Utilities                PAM            :   1.57%  阿根廷, 能源, 电力, 发电, 石油, 石化, 天然气
+Industrials              SAIA.+         :   1.56%  货运, 物流, 运输
+Financial_Services       MSCI.++        :   1.56%  指数提供商, 全球指数, 新兴市场指数, 指数
+Real_Estate              DOC.+          :   1.55%  医疗保健房地产投资信托
+Technology               RMBS.++        :   1.55%  内存芯片, 高速接口技术, 半导体, 用于Intel平台
+Technology               LDOS           :   1.53%  国防, 情报, 政府承包商, 民用医疗, 技术服务
+Healthcare               PRCT.+         :   1.52%  泌尿外科, 手术机器人, 前列腺BPH, Aquablation, 医疗设备
+Communication_Services   CHTR           :   1.51%  特许通讯, 第二大, 有线电视运营商, 有线电视, 美国
+Industrials              RXO.++         :   1.51%  北美, 货运, 运输, 物流, 卡车运输, 供应链, 3PL, XPO分拆, 配送, 第三大
+Industrials              BWXT           :   1.51%  核潜艇动力系统, 核电站, 核废物管理, 核, 核能, 核电
+Utilities                PCG.*          :   1.51%  电力, 天然气
+Financial_Services       BRO            :   1.50%  保险经纪业务
+Healthcare               NVO.*          :   1.50%  丹麦, 诺和诺德, 减肥药, Wegovy, 司美格鲁肽, Ozempic
+Communication_Services   META.*.+       :   1.49%  Facebook, 元宇宙, 扎克伯格, 在线广告, 社交网络, 开源人工智能AI, 虚拟现实VR
+Technology               INFY.*.++      :   1.49%  印孚瑟斯, 印度, 信息技术, 外包服务
+Real_Estate              CPT.++         :   1.48%  房地产, 多户住宅, 公寓楼
+Consumer_Defensive       MO.++          :   1.48%  奥驰亚, 烟草, 香烟, 万宝路Marlboro, 电子烟, NJOY
+Consumer_Cyclical        RL.++          :   1.47%  时尚, 服装, 拉夫劳伦, 美国
+Financial_Services       KKR.++         :   1.47%  投资管理, 私募, 能源基础设施
+Technology               SAIC           :   1.46%  工程, 系统集成, 信息技术
+Consumer_Defensive       CPB.++         :   1.46%  金宝汤, 食品, 饮料, 汤, 美国
+Healthcare               OPCH.++        :   1.45%  家庭输液服务提供商, 静脉输液, 医疗保健, 护理
+Technology               CSCO.13.*.++   :   1.45%  思科, 网络设备, 路由器, 交换机, 防火墙, 无线
+Consumer_Defensive       POST.14.++     :   1.43%  早餐谷物, 冷冻食品, 食品, 蛋白质棒, 乳制品
+Industrials              KNX.++         :   1.43%  货运, 物流, 卡车运输
+Industrials              TT             :   1.41%  暖通空调, 冷链运输, 数据中心, AI
+Healthcare               GRFS           :   1.40%  西班牙, 血浆衍生药物生产商, 血浆
+Industrials              LSTR.++        :   1.39%  北美, 物流, 卡车运输, 供应链, 空运, 海运
+Energy                   HESM           :   1.39%  中游能源, 天然气原油收集运输储存, 天然气, 能源
+Financial_Services       NDAQ.++        :   1.39%  纳斯达克, 证券交易所, 全球第二
+Consumer_Defensive       BG.+           :   1.38%  邦吉, 粮食, 农业, 油籽, 谷物, 食用油, Viterra
+Technology               BR.++          :   1.38%  为金融行业提供通讯和技术解决方案
+Industrials              STRL           :   1.38%  斯特林, 基础设施, 数据中心, 电商配送中心, 运输, 建筑
+Energy                   CVX.*          :   1.35%  雪佛龙, 石油, 天然气, 能源, 勘探, 炼油
+Healthcare               MCK            :   1.34%  麦克森, 药品分销, 医疗设备, 医疗器械, 药品, 医疗供应链管理, 零售药房
+Real_Estate              BXP.+          :   1.34%  波士顿地产, 房地产, 办公楼, 高端物业
+Consumer_Defensive       ADM            :   1.34%  美国粮食, 农产品, 食品加工, 食品, 油籽, 谷物, 粮食
+Industrials              JBHT.++        :   1.33%  运输, 物流
+Real_Estate              REG            :   1.32%  专注于零售购物中心大型超市的房地产投资信托
+Energy                   FTI            :   1.31%  油气, 海底技术
+Consumer_Defensive       CL.++          :   1.30%  高露洁, 口腔护理, 牙膏, 牙刷
+Communication_Services   LBTYK.++       :   1.29%  自由全球, 有线电视宽带, 电信
+Financial_Services       BBD.*          :   1.28%  布拉德斯科, 巴西, 银行
+Consumer_Cyclical        TXRH.++        :   1.28%  美式牛排, 连锁餐厅
+Utilities                PPL.*          :   1.28%  电力, 发电, 输电, 配电, 天然气
+Technology               FFIV.++        :   1.28%  网络技术, 应用交付, 云安全, 控制器ADC, ADN
+Technology               ADBE.++        :   1.27%  软件, 创意, 修图, 图片编辑, 视频编辑, AI, Photoshop, AcrobatReader, PremierPro
+Technology               ORCL.*         :   1.27%  甲骨文, 数据库, 云服务, Java, 美国
+Energy                   RRC.++         :   1.26%  石油, 天然气, 勘探开采
+Real_Estate              CBRE.++        :   1.25%  房地产, 商业地产, 物业, 租赁
+Financial_Services       CRVL           :   1.25%  保险, 医疗费用控制, 工作场所伤害管理
+Utilities                AEP.+          :   1.25%  美国电力, 电力, 天然气, 公共事业
+Technology               CLS            :   1.25%  电子制造服务, 加拿大, EMS, AI
+Healthcare               SYK.+          :   1.25%  关节置换, 骨科治疗
+Technology               COHR           :   1.24%  激光, 光电子设备, 可用于半导体
+Healthcare               ALC.12.++      :   1.24%  瑞士, 眼药水, 白内障屈光手术设备, 隐形眼镜
+Real_Estate              KRG.++         :   1.24%  房地产投资信托
+Consumer_Defensive       TAP.+          :   1.22%  啤酒酿造, 啤酒
+Industrials              WAB.++         :   1.22%  铁路制动系统
+Energy                   ET.*           :   1.21%  天然气, 原油, 管道运输, 压缩储存
+Healthcare               CRNX.12.+      :   1.21%  内分泌疾病, 制药, 药物, 肢端肥大症, 神经内分泌肿瘤
+Energy                   AM             :   1.21%  石油, 天然气, 天然气液体NGL
+Technology               KD.++          :   1.21%  IBM分拆, IT基础设施, 云服务, 数据, AI
+Consumer_Defensive       PM.+           :   1.20%  菲利普莫里斯, 烟草, 万宝路, 林奇爱股
+Technology               CRM            :   1.20%  客户关系管理, 云计算
+Consumer_Cyclical        EXPE           :   1.20%  Hotels.com, 在线旅游, 酒店, 机票, 租车, 旅游
+Technology               IBM.++         :   1.19%  咨询服务, 混合云, 开源软件
+Technology               PEGA.++        :   1.17%  CRM, BPM, 软件服务
+Energy                   TRGP           :   1.17%  北美, 天然气, 天然气液体NGL, 能源
+Financial_Services       SIGI.++        :   1.17%  保险, 美国
+Technology               GDDY.++        :   1.16%  互联网域名注册, 网络托管, 网站开发, 网站, 软件开发, 网站托管
+Healthcare               VRTX.++        :   1.16%  囊性纤维化, 贫血症, 痛风, 1型糖尿病, 自身免疫疾病
+Industrials              HWM            :   1.16%  航空航天, 飞机, 零部件, 紧固系统, 锻造车轮
+Consumer_Cyclical        YUM.++         :   1.15%  百胜餐饮集团, 肯德基, 必胜客
+Industrials              CTAS.++        :   1.15%  制服租赁, 企业安全, 美国
+Consumer_Cyclical        CMG.*          :   1.15%  墨西哥风味, 快餐连锁, 烧烤, Chipotle
+Energy                   MPLX           :   1.14%  中游能源基础设施, 石油运输物流
+Financial_Services       MCO.++         :   1.14%  穆迪, 信用评级
+Technology               CVLT.++        :   1.14%  康沃系统, 数据管理, 数据保护
+Consumer_Cyclical        TJX.++         :   1.13%  折扣零售, 服装, 家居用品
+Financial_Services       KNSL.++        :   1.13%  超额过剩市场, 保险
+Financial_Services       ALLY.++        :   1.13%  汽车贷款, 信用卡, 贷款, 汽车金融
+Utilities                SBS.11.++      :   1.12%  巴西, 最大水务, 饮用水, 污水处理
+Technology               CYBR.13.+      :   1.12%  以色列, 网络安全
+Utilities                CMS.++         :   1.12%  电力, 天然气
+Financial_Services       RJF.++         :   1.12%  瑞杰金融, 金融
+Industrials              VRSK.++        :   1.12%  数据分析, 赋能保险和能源行业, 预测灾害天气
+Consumer_Cyclical        AZO.++         :   1.11%  汽车地带, 汽车零部件, 汽车配件, 零售连锁
+Utilities                NEE.*.+        :   1.11%  电力, 风能, 太阳能, 核能, 核
+Consumer_Defensive       COST           :   1.10%  会员制, 仓储式, 批发, 零售, 低价零售, 超市, 美国
+Energy                   WES            :   1.10%  天然气处理, 天然气液体NGL分离, 天然气, NGL
+Communication_Services   WMG.++         :   1.09%  华纳音乐集团, 音乐出版, 唱片, 艺术家管理
+Industrials              PNR.++         :   1.08%  水处理, 泳池, 水疗, 水
+Technology               ADP            :   1.08%  云计算, 人力资源管理, 美国
+Consumer_Defensive       PG.++          :   1.08%  宝洁, 消费品, 家具生活用品, Tide汰渍, Pampers, Oral-B, Gillette吉列
+Healthcare               BSX            :   1.08%  医疗设备制造, 微创介入器械
+Industrials              PWR.++         :   1.07%  电力传输, 油气管道, 光纤通信
+Communication_Services   WPP.++         :   1.07%  第一大, 公关传媒, 广告
+Real_Estate              AVB.++         :   1.07%  房地产, 公寓社区开发收购管理
+Financial_Services       SEIC.++        :   1.07%  投资管理, 金融服务, 美国
+Healthcare               ISRG           :   1.03%  直觉外科, 机器人辅助, 达芬奇手术系统
+Financial_Services       IBKR           :   1.03%  盈透证券, 金融服务
+Utilities                SO.+           :   1.03%  美国南方, 电力
+Healthcare               HCA.+          :   1.02%  医院运营, 急症后护理, 手术中心, 护理, 医院, 美国
+Consumer_Cyclical        MOD            :   1.02%  AI, 数据中心, 数据中心冷却, 摩丁制造
+Industrials              TTEK.13.++     :   1.02%  德照科技, 工程咨询, 工程设计, 技术服务, 水资源, 环境工程, 环保
+Consumer_Defensive       BTI            :   1.02%  英美烟草, 登喜路, 电子烟
+Communication_Services   BIDU.+         :   1.02%  中国百度, 搜索引擎, 广告, 地图, AI, 在线广告
+Industrials              URI.++         :   1.02%  联合租赁, 挖掘设备, 高空作业
+Utilities                D.+            :   1.01%  电力, 天然气
+Healthcare               KRYS.++        :   1.01%  皮肤病, 基因疗法
+Technology               PI.++          :   1.00%  RFID标签芯片和阅读器, 无线电频率识别
+Industrials              J.++           :   1.00%  工程设计, 建筑, 运营, 维护
+Financial_Services       CNS.++         :   0.99%  资产管理, 投资管理, 房地产投资信托, 基础设施, 房地产证券化, 自然资源股权
+Utilities                PNW            :   0.99%  电力公共事业, 发电, 电力传输, 电力
+Industrials              CW.++          :   0.99%  为航空航天、国防、工业、核电站提供工程产品和服务
+Basic_Materials          RGLD           :   0.99%  黄金金融, 黄金特许权, 黄金
+Financial_Services       TW             :   0.98%  电子交易, 债券, ETF, 金融, 美国
+Financial_Services       TRV            :   0.98%  旅行者财产险, 保险
+Technology               MRVL.*         :   0.98%  迈威尔科技, 处理器, 存储, 网络无线, 5G
+Technology               SHOP.12.*.++   :   0.97%  加拿大, 电子商务, 网店
+Industrials              HRI.++         :   0.97%  设备租赁, 建筑设备, 工业设备, 租赁, 二手设备
+Financial_Services       RNR.++         :   0.97%  文艺复兴, 保险服务, 再保险
+Technology               CIEN.++        :   0.97%  光纤传输, 网络自动化, AI, 数据中心, 云
+Energy                   DTM            :   0.96%  天然气, 天然气液体NGL, 能源
+Healthcare               BGNE.12        :   0.95%  百济神州, 生物技术
+Healthcare               GILD.++        :   0.95%  吉利德科学, 生物制药, 抗艾滋病毒
+Communication_Services   NTES.14        :   0.95%  网易, 中国, 游戏, 有道, 音乐
+Real_Estate              INVH           :   0.95%  房地产, 单户住宅, 房屋出租, 投资信托
+Healthcare               ALNY.+         :   0.94%  RNA干扰RNAi疗法, 基因沉默技术
+Technology               AAPL.*.++      :   0.94%  苹果, iPad平板, iPhone手机, Mac电脑, 智能手机, Vision Pro, 手机, 电脑
+Technology               FICO.++        :   0.94%  信用评分, 数据分析
+Technology               WDAY           :   0.93%  云计算, 财务人力资源管理
+Real_Estate              KRC.++         :   0.93%  房地产, 投资信托, 租赁, 物业
+Consumer_Defensive       ABEV.*         :   0.92%  巴西, 啤酒, 饮料
+Utilities                EXC.+          :   0.92%  电力, 核能, 发电, 美国
+Energy                   CNX            :   0.92%  天然气, 页岩气, 煤层气, 美国
+Technology               GEN.++         :   0.91%  长期护理, 短期康复, 临终关怀, 护理
+Financial_Services       L              :   0.91%  保险, 能源, 酒店, 包装
+Financial_Services       HIG.++         :   0.91%  保险, 金融服务, 最大保险公司之一, 美国
+Financial_Services       BNT.++         :   0.90%  金融, 退休服务, 财富保护, 定制资本
+Real_Estate              EQR.++         :   0.90%  房地产, 收购开发管理多户住宅租赁公寓, 投资信托
+Financial_Services       MMC.++         :   0.89%  保险经纪, 再保险, 人力财务咨询
+Communication_Services   VZ.*.++        :   0.89%  威瑞森通信, 电信, 电信运营商, 美国
+Energy                   CRC            :   0.88%  加州资源, 石油, 天然气, 能源, 美国
+Energy                   CCJ            :   0.88%  铀矿, 铀, 核能, 核, 加拿大, 哈萨克斯坦
+Communication_Services   GOOGL.*.+      :   0.88%  谷歌, 搜索引擎, 地图, Android, Chrome, Youtube, Gemini, AI
+Technology               INFA.+         :   0.87%  数据管理软件提供商, 云数据平台
+Financial_Services       ONB.*.++       :   0.87%  历史悠久银行, 抵押贷款, 银行, 美国
+Real_Estate              BRX.++         :   0.87%  专注于零售物业, 购物中心, 房地产, 沃尔玛, 房地产投资信托, 美国
+Energy                   KMI.*          :   0.86%  天然气原油管道运输, 存储, 分销
+Industrials              ARMK.11.++     :   0.86%  食品, 设施, 制服, 设施管理, 管理黄石公园
+Basic_Materials          CF             :   0.86%  化肥, 氨, 尿素
+Industrials              BE.*.++        :   0.85%  能源, 燃料电池, 固体氧化物, 清洁能源, 发电, 电力, 美国
+Technology               PCTY.++        :   0.84%  云计算, 人力资源薪酬管理
+Consumer_Cyclical        CPNG.++        :   0.84%  韩国, 电子商务
+Consumer_Defensive       PPC            :   0.83%  巴西, 隶属于JBS, 禽肉生产, 食品加工
+Consumer_Defensive       ACI.++         :   0.83%  仅次于克罗格Kroger, 食品杂货药品零售, 零售, 连锁
+Financial_Services       PNC.++         :   0.81%  银行, 贷款, 金融
+Real_Estate              UDR.++         :   0.81%  房地产, 多户型公寓, 住宅物业
+Financial_Services       THG            :   0.81%  汉诺威, 保险, 美国
+Communication_Services   NFLX           :   0.81%  奈飞, 流媒体
+Healthcare               BPMC           :   0.81%  激酶抑制剂, 靶向治疗
+Financial_Services       PGR.15         :   0.80%  前进保险, 汽车保险, 房屋保险, 保险, 美国
+Consumer_Defensive       FRPT           :   0.80%  宠物食品, real food, 宠物, 食品
+Communication_Services   EDR.*.++       :   0.80%  好莱坞, 艺人经纪
+Financial_Services       MKL.++         :   0.80%  保险, 再保险, 专业保险
+Consumer_Defensive       KR.++          :   0.80%  连锁, 仅次于沃尔玛, 克罗格, 超市, 美国
+Industrials              ATI.++         :   0.80%  专业金属材料, 合金, 不锈钢
+Industrials              WM.++          :   0.80%  废物回收管理, 废物处理, 美国
+Financial_Services       TROW.++        :   0.80%  共同基金, 投资管理
+Consumer_Cyclical        DPZ.++         :   0.80%  达美乐披萨, 快餐, 连锁
+Industrials              BAH            :   0.79%  管理信息, 技术咨询, 咨询, 政府服务, 政府承包商
+Utilities                AEE            :   0.79%  公共事业, 电力, 天然气, 美国
+Utilities                NI.+           :   0.79%  电力, 天然气
+Healthcare               ENSG           :   0.79%  长期护理, 辅助生活, 康复护理, 护理
+Technology               IT             :   0.78%  研究与咨询服务, 评测分析
+Consumer_Cyclical        MUSA.++        :   0.76%  加油站, 加油站网络经营, 汽油零售, 便利店, 美国
+Real_Estate              EXR.++         :   0.75%  自助存储, 仓储租赁, 公共仓库, 房地产
+Industrials              EME.+          :   0.74%  电气, 机械, 从事电气和机械结构以及设施服务
+Real_Estate              ADC            :   0.73%  房地产投资信托, 物业收购开发管理
+Real_Estate              MAA.++         :   0.73%  房地产投资信托, 房地产
+Energy                   PSX.++         :   0.73%  菲利普斯66, 康菲石油分拆, 炼油, 化工, 石油
 Financial_Services       AFL.++         :   0.72%  日本, 家庭人寿保险, 补充保险, 美国
-Consumer_Defensive       KO.*.++        :   0.72%  可口可乐, 可乐, 雪碧, 芬达, 金典, 巴菲特, 美国
-Consumer_Cyclical        LI             :   0.72%  理想, 汽车, 中国
-Technology               NOK.*.+        :   0.72%  芬兰, 通信, 5G, 诺基亚, 通讯, 电信设备
-Communication_Services   PSO.++         :   0.72%  英国, 培生集团, 跨国教育, 出版, 教育
-Technology               FFIV.++        :   0.71%  提供程序交付网络技术, 应用交付控制器ADC
-Industrials              CMI.++         :   0.71%  康明斯, 发动机, 发电设备, 动力设备制造, 发电机
-Real_Estate              GLPI.++        :   0.71%  以三网租赁安排将地产租赁给赌场博彩运营商来获得租金收入
-Technology               TENB.++        :   0.71%  网络安全, 威胁情报, 漏洞分析
-Industrials              RBA.++         :   0.71%  工业设备拍卖
-Financial_Services       FDS.++         :   0.70%  金融信息, 数据服务, 分析工具, 数据分析, 软件平台
-Industrials              MSA.+          :   0.70%  安全头盔, 听力和呼吸保护, 气体和火焰检测仪
-Financial_Services       JPM.++         :   0.70%  摩根大通, 金融, 投资银行, 资产管理, 美国
-Communication_Services   TMUS.*.++      :   0.70%  电信运营商, 电信, 德国电信控股, 美国
-Financial_Services       RF.*.++        :   0.70%  区域性银行, 金融服务, 美国
-Industrials              DY             :   0.69%  电信行业工程服务提供商, 光纤, 电力线路
-Financial_Services       AJG.++         :   0.69%  保险, 保险经纪, 风险管理, 财产保险, 意外保险
-Utilities                WEC            :   0.69%  公共事业, 电力, 天然气, 风能, 太阳能, 可再生能源
-Financial_Services       BMO.++         :   0.68%  蒙特利尔银行, 加拿大, 银行
-Consumer_Cyclical        FUN.+          :   0.68%  游乐园, 水上乐园, 主题公园
-Industrials              GTES.++        :   0.68%  动力传输, 液压, 流体动力, 传动带, 工业, 机械, 机械设备
-Communication_Services   Z.++           :   0.68%  在线房地产, 信息服务
-Real_Estate              EPR-PG.++      :   0.68%  体验式和教育领域的房地产投资信托
-Healthcare               GMAB.++        :   0.68%  生物科技, 癌症, 生物技术, 丹麦, 骨髓瘤
-Healthcare               LH             :   0.68%  临床实验室, 诊断测试
-Healthcare               ZBH.+          :   0.67%  骨科手术, 关节置换, 膝关节髋关节置换
-Utilities                PEG.*.++       :   0.67%  电力, 天然气, 核能, 核, 核电
-Utilities                D.*            :   0.67%  电力, 天然气
-Real_Estate              KIM.*.++       :   0.67%  北美房地产投资信托, 社区购物中心, 零售物业
-Communication_Services   ORAN.+         :   0.67%  法国, 电信运营商
-Energy                   TS.+           :   0.67%  石油, 天然气, 管材, 管道, 套管
-Consumer_Defensive       KVUE.*         :   0.66%  健康产品, 李施德林, Tylenol泰诺, 强生拆分, 个人护理
-Technology               QRVO.++        :   0.66%  半导体, 射频芯片, 智能手机, 功率放大器, 移动芯片, 苹果, 适用于高端机型, 美国
-Financial_Services       MKL.++         :   0.66%  保险, 再保险, 专业保险
-Financial_Services       HIG.++         :   0.66%  保险, 金融服务, 最大保险公司之一, 美国
-Consumer_Defensive       USFD.++        :   0.66%  第二大, 食品分销商, 食品, 农产品, 冷冻产品, 美国
-Financial_Services       NMR            :   0.66%  野村控股株式会社, 金融服务, 投资银行
-Industrials              HUBB.++        :   0.66%  哈勃集团, 电气系统, 公共事业
-Healthcare               BDX            :   0.66%  医疗仪器
-Basic_Materials          ECL.++         :   0.66%  艺康, 水, 卫生, 清洁, 消毒, 杀虫
-Consumer_Defensive       KHC.*.++       :   0.66%  卡夫亨氏, 食品, 番茄酱, 沙拉酱, 奶酪, 冷冻披萨
-Industrials              MOG-A.++       :   0.66%  穆格, 精密运动, 流体控制, 航空航天, 工业, 美国
-Financial_Services       FFIN.++        :   0.65%  德克萨斯州, 区域性银行, 抵押贷款, 美国
-Financial_Services       SLF            :   0.65%  永明金融, 保险, 财富管理, 退休计划, 投资管理
-Financial_Services       ERIE.++        :   0.65%  伊瑞保险, 保险, 美国
-Industrials              HON.+          :   0.65%  霍尼韦尔, 航空航天, 楼宇技术
-Consumer_Defensive       PEP.*.++       :   0.65%  百事可乐, 可乐, 食品, 碳酸饮料, 零食, 饮料
-Industrials              MTZ.++         :   0.65%  为通信电力石油天然气行业提供基础设施建设服务
-Technology               MTSI.++        :   0.65%  射频微波组件, 模拟芯片, 光纤, 无线传感, AI
-Real_Estate              MAA.++         :   0.65%  房地产投资信托, 房地产
-Basic_Materials          APD.++         :   0.64%  工业气体, 化学产品
-Healthcare               UHS.++         :   0.64%  全科医院, 美国
-Financial_Services       PRU.++         :   0.64%  保德信金融集团, 人寿保险, 年金, 退休服务
-Financial_Services       SOFI.*.++      :   0.64%  金融科技, 学生贷款, 信用卡
-Real_Estate              BRX.++         :   0.64%  专注于零售物业, 购物中心, 房地产, 沃尔玛, 房地产投资信托, 美国
-Technology               ALTR.+         :   0.64%  工业领域设计工具, CAE, 工业设计
-Utilities                NI             :   0.64%  电力, 天然气
-Industrials              TTEK.13.++     :   0.63%  德照科技, 工程咨询, 工程设计, 技术服务, 水资源, 环境工程, 环保
-Healthcare               BAX.++         :   0.63%  透析设备, 医疗产品, 营养输液, 医疗设备, 医疗器械
-Technology               VRSN           :   0.63%  域名注册, 互联网基础设施
-Consumer_Defensive       PG.*.++        :   0.63%  宝洁, 消费品, 家具生活用品, Tide汰渍, Pampers, Oral-B, Gillette吉列
-Communication_Services   WMG.+          :   0.63%  华纳音乐集团, 音乐出版, 唱片, 艺术家管理
-Financial_Services       SCHW.*.++      :   0.63%  嘉信理财, 证券经纪, 银行
-Utilities                FE             :   0.62%  电力, 发电, 输电, 配电, 美国
-Consumer_Cyclical        PDD.*          :   0.62%  中国, 拼多多, 在线零售, 低价, 低价折扣, 电子商务
-Basic_Materials          TECK           :   0.62%  泰克资源, 加拿大, 炼钢煤, 冶金煤, 锌铜
-Technology               ANSS.++        :   0.61%  工程仿真软件, 工业软件, 仿真
-Technology               TOST.*.+       :   0.61%  云计算, 赋能餐饮
-Real_Estate              CCI.++         :   0.61%  冠城国际, 塔楼租赁, 小型基站, 光纤网络
-Communication_Services   EDR.++         :   0.60%  好莱坞, 艺人经纪
-Industrials              IESC.++        :   0.60%  工业基础设施, 电气, 机电, 网络基础设施, 工程, 机械, 美国
-Real_Estate              CSGP.++        :   0.59%  在线房地产服务, 房地产
-Consumer_Cyclical        ONON.12.++     :   0.58%  瑞士, 运动, 鞋, 服装, 体育, 运动鞋
-Industrials              RBC.+          :   0.58%  精密轴承, 航空航天, 国防工业, 轴承, 工业, 国防
-Consumer_Defensive       KDP.*.++       :   0.58%  第三大, 非酒精饮料, 饮料, DrPepper, 7UP, 咖啡机, K-Cup胶囊, 运动饮料, 美国
-Consumer_Defensive       SFM.++         :   0.58%  连锁超市, 有机食品, 天然, 美国
-Healthcare               ATR.++         :   0.58%  包装交付解决方案供应商
-Technology               CVLT.+         :   0.57%  康沃系统, 数据管理, 数据保护
-Financial_Services       AIZ.++         :   0.57%  保险
-Consumer_Cyclical        LTH.++         :   0.57%  高端健身俱乐部, 健康管理社区会所
-Real_Estate              CUZ.++         :   0.57%  房地产, 投资信托, 办公楼, 美国
-Basic_Materials          ALTM.*.++      :   0.57%  阿根廷澳大利亚, 锂卤水, 锂矿, 锂
-Consumer_Defensive       BUD.+          :   0.57%  百威英博, 啤酒, 科罗娜, 哈尔滨
-Healthcare               GSK.++         :   0.56%  葛兰素史克, 医疗保健, 制药, 疫苗
-Consumer_Cyclical        CVNA.++        :   0.56%  在线二手车, 二手车, 美国
-Financial_Services       NDAQ.++        :   0.56%  纳斯达克, 证券交易所, 全球第二
-Consumer_Defensive       PM             :   0.55%  菲利普莫里斯, 烟草, 万宝路, 林奇爱股
-Technology               PAYX.++        :   0.55%  人力资源, 薪酬管理
-Financial_Services       PRI.++         :   0.55%  北美, 人寿保险, 投资基金, 年金
-Industrials              WM.++          :   0.55%  废物回收管理, 废物处理, 美国
-Technology               OLED.++        :   0.55%  OLED技术, 专利, 材料
-Technology               GDDY.++        :   0.55%  互联网域名注册, 网络托管, 网站开发, 网站, 软件开发, 网站托管
-Financial_Services       MSCI.+         :   0.54%  指数提供商, 全球指数, 新兴市场指数, 指数
-Financial_Services       BXSL.12.+      :   0.54%  黑石, 基金, 担保贷款, 贷款, 另类投资
-Healthcare               MTD.++         :   0.53%  精密仪器, 实验室仪器, 工业秤, 零售称重设备
-Utilities                SRE            :   0.53%  墨西哥, 南美, 电力, 天然气, 公共事业
-Communication_Services   TLK.++         :   0.53%  电信运营商, 印尼
-Utilities                AEP            :   0.52%  美国电力, 电力, 天然气, 公共事业
-Consumer_Defensive       KMB.++         :   0.52%  金佰利, 健康卫生护理, 纸尿裤, 卫生巾
-Industrials              AIT.++         :   0.52%  应用工业技术, 工业零部件, 技术服务
-Financial_Services       ORI.++         :   0.52%  保险, 美国
-Consumer_Defensive       TAP            :   0.51%  啤酒酿造, 啤酒
-Healthcare               BIIB           :   0.51%  渤健, 神经退行性疾病, 多发性硬化症
-Healthcare               BLCO           :   0.51%  博士伦, 隐形眼镜, 眼药水, 眼科手术器械
-Healthcare               CTLT.++        :   0.51%  先进药物递送技术, 临床试验服务, 生物技术
-Communication_Services   NXST.++        :   0.51%  广播电视, 数字媒体, 美国
-Industrials              MMS            :   0.51%  马克西姆, 协助联邦和州政府 医疗补助和保险
-Basic_Materials          VALE.*.+       :   0.50%  巴西淡水河谷, 铁矿石
-Industrials              ACM.++         :   0.50%  建筑, 工程, 施工, 运营, 基础设施
-Technology               HPE.*.++       :   0.50%  惠普, 专注企业客户, 数据中心, AI服务器, 服务器, AI
-Industrials              RSG.++         :   0.49%  第二大, 废物处理, 美国
-Utilities                LNT.++         :   0.49%  巴尔的摩能源, 电力, 天然气, 公共事业
-Financial_Services       UNM.++         :   0.49%  残疾保险, 人寿保险, 意外保险, 牙科和视力保险
-Healthcare               LNTH.++        :   0.49%  医学影像诊断试剂, 影像诊断, 试剂, 医疗
-Healthcare               A.++           :   0.49%  生命科学仪器, 色谱仪, 质谱仪, 光谱仪
-Industrials              CNI.++         :   0.49%  加拿大, 国家铁路, 铁路, 货运, 物流
-Industrials              CP.++          :   0.48%  加拿大, 太平洋铁路, 货物运输, 物流
-Utilities                KEP.11         :   0.47%  韩国电力公社, 发电, 输电, 配电
-Consumer_Cyclical        REYN.+         :   0.47%  家居用品, 烹饪, 垃圾处理和储存, 餐具
-Technology               PLTR.*.+       :   0.47%  AI, 大数据分析, AI工具, 政府服务, 政府承包商
-Utilities                DTE.++         :   0.47%  电力, 发电, 配电, 天然气供应, 能源
-Technology               VNT.++         :   0.46%  加油站管理系统, 运油车辆检测
-Consumer_Defensive       BRFS.13.++     :   0.46%  肉, 家禽, 食品, 加工, 巴西
-Technology               ASTS.14.*      :   0.46%  近地轨道卫星LEO, 太空宽带网络, SpaceX竞争对手
-Industrials              FLR.++         :   0.45%  工程, 采购建造, 维护运营
-Consumer_Defensive       CL.*.++        :   0.44%  高露洁, 口腔护理, 牙膏, 牙刷
-Technology               CPAY.++        :   0.44%  支付解决方案
-Industrials              TXT.++         :   0.43%  贝尔直升机, 商用飞机, 军事装备, 工业产品
-Technology               MSFT.*.+       :   0.43%  微软, 软件开发, office, AI, 操作系统
-Financial_Services       CB.++          :   0.42%  安达保险, 保险, 四大保险公司之一, 美国
-Consumer_Cyclical        IP.*.++        :   0.42%  纸张, 包装, 林产品, 国际纸业, 纸
-Consumer_Defensive       HSY            :   0.42%  赫尔希, 好时巧克力, 巧克力
-Real_Estate              AVB.++         :   0.41%  房地产, 公寓社区开发收购管理
-Real_Estate              NLY.*.++       :   0.40%  房地产投资信托, 抵押贷款
-Industrials              DOV.++         :   0.40%  工程系统, 燃料解决方案
-Healthcare               JNJ            :   0.39%  强生, 健康保健, 制药, 医疗器械, Band-Aid邦迪, 创可贴
-Financial_Services       ING            :   0.39%  荷兰国际集团, 银行, 保险, 资产管理
-Technology               FTNT.*         :   0.38%  网络安全, 防火墙, Fortinet
-Financial_Services       MTB.++         :   0.38%  制商银行, 美国
-Financial_Services       ACGL.++        :   0.37%  保险, 再保险
-Healthcare               SRPT.+         :   0.37%  生物制药, 杜氏肌营养不良
-Energy                   AR.*           :   0.36%  水力压裂, 页岩气, 石油, 天然气, 美国
-Consumer_Cyclical        PKG.++         :   0.36%  瓦楞纸板, 包装, 纸, 美国
-Technology               AVGO.*.++      :   0.36%  博通, 半导体, 通信芯片, 美国
-Utilities                EVRG           :   0.36%  电力, 发电输电配电, 美国
-Utilities                XEL            :   0.35%  电力, 天然气, 能源
-Financial_Services       CRBG.*.++      :   0.35%  保险, 资产管理, 退休, 金融, 美国
-Consumer_Cyclical        GIL.++         :   0.34%  服装制造, 加拿大
-Financial_Services       WF             :   0.34%  韩国, 友利银行
-Industrials              LTM            :   0.34%  拉塔姆航空, 拉丁美洲, 航空, 航空公司, 拉美航空
-Healthcare               GILD.*.++      :   0.33%  吉利德科学, 生物制药, 抗艾滋病毒
-Consumer_Cyclical        AZO.++         :   0.33%  汽车地带, 汽车零部件, 汽车配件, 零售连锁
-Technology               CSCO.13.*.++   :   0.32%  思科, 网络设备, 路由器, 交换机, 防火墙, 无线
-Basic_Materials          NEU.+          :   0.32%  化学品, 石油添加剂
-Financial_Services       RGA.++         :   0.32%  人寿健康再保险, 保险, 再保险, 美国
-Healthcare               ABT.*.++       :   0.31%  雅培, 医疗保健, 连续血糖监测仪, FreestyleLibre, 美国
-Industrials              CWST.++        :   0.31%  废物处理, 废物回收, 废物管理
-Technology               TEL.++         :   0.31%  连接器, 传感器, 电缆
-Energy                   RRC.++         :   0.31%  石油, 天然气, 勘探开采
-Communication_Services   DIS.14.*.++    :   0.30%  华特迪士尼, 主题乐园, 流媒体, 动画电影
-Financial_Services       VIRT           :   0.30%  金融技术, 高频交易, 做市商服务
-Basic_Materials          EXP.++         :   0.30%  建筑材料, 美国
+Consumer_Cyclical        FUN.++         :   0.72%  游乐园, 水上乐园, 主题公园
+Financial_Services       CB.++          :   0.72%  安达保险, 保险, 四大保险公司之一, 美国
+Healthcare               NUVL.++        :   0.71%  癌症, 小分子激酶抑制剂, 肺癌药物
+Consumer_Cyclical        ROST.14.++     :   0.71%  罗斯百货, 折扣
+Real_Estate              AMH.++         :   0.71%  房地产, 住宅出租, 住宅租赁, 租赁
+Technology               ROP            :   0.71%  医学科学成像, 射频技术, 工业控制
+Consumer_Cyclical        ROL.++         :   0.70%  害虫防治, 美国
+Consumer_Defensive       GIS.++         :   0.70%  通用磨坊, 食品, 谷物早餐, 哈根达斯
+Industrials              AIT.++         :   0.70%  应用工业技术, 工业零部件, 技术服务
+Consumer_Cyclical        CAVA.12        :   0.69%  地中海饮食, 连锁餐厅, 牛排
+Technology               PAYC.++        :   0.69%  云计算, 人力资源管理, 美国
+Financial_Services       LPLA           :   0.69%  财富管理, 投资顾问, 经纪服务, 美国
+Consumer_Defensive       MKC            :   0.69%  味好美, 香料, 调味品
+Financial_Services       AMP            :   0.67%  金融, 拆分自美国运通, 美国
+Technology               GWRE.++        :   0.66%  保险
+Technology               INTU           :   0.66%  财捷, 财务软件, 会计软件, 软件开发, 报税软件, Turbo Tax
+Technology               NVDA.*         :   0.66%  英伟达, AI, 芯片, CUDA, 半导体, 显卡
+Basic_Materials          HMY            :   0.65%  南非, 哈莫尼黄金, 黄金开采
+Industrials              NOC            :   0.65%  诺斯罗普格鲁门, 雷达军舰制造, 卫星发射, 军工, 政府承包商, B21轰炸机
+Technology               TSEM.13.++     :   0.65%  塔尔, 半导体, 以色列, 模拟电路, 晶圆, 代工, 射频芯片
+Healthcare               TECH.++        :   0.65%  生物技术, 重组蛋白, 基因编辑, 细胞疗法
+Financial_Services       RYAN.++        :   0.64%  保险经纪, 保险代理
+Financial_Services       WTW.++         :   0.64%  数据分析精算, 风险管理, 保险经纪, 咨询服务, 再保险
+Energy                   COP.*          :   0.64%  康菲石油, 天然气, 能源
+Technology               PAYX.++        :   0.64%  人力资源, 薪酬管理
+Consumer_Defensive       PRMB           :   0.64%  饮料, 非酒精饮料, 北美, 健康补水, 可重复使用包装和瓶子
+Healthcare               MTD.++         :   0.64%  精密仪器, 实验室仪器, 工业秤, 零售称重设备
+Financial_Services       BN.14.++       :   0.64%  布鲁克菲尔德, 资产管理, 房地产, 可再生能源, 基础设施, 私募股权
+Real_Estate              PSA.++         :   0.64%  自助存储, 仓储租赁, 公共仓库
+Energy                   HES            :   0.63%  第四大, 石油, 天然气, 液化天然气, 能源, 美国
+Technology               TENB.++        :   0.63%  网络安全, 威胁情报, 漏洞分析
+Healthcare               NBIX.++        :   0.63%  抑郁症, 迟发性运动障碍TD, 亨廷顿舞蹈症HD
+Financial_Services       RLI.+          :   0.63%  保险, 财产和意外伤害保险
+Technology               FIS            :   0.63%  金融领域, IT技术解决方案及服务, IT
+Real_Estate              DLR.++         :   0.62%  数据中心, 互联托管
+Utilities                AWK            :   0.62%  水务, 废水处理
+Consumer_Defensive       CLX            :   0.62%  高乐氏, 家庭清洁, 健康保健
+Consumer_Cyclical        PLNT           :   0.61%  健身俱乐部, 会员制, 连锁, 低价
+Industrials              AER.++         :   0.61%  爱尔兰, 飞机租赁, 发动机租赁, 机队管理, 租赁
+Communication_Services   MSGS           :   0.61%  麦迪逊广场花园体育, 拥有职业球队, 纽约尼克斯队
+Communication_Services   Z.++           :   0.60%  在线房地产, 信息服务
+Consumer_Defensive       HRL.++         :   0.60%  荷美尔, 肉类, 食品, 美国
+Healthcare               STVN.++        :   0.60%  意大利, 药瓶, 药筒, 注射器, 药盒, 耗材, 医疗耗材
+Healthcare               CI.+           :   0.60%  信诺保险, 牙科、药房、视力保险产品, 医疗保险, 健康保险
+Healthcare               SNN            :   0.60%  骨科, 运动医学, 伤口护理, 健康医疗
+Financial_Services       CRBG.++        :   0.60%  保险, 资产管理, 退休, 金融, 美国
+Industrials              MATX.++        :   0.60%  航运, 海运, 物流, 集装箱运输
+Consumer_Cyclical        CCL.*.+        :   0.60%  嘉年华, 邮轮, 游轮, 旅游, 利率敏感
+Financial_Services       SCHW.++        :   0.59%  嘉信理财, 证券经纪, 银行
+Financial_Services       WFC.*.++       :   0.59%  富国银行, 银行, 美国
+Healthcare               DVA.++         :   0.58%  肾脏护理, 透析服务, 透析, 护理, 医疗保健
+Healthcare               HSIC.++        :   0.57%  医疗保健, 牙科, 兽医, 医疗设备
+Energy                   PAA            :   0.57%  石油天然气中游业务, 锂电池PAA粘结剂, 石油, 天然气, 化工材料
+Communication_Services   VIV.++         :   0.56%  巴西电信, 电信
+Industrials              CMI.++         :   0.56%  康明斯, 发动机, 发电设备, 动力设备制造, 发电机
+Financial_Services       CNA.++         :   0.56%  保险
+Financial_Services       MORN.++        :   0.56%  金融服务, 投资研究分析
+Healthcare               CAH            :   0.55%  医疗保健, 药品, 放射性药物, 药品分销, 医疗设备, 医疗器械
+Utilities                FE.+           :   0.55%  电力, 发电, 输电, 配电, 美国
+Financial_Services       AIZ.++         :   0.55%  保险
+Consumer_Defensive       UL.++          :   0.54%  联合利华, 消费品, 多芬Dove, 力士Lux, 立顿Lipton, 奥妙Omo
+Utilities                EVRG.+         :   0.54%  电力, 发电输电配电, 美国
+Financial_Services       ICE.++         :   0.54%  纽约证券交易所, 商品期权期货交易
+Industrials              CRS.++         :   0.54%  特种金属, 合金材料, 不锈钢, 材料
+Financial_Services       APO.++         :   0.54%  阿波罗全球, 资产管理, 投资管理
+Industrials              CAT.++         :   0.54%  卡特彼勒, 重型机械, 工程设备制造
+Communication_Services   EA             :   0.54%  电子艺界, 视频游戏, FIFA, 模拟人生, 战地, 极品飞车
+Technology               SAP            :   0.53%  德国, ERP软件领导者
+Technology               EXLS.++        :   0.53%  云计算, 业务流程管理
+Technology               CTSH.++        :   0.53%  信息技术, 咨询, 外包
+Financial_Services       BAC.*.++       :   0.53%  美国银行, 银行, 贷款, 美国
+Technology               ACN.+          :   0.52%  埃森哲, 管理咨询, 外包服务
+Industrials              ADT.+          :   0.52%  防盗, 火灾报警, 报警, 监控, 安全
+Real_Estate              O              :   0.52%  商业房地产, 净租赁, 知名租户7-eleven
+Industrials              VMI.++         :   0.52%  基础设施, 通信塔, 交通信号灯柱, 灯柱, 电塔, 护栏, 农业灌溉设备
+Technology               NSIT.++        :   0.52%  云计算, 信息技术
+Industrials              RELX           :   0.52%  科学医学法律商业, 信息分析决策工具, 数据分析
+Healthcare               RARE           :   0.51%  生物制药, 罕见遗传病, Crysvita, Mepsevii
+Consumer_Cyclical        VFS            :   0.51%  越南, 电动汽车制造商
+Financial_Services       PRI.++         :   0.50%  北美, 人寿保险, 投资基金, 年金
+Basic_Materials          KNF.++         :   0.50%  房地产, 建筑材料, 承包服务, 美国
+Technology               VERX.++        :   0.49%  企业税务技术解决方案
+Industrials              JCI            :   0.49%  江森, 自控, 暖通空调, 汽车座椅
+Technology               ERIC.*.++      :   0.49%  瑞典, 爱立信, 通讯, 电信设备, 电信, 5G
+Financial_Services       PSLV           :   0.49%  白银, 实物白银, 信托
+Technology               TOST.*.++      :   0.49%  云计算, 赋能餐饮
+Healthcare               BIO.++         :   0.49%  基因组学, 蛋白质分析, 体外诊断
+Consumer_Cyclical        WING           :   0.48%  连锁餐厅, 炸鸡翅
+Financial_Services       MET.++         :   0.48%  大都会人寿保险, 年金, 退休福利
+Consumer_Cyclical        MELI.++        :   0.48%  南美, 阿根廷, 电子商务, 电商平台
+Technology               TEAM.++        :   0.47%  澳大利亚, 团队协作, 项目管理, 软件开发
+Technology               DT             :   0.47%  企业监控, 云平台监控管理
+Healthcare               REGN.+         :   0.47%  再生元制药, 生物制药, 眼科, 皮炎哮喘
+Healthcare               RGEN.12.++     :   0.47%  生物技术, 重组蛋白质, 医疗健康
+Financial_Services       AIG            :   0.46%  国际集团, 保险, 金融, 美国
+Industrials              GTLS.++        :   0.46%  工业气体生物制品绝对零度低温储存运输, 低温储存, 低温运输, 储存, 运输
+Healthcare               MRK.*.+        :   0.45%  生物医药, Keytruda, 默沙东, 药王, 美国
+Industrials              SARO.+         :   0.44%  航空航天, 发动机维护, 发动机修理, 发动机
+Consumer_Cyclical        ORLY.++        :   0.44%  汽车售后, 零部件
+Basic_Materials          AGI            :   0.44%  加拿大, 黄金开采, 墨西哥, 土耳其, 矿场, 黄金
+Financial_Services       BSBR.++        :   0.44%  桑坦德, 银行, 巴西
+Utilities                OGE.+          :   0.43%  天然气, 电力, 发电, 输电, 配电, 美国
+Technology               OKTA           :   0.43%  云计算, 身份识别
+Consumer_Cyclical        BFAM.++        :   0.43%  儿童早教, 幼儿园, 学前班, 保育, 教育, 学校
+Financial_Services       BAP            :   0.43%  秘鲁, 第一大, 金融, 银行, 证券, 投资
+Technology               WIT.++         :   0.42%  IT服务, 外包, 印度
+Energy                   EOG            :   0.42%  页岩油田, 石油天然气, 能源, 美国
+Consumer_Defensive       KMB.++         :   0.42%  金佰利, 健康卫生护理, 纸尿裤, 卫生巾
+Basic_Materials          AA.+           :   0.42%  美国铝业, 铝
+Industrials              FAST.++        :   0.42%  工业, 紧固件, 五金, 美国
+Real_Estate              EPRT.+         :   0.41%  房地产投资信托, 物业出租管理
+Technology               JKHY           :   0.41%  为银行和信用合作社提供集成技术解决方案和数据服务
+Financial_Services       GS.++          :   0.41%  高盛, 投资银行, 金融服务, 美国
+Energy                   MPC            :   0.41%  石油炼制, 管道运输, 柴油
+Industrials              RSG.++         :   0.41%  第二大, 废物处理, 美国
+Healthcare               BLCO.+         :   0.41%  博士伦, 隐形眼镜, 眼药水, 眼科手术器械
+Real_Estate              EQIX.++        :   0.40%  数据中心, 云计算, 互联托管
+Consumer_Defensive       USFD.++        :   0.40%  第二大, 食品分销商, 食品, 农产品, 冷冻产品, 美国
+Basic_Materials          AU.*           :   0.40%  南非, 黄金开采
+Healthcare               EW.++          :   0.39%  爱德华兹, 生命科学, 心血管治疗
+Technology               G.++           :   0.39%  简伯特, 业务流程外包服务, 核心智能运营服务
+Industrials              ODFL.++        :   0.38%  运输, 物流, 美国
+Industrials              DOV.++         :   0.38%  工程系统, 燃料解决方案
+Utilities                XEL.+          :   0.38%  电力, 天然气, 能源
+Technology               ZBRA.++        :   0.38%  条码打印机, RFID标签, 扫描仪
+Industrials              LTM.+          :   0.37%  拉塔姆航空, 拉丁美洲, 航空, 航空公司, 拉美航空
+Financial_Services       CEF            :   0.37%  实物, 黄金, 白银, 贵金属, 信托基金
+Industrials              CLH.++         :   0.37%  第三方危险废物处理, 废物处理, 废物
+Real_Estate              ELS.++         :   0.37%  房地产信托, 度假社区开发经营
+Basic_Materials          NUE.++         :   0.36%  钢铁制造, 钢铁回收, 纽柯钢铁, 钢铁
+Industrials              ATKR.++        :   0.36%  电气管道, 电缆支架, 镀锌机械管
+Communication_Services   TKO.+          :   0.36%  体育娱乐, 终极格斗, UFC, 摔角, WWE
+Healthcare               RVTY.++        :   0.36%  癌症传染病基因检测诊断设备, 实验室服务, 研究试剂
+Financial_Services       MA.++          :   0.36%  万事达卡, 支付, 信用卡, 借记卡
+Technology               WK.++          :   0.36%  企业软件, 生成报告, 合规管理, Workiva, SaaS, 云平台
+Consumer_Cyclical        AS.++          :   0.35%  亚玛芬, 体育用品, 户外用品, 零售
+Consumer_Cyclical        IHG.+          :   0.35%  洲际酒店集团, 皇冠假日酒店, Holiday Inn
+Industrials              RBC.++         :   0.35%  精密轴承, 航空航天, 国防工业, 轴承, 工业, 国防
+Consumer_Defensive       INGR.++        :   0.35%  食品饮料行业的配料解决方案, 甜味剂, 食品, 饮料, 配料, 宜瑞安
+Financial_Services       ACGL.++        :   0.35%  保险, 再保险
+Consumer_Cyclical        WH.++          :   0.35%  温德姆酒店集团, 经济型, 度假村, 酒店
+Consumer_Cyclical        TPR.*.++       :   0.35%  时尚, 奢侈品, coach
+Industrials              PH             :   0.34%  运动控制, 流体控制, 空调制冷, AI
+Financial_Services       SYF.++         :   0.33%  消费者金融服务, 信用卡, 分期贷款, 金融
+Technology               FOUR.12.++     :   0.32%  支付, POS终端, 支付解决方案, 金融
+Communication_Services   PHI.12         :   0.32%  菲律宾, 电信, 长途电话
+Consumer_Defensive       OLLI.++        :   0.32%  折扣零售, 低价商品, 低价, 零售, 美国
+Industrials              GTES.++        :   0.32%  动力传输, 液压, 流体动力, 传动带, 工业, 机械, 机械设备
+Technology               FI.++          :   0.31%  支付服务, 金融技术, 欺诈保护, 云POS
+Financial_Services       PRU.++         :   0.31%  保德信金融集团, 人寿保险, 年金, 退休服务
+Consumer_Cyclical        ALSN           :   0.31%  中重型商用军用车辆, 军用车辆, 自动变速器, 混合动力
+Energy                   WMB.*          :   0.31%  天然气, 液化天然气, 储存运输输送公司, 美国
+Consumer_Cyclical        PKG.++         :   0.30%  瓦楞纸板, 包装, 纸, 美国
+Industrials              GNRC.++        :   0.30%  发电设备, 备用发电机, 应对飓风等自然灾害, 发动机
+Technology               SSNC.++        :   0.30%  为金融服务和医疗保健行业提供软件解决方案, 软件
+Real_Estate              NNN.+          :   0.30%  专注于零售物业的房地产投资信托, 房地产
+Technology               TDY            :   0.30%  仪器仪表, 数字成像, 航空航天, 国防
 Financial_Services       BRK-A.++       :   0.30%  伯克希尔哈撒韦, 沃伦巴菲特, 保险, 铁路, 能源
-Industrials              PWR.++         :   0.29%  电力传输, 油气管道, 光纤通信
-Technology               UMC.*.+        :   0.29%  联电, 半导体, 晶圆代工, 台湾
-Financial_Services       TFC.*.++       :   0.29%  银行, 抵押贷款
-Financial_Services       ARES.++        :   0.29%  资产管理, 信贷, 私募, 房地产
-Consumer_Defensive       UL.++          :   0.29%  联合利华, 消费品, 多芬Dove, 力士Lux, 立顿Lipton, 奥妙Omo
-Financial_Services       EG.++          :   0.28%  保险, 再保险
-Consumer_Defensive       SJM            :   0.28%  食品, 果酱
-Financial_Services       FG.++          :   0.27%  金融, 年金, 寿险, 抵押贷款, 美国
-Healthcare               GEHC.+         :   0.27%  医疗影像, 通用电气分拆, 磁共振成像, CT, 超声波诊断
-Utilities                DUK            :   0.26%  杜克能源, 电力, 天然气, 美国
-Industrials              VRSK.++        :   0.26%  数据分析, 赋能保险和能源行业, 预测灾害天气
-Consumer_Defensive       DEO.+          :   0.25%  酒精饮料, Johnnie Walker, Smirnoff, 百利Baileys, 水井坊, Guinness, 烈酒
-Consumer_Cyclical        HLT.++         :   0.25%  希尔顿, 酒店, 度假村
-Technology               ERIC.*.++      :   0.25%  瑞典, 爱立信, 通讯, 电信设备, 电信, 5G
-Financial_Services       CNA.++         :   0.24%  保险
-Basic_Materials          CLF.*.++       :   0.24%  克利夫兰, 钢铁, 铁矿石, 美国
-Real_Estate              ELS.++         :   0.24%  房地产信托, 度假社区开发经营
-Industrials              CR.++          :   0.24%  流体控制, 航空航天, 电子
-Utilities                NGG.+          :   0.24%  英国国家电网, 电力, 天然气
-Basic_Materials          EMN.++         :   0.24%  特种化学品, 添加剂, 塑料, 纤维
-Basic_Materials          LYB.*.++       :   0.23%  荷兰, 塑料, 丙烯, 烯烃, 化工, 化学品, 炼油, 精炼, 溶剂
-Healthcare               ELAN           :   0.22%  宠物健康, 药品, 疫苗, 宠物
-Technology               INFY.*.+       :   0.22%  印孚瑟斯, 印度, 信息技术, 外包服务
-Real_Estate              KRG.++         :   0.22%  房地产投资信托
-Utilities                CMS.++         :   0.22%  电力, 天然气
-Financial_Services       ICE.++         :   0.21%  纽约证券交易所, 商品期权期货交易
-Healthcare               HCA            :   0.21%  医院运营, 急症后护理, 手术中心, 护理, 医院, 美国
-Healthcare               ALC.12.++      :   0.21%  瑞士, 眼药水, 白内障屈光手术设备, 隐形眼镜
-Technology               FICO.++        :   0.21%  信用评分, 数据分析
-Financial_Services       ESGR.++        :   0.21%  保险, 再保险
-Healthcare               CHE.++         :   0.20%  临终关怀服务提供商, 管道和排水服务, 临终关怀, 护理
-Basic_Materials          PKX            :   0.20%  浦项, 韩国, 钢铁, 钢铁制造, 不锈钢, 特种钢材
-Basic_Materials          LIN            :   0.20%  林德, 世界最大工业气体
-Financial_Services       KKR.++         :   0.20%  投资管理, 私募, 能源基础设施
-Utilities                AGR            :   0.19%  能源服务, 风能太阳能天然气分配交付
-Basic_Materials          BHP.+          :   0.19%  必和必拓, 石油, 矿产, 铁矿石, 第三大, 铜, 铜矿, 铝煤炭铀
-Communication_Services   NWS            :   0.19%  新闻集团, 默多克, Fox, 福克斯, 媒体, 数字房地产, 图书出版
-Healthcare               TMO            :   0.18%  赛默飞世尔, 生命科学, 科学仪器, 实验室设备, 耗材, 试剂
-Technology               VRNS           :   0.18%  面向企业, 数据安全, 数据分析, 云计算
-Communication_Services   LYV.11.++      :   0.18%  娱乐, 演唱会, 票务
-Financial_Services       JHG.++         :   0.18%  英国, 积极资产管理
-Technology               CDNS.++        :   0.17%  芯片设计, 全球三大EDA公司之一, AI, 工业软件
-Technology               TEAM.++        :   0.16%  澳大利亚, 团队协作, 项目管理, 软件开发
-Financial_Services       BNS.+          :   0.16%  加拿大, 丰业银行
-Energy                   HAL.*.++       :   0.16%  哈里伯顿, 石油, 天然气, 钻井, 油田服务
-Energy                   EQT.*          :   0.15%  天然气, 水力压裂, 能源, 美国
-Healthcare               RPRX.*.++      :   0.15%  生物制药特许权买家, 医药创新投资者
-Industrials              CW.++          :   0.15%  为航空航天、国防、工业、核电站提供工程产品和服务
-Healthcare               SNY.++         :   0.14%  赛诺菲, 医疗, 制药, 疫苗, 扑热息痛
-Financial_Services       CME.+          :   0.14%  芝加哥商品交易所集团, 期货, 期权交易市场
-Technology               GWRE.++        :   0.14%  保险
-Basic_Materials          BCPC.++        :   0.14%  人与动物, 食物, 饮料, 膳食补充剂
-Communication_Services   SKM.++         :   0.13%  韩国, 电信, 移动通信, 宽带互联网
-Industrials              AAON.++        :   0.12%  暖通空调, 建材, 数据中心, AI
-Real_Estate              NNN            :   0.11%  专注于零售物业的房地产投资信托, 房地产
-Consumer_Defensive       CAG.*.++       :   0.11%  康尼格拉, 食品, 美国
-Real_Estate              AGNC.*.++      :   0.10%  房地产投资信托基金, 抵押贷款按揭证券
-Utilities                OGE            :   0.09%  天然气, 电力, 发电, 输电, 配电, 美国
-Technology               FI.+           :   0.09%  支付服务, 金融技术, 欺诈保护, 云POS
-Basic_Materials          IFF.++         :   0.09%  香料, 香精, 美国
-Utilities                ATO            :   0.09%  天然气, 管道, 输送, 存储, 分销, 公共事业, 美国
-Energy                   SUN.++         :   0.07%  汽油柴油分销, 美国
-Financial_Services       WTW.++         :   0.07%  数据分析精算, 风险管理, 保险经纪, 咨询服务, 再保险
-Technology               CIEN.++        :   0.07%  光纤传输, 网络自动化, AI, 数据中心, 云
-Industrials              WAB.++         :   0.07%  铁路制动系统
-Healthcare               ABBV.*.++      :   0.06%  艾伯维, 雅培分拆, 自身免疫性疾病, 阿达木单抗, 修美乐
-Utilities                SBS.11.+       :   0.06%  巴西, 最大水务, 饮用水, 污水处理
-Healthcare               CRNX.12        :   0.05%  内分泌疾病, 制药, 药物, 肢端肥大症, 神经内分泌肿瘤
-Industrials              TDG.+          :   0.05%  航空航天, 飞机零部件, 飞机, 军工, 政府承包商
-Consumer_Defensive       ACI.+          :   0.05%  仅次于克罗格Kroger, 食品杂货药品零售, 零售, 连锁
-Utilities                IDA.++         :   0.04%  电力, 发电, 输电, 配电, 美国
-Financial_Services       GS.++          :   0.04%  高盛, 投资银行, 金融服务, 美国
-Technology               INFA           :   0.04%  数据管理软件提供商, 云数据平台
-Consumer_Cyclical        HMC.++         :   0.04%  日本, 本田, 汽车
-Technology               AZPN.++        :   0.04%  工业软件, 过程优化, 资产性能管理
-Consumer_Defensive       MO.*.++        :   0.04%  奥驰亚, 烟草, 香烟, 万宝路Marlboro, 电子烟, NJOY
-Communication_Services   FYBR.++        :   0.03%  通信服务, 宽带, 有线电视, 美国
-Real_Estate              PECO.++        :   0.03%  从事购物中心持有和运营, 房地产投资信托, 房地产
-Technology               TSEM.13.++     :   0.02%  塔尔, 半导体, 以色列, 模拟电路, 晶圆, 代工, 射频芯片
-Healthcare               MEDP           :   0.02%  临床合同研究组织CRO, 外包临床开发服务, 临床
-Consumer_Defensive       TSN.12         :   0.02%  泰森食品, 鸡肉牛肉猪肉
-Healthcare               SYK            :   0.02%  关节置换, 骨科治疗
-Energy                   PSX.+          :   0.01%  菲利普斯66, 康菲石油分拆, 炼油, 化工, 石油
-Communication_Services   NBIS.*         :   0.00%  荷兰, 技术服务, AI基础设施, 赋能人工智能, AI, GPU集群, 云计算平台, GPU租赁
-Consumer_Cyclical        VFS            :   0.00%  越南, 电动汽车制造商
-Energy                   TBN            :   0.00%  澳大利亚, 天然气, 勘探生产
-Industrials              NVT            :   0.00%  电气连接, 电气保护, 数据中心, 冷却, AI
-Real_Estate              O.*            :   0.00%  商业房地产, 净租赁, 知名租户7-eleven
-Technology               HCP            :   0.00%  云计算
-Financial_Services       CM             :  -0.02%  帝国银行, 加拿大
-Consumer_Cyclical        CMG.*          :  -0.02%  墨西哥风味, 快餐连锁, 烧烤, Chipotle
-Technology               WDAY.-         :  -0.02%  云计算, 财务人力资源管理
-Consumer_Cyclical        CHDN.-         :  -0.03%  赛马, 博彩, 肯塔基德比赛Kentucky Derby
-Technology               DELL.*         :  -0.03%  戴尔, AI, AI服务器, 服务器, 数据中心, 电脑, PC
-Industrials              HII            :  -0.04%  核动力航空母舰, 国防, 工业, 军事, 宙斯盾驱逐舰, 美国
-Industrials              ASR.--         :  -0.04%  墨西哥, 东南机场, 机场管理
-Healthcare               ARGX           :  -0.04%  荷兰, 比利时, 自身免疫疾病, 慢性炎性脱髓鞘性多发性神经病
-Real_Estate              IRT            :  -0.05%  房地产, 投资信托, 多户住宅, 美国
-Real_Estate              OHI.-          :  -0.05%  医疗保健设施房地产投资信托
-Financial_Services       BSAC.--        :  -0.05%  智利, 桑坦德银行
-Utilities                PNW.-          :  -0.05%  电力公共事业, 发电, 电力传输, 电力
-Healthcare               CAH.-          :  -0.06%  医疗保健, 药品, 放射性药物, 药品分销, 医疗设备, 医疗器械
-Technology               JKHY           :  -0.06%  为银行和信用合作社提供集成技术解决方案和数据服务
-Communication_Services   DJT.*          :  -0.06%  特朗普媒体科技集团, Truth Social, SPAC, 特朗普
-Industrials              CHRW.--        :  -0.07%  北美, 罗宾逊, 运输经纪
-Healthcare               PEN            :  -0.07%  中风介入治疗, 血栓取出
-Real_Estate              ADC.-          :  -0.07%  房地产投资信托, 物业收购开发管理
-Financial_Services       PGR.15.*       :  -0.07%  前进保险, 汽车保险, 房屋保险, 保险, 美国
-Consumer_Defensive       K              :  -0.07%  家乐氏, 谷物早餐, 麦片, 品客薯片Pringles, 零食
-Healthcare               VTRS.*         :  -0.07%  医疗保健, 仿制药, 生物制药
-Financial_Services       MUFG.14        :  -0.08%  三菱日联金融集团, 银行, 金融服务, 信托
-Consumer_Defensive       CCEP           :  -0.09%  瓶装分销, 可口可乐, 欧洲, 大洋洲
-Financial_Services       ARCC           :  -0.09%  商业发展, 直接贷款, 股权投资, 并购融资
-Technology               OKTA           :  -0.09%  云计算, 身份识别
-Industrials              STRL.-         :  -0.09%  斯特林, 基础设施, 数据中心, 电商配送中心, 运输, 建筑
-Consumer_Cyclical        AMCR.*         :  -0.10%  柔性包装, 刚性塑料容器, 专用纸包装, 烟草包装
-Healthcare               BGNE.12.-      :  -0.11%  百济神州, 生物技术
-Real_Estate              INVH.*         :  -0.12%  房地产, 单户住宅, 房屋出租, 投资信托
-Consumer_Cyclical        WING.-         :  -0.13%  连锁餐厅, 炸鸡翅
-Industrials              AME            :  -0.13%  电子仪器, 机电设备
-Industrials              JCI.-          :  -0.13%  江森, 自控, 暖通空调, 汽车座椅
-Consumer_Defensive       BTI            :  -0.13%  英美烟草, 登喜路, 电子烟
-Technology               SMAR           :  -0.14%  云计算, 软件平台
-Financial_Services       AIG.*          :  -0.14%  国际集团, 保险, 金融, 美国
-Utilities                PPL.*.-        :  -0.15%  电力, 发电, 输电, 配电, 天然气
-Healthcare               BMY.*          :  -0.15%  百时美施贵宝, 医药, 医疗, 生物制药
-Technology               IT             :  -0.16%  研究与咨询服务, 评测分析
-Technology               ADP            :  -0.16%  云计算, 人力资源管理, 美国
-Consumer_Cyclical        GAP.*          :  -0.16%  休闲服饰, 服装, 服饰, 服装零售, 零售, Old Navy
-Industrials              GD             :  -0.16%  通用动力, 国防, 军工, 五大军事承包商之一, 政府承包商
-Healthcare               AMGN           :  -0.18%  安进, 生物医药, 高胆固醇血症, 癌症, 骨质疏松
-Technology               DT.*           :  -0.18%  企业监控, 云平台监控管理
-Consumer_Defensive       LW             :  -0.18%  冷冻马铃薯供应商
-Financial_Services       BMA            :  -0.19%  阿根廷, 银行
-Technology               AMAT.14.*.-    :  -0.19%  应用材料, 半导体, 传统半导体, 人工智能芯片, 材料
-Technology               ITRI           :  -0.19%  水资源, 智能电表, 服务于公共事业类, 公共事业
-Industrials              ETN            :  -0.19%  电气化, 流体液压组件
-Financial_Services       OBDC           :  -0.20%  面向美国中型企业的直接贷款, 另类资产管理
-Technology               ASX.*          :  -0.20%  台湾日月光, 半导体, 芯片封装, 芯片测试
-Consumer_Cyclical        DKNG.*.--      :  -0.21%  在线博彩, 体育博彩, 博彩
-Consumer_Cyclical        CCK            :  -0.22%  食品包装, 金属罐
-Healthcare               THC.--         :  -0.22%  医院运营, 医院, 诊所服务, 医疗保健
-Consumer_Cyclical        BERY           :  -0.22%  塑料包装, 包装, 无纺布, 特种材料, 薄膜, 尿不湿, 卫生巾, 湿巾
-Consumer_Defensive       DAR.--         :  -0.22%  动物副产品加工, 动物饲料, 饲料, 生物营养素
-Consumer_Defensive       ADM.--         :  -0.23%  美国粮食, 农产品, 食品加工, 食品, 油籽, 谷物, 粮食
-Industrials              ERJ            :  -0.23%  巴西, 第三大, 飞机制造, 飞机
-Financial_Services       KB             :  -0.24%  韩国, 国民银行
-Healthcare               RARE           :  -0.25%  生物制药, 罕见遗传病, Crysvita, Mepsevii
-Technology               ZS             :  -0.26%  云安全, 移动安全
-Financial_Services       FUTU.--        :  -0.26%  富途牛牛, 美股交易平台, moomoo, 中国
-Technology               TTD.*          :  -0.27%  程序化广告购买平台, 实时竞价RTB, 广告投放, 广告购买, 广告, 广告营销, 在线广告
-Healthcare               GMED.-         :  -0.27%  医疗器械, 脊柱外科, 椎间融合术
-Financial_Services       BRO            :  -0.28%  保险经纪业务
-Basic_Materials          NTR            :  -0.28%  加拿大, 农业, 肥料, 种子, 化肥
-Consumer_Cyclical        CASY           :  -0.28%  便利商店, 加油站, 披萨, 美国
-Financial_Services       L              :  -0.28%  保险, 能源, 酒店, 包装
-Communication_Services   TTWO           :  -0.28%  电子游戏, 游戏, 侠盗猎车, 荒野大镖客, Grand Theft Auto
-Technology               MRVL.*.-       :  -0.29%  迈威尔科技, 处理器, 存储, 网络无线, 5G
-Real_Estate              REG.--         :  -0.30%  专注于零售购物中心大型超市的房地产投资信托
-Healthcare               BPMC.-         :  -0.30%  激酶抑制剂, 靶向治疗
-Industrials              TRI.-          :  -0.30%  汤森路透, 法律, 税务, 数据信息解决方案
-Utilities                AEE.-          :  -0.30%  公共事业, 电力, 天然气, 美国
-Utilities                FTS            :  -0.31%  电力, 天然气, 传输, 配送, 能源, 公共事业
-Industrials              DLB            :  -0.31%  杜比实验室, 音频, 影院
-Energy                   UGP.13         :  -0.31%  巴西, 石油, 化工
-Healthcare               COR.-          :  -0.32%  药品采购, 药品供应链, 药品分销, 医疗保健, 品牌药, 仿制药
-Consumer_Defensive       COST           :  -0.32%  会员制, 仓储式, 批发, 零售, 低价零售, 超市, 美国
-Financial_Services       AMP            :  -0.33%  金融, 拆分自美国运通, 美国
-Energy                   DINO           :  -0.33%  石油精炼, 可再生能源
-Financial_Services       IBKR.-         :  -0.33%  盈透证券, 金融服务
-Technology               BMI            :  -0.34%  水表, 流量计量
-Communication_Services   T.*            :  -0.35%  电信, 电信运营商, 美国
-Industrials              PH             :  -0.35%  运动控制, 流体控制, 空调制冷, AI
-Energy                   WDS            :  -0.37%  澳大利亚, 石油, 液化天然气LNG
-Energy                   NFG            :  -0.37%  天然气, 生产, 收集, 运输, 储存, 分销
-Communication_Services   MSGS           :  -0.37%  麦迪逊广场花园体育, 拥有职业球队, 纽约尼克斯队
-Technology               GTLB           :  -0.38%  代码托管协作平台, 开源项目
-Consumer_Cyclical        ALSN           :  -0.38%  中重型商用军用车辆, 军用车辆, 自动变速器, 混合动力
-Utilities                CEG.-          :  -0.38%  星座, 发电, 电力, 可再生, 核能, 核
-Industrials              RELX           :  -0.39%  科学医学法律商业, 信息分析决策工具, 数据分析
-Consumer_Defensive       MKC.-          :  -0.39%  味好美, 香料, 调味品
-Healthcare               MMSI           :  -0.39%  医疗器械, 心脏胃肠肺胸肾内血管介入设备, 介入设备
-Technology               ROP            :  -0.39%  医学科学成像, 射频技术, 工业控制
-Utilities                AWK.-          :  -0.42%  水务, 废水处理
-Energy                   HESM.-         :  -0.44%  中游能源, 天然气原油收集运输储存, 天然气, 能源
-Energy                   APA.*          :  -0.44%  阿帕奇, 石油, 天然气, 勘探开发
-Communication_Services   RBLX.*         :  -0.45%  游戏平台, 元宇宙, 儿童用户
-Technology               SRAD           :  -0.45%  瑞士, 体育, 数据分析, 体育博彩, 博彩
-Consumer_Cyclical        EXPE           :  -0.45%  Hotels.com, 在线旅游, 酒店, 机票, 租车, 旅游
-Consumer_Cyclical        RCL            :  -0.46%  皇家加勒比, 邮轮, 游轮, 利率敏感
-Financial_Services       PDI            :  -0.47%  太平洋投资, 封闭式基金, 债券基金
-Healthcare               HQY.-          :  -0.47%  医疗储蓄账户, 医疗保健, HQY, 美国
-Healthcare               NVO            :  -0.48%  丹麦, 诺和诺德, 减肥药, Wegovy, 司美格鲁肽, Ozempic
-Financial_Services       TRV            :  -0.48%  旅行者财产险, 保险
-Financial_Services       BLK            :  -0.48%  贝莱德, 资产管理, 贷款, 金融
-Technology               NET.-          :  -0.48%  网络服务供应商, 域名, DNS
-Consumer_Cyclical        JD.14.*.-      :  -0.49%  京东, 电子商务, 自营物流, 京东健康
-Financial_Services       FCNCA          :  -0.51%  银行, 财富管理, 信托, 美国
-Industrials              GE             :  -0.52%  通用电气, 航空发动机, 发电机, 医疗成像, 发动机
-Technology               NTNX.*         :  -0.52%  云计算, 虚拟化, AI
-Energy                   ET.*           :  -0.52%  天然气, 原油, 管道运输, 压缩储存
-Financial_Services       LPLA           :  -0.53%  财富管理, 投资顾问, 经纪服务, 美国
-Healthcare               MDT.*          :  -0.53%  美敦力, 心血管, 微创
-Industrials              KBR            :  -0.53%  工程, 建筑
-Technology               GLW.*          :  -0.54%  康宁, 玻璃, 显示器, 光纤, 培养皿
-Financial_Services       STEP           :  -0.54%  私募
-Consumer_Cyclical        RACE           :  -0.54%  法拉利, 豪华跑车制造商, 意大利
-Technology               FRSH           :  -0.54%  SaaS, Freshdesk, 客户关系管理, IT, CRM, 软件平台
-Real_Estate              VTR.-          :  -0.55%  老年人住宅, 医疗办公楼, 后期护理设施, 房地产
-Technology               FLEX.*         :  -0.56%  新加坡, AI, 电子制造服务EMS
-Healthcare               ROIV.12.*      :  -0.56%  生物技术
-Technology               ACIW           :  -0.56%  电子支付解决方案提供商, 金融安全, 欺诈管理
-Energy                   EXE.*.-        :  -0.56%  天然气, 由切萨皮克能源公司Chesapeake和西南能源公司, SouthwesternEnergy2024年合并而成, 美国
-Technology               SNPS           :  -0.57%  电子设计自动化工具, EDA, 设计, 集成电路, 芯片, 半导体, 工业软件
-Real_Estate              SPG.-          :  -0.57%  房地产, 投资信托, 购物中心
-Financial_Services       TD             :  -0.57%  多伦多道明银行, 银行, 加拿大
-Energy                   AM.-           :  -0.57%  石油, 天然气, 天然气液体NGL
-Consumer_Cyclical        PLNT           :  -0.57%  健身俱乐部, 会员制, 连锁, 低价
-Technology               ADSK           :  -0.59%  AutoCAD, Maya, 3DsMAX
-Energy                   CQP            :  -0.59%  液化天然气, LNG, 天然气, 能源
-Financial_Services       MFG.14.-       :  -0.60%  瑞穗金融, 日本, 第三大, 银行, 证券, 信托
-Financial_Services       RY.-           :  -0.61%  皇家银行, 加拿大
-Energy                   FTI            :  -0.62%  油气, 海底技术
-Technology               AUR.*          :  -0.62%  自动驾驶, 无人驾驶
-Communication_Services   CMCSA.*.-      :  -0.62%  康卡斯特, 有线电视, 互联网提供商, 流媒体
-Healthcare               SNN            :  -0.63%  骨科, 运动医学, 伤口护理, 健康医疗
-Consumer_Cyclical        SBUX.*         :  -0.64%  星巴克, 咖啡零售, 连锁
-Financial_Services       OWL.*          :  -0.65%  资产管理, 直接贷款, 私募
-Healthcare               MDGL           :  -0.65%  生物制药, 非酒精性脂肪肝
-Energy                   PBF.-          :  -0.66%  石油精炼, 管道储存销售供应
-Technology               CORZ.*         :  -0.66%  比特币挖矿, 矿机托管, 区块链, 数据中心, ASIC, GPU
-Technology               ONTO.-         :  -0.66%  半导体, 计量检测
-Consumer_Cyclical        SW.*           :  -0.69%  爱尔兰, 包装, 瓦楞纸板, 纸业, 纸
-Healthcare               RDNT.10        :  -0.69%  医疗, 影像诊断, 检查, MRI, CT, PET, X射线, 门诊成像中心
-Healthcare               DGX.-          :  -0.70%  诊断信息服务, 临床实验室, 医疗诊断
-Consumer_Cyclical        RRR            :  -0.71%  赌博, 博彩, 度假村, 美国
-Healthcare               NVS            :  -0.71%  诺华, 癌症, 心血管疾病药物, 仿制药, 山德士Sandoz, 子公司爱尔康Alcon, 瑞士
-Energy                   ENB.*.-        :  -0.72%  能源基础设施, 原油液体管道, 天然气管道网络
-Healthcare               HLN.*          :  -0.73%  葛兰素史克分拆, Sensodyne舒适达, Panadol, 扶他林, 善存
-Financial_Services       TW             :  -0.73%  电子交易, 债券, ETF, 金融, 美国
-Healthcare               GKOS           :  -0.74%  眼科医疗, 微创青光眼手术, iStent, 眼科, 手术
-Energy                   PBR.*          :  -0.74%  巴西国有石油
-Technology               NOW            :  -0.74%  云计算, 企业自动化, 人力资源, IT服务
-Financial_Services       MS.*.-         :  -0.76%  摩根士丹利, 投资银行, 证券, 财富管理
-Energy                   VLO.--         :  -0.77%  瓦莱罗能源, 炼油, 柴油
-Consumer_Cyclical        CHWY.-         :  -0.77%  宠物, 宠物食品, 宠物用品, 在线零售
-Technology               FN             :  -0.78%  泰国, 高精度制造, 光学, 电子电气, AI, 电信行业, 光通信, 硅光产品, 数据通信
-Healthcare               BHVN           :  -0.79%  生物制药, 精神分裂, 偏头痛, Rimegepant, Nurtec, SCA
-Healthcare               ENSG.-         :  -0.79%  长期护理, 辅助生活, 康复护理, 护理
-Healthcare               ITCI           :  -0.82%  精神分裂症, 双相情感障碍, 重度抑郁症, 抑郁症
-Energy                   MPLX           :  -0.83%  中游能源基础设施, 石油运输物流
-Healthcare               BSX.*.-        :  -0.83%  医疗设备制造, 微创介入器械
-Energy                   MUR            :  -0.84%  石油, 天然气, 勘探, 开发
-Utilities                PCG.*          :  -0.84%  电力, 天然气
-Technology               CRM.*          :  -0.85%  客户关系管理, 云计算
-Financial_Services       LU             :  -0.85%  陆金所, 零售信贷, 财富管理, 隶属于中国平安, 中国
-Real_Estate              SLG            :  -0.85%  房地产, 投资信托, 房地产, 曼哈顿办公楼, 商业地产, 美国
-Technology               INTU.-         :  -0.86%  财捷, 财务软件, 会计软件, 软件开发, 报税软件, Turbo Tax
-Financial_Services       ALL            :  -0.87%  保险, 美国
-Real_Estate              CTRE.-         :  -0.89%  房地产, 投资信托, 医疗保健, 长期护理, 护理, 老年人住房, 老年人护理
-Consumer_Defensive       ABEV.*         :  -0.91%  巴西, 啤酒, 饮料
-Healthcare               WAY            :  -0.93%  云计算, 软件, 医疗保健, 支付, AI, 医疗报销, IT
-Technology               CACI.-         :  -0.95%  国防, 情报, 高科技解决方案, 政府服务, 政府承包商
-Industrials              HEI            :  -0.95%  飞机零部件, 航空航天, 电子技术, 电子设备, 伯克希尔哈撒韦, 巴菲特
-Energy                   ENLC.*         :  -0.95%  天然气原油, 加工运输
-Industrials              PAC            :  -0.98%  墨西哥, 机场运营管理, 太平洋机场, 机场运营
-Communication_Services   CHTR           :  -0.98%  特许通讯, 第二大, 有线电视运营商, 有线电视, 美国
-Basic_Materials          MT.-           :  -1.00%  印度, 钢铁
-Industrials              TT             :  -1.00%  暖通空调, 冷链运输, 数据中心, AI
-Energy                   CHX.-          :  -1.02%  石油, 天然气, 油田化学品, 人工升举系统, 钻井技术
-Technology               SAP            :  -1.03%  德国, ERP软件领导者
-Healthcare               MCK.-          :  -1.04%  麦克森, 药品分销, 医疗设备, 医疗器械, 药品, 医疗供应链管理, 零售药房
-Consumer_Defensive       WMT.*          :  -1.04%  沃尔玛, 零售, 山姆会员, 连锁超市, 超市
-Energy                   SLB.*          :  -1.09%  斯伦贝谢, 石油, 天然气, 勘探, 开发
-Technology               DUOL           :  -1.13%  多邻国, 在线语言学习, 游戏化软件, 多语种培训, 在线教育
-Healthcare               UTHR           :  -1.13%  生物制药, 肺动脉高压
-Healthcare               ACLX           :  -1.14%  生物技术, 免疫疗法, CAR-T, 白血病, 淋巴瘤, 细胞疗法
-Financial_Services       THG            :  -1.14%  汉诺威, 保险, 美国
-Healthcare               GRFS           :  -1.15%  西班牙, 血浆衍生药物生产商, 血浆
-Basic_Materials          X.*.-          :  -1.15%  美国钢铁, 制铁
-Technology               LDOS           :  -1.15%  国防, 情报, 政府承包商, 民用医疗, 技术服务
-Healthcare               IBRX           :  -1.18%  免疫疗法, 卡介苗, Anktiva, 膀胱癌
-Industrials              BAH.-          :  -1.18%  管理信息, 技术咨询, 咨询, 政府服务, 政府承包商
-Communication_Services   TKC.-          :  -1.19%  土耳其, 电信
-Financial_Services       CRVL           :  -1.19%  保险, 医疗费用控制, 工作场所伤害管理
-Communication_Services   NTES.14.-      :  -1.21%  网易, 中国, 游戏, 有道, 音乐
-Energy                   CVX            :  -1.23%  雪佛龙, 石油, 天然气, 能源, 勘探, 炼油
-Energy                   E              :  -1.24%  意大利, 石油, 天然气
-Energy                   MPC.--         :  -1.25%  石油炼制, 管道运输, 柴油
-Energy                   EQNR.-         :  -1.26%  挪威, 能源, 石油, 天然气, 海上风电
-Technology               TDY            :  -1.26%  仪器仪表, 数字成像, 航空航天, 国防
-Communication_Services   LUMN.*         :  -1.27%  电信运营商, 通信服务提供商, AI, 通信, 高速光纤网络连接, 互联网骨干网, 电信基础设施
-Consumer_Cyclical        BKNG.-         :  -1.32%  Priceline, Agoda, Kayak, 旅游, 订票
-Consumer_Defensive       FRPT           :  -1.33%  宠物食品, real food, 宠物, 食品
-Consumer_Defensive       CHD.-          :  -1.33%  家居用品, 个人护理产品, Waterpik洁碧冲牙器, 小苏打
-Energy                   BP.*           :  -1.35%  英国石油, 能源, 石油
-Technology               APH.*          :  -1.35%  电子连接器, 光纤电缆, AI
-Communication_Services   AMX.-          :  -1.40%  墨西哥, 电信, 电信运营商
-Communication_Services   LBRDK          :  -1.40%  持有美国第二大有线电视公司Charter股份
-Energy                   IEP            :  -1.41%  华尔街之狼卡尔伊坎创办, 卡尔伊坎
-Energy                   WES            :  -1.41%  天然气处理, 天然气液体NGL分离, 天然气, NGL
-Communication_Services   ROKU           :  -1.42%  流媒体播放器
-Industrials              AVAV           :  -1.43%  航空航天, 国防, 军事, 无人机
-Technology               HUBS           :  -1.45%  云计算, 客户关系管理
-Energy                   EPD.*          :  -1.46%  天然气, 天然气液体NGL, 储存管道服务
-Energy                   SHEL.-         :  -1.48%  荷兰皇家壳牌, 石油, 石化, 能源, 深海钻探, vito平台
-Communication_Services   FOX            :  -1.49%  福克斯, 媒体集团, 广播娱乐, 媒体, 新闻
-Energy                   XOM.*.-        :  -1.49%  埃克森美孚, 石油, 天然气, 第一大, 美国
-Industrials              ZTO.*.--       :  -1.50%  中通快递, 物流, 快递
-Technology               IOT            :  -1.51%  物联网, 工业, 美国
-Communication_Services   EA.-           :  -1.52%  电子艺界, 视频游戏, FIFA, 模拟人生, 战地, 极品飞车
-Real_Estate              WELL.*         :  -1.57%  房地产, 老年人辅助生活记忆保健社区, 急症后护理, 医疗办公楼, 老年人住房, 医院
-Financial_Services       MFC.-          :  -1.57%  加拿大, 保险
-Energy                   BKR.*.-        :  -1.58%  石油, 天然气, 油田服务, 油井设备
-Energy                   TRP.-          :  -1.58%  原油, 天然气, 发电, 能源
-Technology               SAIC.-         :  -1.59%  工程, 系统集成, 信息技术
-Basic_Materials          SUZ.-          :  -1.62%  巴西, 纸浆, 纸张
-Technology               SQ.*.-         :  -1.64%  移动支付, 手机转账, 股票交易, Square, 加密货币交易, 比特币
-Energy                   CNX            :  -1.65%  天然气, 页岩气, 煤层气, 美国
-Energy                   VRN.*          :  -1.66%  石油, 天然气, 勘探, 生产
-Technology               ANET           :  -1.66%  数据中心, 以太网交换机, 云服务, AI
-Energy                   CIVI           :  -1.67%  石油, 天然气, 油气田
-Financial_Services       BBD.*.--       :  -1.68%  布拉德斯科, 巴西, 银行
-Energy                   WFRD           :  -1.69%  陆上钻井, 石油, 天然气
-Consumer_Cyclical        CAVA.12        :  -1.70%  地中海饮食, 连锁餐厅, 牛排
-Healthcare               PACS.--        :  -1.70%  急症护理, 老年护理, 辅助生活, 长期护理, 护理
-Healthcare               NTRA.12.-      :  -1.72%  基因检测, 产前/遗传病, 美国
-Industrials              RTX            :  -1.76%  雷神, 航空航天, 国防, 五大军事承包商之一, 军事
-Consumer_Cyclical        HTHT.--        :  -1.76%  华住, 房地产, 酒店住宿, 汉庭
-Consumer_Defensive       CLX            :  -1.76%  高乐氏, 家庭清洁, 健康保健
-Basic_Materials          SUM.*          :  -1.76%  建筑材料, 美国
-Energy                   SOBO.-         :  -1.76%  能源, 基础设施, 管道运输
-Communication_Services   USM            :  -1.78%  第五大, 电信运营商, 电信, 美国
-Healthcare               JAZZ           :  -1.84%  爱尔兰, 嗜睡症, 癌症, 精神疾病
-Energy                   VIST           :  -1.86%  拉丁美洲, 石油, 天然气, 页岩油
-Industrials              BWXT.-         :  -1.88%  核潜艇动力系统, 核电站, 核废物管理, 核, 核能, 核电
-Energy                   YPF.*          :  -1.92%  阿根廷, 石油, 天然气
-Energy                   SM             :  -1.93%  石油, 天然气, 勘探开发
-Technology               FIS.*          :  -1.94%  金融领域, IT技术解决方案及服务, IT
-Energy                   LNG.-          :  -1.97%  液化天然气LNG, 生产, 出口
-Financial_Services       QFIN.14.--     :  -1.97%  奇富, 360, 信用, 金融, 贷款, 中国
-Consumer_Defensive       BRBR           :  -2.01%  高蛋白饮料, 饮料, 蛋白质棒
-Energy                   RIG.*          :  -2.01%  海上钻井, 油气钻探
-Technology               NVMI           :  -2.04%  以色列, 半导体, 高精度计量解决方案
-Energy                   OVV            :  -2.06%  石油, 天然气
-Energy                   PAA            :  -2.06%  石油天然气中游业务, 锂电池PAA粘结剂, 石油, 天然气, 化工材料
-Healthcare               ISRG.-         :  -2.07%  直觉外科, 机器人辅助, 达芬奇手术系统
-Energy                   MGY            :  -2.08%  德克萨斯州, 石油天然气勘探开发
-Energy                   SU.12.*        :  -2.09%  加拿大, 能源, 石油, 天然气
-Basic_Materials          NEM.*          :  -2.12%  金矿, 铜矿, 黄金, 第一大
-Technology               LITE           :  -2.12%  光通信, 工业, 激光, 3D传感
-Energy                   CVE.*.-        :  -2.16%  加拿大, 原油, 天然气
-Energy                   NOV            :  -2.17%  石油, 天然气, 钻探生产, 油田设备部件供应商
-Industrials              HWM            :  -2.20%  航空航天, 飞机, 零部件, 紧固系统, 锻造车轮
-Energy                   HES            :  -2.20%  第四大, 石油, 天然气, 液化天然气, 能源, 美国
-Industrials              DRS            :  -2.21%  以色列, 国防, 军事技术, 美国
-Consumer_Cyclical        M.14.*         :  -2.21%  梅西, 百货, 商店, 美国
-Technology               ORCL.*.-       :  -2.24%  甲骨文, 数据库, 云服务, Java, 美国
-Energy                   KMI.*.-        :  -2.25%  天然气原油管道运输, 存储, 分销
-Utilities                TLN.-          :  -2.27%  发电, 电力, 核能, 核
-Technology               CRWD.*         :  -2.30%  网络安全
-Technology               S              :  -2.31%  网络安全
-Energy                   CTRA           :  -2.32%  石油, 天然气, 勘探开发
-Energy                   CNQ.*          :  -2.32%  轻质原油, 重油, 加拿大, 液体天然气
-Industrials              NOC            :  -2.33%  诺斯罗普格鲁门, 雷达军舰制造, 卫星发射, 军工, 政府承包商, B21轰炸机
-Technology               PSN.-          :  -2.34%  技术驱动, 国防, 情报, 关键基础设施
-Energy                   TTE.--         :  -2.35%  道达尔能源, 石油, 天然气, 电力, 炼油化工
-Consumer_Cyclical        XPEV.*.--      :  -2.43%  小鹏汽车, 电动车, 中国
-Healthcare               SEM            :  -2.45%  急性护理医院, 康复医院, 门诊康复诊所, 职业健康服务, 医院
-Energy                   WMB.*.-        :  -2.45%  天然气, 液化天然气, 储存运输输送公司, 美国
-Healthcare               HALO           :  -2.47%  酶基平台, 小分子药物递送, 肿瘤酶疗法
-Energy                   TGS            :  -2.48%  阿根廷, 天然气, 天然气管道, 天然气运输, 能源
-Technology               MSI            :  -2.50%  摩托罗拉拆分, 通信设备, 监控摄像头, 视频指挥中心
-Healthcare               TEVA.*         :  -2.51%  以色列, 梯瓦制药, 仿制药
-Basic_Materials          FNV            :  -2.52%  加拿大, 黄金金融
-Energy                   TDW            :  -2.54%  海上钻井, 潮水公司, 供应船
-Energy                   CRC            :  -2.58%  加州资源, 石油, 天然气, 能源, 美国
-Energy                   DTM            :  -2.61%  天然气, 天然气液体NGL, 能源
-Technology               TSM.*.-        :  -2.63%  台积电, 晶圆代工, 芯片, AI, 封装测试
-Energy                   FRO            :  -2.66%  原油海运, 油轮船队
-Basic_Materials          CF.-           :  -2.67%  化肥, 氨, 尿素
-Consumer_Defensive       PPC.-          :  -2.71%  巴西, 隶属于JBS, 禽肉生产, 食品加工
-Utilities                PAM            :  -2.71%  阿根廷, 能源, 电力, 发电, 石油, 石化, 天然气
-Basic_Materials          RGLD           :  -2.76%  黄金金融, 黄金特许权, 黄金
-Energy                   EC.13          :  -2.76%  哥伦比亚, 石油
-Financial_Services       PSLV.*         :  -2.76%  白银, 实物白银, 信托
-Financial_Services       BAP.-          :  -2.76%  秘鲁, 第一大, 金融, 银行, 证券, 投资
-Industrials              AXON           :  -2.82%  个人安全防卫, 电击武器, 摄像头, 安全
-Energy                   MTDR           :  -2.82%  原油, 天然气, 勘探开采
-Energy                   OXY.12.*       :  -2.87%  巴菲特, 西方石油, 石油
-Basic_Materials          AU             :  -2.89%  南非, 黄金开采
-Technology               IONQ.*.-       :  -2.89%  量子计算, 量子计算机, 美国
-Communication_Services   TME.12.*       :  -2.95%  腾讯, 音乐, 酷我, 酷狗, 中国
-Basic_Materials          GOLD.*         :  -2.96%  巴里克, 黄金, 铜矿, 全球, 第二大
-Energy                   CHRD           :  -2.97%  原油, 天然气, 勘探开发
-Financial_Services       BX.*           :  -2.98%  黑石集团, 私募股权, 房地产, 对冲基金
-Energy                   DVN.*          :  -2.99%  石油, 天然气, 勘探, 开发
-Energy                   TRGP.-         :  -3.01%  北美, 天然气, 天然气液体NGL, 能源
-Basic_Materials          AGI            :  -3.02%  加拿大, 黄金开采, 墨西哥, 土耳其, 矿场, 黄金
-Industrials              LHX            :  -3.05%  航空航天, 国防, 太空, 卫星, 军工, 武器, 军事
-Energy                   PBA.-          :  -3.05%  石油, 天然气, 运输加工储存
-Basic_Materials          AEM            :  -3.06%  加拿大, 黄金, 黄金开采生产
-Energy                   NE             :  -3.08%  石油, 海上和陆地钻井服务
-Energy                   FANG           :  -3.10%  石油, 天然气, 勘探, 生产
-Communication_Services   PHI.12         :  -3.13%  菲律宾, 电信, 长途电话
-Industrials              FTAI.-         :  -3.14%  飞机, 租赁, 发动机, 出租, 飞机租赁
-Energy                   EOG            :  -3.20%  页岩油田, 石油天然气, 能源, 美国
-Financial_Services       CEF            :  -3.23%  实物, 黄金, 白银, 贵金属, 信托基金
-Communication_Services   RDDT.*.-       :  -3.25%  meme, 社交媒体, 新闻聚合
-Energy                   PR.*           :  -3.27%  石油, 天然气, 勘探开发
-Energy                   CCJ.-          :  -3.33%  铀矿, 铀, 核能, 核, 加拿大, 哈萨克斯坦
-Basic_Materials          GFI            :  -3.35%  金田, 南非, 黄金开采, 黄金, 加纳澳大利亚秘鲁拥有矿山
-Industrials              SYM            :  -3.38%  自动化仓储机器人, 人工智能, 机器人, 自动化, 用于沃尔玛
-Consumer_Cyclical        NIO.*          :  -3.51%  蔚来, 电动车, 中国
-Communication_Services   NFLX.*         :  -3.59%  奈飞, 流媒体
-Energy                   VAL            :  -3.62%  石油, 海上钻井
-Industrials              LMT            :  -3.75%  洛克希德, 马丁, 五大军事承包商之一, 国防, 军事, 武器, 政府承包商, 军工
-Utilities                NRG.-          :  -3.78%  电力, 发电, 天然气发电, 煤炭发电, 风力发电, 核能
-Basic_Materials          PAAS.*.-       :  -3.94%  白银, 银矿开采
-Consumer_Cyclical        TSLA.*         :  -3.96%  特斯拉, 电动车, modelY, Cybertruck, xAI, Optimus
-Technology               CLS.-          :  -3.99%  电子制造服务, 加拿大, EMS, AI
-Basic_Materials          KGC.*          :  -4.01%  金罗斯黄金, 加拿大, 黄金白银开采, 黄金
-Consumer_Cyclical        MOD            :  -4.06%  AI, 数据中心, 数据中心冷却, 摩丁制造
-Technology               APP.*          :  -4.12%  移动平台, 广告营销, 数据分析, 广告购买, 广告投放, 在线广告
-Energy                   VNOM           :  -4.16%  石油天然气资产收购, 特许权
-Technology               NVDA.*.-       :  -4.18%  英伟达, AI, 芯片, CUDA, 半导体, 显卡
-Technology               MSTR.*         :  -4.37%  比特币
-Basic_Materials          HMY            :  -4.47%  南非, 哈莫尼黄金, 黄金开采
-Basic_Materials          WPM            :  -4.50%  加拿大, 黄金, 白银, 钯金
-Basic_Materials          SSL            :  -4.72%  南非, 萨索尔, 煤炭, 天然气, 柴油, 汽油, 燃料, 乙烯, 丙烯, 化学品, 化工
-Energy                   OKE.*          :  -4.72%  天然气, 天然气液体, 管道运输储存
-Utilities                VST.*.-        :  -4.80%  电力, 天然气, 核能, 核电, 伯克希尔哈撒韦, 美国
-Technology               ZETA.11.*      :  -4.96%  云营销平台, 数据驱动, DMP, CRM, 云平台
-Energy                   COP.*.--       :  -5.06%  康菲石油, 天然气, 能源
-Energy                   LB             :  -5.10%  石油, 天然气, 二叠纪盆地, 美国
-Real_Estate              BEKE.*.--      :  -5.15%  中国, 房地产, 在线
-Technology               COHR.-         :  -5.26%  激光, 光电子设备, 可用于半导体
-Energy                   NXE.*          :  -5.52%  加拿大, 矿产, 铀矿, 铀, 核能
-Utilities                GEV.*          :  -5.78%  可再生能源, 电力, 能源, 核能, 核电, 核
-Industrials              VRT.*.-        :  -5.79%  维谛技术, AI, 数据中心, 液冷散热, 液冷, 收购CoolTerra, 空调
-Industrials              MLI.*.-        :  -6.54%  穆勒工业, 管道产品, 工业金属, 黄铜棒
-Energy                   TPL            :  -6.71%  土地信托, 水资源, 石油, 天然气
-Consumer_Cyclical        WRD            :  -8.01%  文远知行, 自动驾驶, L4, Robotaxi, 中国, 科技
+Technology               STX.+          :   0.30%  希捷, 数据存储, 硬盘
+Consumer_Defensive       EL.++          :   0.29%  雅诗兰黛, 倩碧, 化妆, 护肤
+Financial_Services       SPGI.++        :   0.28%  提供标准普尔指数, 指数, 评级, 分析
+Communication_Services   MTCH.++        :   0.28%  Tinder, 在线约会, 约会软件, Hinge
+Technology               ZI.12.*.++     :   0.28%  云计算, 数据分析
+Real_Estate              SBAC.++        :   0.27%  无线通讯基础设施, 通信塔, 小型基站
+Consumer_Defensive       KO.*.++        :   0.26%  可口可乐, 可乐, 雪碧, 芬达, 金典, 巴菲特, 美国
+Consumer_Defensive       FLO.++         :   0.26%  面包, 烘焙食品, 食品
+Financial_Services       BCH.+          :   0.26%  智利银行
+Healthcare               NVS            :   0.26%  诺华, 癌症, 心血管疾病药物, 仿制药, 山德士Sandoz, 子公司爱尔康Alcon, 瑞士
+Industrials              KBR            :   0.26%  工程, 建筑
+Healthcare               ARGX           :   0.25%  荷兰, 比利时, 自身免疫疾病, 慢性炎性脱髓鞘性多发性神经病
+Basic_Materials          APD.++         :   0.24%  工业气体, 化学产品
+Industrials              GD             :   0.24%  通用动力, 国防, 军工, 五大军事承包商之一, 政府承包商
+Healthcare               COO.++         :   0.23%  医疗保健, 隐形眼镜, 眼镜, 辅助生殖医疗设备, 医疗设备
+Healthcare               CHE.++         :   0.23%  临终关怀服务提供商, 管道和排水服务, 临终关怀, 护理
+Communication_Services   FOX            :   0.23%  福克斯, 媒体集团, 广播娱乐, 媒体, 新闻
+Real_Estate              PECO.++        :   0.23%  从事购物中心持有和运营, 房地产投资信托, 房地产
+Industrials              WCN.++         :   0.23%  北美, 废物处理, 环境服务
+Real_Estate              AMT.++         :   0.22%  无线广播通信基础设施, 分布式天线系统, 塔租赁
+Utilities                DTE.++         :   0.22%  电力, 发电, 配电, 天然气供应, 能源
+Real_Estate              CCI.++         :   0.21%  冠城国际, 塔楼租赁, 小型基站, 光纤网络
+Industrials              R.++           :   0.21%  运输, 物流, 供应链, 车队管理
+Basic_Materials          LIN.+          :   0.20%  林德, 世界最大工业气体
+Financial_Services       NTRS.++        :   0.20%  北方信托, 资产托管, 私人银行, 银行, 资产管理, 信托
+Consumer_Cyclical        HD.12.++       :   0.20%  家得宝, 家居装修, 建筑材料, 草坪花园, 装修
+Utilities                WEC.+          :   0.20%  公共事业, 电力, 天然气, 风能, 太阳能, 可再生能源
+Basic_Materials          SUM.*          :   0.20%  建筑材料, 美国
+Technology               GRAB.11.*.+    :   0.19%  东南亚, 打车, 在线叫车, 外卖, 送餐, 快递
+Healthcare               EXEL.++        :   0.19%  生物制药, 制药, 癌症小分子疗法, 卡波替尼cabozantinib
+Industrials              SNA.++         :   0.19%  专业工具, 专业设备制造
+Industrials              CSX.*.++       :   0.19%  加拿大, 铁路运输, 美国
+Industrials              EMR.++         :   0.19%  艾默生电气, 工业自动化, 暖风空调, 爱默生
+Basic_Materials          ECL.++         :   0.19%  艺康, 水, 卫生, 清洁, 消毒, 杀虫
+Industrials              FSS.++         :   0.18%  环境解决方案, 安保系统, 美国
+Technology               S              :   0.18%  网络安全
+Healthcare               RMD.++         :   0.17%  瑞思迈, 医疗器械, 呼吸机, 睡眠呼吸障碍, 慢性阻塞性肺病
+Technology               CRWD.*         :   0.17%  网络安全
+Industrials              ETN            :   0.16%  电气化, 流体液压组件
+Healthcare               UNH.+          :   0.16%  联合健康集团, Optum, 医疗, 医疗保险, 保险, 健康, 美国
+Financial_Services       BSAC           :   0.16%  智利, 桑坦德银行
+Technology               CPAY.++        :   0.16%  支付解决方案
+Financial_Services       JHG.++         :   0.15%  英国, 积极资产管理
+Utilities                CNP.++         :   0.15%  电力, 天然气
+Consumer_Cyclical        EBAY.++        :   0.15%  电子商务
+Communication_Services   TKC            :   0.15%  土耳其, 电信
+Industrials              MDU.++         :   0.15%  天然气, 电力, 能源
+Utilities                EIX.+          :   0.15%  爱迪生国际, 公共事业, 电力, 能源
+Consumer_Defensive       CAG.*.++       :   0.15%  康尼格拉, 食品, 美国
+Healthcare               DXCM.+         :   0.14%  德康医疗, 血糖监测, 医疗器械, 医疗
+Consumer_Cyclical        DKNG.*         :   0.14%  在线博彩, 体育博彩, 博彩
+Basic_Materials          PAAS           :   0.14%  白银, 银矿开采
+Financial_Services       AON.++         :   0.14%  怡安, 保险, 美国
+Technology               KEYS.+         :   0.13%  电子测试, 测量仪器, 美国
+Communication_Services   PSO.++         :   0.13%  英国, 培生集团, 跨国教育, 出版, 教育
+Industrials              TDG.++         :   0.13%  航空航天, 飞机零部件, 飞机, 军工, 政府承包商
+Financial_Services       ESGR.++        :   0.13%  保险, 再保险
+Industrials              GWW.++         :   0.13%  工业品分销商, 各类工具, 维护修理
+Communication_Services   TTWO           :   0.12%  电子游戏, 游戏, 侠盗猎车, 荒野大镖客, Grand Theft Auto
+Real_Estate              CUBE.++        :   0.12%  自助存储, 仓储租赁, 公共仓库, 房地产
+Financial_Services       CINF.++        :   0.12%  财产保险, 意外伤害保险, 寿险, 保险
+Financial_Services       AXP.++         :   0.12%  运通, 巴菲特持股, 美国
+Energy                   VNOM           :   0.11%  石油天然气资产收购, 特许权, 石油, 天然气
+Consumer_Cyclical        NCLH.*.++      :   0.11%  挪威, 游轮, 邮轮, 利率敏感
+Healthcare               HLN            :   0.10%  葛兰素史克分拆, Sensodyne舒适达, Panadol, 扶他林, 善存
+Consumer_Cyclical        HRB.++         :   0.10%  税务服务, 纳税申报, 税务, 报税软件, Spruce, 美国
+Utilities                ATO.+          :   0.10%  天然气, 管道, 输送, 存储, 分销, 公共事业, 美国
+Financial_Services       HOMB.++        :   0.09%  区域性银行, 银行, 美国
+Financial_Services       RGA.++         :   0.09%  人寿健康再保险, 保险, 再保险, 美国
+Consumer_Cyclical        SLGN.++        :   0.09%  制造销售刚性包装, 瓶盖, 容器, 服务于金宝汤雀巢, 包装
+Industrials              CR.++          :   0.09%  流体控制, 航空航天, 电子
+Consumer_Cyclical        BYD.++         :   0.08%  赌场, 酒店管理, 美国
+Technology               DOX.12.++      :   0.08%  云计算, 软件服务, 软件
+Industrials              CPRT.14.++     :   0.08%  在线汽车拍卖, 车辆再营销, 汽车拍卖, 车辆拍卖
+Utilities                BEP.+          :   0.08%  多伦多, 可再生能源, 发电
+Financial_Services       TD             :   0.07%  多伦多道明银行, 银行, 加拿大
+Basic_Materials          CRH.*.++       :   0.07%  爱尔兰, 建材
+Communication_Services   AMX            :   0.07%  墨西哥, 电信, 电信运营商
+Consumer_Defensive       LW             :   0.07%  冷冻马铃薯供应商
+Consumer_Cyclical        MAR.++         :   0.06%  万豪, 酒店, 喜来登, 丽思卡尔顿
+Technology               PCOR.++        :   0.06%  建筑项目管理, 云计算
+Financial_Services       BK.++          :   0.06%  纽约梅隆银行, 银行, 美国
+Financial_Services       STEP           :   0.06%  私募
+Industrials              NSC.++         :   0.06%  诺福克南方, 货运, 铁路, 运输
+Financial_Services       USB.*.++       :   0.06%  合众银行, 美国
+Utilities                AGR.+          :   0.06%  能源服务, 风能太阳能天然气分配交付
+Healthcare               SMMT.++        :   0.05%  双特异性Ivonescimab, 靶向PD-1和VEGF, 非小细胞肺癌, HARMONi, 肺癌, 医疗健康
+Industrials              ITW.++         :   0.05%  工业工具, 工业设备, 工业
+Real_Estate              ESS.++         :   0.05%  房地产, 公寓社区
+Healthcare               GMED           :   0.05%  医疗器械, 脊柱外科, 椎间融合术
+Consumer_Cyclical        MCD.++         :   0.05%  麦当劳, 快餐, 连锁, 汉堡
+Consumer_Defensive       TSN.12.+       :   0.05%  泰森食品, 鸡肉牛肉猪肉
+Financial_Services       GL.++          :   0.04%  保险, 人寿保险, 健康保险, 美国
+Technology               ESTC.++        :   0.04%  荷兰, 数据分析, 企业搜索
+Consumer_Cyclical        AN.++          :   0.04%  汽车零售, 抵押贷款, 汽车贷款, 美国
+Basic_Materials          IFF.++         :   0.04%  香料, 香精, 美国
+Industrials              TRI            :   0.04%  汤森路透, 法律, 税务, 数据信息解决方案
+Industrials              DLB            :   0.04%  杜比实验室, 音频, 影院
+Consumer_Cyclical        GPK.++         :   0.03%  纸质包装, 包装
+Financial_Services       AMG.++         :   0.03%  资产管理, 金融
+Industrials              AWI.++         :   0.03%  工业吊顶, 天花板, 地板, 装修, 工业装修, 工业
+Communication_Services   OMC.++         :   0.03%  广告, 市场营销, 企业传播
+Consumer_Defensive       K              :   0.02%  家乐氏, 谷物早餐, 麦片, 品客薯片Pringles, 零食
+Financial_Services       STT.++         :   0.02%  道富银行, 托管银行, 资产管理, 美国
+Energy                   EXE            :   0.02%  天然气, 由切萨皮克能源公司Chesapeake和西南能源公司, SouthwesternEnergy2024年合并而成, 美国
+Basic_Materials          GGB.*          :   0.00%  巴西, 钢铁
+Communication_Services   SNAP.*         :   0.00%  Snapchat, 社交
+Communication_Services   TIMB           :   0.00%  巴西, 第三大电信, 电信运营商
+Consumer_Cyclical        VFC            :   0.00%  服装, 鞋, North Face, 北面, 美国
+Consumer_Cyclical        PSNYW          :   0.00%  瑞典, 电动车, 沃尔沃, 吉利, Polestar
+Financial_Services       ARCC           :   0.00%  商业发展, 直接贷款, 股权投资, 并购融资
+Financial_Services       UNM            :   0.00%  残疾保险, 人寿保险, 意外保险, 牙科和视力保险
+Financial_Services       ORI            :   0.00%  保险, 美国
+Financial_Services       IVZ            :   0.00%  景顺, 投资管理
+Healthcare               HALO           :   0.00%  酶基平台, 小分子药物递送, 肿瘤酶疗法
+Technology               GTLB           :   0.00%  代码托管协作平台, 开源项目
+Technology               GLOB.14        :  -0.01%  阿根廷, 信息技术, 软件开发, 媒体营销, 创意广告
+Financial_Services       FDS            :  -0.01%  金融信息, 数据服务, 分析工具, 数据分析, 软件平台
+Energy                   VLO.--         :  -0.01%  瓦莱罗能源, 炼油, 柴油
+Healthcare               QGEN           :  -0.02%  生物科学, 分子诊断, 药物开发
+Healthcare               RDNT.10.-      :  -0.02%  医疗, 影像诊断, 检查, MRI, CT, PET, X射线, 门诊成像中心
+Consumer_Defensive       CHD.--         :  -0.03%  家居用品, 个人护理产品, Waterpik洁碧冲牙器, 小苏打
+Financial_Services       DFS            :  -0.03%  信用卡, 贷款
+Healthcare               STE            :  -0.03%  感染预防, 灭菌, 手术支持
+Healthcare               VEEV           :  -0.03%  云计算, 生命科学
+Real_Estate              CTRE.--        :  -0.03%  房地产, 投资信托, 医疗保健, 长期护理, 护理, 老年人住房, 老年人护理
+Technology               SPSC           :  -0.04%  云计算, 供应链管理, SPS Commerce平台, 赋能B2B
+Financial_Services       JEF            :  -0.04%  杰富瑞, 投资银行, 金融服务
+Technology               APH.-          :  -0.04%  电子连接器, 光纤电缆, AI
+Communication_Services   T.*.-          :  -0.04%  电信, 电信运营商, 美国
+Industrials              ESLT           :  -0.04%  以色列, 国防, 无人机, 电子战系统, 武器
+Energy                   BKR.--         :  -0.05%  石油, 天然气, 油田服务, 油井设备
+Real_Estate              IRT.-          :  -0.05%  房地产, 投资信托, 多户住宅, 美国
+Consumer_Cyclical        CASY.-         :  -0.05%  便利商店, 加油站, 披萨, 美国
+Technology               AVGO.*         :  -0.05%  博通, 半导体, 通信芯片, 美国
+Communication_Services   DASH           :  -0.05%  食品配送物流, 外卖平台
+Industrials              AME.-          :  -0.05%  电子仪器, 机电设备
+Technology               ZS.-           :  -0.06%  云安全, 移动安全
+Healthcare               PODD           :  -0.06%  银休特, 胰岛素泵, 医疗器械, OmniPod, 健康
+Healthcare               AZN.12         :  -0.06%  阿斯利康, 优赫得®Enhertu, 德曲妥珠单抗, 度伐利尤单抗
+Consumer_Cyclical        SE.12          :  -0.06%  东南亚, 游戏, Garena, 电商, Shopee, 电子商务
+Financial_Services       XP.*           :  -0.06%  巴西, 金融, 资产管理, 保险, 信托
+Energy                   OVV.-          :  -0.07%  石油, 天然气
+Industrials              MOG-A          :  -0.07%  穆格, 精密运动, 流体控制, 航空航天, 工业, 美国
+Healthcare               BMY.*.-        :  -0.07%  百时美施贵宝, 医药, 医疗, 生物制药
+Real_Estate              FRT            :  -0.07%  房地产, 投资信托, 沿海地区, 零售物业, 美国
+Consumer_Cyclical        KMX            :  -0.07%  车美仕, 二手车零售, 抵押贷款, 二手车, 美国
+Healthcare               MDT.-          :  -0.08%  美敦力, 心血管, 微创
+Technology               SNOW.*         :  -0.08%  云数据仓库, 数据管理, 数据分析
+Industrials              LMT.-          :  -0.08%  洛克希德, 马丁, 五大军事承包商之一, 国防, 军事, 武器, 政府承包商, 军工
+Industrials              HON            :  -0.09%  霍尼韦尔, 航空航天, 楼宇技术
+Healthcare               A              :  -0.09%  生命科学仪器, 色谱仪, 质谱仪, 光谱仪
+Consumer_Defensive       MDLZ.*         :  -0.09%  亿滋国际, 食品, 零食, 奥利奥饼干, 吉百利巧克力, 卡夫食品分拆
+Communication_Services   ORAN           :  -0.10%  法国, 电信运营商
+Consumer_Defensive       TAL            :  -0.10%  好未来, 学而思, 教育, 培训, 中国, 在线教育
+Energy                   TGS.-          :  -0.10%  阿根廷, 天然气, 天然气管道, 天然气运输, 能源
+Healthcare               DGX.--         :  -0.10%  诊断信息服务, 临床实验室, 医疗诊断
+Consumer_Cyclical        TSLA.*.-       :  -0.11%  特斯拉, 电动车, modelY, Cybertruck, xAI, Optimus
+Financial_Services       SLF            :  -0.11%  永明金融, 保险, 财富管理, 退休计划, 投资管理
+Communication_Services   FYBR           :  -0.11%  通信服务, 宽带, 有线电视, 美国
+Financial_Services       OWL.-          :  -0.12%  资产管理, 直接贷款, 私募
+Financial_Services       CMA            :  -0.12%  银行, 金融服务, 抵押贷款
+Financial_Services       JPM            :  -0.13%  摩根大通, 金融, 投资银行, 资产管理, 美国
+Technology               DSGX           :  -0.13%  加拿大, 云计算, 物流供应链, Saas
+Industrials              ACM            :  -0.13%  建筑, 工程, 施工, 运营, 基础设施
+Real_Estate              NSA            :  -0.13%  自助存储, 仓储租赁, 公共仓库, 仓库, 房地产
+Basic_Materials          GFI.-          :  -0.14%  金田, 南非, 黄金开采, 黄金, 加纳澳大利亚秘鲁拥有矿山
+Financial_Services       RY.--          :  -0.14%  皇家银行, 加拿大
+Healthcare               WST            :  -0.14%  药物包装, 包装, 注射器, 药物注射, 医疗保健, 医疗设备
+Consumer_Cyclical        PVH            :  -0.14%  服装, Calvin Klein, Tommy Hilfiger, CK, 内裤, 内衣
+Financial_Services       TPG            :  -0.14%  私募股权, 另类投资
+Healthcare               ABT            :  -0.14%  雅培, 医疗保健, 连续血糖监测仪, FreestyleLibre, 美国
+Consumer_Cyclical        BALL           :  -0.14%  金属包装生产商, 铝制饮料罐, 包装
+Healthcare               SNY            :  -0.14%  赛诺菲, 医疗, 制药, 疫苗, 扑热息痛
+Industrials              FCN            :  -0.15%  商业咨询, 战略重组, 法律诉讼, 网络技术
+Real_Estate              JLL            :  -0.16%  房地产, 租赁, 房地产管理
+Financial_Services       UWMC           :  -0.16%  住房抵押贷款, 金融, 抵押贷款
+Consumer_Defensive       KHC.*          :  -0.16%  卡夫亨氏, 食品, 番茄酱, 沙拉酱, 奶酪, 冷冻披萨
+Financial_Services       DNB            :  -0.16%  邓白氏, 商业信息供应商, 商业数据与分析, 业务决策
+Energy                   TS             :  -0.16%  石油, 天然气, 管材, 管道, 套管
+Industrials              SYM.-          :  -0.16%  自动化仓储机器人, 人工智能, 机器人, 自动化, 用于沃尔玛
+Consumer_Cyclical        CART.12        :  -0.16%  Instacart, 在线, 代购, 配送, 快递, 物流
+Communication_Services   IPG            :  -0.16%  广告, 广告营销
+Healthcare               SOLV           :  -0.17%  舒万诺, 伤口护理, 口腔护理, 3M分拆
+Utilities                WTRG           :  -0.17%  水务, 废水, 天然气服务
+Industrials              XPO            :  -0.18%  世界十大运输和物流服务供应商之一, 运输, 物流, 卡车运输
+Technology               SMAR.-         :  -0.18%  云计算, 软件平台
+Real_Estate              RITM           :  -0.18%  房地产投资信托, 抵押贷款, 投资管理
+Technology               VNT            :  -0.18%  加油站管理系统, 运油车辆检测
+Healthcare               GEHC           :  -0.18%  医疗影像, 通用电气分拆, 磁共振成像, CT, 超声波诊断
+Healthcare               HQY.--         :  -0.18%  医疗储蓄账户, 医疗保健, HQY, 美国
+Industrials              HEI.-          :  -0.18%  飞机零部件, 航空航天, 电子技术, 电子设备, 伯克希尔哈撒韦, 巴菲特
+Communication_Services   NXST           :  -0.19%  广播电视, 数字媒体, 美国
+Industrials              FLR            :  -0.20%  工程, 采购建造, 维护运营
+Technology               EPAM           :  -0.20%  软件开发, 中东欧开发人员
+Technology               IOT.-          :  -0.20%  物联网, 工业, 美国
+Basic_Materials          BCPC           :  -0.20%  人与动物, 食物, 饮料, 膳食补充剂
+Communication_Services   RBLX.*.-       :  -0.20%  游戏平台, 元宇宙, 儿童用户
+Real_Estate              GLPI           :  -0.21%  以三网租赁安排将地产租赁给赌场博彩运营商来获得租金收入
+Technology               AZPN           :  -0.22%  工业软件, 过程优化, 资产性能管理
+Industrials              VRT.*.--       :  -0.22%  维谛技术, AI, 数据中心, 液冷散热, 液冷, 收购CoolTerra, 空调
+Financial_Services       COF            :  -0.23%  第一资本, 信用卡, 金融, 美国
+Financial_Services       HLI            :  -0.24%  投资银行, 财务重组, 并购咨询
+Healthcare               TMO            :  -0.24%  赛默飞世尔, 生命科学, 科学仪器, 实验室设备, 耗材, 试剂
+Financial_Services       VIRT           :  -0.24%  金融技术, 高频交易, 做市商服务
+Technology               DOCU           :  -0.25%  电子签名, 数字交易
+Consumer_Cyclical        HLT            :  -0.25%  希尔顿, 酒店, 度假村
+Technology               LITE.-         :  -0.25%  光通信, 工业, 激光, 3D传感
+Healthcare               IONS           :  -0.25%  生物制药, 反义技术
+Real_Estate              LAMR           :  -0.25%  户外广告, 数字广告牌, 交通广告, 广告, 广告平台, 广告营销
+Energy                   PR.*.-         :  -0.26%  石油, 天然气, 勘探开发
+Consumer_Defensive       CCEP.-         :  -0.26%  瓶装分销, 可口可乐, 欧洲, 大洋洲
+Basic_Materials          CMC            :  -0.26%  钢铁, 金属回收, 特朗普概念, 美国
+Technology               SONY           :  -0.26%  日本, 索尼, 游戏机, 电视机, 影像
+Healthcare               LEGN.12        :  -0.26%  中国, 传奇生物, CAR-T细胞疗法
+Real_Estate              ARE            :  -0.26%  生命科学领域的房地产投资信托, 亚历山大房地产
+Technology               FSLR           :  -0.26%  第一太阳能, 太阳能, 光伏, 美国
+Real_Estate              RHP            :  -0.26%  酒店度假村开发运营, 房地产投资信托
+Healthcare               ATR            :  -0.27%  包装交付解决方案供应商
+Industrials              DCI            :  -0.27%  发动机过滤, 工业过滤器
+Technology               HUBS.-         :  -0.27%  云计算, 客户关系管理
+Financial_Services       FSK            :  -0.27%  直接贷款, 夹层融资, 股权投资
+Healthcare               PCVX           :  -0.27%  生物科技, 肺炎球菌疫苗
+Technology               SNX            :  -0.27%  信息技术, IT产品, 分销, 解决方案
+Consumer_Defensive       MNST           :  -0.27%  能量饮料, "爪痕"标志
+Consumer_Cyclical        LTH            :  -0.28%  高端健身俱乐部, 健康管理社区会所
+Communication_Services   FWONA          :  -0.28%  一级方程式赛车, 卫星广播, 流媒体
+Financial_Services       FUTU.--        :  -0.29%  富途牛牛, 美股交易平台, moomoo, 中国
+Technology               TTD.-          :  -0.29%  程序化广告购买平台, 实时竞价RTB, 广告投放, 广告购买, 广告, 广告营销, 在线广告
+Financial_Services       PFG            :  -0.29%  金融集团, 退休金计划, 保险
+Healthcare               ZBH            :  -0.29%  骨科手术, 关节置换, 膝关节髋关节置换
+Consumer_Cyclical        GPI            :  -0.29%  汽车零售, 汽车维修, 汽车保险, 美国
+Financial_Services       WTFC           :  -0.29%  银行, 贷款, 信托, 信达金融
+Healthcare               WAY.-          :  -0.29%  云计算, 软件, 医疗保健, 支付, AI, 医疗报销, IT
+Technology               UMC.*          :  -0.29%  联电, 半导体, 晶圆代工, 台湾
+Financial_Services       AXS            :  -0.30%  保险, 再保险
+Consumer_Cyclical        EAT            :  -0.30%  布林克国际, 连锁餐厅, 餐饮, Chili's Grill & Bar
+Basic_Materials          NEU            :  -0.30%  化学品, 石油添加剂
+Consumer_Cyclical        LOW            :  -0.31%  劳氏, 家居装修零售, 仅次于HomeDepot家得宝, 装修, 零售, 家装, 建材
+Industrials              ESAB           :  -0.31%  切割, 焊接, 气体控制
+Real_Estate              KIM            :  -0.31%  北美房地产投资信托, 社区购物中心, 零售物业
+Consumer_Cyclical        M.14.*.-       :  -0.31%  梅西, 百货, 商店, 美国
+Technology               QLYS           :  -0.32%  云安全, IT合规解决方案
+Healthcare               BMRN           :  -0.32%  生物技术, 罕见遗传病
+Consumer_Cyclical        SCI            :  -0.33%  殡葬, 火化, 墓地
+Financial_Services       HBAN.*         :  -0.33%  美国亨廷顿银行, 区域性银行, 银行
+Industrials              UAL.*          :  -0.33%  联合航空, 航空, 美国, 航空公司
+Energy                   SUN            :  -0.33%  汽油柴油分销, 美国
+Financial_Services       ACT            :  -0.34%  商业与住宅私人抵押贷款保险, 抵押贷款保险
+Industrials              GFL            :  -0.34%  加拿大, 环境服务, 废物处理
+Communication_Services   NWS            :  -0.34%  新闻集团, 默多克, Fox, 福克斯, 媒体, 数字房地产, 图书出版
+Financial_Services       MFC.--         :  -0.34%  加拿大, 保险
+Technology               QTWO           :  -0.34%  数字银行平台, 赋能银行, 在线银行, 移动银行, 金融数字化
+Real_Estate              STWD           :  -0.35%  房地产投资信托, 抵押贷款支持证券
+Technology               KVYO           :  -0.35%  电子商务, 通过邮件短信推送个性化营销信息, 营销自动化, 营销, 短信推送
+Financial_Services       BOKF           :  -0.35%  金融控股银行, 抵押贷款, 美国
+Industrials              DE             :  -0.36%  迪尔, 农业设备, 建筑设备, 工程机械
+Consumer_Defensive       EDU            :  -0.36%  新东方, 在线教育, 培训, 中国
+Technology               HPE.*          :  -0.36%  惠普, 专注企业客户, 数据中心, AI服务器, 服务器, AI
+Basic_Materials          RS             :  -0.36%  Reliance, 金属, 钢铁, 分销
+Financial_Services       HSBC           :  -0.37%  汇丰, 银行
+Healthcare               TAK            :  -0.37%  日本武田制药, 肿瘤, 消化, 神经系统, 药品, 制药
+Healthcare               MOH            :  -0.38%  医疗保险, 长期护理
+Healthcare               GSK            :  -0.38%  葛兰素史克, 医疗保健, 制药, 疫苗
+Financial_Services       HDB            :  -0.39%  印度, 银行
+Financial_Services       FITB           :  -0.39%  五三银行, 美国
+Technology               BOX            :  -0.39%  云存储, 企业软件, SaaS, 云服务, 智能内容管理
+Financial_Services       CACC           :  -0.39%  汽车经销商, 汽车融资, 汽车贷款
+Financial_Services       OBDC.-         :  -0.39%  面向美国中型企业的直接贷款, 另类资产管理
+Technology               VRNS           :  -0.40%  面向企业, 数据安全, 数据分析, 云计算
+Financial_Services       PB             :  -0.40%  银行, 美国
+Energy                   SHEL.--        :  -0.40%  荷兰皇家壳牌, 石油, 石化, 能源, 深海钻探, vito平台
+Industrials              TFII           :  -0.40%  北美, 物流运输, 包裹, 快递, 卡车货运, 仓储
+Real_Estate              STAG           :  -0.40%  工业房地产投资信托, 仓库, 物流设施, 二三线市场
+Real_Estate              EPR-PG         :  -0.40%  体验式和教育领域的房地产投资信托
+Technology               PSN.--         :  -0.41%  技术驱动, 国防, 情报, 关键基础设施
+Industrials              NVT            :  -0.42%  电气连接, 电气保护, 数据中心, 冷却, AI
+Energy                   AR             :  -0.42%  水力压裂, 页岩气, 石油, 天然气, 美国
+Healthcare               AVTR           :  -0.43%  生物技术, 实验室产品, 生产制造材料
+Consumer_Cyclical        RIVN.*         :  -0.43%  meme, 电动汽车
+Consumer_Cyclical        CCK.-          :  -0.43%  食品包装, 金属罐
+Technology               WIX            :  -0.43%  以色列, 云计算, 网站开发
+Financial_Services       V              :  -0.44%  全球, 支付, 信用卡, 借记卡, 预付卡
+Financial_Services       BXSL.12        :  -0.44%  黑石, 基金, 担保贷款, 贷款, 另类投资
+Real_Estate              CUZ            :  -0.44%  房地产, 投资信托, 办公楼, 美国
+Technology               HCP            :  -0.44%  云计算
+Communication_Services   LBRDK.-        :  -0.44%  持有美国第二大有线电视公司Charter股份
+Technology               ALTR           :  -0.44%  工业领域设计工具, CAE, 工业设计
+Communication_Services   TEF            :  -0.45%  西班牙, 拉丁美洲, 电信运营商
+Technology               ADSK.-         :  -0.45%  AutoCAD, Maya, 3DsMAX
+Real_Estate              CSGP           :  -0.45%  在线房地产服务, 房地产
+Industrials              HII.-          :  -0.45%  核动力航空母舰, 国防, 工业, 军事, 宙斯盾驱逐舰, 美国
+Utilities                LNT            :  -0.46%  巴尔的摩能源, 电力, 天然气, 公共事业
+Real_Estate              VICI           :  -0.46%  三重净租赁房地产投资信托, 赌场, 娱乐物业, 凯撒宫
+Financial_Services       FNB            :  -0.46%  社区银行, 金融, 抵押贷款, 美国
+Healthcare               DHR            :  -0.46%  丹纳赫, 医疗耗材, 诊断设备, 环境测量
+Consumer_Cyclical        BABA.15.*      :  -0.47%  阿里巴巴, 电子商务, 阿里云, 蚂蚁金服, 支付宝, 淘宝, 中国
+Financial_Services       OMF            :  -0.47%  个人贷款, 保险, 金融服务
+Basic_Materials          RPM            :  -0.47%  涂料, 密封剂, 建筑材料
+Communication_Services   DIS.14.*       :  -0.47%  华特迪士尼, 主题乐园, 流媒体, 动画电影
+Industrials              OTIS           :  -0.48%  奥的斯, 电梯
+Industrials              VLTO           :  -0.48%  水质分析, 水, 水处理, 提供安全饮用水
+Financial_Services       BLK.-          :  -0.49%  贝莱德, 资产管理, 贷款, 金融
+Industrials              OSK            :  -0.49%  国防, 特种车辆, 装甲车, 消防车, 卡车
+Basic_Materials          NEM.*.-        :  -0.49%  金矿, 铜矿, 黄金, 第一大
+Consumer_Defensive       KVUE.*         :  -0.50%  健康产品, 李施德林, Tylenol泰诺, 强生拆分, 个人护理
+Technology               JNPR           :  -0.50%  瞻博, 网络通讯设备, 路由器, 交换机
+Consumer_Cyclical        REYN           :  -0.50%  家居用品, 烹饪, 垃圾处理和储存, 餐具
+Technology               HPQ.*          :  -0.51%  AI, 惠普, AI服务器, 服务器, 个人电脑
+Consumer_Cyclical        LNW.12         :  -0.52%  手机电脑游戏, 博彩游戏, 赌场游戏, 游戏
+Financial_Services       WTM            :  -0.52%  白山保险集团, 保险, 再保险, 财产保险, 意外保险
+Technology               DBX            :  -0.53%  云存储, 文件同步
+Industrials              KEX            :  -0.53%  石油驳船, 水路运输, 柴油发动机服务, 驳船, 运输, 拖船, 运输液体散货
+Financial_Services       FAF            :  -0.53%  房地产, 产权保险
+Energy                   IEP.-          :  -0.54%  华尔街之狼卡尔伊坎创办, 卡尔伊坎
+Financial_Services       CBSH           :  -0.54%  科默斯银行, 美国
+Technology               GLW.-          :  -0.54%  康宁, 玻璃, 显示器, 光纤, 培养皿
+Technology               MTSI           :  -0.54%  射频微波组件, 模拟芯片, 光纤, 无线传感, AI
+Consumer_Cyclical        SON            :  -0.54%  消费品包装, 工业包装, 包装
+Financial_Services       MTB            :  -0.54%  制商银行, 美国
+Industrials              DAL            :  -0.54%  达美航空, 航空, 飞机, 航空公司, 美国
+Consumer_Cyclical        HAS            :  -0.54%  孩之宝, 玩具, 变形金刚, 大富翁GO手游
+Healthcare               BDX            :  -0.55%  医疗仪器
+Consumer_Defensive       PEP            :  -0.55%  百事可乐, 可乐, 食品, 碳酸饮料, 零食, 饮料
+Communication_Services   VOD.12         :  -0.56%  英国, 沃达丰, 电信运营商
+Energy                   HAL.*          :  -0.56%  哈里伯顿, 石油, 天然气, 钻井, 油田服务
+Financial_Services       BNS            :  -0.57%  加拿大, 丰业银行
+Industrials              ITT            :  -0.57%  为能源、交通和工业市场提供高度工程化的关键部件和定制技术解决方案
+Energy                   MTDR.-         :  -0.57%  原油, 天然气, 勘探开采
+Financial_Services       IBN            :  -0.58%  印度, 工业信贷, 投资银行
+Industrials              IR             :  -0.58%  工业设备, 空气压缩机, 泵阀门, 工业, 工业制造
+Energy                   ENB.--         :  -0.58%  能源基础设施, 原油液体管道, 天然气管道网络
+Financial_Services       RF             :  -0.58%  区域性银行, 金融服务, 美国
+Technology               CWAN           :  -0.59%  云平台, 投资数据分析报告, 风险评估
+Technology               ITRI.-         :  -0.59%  水资源, 智能电表, 服务于公共事业类, 公共事业
+Financial_Services       VOYA           :  -0.59%  退休, 人寿保险, 投资, 节税, 拆分自荷兰国际集团
+Real_Estate              HST.*          :  -0.60%  高端酒店度假村房地产投资信托, 万豪希尔顿凯悦
+Healthcare               TEVA.*.-       :  -0.60%  以色列, 梯瓦制药, 仿制药
+Financial_Services       NWG            :  -0.60%  英国, 银行
+Consumer_Cyclical        ULTA           :  -0.60%  美妆购物, 美容沙龙, 化妆品美甲护发
+Industrials              EXPD           :  -0.60%  物流, 货运, 海运空运
+Healthcare               ILMN           :  -0.60%  基因测序, 血液筛查, 癌症筛查
+Consumer_Defensive       KDP.*          :  -0.61%  第三大, 非酒精饮料, 饮料, DrPepper, 7UP, 咖啡机, K-Cup胶囊, 运动饮料, 美国
+Consumer_Cyclical        CHH            :  -0.61%  精选国际, 酒店特许经营, 酒店品牌管理运营
+Financial_Services       PJT            :  -0.61%  投资银行, 战略咨询, 私募配售
+Technology               MANH           :  -0.62%  供应链管理软件, 供应链管理, 软件平台
+Energy                   SLB.*.-        :  -0.62%  斯伦贝谢, 石油, 天然气, 勘探, 开发
+Industrials              PCAR           :  -0.62%  重型卡车制造商, 卡车
+Technology               NTNX.-         :  -0.62%  云计算, 虚拟化, AI
+Utilities                ES             :  -0.63%  电力, 天然气, 公共事业
+Financial_Services       ESNT           :  -0.64%  私人住房抵押贷款保险和再保险, 抵押贷款保险, 保险, 再保险
+Consumer_Defensive       SYY            :  -0.64%  西斯科, 食品, 食物, 肉, 餐具, 食品分销, 餐具, 厨具
+Healthcare               BIIB           :  -0.64%  渤健, 神经退行性疾病, 多发性硬化症
+Financial_Services       FCNCA.-        :  -0.64%  银行, 财富管理, 信托, 美国
+Consumer_Cyclical        GNTX           :  -0.64%  后视镜, 玻璃, 智能玻璃, 飞机调光玻璃
+Financial_Services       SAN            :  -0.65%  桑坦德银行, 西班牙
+Technology               NICE.14        :  -0.65%  以色列, 云计算, 企业平台, 金融犯罪, AI
+Technology               ANSS           :  -0.65%  工程仿真软件, 工业软件, 仿真
+Technology               AVT            :  -0.65%  电子元器件, 半导体, AI
+Energy                   TRP.--         :  -0.65%  原油, 天然气, 发电, 能源
+Industrials              HXL            :  -0.65%  高性能复合材料, 碳纤维, 蜂窝芯, 赫氏
+Utilities                BEPC           :  -0.65%  可再生能源, 能源
+Energy                   PBF.--         :  -0.66%  石油精炼, 管道储存销售供应
+Energy                   APA.-          :  -0.66%  阿帕奇, 石油, 天然气, 勘探开发
+Technology               PTC            :  -0.66%  产品生命周期管理PLM, 计算机辅助设计CAD, CAD, 辅助设计, 工业
+Technology               ARW            :  -0.67%  电子元器件, 企业计算解决方案
+Financial_Services       EG             :  -0.67%  保险, 再保险
+Technology               TSM.*.--       :  -0.67%  台积电, 晶圆代工, 芯片, AI, 封装测试
+Industrials              HUBB           :  -0.67%  哈勃集团, 电气系统, 公共事业
+Healthcare               GMAB           :  -0.67%  生物科技, 癌症, 生物技术, 丹麦, 骨髓瘤
+Financial_Services       PDI.-          :  -0.68%  太平洋投资, 封闭式基金, 债券基金
+Basic_Materials          VMC            :  -0.68%  建筑骨料, 建筑材料, 砂石碎石沥青, 混凝土
+Basic_Materials          GOLD.*.-       :  -0.68%  巴里克, 黄金, 铜矿, 全球, 第二大
+Utilities                NGG            :  -0.68%  英国国家电网, 电力, 天然气
+Healthcare               RPRX           :  -0.68%  生物制药特许权买家, 医药创新投资者
+Financial_Services       AFG            :  -0.68%  保险, 年金
+Consumer_Cyclical        GLBE           :  -0.69%  以色列, 跨境电商解决方案, 电商
+Basic_Materials          DD             :  -0.70%  杜邦, 材料, 化学品
+Basic_Materials          JHX            :  -0.70%  建筑材料, 纤维, 水泥
+Technology               STM.*          :  -0.70%  意法半导体, 芯片, 传统半导体, 欧洲
+Financial_Services       CFR            :  -0.70%  金融, 银行
+Real_Estate              EGP            :  -0.71%  工业领域, 房地产投资信托, 房地产
+Industrials              FDX            :  -0.71%  联邦快递, 物流, 速递, 运输, 托运
+Technology               NOK.*          :  -0.71%  芬兰, 通信, 5G, 诺基亚, 通讯, 电信设备
+Industrials              DY             :  -0.72%  电信行业工程服务提供商, 光纤, 电力线路
+Industrials              RBA            :  -0.72%  工业设备拍卖
+Industrials              TXT            :  -0.72%  贝尔直升机, 商用飞机, 军事装备, 工业产品
+Technology               CDNS           :  -0.73%  芯片设计, 全球三大EDA公司之一, AI, 工业软件
+Consumer_Defensive       LOPE           :  -0.74%  教育服务, 大峡谷大学, 在线教育, 教育, 美国
+Financial_Services       CFG            :  -0.74%  第14大, 银行, 抵押贷款, 美国
+Communication_Services   NYT            :  -0.74%  纽约时报, 新闻, 数字媒体, 媒体
+Technology               IONQ.*.--      :  -0.74%  量子计算, 量子计算机, 美国
+Utilities                POR            :  -0.75%  天然气, 发电, 配电
+Financial_Services       JXN            :  -0.76%  退休储蓄, 可变年金, 固定年金
+Financial_Services       BX.-           :  -0.76%  黑石集团, 私募股权, 房地产, 对冲基金
+Financial_Services       KEY.*          :  -0.76%  银行, 金融服务
+Consumer_Cyclical        NVR            :  -0.76%  房地产, 新房建造销售, 美国
+Consumer_Defensive       PFGC           :  -0.77%  食品服务分销商, 肉, 冷冻, 食品, 零食
+Consumer_Cyclical        SKY            :  -0.77%  模块化, 预制住宅制造商, 住宅建筑
+Consumer_Cyclical        IP             :  -0.77%  纸张, 包装, 林产品, 国际纸业, 纸
+Healthcare               MEDP           :  -0.77%  临床合同研究组织CRO, 外包临床开发服务, 临床
+Technology               AMAT.14.*.--   :  -0.77%  应用材料, 半导体, 传统半导体, 人工智能芯片, 材料
+Industrials              MMS            :  -0.78%  马克西姆, 协助联邦和州政府 医疗补助和保险
+Energy                   CTRA.-         :  -0.78%  石油, 天然气, 勘探开发
+Financial_Services       FCFS           :  -0.78%  拉丁美洲, 典当, 小额贷款, 美国
+Technology               GRMN           :  -0.78%  佳明, 瑞士, GPS, 手表, 可穿戴, 全球定位设备
+Communication_Services   DJT.*.-        :  -0.78%  特朗普媒体科技集团, Truth Social, SPAC, 特朗普
+Technology               GIB            :  -0.78%  加拿大, 信息技术IT, 业务咨询
+Consumer_Cyclical        DRI            :  -0.78%  快餐, 高端餐饮
+Financial_Services       RDN            :  -0.79%  抵押贷款保险, 保险
+Technology               FRSH.-         :  -0.79%  SaaS, Freshdesk, 客户关系管理, IT, CRM, 软件平台
+Basic_Materials          PKX            :  -0.79%  浦项, 韩国, 钢铁, 钢铁制造, 不锈钢, 特种钢材
+Technology               TRMB           :  -0.80%  GPS定位技术解决方案
+Financial_Services       FNF            :  -0.80%  产权保险, 抵押贷款
+Industrials              AMTM           :  -0.81%  工程技术, 情报, 政府服务, 政府承包商
+Technology               BSY            :  -0.81%  建筑行业, 工程领域, 软件开发
+Healthcare               JNJ.*          :  -0.81%  强生, 健康保健, 制药, 医疗器械, Band-Aid邦迪, 创可贴
+Energy                   PBR.*.-        :  -0.81%  巴西国有石油
+Industrials              MSA            :  -0.81%  安全头盔, 听力和呼吸保护, 气体和火焰检测仪
+Financial_Services       SSB            :  -0.81%  银行, 金融服务, 抵押贷款
+Consumer_Cyclical        RACE.-         :  -0.81%  法拉利, 豪华跑车制造商, 意大利
+Consumer_Cyclical        SKX            :  -0.82%  斯凯奇, 鞋, 服装
+Basic_Materials          EMN            :  -0.82%  特种化学品, 添加剂, 塑料, 纤维
+Financial_Services       KB.-           :  -0.83%  韩国, 国民银行
+Financial_Services       TFC            :  -0.83%  银行, 抵押贷款
+Consumer_Cyclical        LAD            :  -0.83%  利西亚车行, 汽车零售, 汽车贷款, 电动汽车, 美国
+Technology               BDC            :  -0.83%  信号传输, 网络基础设施, 电缆, 网络设备, 工业, 工业自动化, 美国
+Financial_Services       VLY.*          :  -0.83%  硅谷国家银行, 银行, 金融服务, 贷款, 理财
+Financial_Services       MTG            :  -0.84%  从事私人抵押贷款保险业务, 抵押贷款保险
+Consumer_Cyclical        ONON.12        :  -0.84%  瑞士, 运动, 鞋, 服装, 体育, 运动鞋
+Technology               CRDO           :  -0.85%  高性能高速数据传输解决方案, 有源电缆, AI
+Energy                   MGY.-          :  -0.85%  德克萨斯州, 石油天然气勘探开发
+Technology               OTEX           :  -0.86%  企业信息管理软件
+Consumer_Cyclical        AMCR.*.-       :  -0.86%  柔性包装, 刚性塑料容器, 专用纸包装, 烟草包装
+Consumer_Cyclical        QSR            :  -0.86%  加拿大, 快餐连锁, 汉堡王
+Financial_Services       GBCI           :  -0.87%  区域性银行, 抵押贷款, 美国
+Industrials              FLS            :  -0.87%  泵, 阀门, 机械密封, 核电, 核能, 核
+Financial_Services       EVR            :  -0.88%  投资银行, 并购重组
+Financial_Services       MC             :  -0.88%  投资银行, 战略咨询, 财务咨询, 并购, 资本重组, 债务重组, 债务融资, 美国
+Healthcare               MMSI.-         :  -0.88%  医疗器械, 心脏胃肠肺胸肾内血管介入设备, 介入设备
+Healthcare               CTLT           :  -0.88%  先进药物递送技术, 临床试验服务, 生物技术
+Financial_Services       SF             :  -0.88%  金融, 银行, 财富管理
+Financial_Services       IX             :  -0.89%  欧力士, 金融服务, 融资租赁
+Technology               NVMI.-         :  -0.89%  以色列, 半导体, 高精度计量解决方案
+Basic_Materials          SHW            :  -0.89%  涂料, 油漆, 化学品, 宣伟
+Consumer_Cyclical        ABNB           :  -0.89%  短租长租平台, 在线租房
+Consumer_Cyclical        TMHC           :  -0.90%  住宅建筑, 房地产, 美国
+Consumer_Cyclical        RH             :  -0.90%  家具, 照明, 家居装饰
+Utilities                IDA            :  -0.90%  电力, 发电, 输电, 配电, 美国
+Consumer_Cyclical        GIL            :  -0.90%  服装制造, 加拿大
+Technology               FTV            :  -0.90%  专业仪器, 工业医疗技术
+Industrials              ROK            :  -0.90%  工业自动化信息化
+Real_Estate              NLY.*          :  -0.90%  房地产投资信托, 抵押贷款
+Financial_Services       COLB           :  -0.91%  哥伦比亚银行系统, 区域性银行, 抵押贷款, 美国
+Technology               CHKP           :  -0.91%  以色列, 防火墙, VPN, 入侵防御
+Healthcare               HOLX           :  -0.92%  豪洛捷, 早期检测疾病, 提高女性健康, 乳腺癌, 健康
+Technology               LOGI           :  -0.92%  罗技, 计算机外设, 游戏设备, 鼠标
+Industrials              CNM            :  -0.93%  市政水务, 废水处理
+Basic_Materials          STLD           :  -0.93%  钢铁制造, 金属回收, 钢铁, 特朗普概念, 美国
+Consumer_Cyclical        LVS.*          :  -0.93%  拉斯维加斯金沙集团, 赌场, 度假村
+Energy                   EQT.*          :  -0.93%  天然气, 水力压裂, 能源, 美国
+Energy                   NFG.-          :  -0.94%  天然气, 生产, 收集, 运输, 储存, 分销
+Technology               CCCS           :  -0.94%  云服务, 赋能保险, 美国
+Industrials              GPN            :  -0.94%  支付解决方案
+Financial_Services       PYPL.*         :  -0.95%  在线支付
+Consumer_Defensive       DLTR           :  -0.95%  美元树, 低价折扣, 零售, 连锁, 商店
+Technology               TWLO           :  -0.95%  提供API接口的云通讯平台
+Energy                   NXE.-          :  -0.95%  加拿大, 矿产, 铀矿, 铀, 核能
+Industrials              ALK            :  -0.95%  阿拉斯加, 航空, 美国
+Technology               JBL            :  -0.96%  捷普, 电子制造, 给苹果供应零部件, 也供应汽车和医疗
+Energy                   PBA.--         :  -0.96%  石油, 天然气, 运输加工储存
+Financial_Services       UBSI           :  -0.97%  社区银行业务, 抵押贷款, 区域性, 美国
+Technology               BILL           :  -0.97%  云计算, 金融服务软件, 云平台, 中小企业, 财务会计, 软件平台
+Industrials              PAC.-          :  -0.97%  墨西哥, 机场运营管理, 太平洋机场, 机场运营
+Basic_Materials          WFG            :  -0.98%  加拿大, 木材
+Technology               TXN.*          :  -0.98%  德州仪器, 半导体, 模拟芯片, 基础芯片, 传统半导体, 美国
+Utilities                FTS.-          :  -0.98%  电力, 天然气, 传输, 配送, 能源, 公共事业
+Financial_Services       LNC            :  -0.98%  寿险, 保险, 退休规划, 资产管理
+Industrials              MLI.--         :  -0.99%  穆勒工业, 管道产品, 工业金属, 黄铜棒
+Industrials              CAE.12         :  -0.99%  模拟建模, 民航, 国防, 医疗仿真, 仿真, 美国飞行员培训
+Real_Estate              SLG.-          :  -0.99%  房地产, 投资信托, 房地产, 曼哈顿办公楼, 商业地产, 美国
+Communication_Services   SPOT.12        :  -0.99%  音乐, 流媒体
+Real_Estate              WY             :  -0.99%  林业管理, 木材产品, 房地产
+Healthcare               PHG            :  -0.99%  荷兰, 飞利浦, 照明, 医疗, 电器
+Financial_Services       BPOP           :  -1.00%  大众银行, 波多黎各, 银行
+Financial_Services       ZION           :  -1.00%  银行, 抵押贷款, 齐昂银行, 美国
+Industrials              WCC            :  -1.03%  电气产品, 工业电器, 工业
+Financial_Services       CM.-           :  -1.04%  帝国银行, 加拿大
+Energy                   DINO.-         :  -1.04%  石油精炼, 可再生能源
+Technology               MNDY.11        :  -1.05%  以色列, 云平台, 工作流程, 项目管理, 云计算, 软件平台
+Real_Estate              TRNO           :  -1.05%  沿海市场收购、出租、经营工业房地产
+Industrials              LPX            :  -1.05%  建筑材料, 定向刨花板, 外墙挂板, 工程木制品
+Consumer_Defensive       FMX            :  -1.05%  墨西哥, 可口可乐瓶装, 可口可乐, 连锁便利店
+Industrials              ZTO.--         :  -1.05%  中通快递, 物流, 快递
+Financial_Services       MKTX           :  -1.05%  金融, 电子交易, 固定收益债券
+Consumer_Cyclical        DECK           :  -1.06%  鞋, UGG, 户外, 凉鞋, Hoka, Teva
+Healthcare               LH             :  -1.06%  临床实验室, 诊断测试
+Utilities                BIPC           :  -1.07%  能源、运输、数据、公用事业基础设施资产管理运营
+Basic_Materials          UFPI           :  -1.07%  环球森林产品, 木材, 建筑材料
+Basic_Materials          FMC            :  -1.07%  化学, 农业解决方案, 美国
+Communication_Services   TME.12.-       :  -1.07%  腾讯, 音乐, 酷我, 酷狗, 中国
+Industrials              RYAAY          :  -1.07%  瑞安航空, 爱尔兰, 低成本廉价航空
+Financial_Services       FHN            :  -1.07%  第一地平线, 区域性银行, 美国
+Utilities                ORA            :  -1.09%  地热发电, 可再生能源, 能源, 发电, 地热, 地热能
+Financial_Services       DB             :  -1.09%  德意志银行
+Financial_Services       HLNE           :  -1.10%  私募投资, 资产管理
+Industrials              CHRW.--        :  -1.10%  北美, 罗宾逊, 运输经纪
+Industrials              BECN           :  -1.10%  屋顶建筑材料, 建筑材料, 北美
+Technology               EEFT           :  -1.11%  电子支付, ATM, POS, 汇款
+Consumer_Defensive       KOF            :  -1.11%  可口可乐瓶装, 可口可乐, 业务覆盖南美, 拉丁美洲
+Financial_Services       FFIN           :  -1.11%  德克萨斯州, 区域性银行, 抵押贷款, 美国
+Real_Estate              AGNC.*         :  -1.13%  房地产投资信托基金, 抵押贷款按揭证券
+Energy                   SM.-           :  -1.13%  石油, 天然气, 勘探开发
+Real_Estate              FR             :  -1.14%  房地产投资信托, 工业地产
+Consumer_Cyclical        SBUX.*.-       :  -1.14%  星巴克, 咖啡零售, 连锁
+Consumer_Cyclical        BERY.-         :  -1.15%  塑料包装, 包装, 无纺布, 特种材料, 薄膜, 尿不湿, 卫生巾, 湿巾
+Financial_Services       HWC            :  -1.15%  区域性银行, 金融服务, 银行, 美国
+Consumer_Cyclical        ABG            :  -1.16%  汽车零售, 零部件维修, 汽车相关金融服务, 汽车贷款, 汽车
+Basic_Materials          MLM            :  -1.16%  建筑材料, 石灰石, 混凝土
+Energy                   OXY.12.*.-     :  -1.17%  巴菲特, 西方石油, 石油
+Industrials              UHAL           :  -1.18%  搬家, 存储租赁, 房地产, 房地产你, 美国
+Communication_Services   LYV.11         :  -1.19%  娱乐, 演唱会, 票务
+Technology               QCOM.*         :  -1.19%  高通, 移动芯片, 无线通信, 专利授权, 射频芯片, 汽车芯片, 物联网设备芯片, 传统半导体, 美国
+Financial_Services       SNV            :  -1.19%  金融, 银行, 抵押贷款, 美国
+Technology               WEX            :  -1.20%  信用卡, 支付, 企业支付, 金融科技
+Industrials              STN            :  -1.20%  加拿大, 斯坦泰克, 建筑设计, 工程服务, 项目管理
+Industrials              TNET           :  -1.20%  人力资源解决方案, 薪酬福利管理
+Financial_Services       MFG.14.--      :  -1.21%  瑞穗金融, 日本, 第三大, 银行, 证券, 信托
+Consumer_Cyclical        GPC            :  -1.21%  汽车零部件, 工业零件, 电子材料
+Real_Estate              WPC            :  -1.22%  房地产, 投资信托
+Financial_Services       BMO            :  -1.22%  蒙特利尔银行, 加拿大, 银行
+Energy                   BP.*.-         :  -1.23%  英国石油, 能源, 石油
+Energy                   CHX.--         :  -1.23%  石油, 天然气, 油田化学品, 人工升举系统, 钻井技术
+Financial_Services       BGC            :  -1.23%  金融产品, 金融经纪, 场外交易, OTC, 电子交易平台, 房地产经纪, 美国
+Energy                   TTE.--         :  -1.24%  道达尔, 石油, 天然气, 电力, 炼油化工, 能源
+Real_Estate              REXR           :  -1.24%  工业房地产, 投资信托, 房地产
+Industrials              TTC            :  -1.24%  割草机, 草坪维护设备
+Financial_Services       EWBC           :  -1.24%  华美, 银行, 大中华区, 抵押贷款, 美国
+Healthcare               JAZZ.-         :  -1.25%  爱尔兰, 嗜睡症, 癌症, 精神疾病
+Financial_Services       PNFP           :  -1.25%  区域性银行, 金融服务, 贷款, 抵押贷款, 美国
+Utilities                BIP            :  -1.25%  基础设施供应商
+Industrials              CWST           :  -1.25%  废物处理, 废物回收, 废物管理
+Financial_Services       WF             :  -1.25%  韩国, 友利银行
+Healthcare               RDY            :  -1.26%  印度, 仿制药
+Financial_Services       FG             :  -1.26%  金融, 年金, 寿险, 抵押贷款, 美国
+Basic_Materials          SUZ.--         :  -1.26%  巴西, 纸浆, 纸张
+Financial_Services       UPST.*         :  -1.27%  贷款, 借贷平台, 个人贷款, 在线贷款, 人工智能, AI, 信用评估, 数字化, 美国
+Financial_Services       WBS            :  -1.27%  金融服务, 银行业务, 储蓄账户, 财富管理
+Basic_Materials          ICL.11         :  -1.27%  以色列, 化学品, 农业增强技术, 农业
+Consumer_Cyclical        SW.-           :  -1.28%  爱尔兰, 包装, 瓦楞纸板, 纸业, 纸
+Consumer_Defensive       HSY            :  -1.28%  赫尔希, 好时巧克力, 巧克力
+Financial_Services       OZK            :  -1.29%  阿肯色州, 区域性银行, 抵押贷款, 美国
+Financial_Services       LU.-           :  -1.29%  陆金所, 零售信贷, 财富管理, 隶属于中国平安, 中国
+Industrials              ZWS            :  -1.29%  水管理解决方案, 管道系统, 阀门
+Technology               CRUS           :  -1.30%  半导体, 模拟集成电路, 音频芯片, 传统半导体
+Communication_Services   CMCSA.*.--     :  -1.30%  康卡斯特, 有线电视, 互联网提供商, 流媒体
+Consumer_Cyclical        COLM           :  -1.31%  哥伦比亚, 运动服装, 美国
+Industrials              EXPO           :  -1.31%  工程和科学咨询, 事故预防, 技术评估
+Financial_Services       PFSI           :  -1.33%  住宅抵押贷款银行
+Technology               YOU            :  -1.33%  生物识别, 身份验证, 机场, 体育馆, 演唱会, 云安全, 安全
+Industrials              GATX           :  -1.33%  铁路, 车辆, 租赁, 管理
+Financial_Services       SOFI.*         :  -1.34%  金融科技, 学生贷款, 信用卡
+Financial_Services       UMBF           :  -1.35%  金融, 银行, 投资管理, 区域性
+Consumer_Defensive       BJ             :  -1.36%  会员制, 零售, 批发, 超市
+Communication_Services   RCI            :  -1.37%  加拿大, 无线通信, 有线电视
+Industrials              OC             :  -1.37%  建筑复合材料, 绝缘, 玻璃纤维
+Healthcare               IQV            :  -1.37%  医疗领域临床研究服务提供商
+Consumer_Cyclical        PDD.*          :  -1.37%  中国, 拼多多, 在线零售, 低价, 低价折扣, 电子商务
+Basic_Materials          CTVA           :  -1.37%  农业, 种子, 农作物保护, 小麦育种, 美国
+Utilities                SWX            :  -1.38%  西南燃气, 天然气运输分销, 能源, 天然气
+Healthcare               ELV            :  -1.38%  医疗, 保险, 前身为安泰保险, 医疗保险, 美国
+Technology               LRCX.*         :  -1.38%  拉姆研究, 半导体, 刻蚀, 沉积, 清洗
+Technology               ONTO.--        :  -1.39%  半导体, 计量检测
+Consumer_Defensive       DEO            :  -1.40%  酒精饮料, Johnnie Walker, Smirnoff, 百利Baileys, 水井坊, Guinness, 烈酒
+Consumer_Cyclical        DKS            :  -1.40%  体育用品, 零售, 商店, 连锁
+Technology               SNPS.-         :  -1.41%  电子设计自动化工具, EDA, 设计, 集成电路, 芯片, 半导体, 工业软件
+Financial_Services       C.*            :  -1.41%  花旗, 银行
+Real_Estate              COLD           :  -1.42%  美国冷库, 冷藏仓储, 温控仓库, 冷链, 房地产, 仓库, 仓储
+Industrials              SPXC           :  -1.42%  暖通空调, 冷却塔, 锅炉加热, 检测与测量
+Communication_Services   SIRI           :  -1.42%  卫星, 无线电广播, 广播, 娱乐
+Industrials              RHI            :  -1.43%  罗伯特哈夫国际, 人力资源服务, 人力资源
+Financial_Services       EQH            :  -1.43%  保险, 人寿, 退休, 理财, 年金
+Technology               DDOG           :  -1.43%  云监控, 云平台
+Real_Estate              SUI            :  -1.44%  房地产, 房车度假村, 露营地
+Communication_Services   BCE            :  -1.44%  加拿大, 电信运营商, 贝尔, 电信
+Technology               NET.--         :  -1.45%  网络服务供应商, 域名, DNS
+Industrials              LUV            :  -1.45%  西南航空, 航空, 美国
+Technology               TER            :  -1.45%  自动测试系统, 为半导体无线电子提供测试解决方案
+Energy                   DVN.*.-        :  -1.46%  石油, 天然气, 勘探, 开发
+Consumer_Cyclical        RRR.-          :  -1.47%  赌博, 博彩, 度假村, 美国
+Industrials              RTO            :  -1.48%  害虫控制
+Industrials              UNP            :  -1.48%  联合太平洋, 铁路, 运输, 货运, 物流
+Energy                   EC.13.-        :  -1.48%  哥伦比亚, 石油
+Consumer_Cyclical        PHM            :  -1.49%  土地采购, 住宅建筑, 销售, 贷款金融服务
+Consumer_Cyclical        BIRK           :  -1.50%  德国, 鞋, 鞋垫, 被LVMH旗下Financière Agache收购
+Basic_Materials          AXTA           :  -1.50%  涂料, 工业, 杜邦分拆
+Consumer_Cyclical        CHDN.--        :  -1.50%  赛马, 博彩, 肯塔基德比赛Kentucky Derby
+Industrials              TKR            :  -1.51%  圆锥滚子轴承, 齿轮链条离合器, 汽车行业, 轴承, 传动系统
+Basic_Materials          RIO            :  -1.51%  力拓, 采矿, 铁矿石
+Technology               ASX.*.-        :  -1.51%  台湾日月光, 半导体, 芯片封装, 芯片测试
+Real_Estate              FSV            :  -1.53%  房地产, 住宅物业管理
+Industrials              BA.*           :  -1.53%  波音, 飞机制造, 飞机, 五大军事承包商之一, 美国
+Healthcare               PFE.*          :  -1.53%  辉瑞, mRNA疫苗, mRNA, 疫苗, 新冠, Paxlovid, 制药
+Utilities                NJR            :  -1.53%  天然气分销, 能源基础设施, 天然气, 能源, 清洁能源
+Technology               INGM           :  -1.53%  技术分销, IT, 云计算, 软件平台, 软件开发
+Consumer_Cyclical        BBWI.14.*      :  -1.54%  沐浴, 护肤, 香氛, 美国
+Energy                   NOV.-          :  -1.54%  石油, 天然气, 钻探生产, 油田设备部件供应商
+Healthcare               GKOS.-         :  -1.55%  眼科医疗, 微创青光眼手术, iStent, 眼科, 手术
+Energy                   CSAN.13        :  -1.55%  巴西, 天然气, 糖
+Utilities                SRE.*          :  -1.56%  墨西哥, 南美, 电力, 天然气, 公共事业
+Financial_Services       ING            :  -1.56%  荷兰国际集团, 银行, 保险, 资产管理
+Technology               LYFT.*         :  -1.57%  网约车, 共享出行, 出租车, 共享租车, 美国
+Technology               OS             :  -1.57%  企业软件, 绩效管理软件, 财务软件, 软件开发, 人工智能, CPM
+Healthcare               LNTH           :  -1.57%  医学影像诊断试剂, 影像诊断, 试剂, 医疗
+Financial_Services       BCS.*          :  -1.57%  巴克莱, 英国, 银行
+Industrials              MSM            :  -1.59%  零散型工业产品分销商
+Financial_Services       AEG            :  -1.59%  荷兰保险集团, 养老金, 资产管理
+Consumer_Cyclical        SG             :  -1.59%  快餐连锁, 餐饮, 沙拉, 美国
+Consumer_Defensive       COTY.*         :  -1.59%  科蒂集团, 美容, 香水, 化妆品
+Consumer_Cyclical        AVY            :  -1.60%  压敏标签技术及物料, 材料科学
+Industrials              ALLE           :  -1.60%  安防技术, 门控系统, 机械锁, 电子安全装置
+Financial_Services       CG             :  -1.60%  凯雷, 私募股权投资, 信贷, 贷款
+Real_Estate              LINE           :  -1.60%  温控仓库, 房地产投资信托, 食物饮料供应链
+Financial_Services       MUFG.14.-      :  -1.61%  三菱日联金融集团, 银行, 金融服务, 信托
+Real_Estate              PLD            :  -1.61%  工业房地产, 物流仓储, 供应链
+Financial_Services       TRU            :  -1.61%  信用报告, 评级评分, 风险评估
+Communication_Services   TU             :  -1.61%  加拿大, 电信运营商
+Consumer_Cyclical        ETSY           :  -1.62%  电子商务, 手工制品, 复古商品
+Consumer_Cyclical        BURL           :  -1.62%  伯灵顿百货, 折扣
+Industrials              FERG           :  -1.62%  建筑材料, 管道供暖
+Industrials              APG            :  -1.62%  防火安全, 施工维护
+Consumer_Defensive       LANC           :  -1.62%  兰卡斯特食品, 沙拉酱, 冷冻面包甜点
+Technology               AKAM           :  -1.63%  内容分发网络, CDN, 阿克迈
+Technology               LFUS           :  -1.63%  工业技术, 电路保护, 功率控制, 传感器
+Industrials              AGCO           :  -1.63%  农业机械, 拖拉机, 收割机
+Industrials              DRS.-          :  -1.64%  以色列, 国防, 军事技术, 美国
+Industrials              BLDR           :  -1.65%  建筑材料, 装修, 美国
+Healthcare               BAX            :  -1.65%  透析设备, 医疗产品, 营养输液, 医疗设备, 医疗器械
+Consumer_Cyclical        CHWY.--        :  -1.65%  宠物, 宠物食品, 宠物用品, 在线零售
+Industrials              WTS            :  -1.65%  沃茨水工业, 用水安全, 水质管理, 水资源
+Financial_Services       PUK            :  -1.65%  英国保诚, 保险, 金融服务
+Financial_Services       SLM            :  -1.65%  学贷美, 教育金融, 学生贷款, 贷款, 美国
+Financial_Services       PIPR           :  -1.65%  投资银行, 资产管理, 机构券商, 金融服务, 美国
+Industrials              ULS            :  -1.66%  测试, 检验, 认证, TIC服务, 软件咨询
+Energy                   XOM.*.--       :  -1.67%  埃克森美孚, 石油, 天然气, 第一大, 美国
+Communication_Services   LUMN.*.-       :  -1.67%  电信运营商, 通信服务提供商, AI, 通信, 高速光纤网络连接, 互联网骨干网, 电信基础设施
+Technology               DELL.*.-       :  -1.68%  戴尔, AI, AI服务器, 服务器, 数据中心, 电脑, PC
+Financial_Services       CADE           :  -1.68%  金融, 银行, 美国
+Healthcare               ZTS            :  -1.68%  宠物, 家畜, 药品, 疫苗, 宠物药品, 宠物医疗, 家畜药品
+Basic_Materials          VALE.*         :  -1.69%  巴西淡水河谷, 铁矿石
+Basic_Materials          EXP            :  -1.69%  建筑材料, 美国
+Healthcare               XRAY           :  -1.69%  登士柏, 牙科, 牙科产品, 口腔健康, 正畸, 种植牙, 牙科设备, 牙科诊断, 牙齿修复, 美国
+Basic_Materials          ALTM.*         :  -1.69%  阿根廷澳大利亚, 锂卤水, 锂矿, 锂
+Basic_Materials          TECK           :  -1.70%  泰克资源, 加拿大, 炼钢煤, 冶金煤, 锌铜
+Consumer_Cyclical        WYNN           :  -1.70%  永利, 赌场, 酒店, 度假村, 澳门, 博彩
+Consumer_Cyclical        PAG            :  -1.70%  汽车零售, 商用卡车销售, 特许经销店, 汽车保险, 汽车金融, 汽车贷款
+Financial_Services       WAL            :  -1.70%  阿莱恩斯西部银行, 银行, 区域性银行, 住房抵押贷款, 美国
+Technology               ALAB           :  -1.71%  AI基础设施, 芯片, AI, 半导体
+Industrials              IEX            :  -1.71%  流体与计量技术, 工程解决方案
+Technology               UI             :  -1.71%  网络设备, UniFi平台, 无线电通信, 视频监控
+Basic_Materials          SSL.-          :  -1.71%  南非, 萨索尔, 煤炭, 天然气, 柴油, 汽油, 燃料, 乙烯, 丙烯, 化学品, 化工
+Industrials              LECO           :  -1.73%  林肯电气, 焊接切割
+Real_Estate              CIGI           :  -1.73%  房地产, 商业地产服务, 租赁, 估价
+Technology               ACIW.-         :  -1.73%  电子支付解决方案提供商, 金融安全, 欺诈管理
+Industrials              ROAD           :  -1.74%  基础设施, 公路桥梁, 建筑材料, 美国
+Communication_Services   BILI.14        :  -1.74%  哔哩哔哩, 中国, 在线视频, 流媒体
+Industrials              AZEK           :  -1.74%  户外建材, 建材, 建筑材料
+Technology               MDB            :  -1.75%  MongoDB, 数据库
+Industrials              GXO            :  -1.75%  仓储配送, 物流, 供应链管理
+Healthcare               CRL            :  -1.76%  生物制药, 提供临床实验室服务
+Consumer_Cyclical        VVV            :  -1.77%  胜牌, 汽车润滑油, 冷却液, 机油, 刹车液, 工业润滑油, 汽车行业
+Industrials              MAS            :  -1.78%  家居装饰, 建筑产品, 管道橱柜
+Financial_Services       SFBS           :  -1.78%  金融, 银行, 贷款, 美国
+Financial_Services       MS.*.--        :  -1.78%  摩根士丹利, 投资银行, 证券, 财富管理
+Healthcare               CVS.*          :  -1.78%  西维斯健康, 药品, 零售药店, 处方药, 医疗保险, 安泰保险Aetna
+Industrials              LII            :  -1.79%  暖通空调, 制冷产品, AI, 数据中心, 制冷
+Industrials              CSL            :  -1.80%  绝缘建筑材料, 高性能电缆, 建筑材料
+Industrials              AL             :  -1.80%  航空租赁, 飞机租赁, 飞机
+Consumer_Cyclical        SEE            :  -1.80%  食品包装, 医药包装, 运输保护, 包装
+Financial_Services       NMR            :  -1.81%  野村控股株式会社, 金融服务, 投资银行
+Industrials              GGG            :  -1.82%  工业设备制造商, 流体处理系统, 涂料喷涂设备
+Financial_Services       SHG            :  -1.82%  新韩金融集团, 韩国首尔, 银行
+Technology               ASML           :  -1.83%  光刻机, 半导体, 赋能芯片制造, 芯片, 荷兰
+Healthcare               BNTX           :  -1.84%  mRNA, 生物技术
+Consumer_Cyclical        CVNA           :  -1.84%  在线二手车, 二手车, 美国
+Consumer_Cyclical        LCID.*         :  -1.84%  电动汽车, 亚马逊合作, 美国
+Energy                   E.-            :  -1.85%  意大利, 石油, 天然气
+Industrials              NDSN           :  -1.85%  粘合剂, 工业涂层
+Consumer_Cyclical        KTB            :  -1.86%  服装, 威富分拆, 牛仔服, Wrangler, Lee, 服饰
+Energy                   CHRD.-         :  -1.86%  原油, 天然气, 勘探开发
+Healthcare               TFX            :  -1.86%  泰利福, 医疗器械, 介入治疗设备, 冠状动脉手术
+Technology               GFS            :  -1.87%  半导体, 晶圆代工, 芯片代工
+Industrials              EFX            :  -1.88%  消费者信用报告, 信用信息分析决策, 信息分析, 信用
+Industrials              UPS            :  -1.88%  物流, 联合包裹, 快递
+Technology               SWKS.12        :  -1.88%  模拟与混合信号半导体, 半导体, 射频芯片, 功率放大器
+Industrials              AAL.*          :  -1.88%  美国航空, 货运客运, 航空公司
+Consumer_Cyclical        CZR            :  -1.88%  凯撒娱乐, 拉斯维加斯, 赌场娱乐
+Technology               TEL            :  -1.88%  连接器, 传感器, 电缆
+Consumer_Cyclical        TM             :  -1.88%  日本, 丰田汽车
+Energy                   EQNR.--        :  -1.89%  挪威, 能源, 石油, 天然气, 海上风电
+Consumer_Cyclical        LKQ            :  -1.91%  汽车零部件, 维修保养, 美国
+Industrials              CNI            :  -1.91%  加拿大, 国家铁路, 铁路, 货运, 物流
+Technology               SQ.*.--        :  -1.92%  移动支付, 手机转账, 股票交易, Square, 加密货币交易, 比特币
+Communication_Services   TLK            :  -1.92%  电信运营商, 印尼
+Basic_Materials          NTR.-          :  -1.92%  加拿大, 农业, 肥料, 种子, 化肥
+Technology               BMI.-          :  -1.93%  水表, 流量计量
+Consumer_Cyclical        LEVI           :  -1.93%  牛仔裤
+Basic_Materials          PPG            :  -1.94%  涂料, 化学品
+Healthcare               ELAN.*         :  -1.94%  宠物健康, 药品, 疫苗, 宠物
+Industrials              AYI            :  -1.94%  照明, 灯具, 建筑材料, 美国
+Industrials              CSWI           :  -1.95%  专业化学品, 密封材料, 机械零部件, 建筑产品
+Technology               CDW            :  -1.95%  信息技术, IT, IT解决方案
+Technology               ENPH           :  -1.96%  太阳能, 微型逆变器, 储能, 利率敏感
+Consumer_Cyclical        XPEV.*.--      :  -1.98%  小鹏汽车, 电动车, 中国
+Consumer_Cyclical        MGM            :  -1.98%  米高梅, 赌场, 度假酒店, 博彩
+Energy                   FANG.-         :  -1.99%  石油, 天然气, 勘探, 生产
+Healthcare               FMS            :  -1.99%  肾病服务, 透析
+Industrials              ASR.--         :  -2.01%  墨西哥, 东南机场, 机场管理
+Consumer_Defensive       BUD            :  -2.02%  百威英博, 啤酒, 科罗娜, 哈尔滨
+Industrials              WMS            :  -2.02%  塑料水管, 排水产品, 水管理
+Technology               ADI.*          :  -2.03%  传统半导体, 集成电路, 模拟信号处理
+Basic_Materials          FCX.*          :  -2.03%  麦克莫兰, 矿业, 铜, 金, 镍
+Consumer_Cyclical        TSCO           :  -2.03%  农用设备, 牲畜饲料, 美国
+Industrials              AOS            :  -2.03%  AO, 史密斯, 热水器
+Financial_Services       NU.13.*        :  -2.04%  拉美, 巴西, 数字, 线上, 银行, 数字银行, 信贷, 金融
+Technology               KLAC           :  -2.05%  科磊, 半导体, 印刷电路板PCB, AI
+Technology               MCHP.*         :  -2.06%  传统半导体, 单片机, 电子设备
+Consumer_Cyclical        THO            :  -2.07%  索尔工业, 房车, 利率敏感, 美国
+Consumer_Cyclical        NKE.*          :  -2.08%  耐克, 体育品牌, 运动装备, 鞋, 运动鞋, 运动
+Energy                   MUR.-          :  -2.08%  石油, 天然气, 勘探, 开发
+Basic_Materials          SQM            :  -2.09%  智利, 锂, 碘, 硝酸盐
+Healthcare               VTRS.*.-       :  -2.10%  医疗保健, 仿制药, 生物制药
+Technology               ARM            :  -2.12%  meme, 芯片, AI, 半导体
+Healthcare               ICLR           :  -2.13%  爱尔兰, 生物制药, 医疗器械
+Energy                   NE.-           :  -2.13%  石油, 海上和陆地钻井服务
+Industrials              CNH.*          :  -2.13%  依维柯Iveco, 农业机械, 机械, 建筑设备
+Consumer_Defensive       HIMS.*         :  -2.14%  远程医疗, 性健康, 皮肤护理, 减肥药, 平替, 山寨减肥药, 医疗
+Industrials              FELE           :  -2.14%  富兰克林电子, 水泵, 电机, 电动机, 水处理, 工业基础设施, 工业, 基础设施, 美国
+Energy                   SOBO.--        :  -2.15%  能源, 基础设施, 管道运输
+Healthcare               CRSP           :  -2.16%  CRISPR, Cas9, 基因编辑
+Consumer_Cyclical        WSM.14         :  -2.16%  零售, 高端厨具, 家居用品, 美国
+Consumer_Cyclical        MTH            :  -2.16%  房地产, 节能住宅, 智能家居
+Technology               ON             :  -2.17%  安森美半导体, 独立自摩托罗拉, 半导体, 汽车芯片
+Consumer_Cyclical        TOL            :  -2.17%  房地产, 高端住宅
+Energy                   CIVI.-         :  -2.20%  石油, 天然气, 油气田
+Technology               PATH.*         :  -2.21%  机器人, 自动化
+Technology               NXPI           :  -2.22%  荷兰, 恩智浦, 半导体, 汽车芯片, 传统半导体
+Technology               QRVO           :  -2.24%  半导体, 射频芯片, 智能手机, 功率放大器, 移动芯片, 苹果, 适用于高端机型, 美国
+Financial_Services       BEN            :  -2.24%  富兰克林坦普顿投资, 共同基金, ETF, 养老金管理, 投资管理
+Consumer_Cyclical        ALV            :  -2.24%  瑞典, 汽车, 汽车零部件, 安全气囊, 安全带
+Financial_Services       CIB            :  -2.25%  哥伦比亚银行, 业务覆盖拉丁美洲
+Basic_Materials          ASH            :  -2.26%  化学品, 化工, 添加剂
+Consumer_Cyclical        RUSHB          :  -2.27%  商用车辆, 卡车, 销售, 汽车维修, 汽车保险
+Technology               AMKR           :  -2.27%  半导体, 封装测试, AI
+Energy                   CVE.*.--       :  -2.27%  加拿大, 原油, 天然气
+Energy                   RIG.*.-        :  -2.28%  海上钻井, 油气钻探
+Basic_Materials          LYB            :  -2.28%  荷兰, 塑料, 丙烯, 烯烃, 化工, 化学品, 炼油, 精炼, 溶剂
+Consumer_Cyclical        MAT            :  -2.31%  美泰, 玩具制造, 芭比娃娃
+Technology               ENTG           :  -2.31%  高性能材料, 服务于半导体行业, 材料, 半导体, 英特格, 传统半导体
+Basic_Materials          ESI            :  -2.32%  电子硬件领域, 材料加工技术, 化学品, 材料, 特种化学品
+Healthcare               CNC.*          :  -2.33%  医疗保险, 为政府资助的医疗保健计划提供服务和产品, 保险, 长期护理, 医疗保健
+Healthcare               OGN            :  -2.35%  健康护理, 生物仿制药, 默克分拆, 药品经销商, 渠道销售, 仿制药, 药品
+Healthcare               BRKR           :  -2.38%  生物技术, 科学仪器, 仪器制造, 仪器设备
+Consumer_Cyclical        H              :  -2.41%  凯悦酒店, 豪华酒店, 度假村
+Consumer_Cyclical        LULU           :  -2.41%  加拿大, 瑜伽服, 时尚运动品牌
+Technology               AMD.*          :  -2.42%  半导体, 显卡, 芯片, 数据中心, AI
+Basic_Materials          BHP            :  -2.42%  必和必拓, 石油, 矿产, 铁矿石, 第三大, 铜, 铜矿, 铝煤炭铀
+Consumer_Cyclical        MTN            :  -2.44%  滑雪度假村, 滑雪, 度假村, 美国
+Energy                   CNQ.*.-        :  -2.44%  轻质原油, 重油, 加拿大, 液体天然气
+Healthcare               MDGL.-         :  -2.45%  生物制药, 非酒精性脂肪肝
+Consumer_Cyclical        DHI            :  -2.45%  德尔惠, 房地产, 住宅建筑, 美国
+Industrials              CARR.*         :  -2.45%  暖通空调, 制冷, 安防
+Industrials              ACA            :  -2.46%  基础设施, 建筑产品, 建筑材料, 工程, 美国
+Financial_Services       LAZ            :  -2.51%  金融咨询, 资产管理, 投资银行, 并购重组
+Consumer_Cyclical        TCOM           :  -2.53%  携程, 旅游, 机票酒店预定, 中国
+Technology               UBER.*         :  -2.53%  共享租车, 外卖递送, 出租车, 拼车, 共享出行, 网约车
+Consumer_Defensive       DG             :  -2.55%  达乐, 折扣连锁, 折扣零售, 低价, 零售, 美国
+Industrials              TREX           :  -2.56%  木材, 地板, 栏杆, 高端装修, 装修
+Technology               SITM           :  -2.56%  传统半导体, 微电机, MEMS振荡器, 精确计时, 时钟解决方案
+Technology               MU.*           :  -2.57%  美光, 内存, 硬盘
+Technology               DAY            :  -2.59%  云计算, 人力资源管理平台
+Basic_Materials          CBT            :  -2.61%  化学品, 性能材料, 用于轮胎的炭黑, 喷墨着色, 美国
+Technology               LSCC           :  -2.61%  传统半导体, FPGA, 可编程逻辑电路
+Energy                   TPL.-          :  -2.62%  土地信托, 水资源, 石油, 天然气
+Healthcare               IDXX           :  -2.63%  动物健康诊断, 水牛奶检测
+Consumer_Cyclical        F.*            :  -2.63%  福特, 汽车
+Financial_Services       UBS            :  -2.65%  瑞银集团, 瑞士, 银行, 收购瑞士信贷
+Basic_Materials          BCC            :  -2.68%  木材, 建筑材料, 美国
+Financial_Services       SMFG.14        :  -2.69%  三井住友, 金融, 日本
+Consumer_Cyclical        LI             :  -2.72%  理想, 汽车, 中国
+Consumer_Cyclical        GAP.*.-        :  -2.74%  休闲服饰, 服装, 服饰, 服装零售, 零售, Old Navy
+Technology               U.*            :  -2.75%  3D引擎, 游戏开发
+Industrials              BCO            :  -2.75%  现金, 贵重物品, 运输, 物流, 安全解决方案
+Energy                   SU.12.*.-      :  -2.75%  加拿大, 能源, 石油, 天然气
+Healthcare               BBIO.11        :  -2.76%  孟德尔疾病, 淀粉样心肌病
+Consumer_Cyclical        KBH            :  -2.76%  房地产, 住宅建筑
+Technology               CLVT.*         :  -2.79%  信息服务提供商, 专利, 商标, 版权, 学术研究, 药物研发, 知识产权, 品牌保护
+Communication_Services   WBD.*          :  -2.79%  华纳兄弟, 探索频道, Discovery+, HBO
+Communication_Services   ROKU.-         :  -2.80%  流媒体播放器
+Technology               FLEX.*.-       :  -2.80%  新加坡, AI, 电子制造服务EMS
+Energy                   VRN.*.-        :  -2.81%  石油, 天然气, 勘探, 生产
+Consumer_Defensive       BF-B           :  -2.82%  杰克丹尼
+Healthcare               HUM            :  -2.82%  医疗保险, 健康保健
+Energy                   WFRD.-         :  -2.83%  陆上钻井, 石油, 天然气
+Basic_Materials          WLK            :  -2.83%  化学品, 塑料
+Technology               MKSI           :  -2.87%  半导体, 光学仪器, 真空技术
+Consumer_Cyclical        BWA            :  -2.87%  汽车零部件供应商, 传动系统, 发动机
+Basic_Materials          DOW.*          :  -2.90%  陶氏化学, 材料
+Basic_Materials          ALB            :  -2.90%  雅宝, 锂, 溴, 特种化学品
+Financial_Services       LYG.*          :  -2.91%  劳埃德, 银行, 英国, 金融服务
+Technology               CFLT.*         :  -2.92%  实时数据处理, 数据分析, 数据流平台, Apache Kafka
+Consumer_Cyclical        LEN            :  -2.94%  房地产, 住宅建筑
+Industrials              POOL           :  -2.95%  游泳池, 水疗设备, 泳池产品
+Healthcare               RNA            :  -2.95%  RNA靶向药物, 肌肉萎缩性侧索硬化症, 杜氏肌营养不良
+Consumer_Cyclical        VIPS.12        :  -2.95%  唯品会, 电子商务, 名牌, 奢侈品, 折扣, 中国
+Consumer_Cyclical        FIVE           :  -2.96%  折扣连锁, 折扣零售, 1~5美元商品, 折扣, 低价, 零售连锁
+Consumer_Cyclical        HMC            :  -3.00%  日本, 本田, 汽车
+Consumer_Cyclical        HOG            :  -3.01%  哈雷戴维森, 哈雷, 摩托, 利率敏感
+Consumer_Defensive       TGT.*          :  -3.05%  塔吉特, 零售, 百货, 商店, 连锁, 美国
+Healthcare               MASI           :  -3.06%  医疗技术, 脉搏血氧仪
+Industrials              SITE           :  -3.10%  景观供应, 草坪园艺, 照明灌溉
+Technology               CGNX           :  -3.11%  机器视觉, 工业自动化
+Consumer_Cyclical        MBLY           :  -3.14%  以色列, 自动驾驶
+Consumer_Cyclical        TPX            :  -3.16%  床上用品, 床垫, 枕头
+Basic_Materials          MOS.12         :  -3.16%  美盛, 化肥, 美国
+Financial_Services       BBVA           :  -3.21%  西班牙银行, 墨西哥, 第一大, 银行
+Industrials              WSO            :  -3.21%  北美, 第一大, 空调, 采暖, 制冷
+Industrials              SWK            :  -3.22%  史丹利, 五金, 工具, 安防, 门类
+Consumer_Cyclical        APTV           :  -3.24%  汽车零部件, 自动驾驶, 电气架构, 车载软件
+Industrials              MIDD           :  -3.26%  商业厨房设备, 食品加工设备, 食品加工
+Technology               INTC.*         :  -3.30%  英特尔, 芯片, 半导体, 美国
+Energy                   WDS.-          :  -3.31%  澳大利亚, 石油, 液化天然气LNG
+Consumer_Defensive       STZ            :  -3.34%  酒精饮料, 科罗娜, 美国
+Technology               SRAD.-         :  -3.34%  瑞士, 体育, 数据分析, 体育博彩, 博彩
+Consumer_Cyclical        SN             :  -3.35%  小家电, 吸尘器, 扫地机器人, 搅拌机, 榨汁机, 空气炸锅, 美国
+Energy                   VAL.-          :  -3.36%  石油, 海上钻井
+Healthcare               OSCR           :  -3.38%  奥斯卡, 保险, 医疗保险, 健康保险
+Technology               ASTS.14.*      :  -3.39%  近地轨道卫星LEO, 太空宽带网络, SpaceX竞争对手
+Basic_Materials          SCCO           :  -3.40%  南方铜业, 墨西哥, 秘鲁
+Technology               ALGM           :  -3.40%  磁性传感器, 模拟电源集成电路, 传统半导体
+Consumer_Cyclical        DDS            :  -3.41%  迪拉德百货, 百货, 商店, 零售, 美国
+Industrials              XYL            :  -3.41%  水处理, 水泵, 水质检测
+Consumer_Defensive       BRFS.13        :  -3.44%  肉, 家禽, 食品, 加工, 巴西
+Industrials              CP.*           :  -3.46%  加拿大, 太平洋铁路, 货物运输, 物流
+Energy                   VIST.-         :  -3.50%  拉丁美洲, 石油, 天然气, 页岩油
+Financial_Services       RKT.12         :  -3.50%  金融科技, 在线抵押贷款, 房地产, 抵押贷款, 在线贷款
+Basic_Materials          OLN            :  -3.51%  化学品, 氯碱, 弹药, 枪支, 美国
+Basic_Materials          CLF.*          :  -3.52%  克利夫兰, 钢铁, 铁矿石, 美国
+Consumer_Cyclical        MHK            :  -3.52%  莫霍克工业, 地毯, 地板, 瓷砖
+Basic_Materials          TX             :  -3.64%  拉丁美洲, 钢铁
+Healthcare               WBA.*          :  -3.64%  连锁药店, 药品零售, 药店, 药品
+Industrials              FBIN           :  -3.66%  橱柜, 卫浴, 洁具, 安全智能家居, 门窗
+Industrials              JOBY.*         :  -3.66%  电动垂直起降飞行器, 飞行器, 飞机, 航空, 丰田投资
+Healthcare               MRNA.*         :  -3.69%  莫德纳, mRNA, 疫苗, 新冠肺炎
+Basic_Materials          MT.--          :  -3.70%  印度, 钢铁
+Consumer_Cyclical        FND            :  -3.75%  硬表面地板, 地板, 家装, 装修, 瓷砖
+Financial_Services       HOOD.11.*      :  -3.78%  meme, 股票交易, 比特币, 加密货币交易
+Technology               NXT            :  -3.79%  太阳能, 追踪器, 跟踪器, 光伏追踪, 利率敏感
+Energy                   TDW.-          :  -3.82%  海上钻井, 潮水公司, 供应船
+Financial_Services       NYCB           :  -3.83%  纽约社区银行, 区域性银行, 房地产抵押贷款, 抵押贷款
+Financial_Services       FLG            :  -3.83%  银行, 金融, 纽约社区银行, 纽约商业银行
+Technology               ACLS           :  -3.90%  半导体, 离子注入机, 单晶圆工具
+Technology               NOVT           :  -3.93%  激光解决方案, 激光, 精密运动控制, 医疗设备, 工业制造
+Consumer_Cyclical        CROX           :  -4.12%  洞洞鞋, 鞋, HEYDUDE
+Consumer_Cyclical        LEA            :  -4.14%  汽车座椅, 电子系统
+Technology               ST             :  -4.20%  传感器, 保护控制器, 汽车行业
+Consumer_Cyclical        WRD.-          :  -4.21%  文远知行, 自动驾驶, L4, Robotaxi, 中国, 科技
+Consumer_Cyclical        ZK             :  -4.28%  极氪, 电动车, 中国, 隶属于吉利汽车, 吉利
+Communication_Services   PARA.*         :  -4.32%  派拉蒙, 电视, 电影, 流媒体
+Consumer_Defensive       ELF            :  -4.34%  化妆品, 性价比, 美国
+Consumer_Cyclical        IBP            :  -4.39%  建筑, 建筑安装, 材料, 隔热材料, 绝缘材料
+Utilities                AES.*          :  -4.41%  爱依斯, 电力, 发电, 公共事业
+Consumer_Cyclical        YUMC           :  -4.41%  百胜, 中国, 肯德基, 必胜客, 小肥羊, 黄记煌
+Communication_Services   RDDT.*.--      :  -4.43%  meme, 社交媒体, 新闻聚合
+Technology               AFRM.*         :  -4.44%  消费金融, 支付, 分期付款, 先买后付
+Technology               OLED           :  -4.45%  OLED技术, 专利, 材料
+Consumer_Cyclical        BOOT           :  -4.55%  西部风格, 零售, 服装, 鞋, 靴子, 牛仔, 农场
+Industrials              BLD            :  -4.60%  建筑, 住宅, 隔热材料, 绝缘安装, 住宅建筑
+Basic_Materials          SSD            :  -4.60%  建筑材料, 连接组件, 辛普森制造, 美国
+Consumer_Cyclical        WHR            :  -4.69%  惠而浦, 家电制造商, 洗衣机, 冰箱
+Healthcare               AMGN.*.-       :  -4.76%  安进, 生物医药, 高胆固醇血症, 癌症, 骨质疏松
+Basic_Materials          CE             :  -4.77%  赛莱默, 化工, 材料, 化学品, 汽车行业, 原材料
+Technology               MPWR           :  -4.79%  芯源系统, 集成电路, 半导体, 电源转换器, 电压调节模块, 电源管理IC, AI, 芯片
+Basic_Materials          SMG            :  -4.81%  园艺, 草坪护理, 销售Roundup, 大麻, 杀虫剂, 除草剂
+Consumer_Cyclical        BBY.*          :  -4.89%  百思买, 电子产品, 零售, 消费品, 连锁, 商店, 美国
+Energy                   FRO.-          :  -5.04%  原油海运, 油轮船队
+Consumer_Cyclical        ANF.*          :  -5.10%  年轻人, 休闲服装
+Healthcare               INSP           :  -5.11%  Inspire疗法, 阻塞性睡眠呼吸暂停OSA
+Consumer_Cyclical        MGA            :  -5.21%  麦格纳国际, 汽车零部件
+Healthcare               ALGN           :  -5.23%  医疗器械, 牙齿矫正, 正畸
+Basic_Materials          CX.*           :  -5.39%  墨西哥, 建材, 水泥, 低碳混凝土
+Technology               CORZ.*.-       :  -5.47%  比特币挖矿, 矿机托管, 区块链, 数据中心, ASIC, GPU
+Industrials              RRX            :  -5.63%  工业动力传动传输解决方案, 电动机, 发电机
+Consumer_Cyclical        STLA.*         :  -5.68%  意大利, 菲亚特, 克莱斯勒, 标致雪铁龙, 汽车制造, 荷兰, 汽车
+Technology               ZETA.11.*.-    :  -5.78%  云营销平台, 数据驱动, DMP, CRM, 云平台
+Communication_Services   NBIS           :  -5.83%  荷兰, 技术服务, AI基础设施, 赋能人工智能, AI, GPU集群, 云计算平台, GPU租赁
+Consumer_Cyclical        HTHT.--        :  -5.89%  华住, 房地产, 酒店住宿, 汉庭
+Consumer_Cyclical        BC             :  -5.92%  船只制造商, 钓鱼船, 游艇, lifeFitness健身器械, 利率敏感
+Financial_Services       COIN.*         :  -6.06%  加密货币, 交易所
+Consumer_Cyclical        W              :  -6.15%  家具, 家居装饰, 电子商务, 家居用品, 在线零售
+Technology               AUR.*.-        :  -6.20%  自动驾驶, 无人驾驶
+Technology               ZM.*           :  -6.31%  视频会议, 云端通讯
+Consumer_Cyclical        DOOO           :  -6.45%  加拿大, 雪地摩托, 水上摩托, 摩托艇, 利率敏感
+Consumer_Cyclical        NIO.*.-        :  -7.71%  蔚来, 电动车, 中国
+Healthcare               TEM            :  -7.86%  癌症治疗, 数据分析, 人工智能, 肿瘤数据库
+Consumer_Cyclical        GM.*           :  -8.99%  通用汽车, 汽车制造, 汽车, 上汽, 五菱, 雪佛兰, 凯迪拉克, 别克, 美国
+Technology               SMCI.*         : -10.36%  超微电脑, AI服务器, 存储, 数据中心, AI, 美国
+Technology               MSTR.*.-       : -12.33%  比特币
+Healthcare               SEM.-          : -44.86%  急性护理医院, 康复医院, 门诊康复诊所, 职业健康服务, 医院
