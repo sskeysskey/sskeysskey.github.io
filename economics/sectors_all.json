@@ -186,7 +186,6 @@
     "SCHD",
     "ESGD",
     "LGOV",
-    "IDHQ",
     "HEWJ",
     "RSP",
     "FRDM",
@@ -1354,7 +1353,8 @@
     "ACLX",
     "PRCT",
     "WAY",
-    "ADMA"
+    "ADMA",
+    "ALKS"
   ],
   "Industrials": [
     "GE",
