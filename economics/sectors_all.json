@@ -206,7 +206,6 @@
     "SPTM",
     "ITOT",
     "IAU",
-    "IWB",
     "SPLG",
     "IVV",
     "SPY",
@@ -411,7 +410,6 @@
     "GNR",
     "GRID",
     "YINN",
-    "IWP",
     "SCHB",
     "ACWI",
     "VEA",
@@ -1303,7 +1301,8 @@
     "WAY",
     "ADMA",
     "ALKS",
-    "GH"
+    "GH",
+    "AXSM"
   ],
   "Industrials": [
     "GE",
@@ -1870,6 +1869,7 @@
     "POR",
     "ORA",
     "NJR",
-    "PAM"
+    "PAM",
+    "OKLO"
   ]
 }
