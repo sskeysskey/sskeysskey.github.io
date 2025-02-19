@@ -509,6 +509,9 @@
                         if (['ETFs_US'].includes(sector)) {
                             sector = 'ETFs';
                         }
+                        else if (['Economic_All'].includes(sector)) {
+                            sector = 'Economics';
+                        }
 
                         // 查找finance.json中对应的组别
                         if (financeData.hasOwnProperty(sector)) {
